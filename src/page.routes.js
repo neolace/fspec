@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 /** 
-  All of the routes for the page layout of Soft UI Dashboard PRO React are added here,
+  All the routes for the page layout of Soft UI Dashboard PRO React are added here,
   You can add a new route, customize the routes and delete the routes here.
 
   Once you add a new route on this file it will be visible automatically on
@@ -26,8 +26,8 @@ Coded by www.creative-tim.com
   3. The `key` key is used for the key of the route (It will help you with the key prop inside a loop).
   4. The `icon` key is used for the icon of the route on the DefaultNavbar, you have to add a node.
   5. The `collapse` key is used for making a collapsible item on the DefaultNavbar that contains other routes inside (nested routes), you need to pass the nested routes inside an array as a value for the `collapse` key.
-  6. The `route` key is used to store the route location which is used for the react router.
-  7. The `href` key is used to store the external links location.
+  6. The `route` key is used to store the route location which is used for the React router.
+  7. The `href` key is used to store the external link's location.
 */
 
 // Soft UI Dashboard PRO React icons
