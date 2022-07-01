@@ -1,18 +1,3 @@
-/**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Card from "@mui/material/Card";
 
@@ -35,13 +20,13 @@ function OrdersOverview() {
         </SuiTypography>
       </SuiBox>
       <SuiBox p={2}>
-        <DefaultItem icon="paid" title="أسبوع الإنترنت" description="01 يونيو 2021, ي 12:30 PM" />
+        <DefaultItem icon="paid" title="Fossil Part" description="01 Jan 20" />
         <SuiBox mt={3.5}>
           <DefaultItem
             color="primary"
             icon="notifications"
-            title="لقاء مع ماري"
-            description="24 مايو 2021, ي 10:00 PM"
+            title=""
+            description=""
           />
         </SuiBox>
       </SuiBox>

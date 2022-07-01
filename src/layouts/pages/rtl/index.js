@@ -1,17 +1,4 @@
-/**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -77,14 +64,14 @@ function RTL() {
               <SuiBox mb={3}>
                 <MiniStatisticsCard
                   bgColor="info"
-                  title={{ text: "صحة البطارية", fontWeight: "regular" }}
+                  title={{ text: "John", fontWeight: "regular" }}
                   count="99 %"
-                  icon={{ component: "sports_esports" }}
+                  icon={{ color:"", component: "music_note" }}
                 />
               </SuiBox>
               <MiniStatisticsCard
                 bgColor="info"
-                title={{ text: "طبقة صوت الموسيقا", fontWeight: "regular" }}
+                title={{ text: "Wendy", fontWeight: "regular" }}
                 count="15/100"
                 icon={{ color: "info", component: "music_note" }}
               />
@@ -124,13 +111,13 @@ function RTL() {
             <Grid item xs={12} sm={3} lg={2}>
               <DefaultInfoCard
                 icon="paypal"
-                title="باي بال"
-                description="دفع لحسابهم الخاص"
+                title="fdg"
+                description="dfgs"
                 value="$455.00"
               />
             </Grid>
             <Grid item xs={12} lg={4}>
-              <MasterCard number={4562112245947852} holder="جاك بيترسون" expires="11/22" />
+              <MasterCard number={4562112245947852} holder="tyr" expires="11/22" />
             </Grid>
           </Grid>
         </SuiBox>
@@ -147,13 +134,13 @@ function RTL() {
                     lightbulb
                   </Icon>
                 }
-                title="درجة حرارة"
+                title=""
                 onChange={handleSetLights}
               />
             </Grid>
             <Grid item xs={12} lg={3}>
               <Chart
-                title="سعرات حراريه"
+                title="fsdg"
                 count={97}
                 percentage={{ color: "success", label: "+5%" }}
                 chart={caloriesChartData}
@@ -166,11 +153,11 @@ function RTL() {
                   <>
                     754&nbsp;
                     <SuiTypography variant="button" color="secondary" fontWeight="medium">
-                      م
+                      f
                     </SuiTypography>
                   </>
                 }
-                description="مدينة نيويورك"
+                description="dfsfda"
               />
             </Grid>
             <Grid item xs={12} md={6} lg={2}>
