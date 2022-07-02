@@ -75,7 +75,7 @@ Let us know your thoughts below. And good luck with development!
 [<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/soft-ui-dashboard-pro-react?ref=readme-sudpr)
 
 | React |
-| ----- |
+|-------|
 
 | [![Soft UI Dashboard PRO React](https://s3.amazonaws.com/creativetim_bucket/products/499/thumb/soft-ui-dashboard-pro-material-ui.jpg)](http://demos.creative-tim.com/soft-ui-dashboard-pro-react/#/dashboards/default?ref=readme-sudpr)
 
@@ -113,6 +113,7 @@ The documentation for the Soft UI Dashboard is hosted at our [website](https://w
 
 Within the download you'll find the following directories and files:
 
+## File-Structure
 ```BASH
 soft-ui-dashboard-pro-react
     ├── public

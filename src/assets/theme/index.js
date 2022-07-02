@@ -1,21 +1,5 @@
-/**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import { createTheme } from "@mui/material/styles";
-// import Fade from "@mui/material/Fade";
 
 // Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
@@ -84,77 +68,245 @@ import dialogContent from "assets/theme/components/dialog/dialogContent";
 import dialogContentText from "assets/theme/components/dialog/dialogContentText";
 import dialogActions from "assets/theme/components/dialog/dialogActions";
 
-export default createTheme({
-  breakpoints: { ...breakpoints },
-  palette: { ...colors },
-  typography: { ...typography },
-  boxShadows: { ...boxShadows },
-  borders: { ...borders },
-  functions: {
-    boxShadow,
-    hexToRgb,
-    linearGradient,
-    pxToRem,
-    rgba,
-  },
+export default createTheme(
+	{
+		breakpoints:
+			{
+				...breakpoints,
+			},
+		palette:
+			{
+				...colors,
+			},
+		typography:
+			{
+				...typography,
+			},
+		boxShadows:
+			{
+				...boxShadows,
+			},
+		borders:
+			{
+				...borders,
+			},
+		functions:
+			{
+				boxShadow,
+				hexToRgb,
+				linearGradient,
+				pxToRem,
+				rgba,
+			},
 
-  components: {
-    MuiCssBaseline: {
-      styleOverrides: {
-        ...globals,
-        ...flatpickr,
-        ...swal,
-        ...container,
-      },
-    },
-    MuiDrawer: { ...sidenav },
-    MuiList: { ...list },
-    MuiListItem: { ...listItem },
-    MuiListItemText: { ...listItemText },
-    MuiCard: { ...card },
-    MuiCardMedia: { ...cardMedia },
-    MuiCardContent: { ...cardContent },
-    MuiButton: { ...button },
-    MuiIconButton: { ...iconButton },
-    MuiInputBase: { ...inputBase },
-    MuiMenu: { ...menu },
-    MuiMenuItem: { ...menuItem },
-    MuiSwitch: { ...switchButton },
-    MuiDivider: { ...divider },
-    MuiTableContainer: { ...tableContainer },
-    MuiTableHead: { ...tableHead },
-    MuiTableCell: { ...tableCell },
-    MuiLinearProgress: { ...linearProgress },
-    MuiBreadcrumbs: { ...breadcrumbs },
-    MuiSlider: { ...slider },
-    MuiAvatar: { ...avatar },
-    MuiTooltip: { ...tooltip },
-    MuiAppBar: { ...appBar },
-    MuiTabs: { ...tabs },
-    MuiTab: { ...tab },
-    MuiStepper: { ...stepper },
-    MuiStep: { ...step },
-    MuiStepConnector: { ...stepConnector },
-    MuiStepLabel: { ...stepLabel },
-    MuiStepIcon: { ...stepIcon },
-    MuiSelect: { ...select },
-    MuiFormControlLabel: { ...formControlLabel },
-    MuiFormLabel: { ...formLabel },
-    MuiCheckbox: { ...checkbox },
-    MuiRadio: { ...radio },
-    MuiAutocomplete: { ...autocomplete },
-    MuiInput: { ...input },
-    MuiOutlinedInput: { ...input },
-    MuiFilledInput: { ...input },
-    MuiPopover: { ...popover },
-    MuiButtonBase: { ...buttonBase },
-    MuiIcon: { ...icon },
-    MuiSvgIcon: { ...svgIcon },
-    MuiLink: { ...link },
-    MuiDialog: { ...dialog },
-    MuiDialogTitle: { ...dialogTitle },
-    MuiDialogContent: { ...dialogContent },
-    MuiDialogContentText: { ...dialogContentText },
-    MuiDialogActions: { ...dialogActions },
-  },
-});
+		components:
+			{
+				MuiCssBaseline:
+					{
+						styleOverrides:
+							{
+								...globals,
+								...flatpickr,
+								...swal,
+								...container,
+							},
+					},
+				MuiDrawer:
+					{
+						...sidenav,
+					},
+				MuiList:
+					{
+						...list,
+					},
+				MuiListItem:
+					{
+						...listItem,
+					},
+				MuiListItemText:
+					{
+						...listItemText,
+					},
+				MuiCard:
+					{
+						...card,
+					},
+				MuiCardMedia:
+					{
+						...cardMedia,
+					},
+				MuiCardContent:
+					{
+						...cardContent,
+					},
+				MuiButton:
+					{
+						...button,
+					},
+				MuiIconButton:
+					{
+						...iconButton,
+					},
+				MuiInputBase:
+					{
+						...inputBase,
+					},
+				MuiMenu:
+					{
+						...menu,
+					},
+				MuiMenuItem:
+					{
+						...menuItem,
+					},
+				MuiSwitch:
+					{
+						...switchButton,
+					},
+				MuiDivider:
+					{
+						...divider,
+					},
+				MuiTableContainer:
+					{
+						...tableContainer,
+					},
+				MuiTableHead:
+					{
+						...tableHead,
+					},
+				MuiTableCell:
+					{
+						...tableCell,
+					},
+				MuiLinearProgress:
+					{
+						...linearProgress,
+					},
+				MuiBreadcrumbs:
+					{
+						...breadcrumbs,
+					},
+				MuiSlider:
+					{
+						...slider,
+					},
+				MuiAvatar:
+					{
+						...avatar,
+					},
+				MuiTooltip:
+					{
+						...tooltip,
+					},
+				MuiAppBar:
+					{
+						...appBar,
+					},
+				MuiTabs:
+					{
+						...tabs,
+					},
+				MuiTab:
+					{
+						...tab,
+					},
+				MuiStepper:
+					{
+						...stepper,
+					},
+				MuiStep:
+					{
+						...step,
+					},
+				MuiStepConnector:
+					{
+						...stepConnector,
+					},
+				MuiStepLabel:
+					{
+						...stepLabel,
+					},
+				MuiStepIcon:
+					{
+						...stepIcon,
+					},
+				MuiSelect:
+					{
+						...select,
+					},
+				MuiFormControlLabel:
+					{
+						...formControlLabel,
+					},
+				MuiFormLabel:
+					{
+						...formLabel,
+					},
+				MuiCheckbox:
+					{
+						...checkbox,
+					},
+				MuiRadio:
+					{
+						...radio,
+					},
+				MuiAutocomplete:
+					{
+						...autocomplete,
+					},
+				MuiInput:
+					{
+						...input,
+					},
+				MuiOutlinedInput:
+					{
+						...input,
+					},
+				MuiFilledInput:
+					{
+						...input,
+					},
+				MuiPopover:
+					{
+						...popover,
+					},
+				MuiButtonBase:
+					{
+						...buttonBase,
+					},
+				MuiIcon:
+					{
+						...icon,
+					},
+				MuiSvgIcon:
+					{
+						...svgIcon,
+					},
+				MuiLink:
+					{
+						...link,
+					},
+				MuiDialog:
+					{
+						...dialog,
+					},
+				MuiDialogTitle:
+					{
+						...dialogTitle,
+					},
+				MuiDialogContent:
+					{
+						...dialogContent,
+					},
+				MuiDialogContentText:
+					{
+						...dialogContentText,
+					},
+				MuiDialogActions:
+					{
+						...dialogActions,
+					},
+			},
+	}
+);
