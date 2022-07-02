@@ -1,22 +1,7 @@
-/**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-import { useState, useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // react-router components
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
 // @mui material components
 import { ThemeProvider } from "@mui/material/styles";
@@ -43,14 +28,19 @@ import createCache from "@emotion/cache";
 import routes from "routes";
 
 // Soft UI Dashboard PRO React contexts
-import { useSoftUIController, setMiniSidenav, setOpenConfigurator } from "context";
+import {
+  setMiniSidenav,
+  setOpenConfigurator,
+  useSoftUIController,
+} from "context";
 
 // Images
 import brand from "assets/images/logo-ct.png";
 
 export default function App() {
   const [controller, dispatch] = useSoftUIController();
-  const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
+  const { miniSidenav, direction, layout, openConfigurator, sidenavColor } =
+    controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
@@ -59,7 +49,7 @@ export default function App() {
   useMemo(() => {
     const cacheRtl = createCache({
       key: "rtl",
-      stylisPlugins: [rtlPlugin],
+      styliPlugins: [rtlPlugin],
     });
 
     setRtlCache(cacheRtl);
@@ -82,7 +72,8 @@ export default function App() {
   };
 
   // Change the openConfigurator state
-  const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
+  const handleConfiguratorOpen = () =>
+    setOpenConfigurator(dispatch, !openConfigurator);
 
   // Setting the dir attribute for the body element
   useEffect(() => {
@@ -102,7 +93,14 @@ export default function App() {
       }
 
       if (route.route) {
-        return <Route exact path={route.route} element={route.component} key={route.key} />;
+        return (
+          <Route
+            element={route.component}
+            exact
+            key={route.key}
+            path={route.route}
+          />
+        );
       }
 
       return null;
@@ -110,23 +108,25 @@ export default function App() {
 
   const configsButton = (
     <SuiBox
-      display="flex"
-      justifyContent="center"
       alignItems="center"
-      width="3.5rem"
-      height="3.5rem"
       bgColor="white"
-      shadow="sm"
       borderRadius="50%"
+      bottom="2rem"
+      color="dark"
+      display="flex"
+      height="3.5rem"
+      justifyContent="center"
+      onClick={handleConfiguratorOpen}
       position="fixed"
       right="2rem"
-      bottom="2rem"
+      shadow="sm"
+      sx={{
+        cursor: "pointer",
+      }}
+      width="3.5rem"
       zIndex={99}
-      color="dark"
-      sx={{ cursor: "pointer" }}
-      onClick={handleConfiguratorOpen}
     >
-      <Icon fontSize="default" color="inherit">
+      <Icon color="inherit" fontSize="default">
         settings
       </Icon>
     </SuiBox>
@@ -139,12 +139,12 @@ export default function App() {
         {layout === "dashboard" && (
           <>
             <Sidenav
-              color={sidenavColor}
               brand={brand}
               brandName="Soft UI Dashboard PRO"
-              routes={routes}
+              color={sidenavColor}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
+              routes={routes}
             />
             <Configurator />
             {configsButton}
@@ -153,7 +153,7 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/dashboards/default" />} />
+          <Route element={<Navigate to="/dashboards/default" />} path="*" />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -163,12 +163,12 @@ export default function App() {
       {layout === "dashboard" && (
         <>
           <Sidenav
-            color={sidenavColor}
             brand={brand}
             brandName="Soft UI Dashboard PRO"
-            routes={routes}
+            color={sidenavColor}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
+            routes={routes}
           />
           <Configurator />
           {configsButton}
@@ -177,7 +177,7 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/default" />} />
+        <Route element={<Navigate to="/dashboards/default" />} path="*" />
       </Routes>
     </ThemeProvider>
   );
