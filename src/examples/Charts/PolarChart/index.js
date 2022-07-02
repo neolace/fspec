@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 import { useMemo } from "react";
 
@@ -31,50 +31,135 @@ import SuiTypography from "components/SuiTypography";
 // PolarChart configurations
 import configs from "examples/Charts/PolarChart/configs";
 
-function PolarChart({ title, description, chart }) {
-  const { data, options } = configs(chart.labels || [], chart.datasets || {});
+function PolarChart({
+  title,
+  description,
+  chart,
+}) {
+  const {
+    data,
+    options,
+  } =
+    configs(
+      chart.labels ||
+        [],
+      chart.datasets ||
+        {}
+    );
 
-  const renderChart = (
-    <SuiBox p={2}>
-      {title || description ? (
-        <SuiBox px={description ? 1 : 0} pt={description ? 1 : 0}>
-          {title && (
-            <SuiBox mb={1}>
-              <SuiTypography variant="h6">{title}</SuiTypography>
+  const renderChart =
+    (
+      <SuiBox
+        p={
+          2
+        }>
+        {title ||
+        description ? (
+          <SuiBox
+            px={
+              description
+                ? 1
+                : 0
+            }
+            pt={
+              description
+                ? 1
+                : 0
+            }>
+            {title && (
+              <SuiBox
+                mb={
+                  1
+                }>
+                <SuiTypography variant="h6">
+                  {
+                    title
+                  }
+                </SuiTypography>
+              </SuiBox>
+            )}
+            <SuiBox
+              mb={
+                2
+              }>
+              <SuiTypography
+                component="div"
+                variant="button"
+                fontWeight="regular"
+                color="text">
+                {
+                  description
+                }
+              </SuiTypography>
             </SuiBox>
-          )}
-          <SuiBox mb={2}>
-            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
-              {description}
-            </SuiTypography>
           </SuiBox>
-        </SuiBox>
-      ) : null}
-      {useMemo(
-        () => (
-          <SuiBox p={4}>
-            <PolarArea data={data} options={options} />
-          </SuiBox>
-        ),
-        [chart]
-      )}
-    </SuiBox>
-  );
+        ) : null}
+        {useMemo(
+          () => (
+            <SuiBox
+              p={
+                4
+              }>
+              <PolarArea
+                data={
+                  data
+                }
+                options={
+                  options
+                }
+              />
+            </SuiBox>
+          ),
+          [
+            chart,
+          ]
+        )}
+      </SuiBox>
+    );
 
-  return title || description ? <Card>{renderChart}</Card> : renderChart;
+  return title ||
+    description ? (
+    <Card>
+      {
+        renderChart
+      }
+    </Card>
+  ) : (
+    renderChart
+  );
 }
 
 // Setting default values for the props of PolarChart
-PolarChart.defaultProps = {
-  title: "",
-  description: "",
-};
+PolarChart.defaultProps =
+  {
+    title:
+      "",
+    description:
+      "",
+  };
 
 // Typechecking props for the PolarChart
-PolarChart.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
-};
+PolarChart.propTypes =
+  {
+    title:
+      PropTypes.string,
+    description:
+      PropTypes.oneOfType(
+        [
+          PropTypes.string,
+          PropTypes.node,
+        ]
+      ),
+    chart:
+      PropTypes.objectOf(
+        PropTypes.oneOfType(
+          [
+            PropTypes.array,
+            PropTypes.object,
+          ]
+        )
+      )
+        .isRequired,
+  };
 
 export default PolarChart;

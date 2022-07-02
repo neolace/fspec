@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React components
 import SuiBox from "components/SuiBox";
@@ -30,21 +30,47 @@ function Illustration() {
       title="Reset Password"
       description="You will receive an e-mail in maximum 60 seconds"
       illustration={{
-        image: lock,
-        title: "Soft UI Design",
+        image:
+          lock,
+        title:
+          "Soft UI Design",
         description:
           "Just as it takes a company to sustain a product, it takes a community to sustain a protocol.",
-      }}
-    >
-      <SuiBox component="form" role="form">
-        <SuiBox mb={2}>
-          <SuiInput type="email" placeholder="Email" size="large" />
+      }}>
+      <SuiBox
+        component="form"
+        role="form">
+        <SuiBox
+          mb={
+            2
+          }>
+          <SuiInput
+            type="email"
+            placeholder="Email"
+            size="large"
+          />
         </SuiBox>
-        <SuiBox mb={2}>
-          <SuiInput placeholder="Verification Code" size="large" />
+        <SuiBox
+          mb={
+            2
+          }>
+          <SuiInput
+            placeholder="Verification Code"
+            size="large"
+          />
         </SuiBox>
-        <SuiBox mt={4} mb={1}>
-          <SuiButton variant="gradient" color="info" size="large" fullWidth>
+        <SuiBox
+          mt={
+            4
+          }
+          mb={
+            1
+          }>
+          <SuiButton
+            variant="gradient"
+            color="info"
+            size="large"
+            fullWidth>
             send
           </SuiButton>
         </SuiBox>

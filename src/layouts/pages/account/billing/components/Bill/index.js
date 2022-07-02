@@ -1,28 +1,28 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
 
 function Bill({ name, company, email, vat, noGutter }) {
   return (
@@ -41,29 +41,56 @@ function Bill({ name, company, email, vat, noGutter }) {
         <SuiBox
           display="flex"
           justifyContent="space-between"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{
+            xs: 'flex-start',
+            sm: 'center',
+          }}
+          flexDirection={{
+            xs: 'column',
+            sm: 'row',
+          }}
           mb={2}
         >
-          <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <SuiTypography
+            variant="button"
+            fontWeight="medium"
+            textTransform="capitalize"
+          >
             {name}
           </SuiTypography>
 
-          <SuiBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
+          <SuiBox
+            display="flex"
+            alignItems="center"
+            mt={{
+              xs: 2,
+              sm: 0,
+            }}
+            ml={{
+              xs: -1.5,
+              sm: 0,
+            }}
+          >
             <SuiBox mr={1}>
               <SuiButton variant="text" color="error">
-                <Icon>delete</Icon>&nbsp;delete
+                <Icon>delete</Icon>
+                &nbsp;delete
               </SuiButton>
             </SuiBox>
             <SuiButton variant="text" color="dark">
-              <Icon>edit</Icon>&nbsp;edit
+              <Icon>edit</Icon>
+              &nbsp;edit
             </SuiButton>
           </SuiBox>
         </SuiBox>
         <SuiBox mb={1} lineHeight={0}>
           <SuiTypography variant="caption" color="text">
             Company Name:&nbsp;&nbsp;&nbsp;
-            <SuiTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+            <SuiTypography
+              variant="caption"
+              fontWeight="medium"
+              textTransform="capitalize"
+            >
               {company}
             </SuiTypography>
           </SuiTypography>

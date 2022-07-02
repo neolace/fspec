@@ -1,45 +1,45 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-chartjs-2 components
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut } from 'react-chartjs-2';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Tooltip from "@mui/material/Tooltip";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Tooltip from '@mui/material/Tooltip';
+import Grid from '@mui/material/Grid';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
 
 // Soft UI Dashboard PRO React example components
-import ComplexReportsDoughnutChartItem from "examples/Charts/DoughnutCharts/ComplexReportsDoughnutChart/ComplexReportsDoughnutChartItem";
+import ComplexReportsDoughnutChartItem from 'examples/Charts/DoughnutCharts/ComplexReportsDoughnutChart/ComplexReportsDoughnutChartItem';
 
 // ComplexReportsDoughnutChart configurations
-import configs from "examples/Charts/DoughnutCharts/ComplexReportsDoughnutChart/configs";
+import configs from 'examples/Charts/DoughnutCharts/ComplexReportsDoughnutChart/configs';
 
 function ComplexReportsDoughnutChart({ title, chart, tooltip, action }) {
   const { data, options } = configs(chart.labels || [], chart.datasets || {});
@@ -50,7 +50,9 @@ function ComplexReportsDoughnutChart({ title, chart, tooltip, action }) {
           image={chart.images && chart.images[key]}
           title={label}
           key={label}
-          percentage={`${chart.datasets && chart.datasets.data ? chart.datasets.data[key] : 0}%`}
+          percentage={`${
+            chart.datasets && chart.datasets.data ? chart.datasets.data[key] : 0
+          }%`}
           hasBorder={key !== chart.labels.length - 1}
         />
       ))
@@ -61,7 +63,7 @@ function ComplexReportsDoughnutChart({ title, chart, tooltip, action }) {
 
     if (action) {
       template =
-        action.type === "internal" ? (
+        action.type === 'internal' ? (
           <SuiBox mt={3} mb={2}>
             <SuiButton
               component={Link}
@@ -94,18 +96,41 @@ function ComplexReportsDoughnutChart({ title, chart, tooltip, action }) {
   };
 
   return (
-    <Card sx={{ height: "100%" }}>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
+    <Card
+      sx={{
+        height: '100%',
+      }}
+    >
+      <SuiBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
         <SuiTypography variant="h6">{title}</SuiTypography>
         <Tooltip title={tooltip} placement="right">
-          <SuiButton variant="outlined" color="secondary" size="small" circular iconOnly>
+          <SuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            circular
+            iconOnly
+          >
             <Icon>priority_high</Icon>
           </SuiButton>
         </Tooltip>
       </SuiBox>
       <SuiBox position="relative" p={2}>
         <Grid container spacing={2}>
-          <Grid item xs={12} lg={5} sx={{ textAlign: "center" }}>
+          <Grid
+            item
+            xs={12}
+            lg={5}
+            sx={{
+              textAlign: 'center',
+            }}
+          >
             <SuiBox height="100%" display="flex" flexDirection="column">
               <SuiBox height="100%" mt={5} mx={1}>
                 {useMemo(
@@ -129,7 +154,7 @@ function ComplexReportsDoughnutChart({ title, chart, tooltip, action }) {
 
 // Setting default values for the props of ComplexReportsDoughnutChart
 ComplexReportsDoughnutChart.defaultProps = {
-  tooltip: "",
+  tooltip: '',
   action: false,
 };
 
@@ -147,18 +172,18 @@ ComplexReportsDoughnutChart.propTypes = {
   action: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({
-      type: PropTypes.oneOf(["external", "internal"]).isRequired,
+      type: PropTypes.oneOf(['external', 'internal']).isRequired,
       route: PropTypes.string.isRequired,
       label: PropTypes.string.isRequired,
       color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
-        "light",
+        'primary',
+        'secondary',
+        'info',
+        'success',
+        'warning',
+        'error',
+        'dark',
+        'light',
       ]),
     }),
   ]),

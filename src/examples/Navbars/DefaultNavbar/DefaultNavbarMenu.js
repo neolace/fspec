@@ -1,29 +1,29 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Popper from "@mui/material/Popper";
-import Grow from "@mui/material/Grow";
+import Popper from '@mui/material/Popper';
+import Grow from '@mui/material/Grow';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 function DefaultNavbarMenu({ open, close, placement, children, style }) {
   const [anchor, setAnchor] = useState(false);
@@ -37,10 +37,18 @@ function DefaultNavbarMenu({ open, close, placement, children, style }) {
       open={Boolean(anchor) || Boolean(open)}
       placement={placement}
       transition
-      style={{ zIndex: 10, ...style }}
+      style={{
+        zIndex: 10,
+        ...style,
+      }}
     >
       {({ TransitionProps }) => (
-        <Grow {...TransitionProps} sx={{ transformOrigin: "left top" }}>
+        <Grow
+          {...TransitionProps}
+          sx={{
+            transformOrigin: 'left top',
+          }}
+        >
           <SuiBox
             bgColor="white"
             shadow="lg"
@@ -59,17 +67,20 @@ function DefaultNavbarMenu({ open, close, placement, children, style }) {
 
 // Setting default values for the props of DefaultNavbarMenu
 DefaultNavbarMenu.defaultProps = {
-  placement: "bottom-start",
+  placement: 'bottom-start',
   style: {},
 };
 
 // Typechecking props for the DefaultNavbarMenu
 DefaultNavbarMenu.propTypes = {
   open: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
-  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object]).isRequired,
+  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object])
+    .isRequired,
   placement: PropTypes.string,
   children: PropTypes.node.isRequired,
-  style: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  style: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  ),
 };
 
 export default DefaultNavbarMenu;

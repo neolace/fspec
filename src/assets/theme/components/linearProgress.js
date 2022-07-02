@@ -1,24 +1,24 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React base styles
-import borders from "assets/theme/base/borders";
-import colors from "assets/theme/base/colors";
+import borders from 'assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from "assets/theme/functions/pxToRem";
+import pxToRem from 'assets/theme/functions/pxToRem';
 
 const { borderRadius } = borders;
 const { light } = colors;
@@ -28,8 +28,8 @@ const linearProgress = {
     root: {
       height: pxToRem(3),
       borderRadius: borderRadius.md,
-      overflow: "visible",
-      position: "relative",
+      overflow: 'visible',
+      position: 'relative',
     },
 
     colorPrimary: {
@@ -43,9 +43,9 @@ const linearProgress = {
     bar: {
       height: pxToRem(6),
       borderRadius: borderRadius.sm,
-      position: "absolute",
+      position: 'absolute',
       transform: `translate(0, ${pxToRem(-1.5)}) !important`,
-      transition: "width 0.6s ease !important",
+      transition: 'width 0.6s ease !important',
     },
   },
 };

@@ -1,40 +1,40 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import Grid from '@mui/material/Grid';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
-import Table from "examples/Tables/Table";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
+import ComplexStatisticsCard from 'examples/Cards/StatisticsCards/ComplexStatisticsCard';
+import Table from 'examples/Tables/Table';
 
 // Reports page components
-import Reviews from "layouts/pages/users/reports/components/Reviews";
+import Reviews from 'layouts/pages/users/reports/components/Reviews';
 
 // Data
-import tableData from "layouts/pages/users/reports/data/tableData";
+import tableData from 'layouts/pages/users/reports/data/tableData';
 
 function Reports() {
   const { columns, rows } = tableData;
@@ -46,9 +46,11 @@ function Reports() {
   const [likesMenu, setLikesMenu] = useState(null);
 
   // ComplexStatisticsCard dropdown menu handlers
-  const openUsersActiveMenu = (event) => setUsersActiveMenu(event.currentTarget);
+  const openUsersActiveMenu = (event) =>
+    setUsersActiveMenu(event.currentTarget);
   const closeUsersActiveMenu = () => setUsersActiveMenu(null);
-  const openClickEventsMenu = (event) => setClickEventsMenu(event.currentTarget);
+  const openClickEventsMenu = (event) =>
+    setClickEventsMenu(event.currentTarget);
   const closeClickEventsMenu = () => setClickEventsMenu(null);
   const openPurchasesMenu = (event) => setPurchasesMenu(event.currentTarget);
   const closePurchasesMenu = () => setPurchasesMenu(null);
@@ -59,8 +61,14 @@ function Reports() {
   const renderMenu = (state, close) => (
     <Menu
       anchorEl={state}
-      anchorOrigin={{ vertical: "top", horizontal: "left" }}
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'left',
+      }}
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
       open={Boolean(state)}
       onClose={close}
       keepMounted
@@ -82,7 +90,10 @@ function Reports() {
                 <Grid item xs={12} md={6}>
                   <ComplexStatisticsCard
                     icon="account_circle"
-                    count={{ number: 1600, label: "users active" }}
+                    count={{
+                      number: 1600,
+                      label: 'users active',
+                    }}
                     percentage="+55%"
                     dropdown={{
                       action: openUsersActiveMenu,
@@ -93,7 +104,10 @@ function Reports() {
                 <Grid item xs={12} md={6}>
                   <ComplexStatisticsCard
                     icon="touch_app"
-                    count={{ number: 357, label: "click events" }}
+                    count={{
+                      number: 357,
+                      label: 'click events',
+                    }}
                     percentage="+124%"
                     dropdown={{
                       action: openClickEventsMenu,
@@ -104,7 +118,10 @@ function Reports() {
                 <Grid item xs={12} md={6}>
                   <ComplexStatisticsCard
                     icon="shopping_cart"
-                    count={{ number: 2300, label: "purchases" }}
+                    count={{
+                      number: 2300,
+                      label: 'purchases',
+                    }}
                     percentage="+55%"
                     dropdown={{
                       action: openPurchasesMenu,
@@ -115,7 +132,10 @@ function Reports() {
                 <Grid item xs={12} md={6}>
                   <ComplexStatisticsCard
                     icon="thumb_up"
-                    count={{ number: 940, label: "likes" }}
+                    count={{
+                      number: 940,
+                      label: 'likes',
+                    }}
                     percentage="+90%"
                     dropdown={{
                       action: openLikesMenu,

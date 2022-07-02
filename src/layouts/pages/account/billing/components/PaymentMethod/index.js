@@ -1,47 +1,59 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import Icon from '@mui/material/Icon';
+import Tooltip from '@mui/material/Tooltip';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
 
 // Soft UI Dashboard PRO React base styles
-import borders from "assets/theme/base/borders";
+import borders from 'assets/theme/base/borders';
 
 // Images
-import masterCardLogo from "assets/images/logos/mastercard.png";
-import visaLogo from "assets/images/logos/visa.png";
+import masterCardLogo from 'assets/images/logos/mastercard.png';
+import visaLogo from 'assets/images/logos/visa.png';
 
 function PaymentMethod() {
   const { borderWidth, borderColor } = borders;
 
   return (
     <Card id="delete-account">
-      <SuiBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
+      <SuiBox
+        pt={2}
+        px={2}
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+      >
         <SuiTypography variant="h6" fontWeight="medium">
           Payment Method
         </SuiTypography>
         <SuiButton variant="gradient" color="dark">
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
+          <Icon
+            sx={{
+              fontWeight: 'bold',
+            }}
+          >
+            add
+          </Icon>
           &nbsp;add new card
         </SuiButton>
       </SuiBox>
@@ -56,13 +68,24 @@ function PaymentMethod() {
               alignItems="center"
               p={3}
             >
-              <SuiBox component="img" src={masterCardLogo} alt="master card" width="10%" mr={2} />
+              <SuiBox
+                component="img"
+                src={masterCardLogo}
+                alt="master card"
+                width="10%"
+                mr={2}
+              />
               <SuiTypography variant="h6" fontWeight="medium">
                 ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;7852
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
+                  <Icon
+                    sx={{
+                      cursor: 'pointer',
+                    }}
+                    fontSize="small"
+                  >
                     edit
                   </Icon>
                 </Tooltip>
@@ -78,13 +101,24 @@ function PaymentMethod() {
               alignItems="center"
               p={3}
             >
-              <SuiBox component="img" src={visaLogo} alt="master card" width="10%" mr={2} />
+              <SuiBox
+                component="img"
+                src={visaLogo}
+                alt="master card"
+                width="10%"
+                mr={2}
+              />
               <SuiTypography variant="h6" fontWeight="medium">
                 ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;5248
               </SuiTypography>
               <SuiBox ml="auto" lineHeight={0}>
                 <Tooltip title="Edit Card" placement="top">
-                  <Icon sx={{ cursor: "pointer" }} fontSize="small">
+                  <Icon
+                    sx={{
+                      cursor: 'pointer',
+                    }}
+                    fontSize="small"
+                  >
                     edit
                   </Icon>
                 </Tooltip>

@@ -1,50 +1,55 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 // react-router-dom components
-import { useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import Sidenav from "examples/Sidenav";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
+import Sidenav from 'examples/Sidenav';
 
 // Soft UI Dashboard PRO React context
-import { useSoftUIController, setMiniSidenav, setLayout, setTransparentSidenav } from "context";
+import {
+  setLayout,
+  setMiniSidenav,
+  setTransparentSidenav,
+  useSoftUIController,
+} from 'context';
 
 // Soft UI Dashboard PRO React routes
-import routes from "routes";
+import routes from 'routes';
 
 // Custom styles for the BaseLayout
 import {
   baseLayout,
   baseLayoutBackground,
   baseLayoutContent,
-} from "layouts/dashboards/virtual-reality/components/BaseLayout/styles";
+} from 'layouts/dashboards/virtual-reality/components/BaseLayout/styles';
 
 // Images
-import brand from "assets/images/logo-ct.png";
+import brand from 'assets/images/logo-ct.png';
 
 function BaseLayout({ children }) {
   const [controller, dispatch] = useSoftUIController();
@@ -70,7 +75,7 @@ function BaseLayout({ children }) {
 
   // Change the document layout to VR for the VR view
   useEffect(() => {
-    setLayout(dispatch, "vr");
+    setLayout(dispatch, 'vr');
     setTransparentSidenav(dispatch, false);
   }, [pathname]);
 
@@ -80,7 +85,12 @@ function BaseLayout({ children }) {
         <DashboardNavbar />
       </SuiBox>
       <SuiBox sx={baseLayoutBackground}>
-        <SuiBox display={{ xs: "block", lg: "none" }}>
+        <SuiBox
+          display={{
+            xs: 'block',
+            lg: 'none',
+          }}
+        >
           <Sidenav
             brand={brand}
             brandName="Soft UI Dashboard PRO"
@@ -90,7 +100,12 @@ function BaseLayout({ children }) {
           />
         </SuiBox>
         <SuiBox sx={baseLayoutContent}>
-          <SuiBox display={{ xs: "none", lg: "block" }}>
+          <SuiBox
+            display={{
+              xs: 'none',
+              lg: 'block',
+            }}
+          >
             <Sidenav
               color={sidenavColor}
               brand={brand}

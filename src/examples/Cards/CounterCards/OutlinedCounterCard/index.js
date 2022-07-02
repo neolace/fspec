@@ -1,31 +1,31 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-countup components
-import CountUp from "react-countup";
+import CountUp from 'react-countup';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
 
 function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
   const { secondary } = colors;
@@ -38,7 +38,12 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
       textAlign="center"
       py={2}
     >
-      <SuiTypography variant="h6" color={color} fontWeight="medium" textTransform="capitalize">
+      <SuiTypography
+        variant="h6"
+        color={color}
+        fontWeight="medium"
+        textTransform="capitalize"
+      >
         {title}
       </SuiTypography>
       <SuiTypography variant="h4" fontWeight="bold">
@@ -62,14 +67,22 @@ function OutlinedCounterCard({ color, count, title, prefix, suffix }) {
 
 // Setting default values for the props of OutlinedCounterCard
 OutlinedCounterCard.defaultProps = {
-  color: "info",
-  prefix: "",
-  suffix: "",
+  color: 'info',
+  prefix: '',
+  suffix: '',
 };
 
 // Typechecking props for the BlogCard
 OutlinedCounterCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+  ]),
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   title: PropTypes.string.isRequired,
   prefix: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),

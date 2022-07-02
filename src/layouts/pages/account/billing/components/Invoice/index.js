@@ -1,27 +1,27 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function Invoice({ date, id, price, noGutter }) {
   return (
@@ -46,7 +46,15 @@ function Invoice({ date, id, price, noGutter }) {
         <SuiTypography variant="button" fontWeight="regular" color="text">
           {price}
         </SuiTypography>
-        <SuiBox display="flex" alignItems="center" lineHeight={1} ml={3} sx={{ cursor: "pointer" }}>
+        <SuiBox
+          display="flex"
+          alignItems="center"
+          lineHeight={1}
+          ml={3}
+          sx={{
+            cursor: 'pointer',
+          }}
+        >
           <Icon fontSize="small">picture_as_pdf</Icon>
           <SuiTypography variant="button" fontWeight="bold">
             &nbsp;PDF

@@ -1,40 +1,40 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
+import Card from '@mui/material/Card';
+import Switch from '@mui/material/Switch';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiInput from 'components/SuiInput';
+import SuiButton from 'components/SuiButton';
 
 // Authentication layout components
-import BasicLayout from "layouts/authentication/components/BasicLayout";
-import Socials from "layouts/authentication/components/Socials";
-import Separator from "layouts/authentication/components/Separator";
+import BasicLayout from 'layouts/authentication/components/BasicLayout';
+import Socials from 'layouts/authentication/components/Socials';
+import Separator from 'layouts/authentication/components/Separator';
 
 // Images
-import curved9 from "assets/images/curved-images/curved9.jpg";
+import curved9 from 'assets/images/curved-images/curved9.jpg';
 
 function Basic() {
   const [rememberMe, setRememberMe] = useState(false);
@@ -70,7 +70,10 @@ function Basic() {
                 variant="button"
                 fontWeight="regular"
                 onClick={handleSetRememberMe}
-                sx={{ cursor: "pointer", userSelect: "none" }}
+                sx={{
+                  cursor: 'pointer',
+                  userSelect: 'none',
+                }}
               >
                 &nbsp;&nbsp;Remember me
               </SuiTypography>

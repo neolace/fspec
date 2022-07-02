@@ -1,28 +1,28 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Collapse from "@mui/material/Collapse";
-import Icon from "@mui/material/Icon";
+import Collapse from '@mui/material/Collapse';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function DefaultNavbarLink({
   name,
@@ -43,20 +43,32 @@ function DefaultNavbarLink({
         onMouseLeave={children ? undefined : closeHandler}
         display="flex"
         alignItems="baseline"
-        color={light ? "white" : "dark"}
-        sx={{ cursor: "pointer", userSelect: "none" }}
+        color={light ? 'white' : 'dark'}
+        sx={{
+          cursor: 'pointer',
+          userSelect: 'none',
+        }}
       >
         <SuiTypography
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
           color="inherit"
-          sx={{ fontWeight: "100%" }}
+          sx={{
+            fontWeight: '100%',
+          }}
         >
           {name}
         </SuiTypography>
-        <SuiTypography variant="body2" color={light ? "white" : "dark"}>
-          <Icon sx={{ fontWeight: "bold", verticalAlign: "middle" }}>keyboard_arrow_down</Icon>
+        <SuiTypography variant="body2" color={light ? 'white' : 'dark'}>
+          <Icon
+            sx={{
+              fontWeight: 'bold',
+              verticalAlign: 'middle',
+            }}
+          >
+            keyboard_arrow_down
+          </Icon>
         </SuiTypography>
       </SuiBox>
       {children && (

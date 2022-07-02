@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -33,47 +33,133 @@ function Automotive() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox pt={3}>
-        <SuiBox mb={3}>
+      <SuiBox
+        pt={
+          3
+        }>
+        <SuiBox
+          mb={
+            3
+          }>
           <AutomotiveDetails />
         </SuiBox>
-        <SuiBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
+        <SuiBox
+          mb={
+            3
+          }>
+          <Grid
+            container
+            spacing={
+              3
+            }>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <MiniStatisticsCard
                 bgColor="secondary"
-                title={{ text: "today's trip", fontWeight: "medium" }}
+                title={{
+                  text: "today's trip",
+                  fontWeight:
+                    "medium",
+                }}
                 count="145 Km"
-                icon={{ component: "paid" }}
+                icon={{
+                  component:
+                    "paid",
+                }}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <MiniStatisticsCard
                 bgColor="secondary"
-                title={{ text: "battery health", fontWeight: "medium" }}
+                title={{
+                  text: "battery health",
+                  fontWeight:
+                    "medium",
+                }}
                 count="99 %"
-                icon={{ component: "sports_esports" }}
+                icon={{
+                  component:
+                    "sports_esports",
+                }}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <MiniStatisticsCard
                 bgColor="secondary"
-                title={{ text: "average speed", fontWeight: "medium" }}
+                title={{
+                  text: "average speed",
+                  fontWeight:
+                    "medium",
+                }}
                 count="56 Km/h"
-                icon={{ component: "speed" }}
+                icon={{
+                  component:
+                    "speed",
+                }}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <MiniStatisticsCard
                 bgColor="secondary"
-                title={{ text: "music volume", fontWeight: "medium" }}
+                title={{
+                  text: "music volume",
+                  fontWeight:
+                    "medium",
+                }}
                 count="15/100"
-                icon={{ color: "info", component: "music_note" }}
+                icon={{
+                  color:
+                    "info",
+                  component:
+                    "music_note",
+                }}
               />
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={3}>
+        <SuiBox
+          mb={
+            3
+          }>
           <AutomotiveMonitor />
         </SuiBox>
       </SuiBox>

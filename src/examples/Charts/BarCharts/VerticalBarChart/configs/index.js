@@ -1,20 +1,20 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React base styles
-import typography from "assets/theme/base/typography";
+import typography from 'assets/theme/base/typography';
 
 function configs(labels, datasets) {
   return {
@@ -42,11 +42,11 @@ function configs(labels, datasets) {
           ticks: {
             display: true,
             padding: 10,
-            color: "#9ca2b7",
+            color: '#9ca2b7',
             font: {
               size: 11,
               family: typography.fontFamily,
-              style: "normal",
+              style: 'normal',
               lineHeight: 2,
             },
           },
@@ -60,12 +60,12 @@ function configs(labels, datasets) {
           },
           ticks: {
             display: true,
-            color: "#9ca2b7",
+            color: '#9ca2b7',
             padding: 10,
             font: {
               size: 11,
               family: typography.fontFamily,
-              style: "normal",
+              style: 'normal',
               lineHeight: 2,
             },
           },

@@ -1,41 +1,57 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card';
+import Tooltip from '@mui/material/Tooltip';
+import Icon from '@mui/material/Icon';
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
-import SuiBadgeDot from "components/SuiBadgeDot";
-import PieChart from "examples/Charts/PieChart";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
+import SuiBadgeDot from 'components/SuiBadgeDot';
+import PieChart from 'examples/Charts/PieChart';
 
 // Data
-import channelChartData from "layouts/ecommerce/overview/components/ChannelsChart/data";
+import channelChartData from 'layouts/ecommerce/overview/components/ChannelsChart/data';
 
 function ChannelsChart() {
   return (
-    <Card sx={{ overflow: "visible" }}>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
+    <Card
+      sx={{
+        overflow: 'visible',
+      }}
+    >
+      <SuiBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
         <SuiTypography variant="h6">Channels</SuiTypography>
         <Tooltip title="See traffic channels" placement="bottom" arrow>
-          <SuiButton variant="outlined" color="secondary" size="small" circular iconOnly>
+          <SuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            circular
+            iconOnly
+          >
             <Icon>priority_high</Icon>
           </SuiButton>
         </Tooltip>
@@ -57,7 +73,11 @@ function ChannelsChart() {
                 <SuiBadgeDot color="dark" size="sm" badgeContent="Organic" />
               </SuiBox>
               <SuiBox mb={0.5}>
-                <SuiBadgeDot color="secondary" size="sm" badgeContent="Referral" />
+                <SuiBadgeDot
+                  color="secondary"
+                  size="sm"
+                  badgeContent="Referral"
+                />
               </SuiBox>
             </SuiBox>
           </Grid>
@@ -68,16 +88,36 @@ function ChannelsChart() {
         pb={2}
         px={2}
         display="flex"
-        flexDirection={{ xs: "column", sm: "row" }}
+        flexDirection={{
+          xs: 'column',
+          sm: 'row',
+        }}
         mt="auto"
       >
-        <SuiBox width={{ xs: "100%", sm: "60%" }} lineHeight={1}>
+        <SuiBox
+          width={{
+            xs: '100%',
+            sm: '60%',
+          }}
+          lineHeight={1}
+        >
           <SuiTypography variant="button" color="text" fontWeight="regular">
-            More than <strong>1,200,000</strong> developers used Creative Tim&apos;s products and
-            over <strong>700,000</strong> projects were created.
+            More than <strong>1,200,000</strong> developers used Creative
+            Tim&apos;s products and over <strong>700,000</strong> projects were
+            created.
           </SuiTypography>
         </SuiBox>
-        <SuiBox width={{ xs: "100%", sm: "40%" }} textAlign="right" mt={{ xs: 2, sm: "auto" }}>
+        <SuiBox
+          width={{
+            xs: '100%',
+            sm: '40%',
+          }}
+          textAlign="right"
+          mt={{
+            xs: 2,
+            sm: 'auto',
+          }}
+        >
           <SuiButton color="light">read more</SuiButton>
         </SuiBox>
       </SuiBox>

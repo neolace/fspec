@@ -1,35 +1,35 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Card from "@mui/material/Card";
+import Grid from '@mui/material/Grid';
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAlert from "components/SuiAlert";
-import SuiButton from "components/SuiButton";
-import SuiSnackbar from "components/SuiSnackbar";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiAlert from 'components/SuiAlert';
+import SuiButton from 'components/SuiButton';
+import SuiSnackbar from 'components/SuiSnackbar';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
 
 function Notifications() {
   const [successSB, setSuccessSB] = useState(false);
@@ -48,8 +48,14 @@ function Notifications() {
 
   const alertContent = (name) => (
     <SuiTypography variant="body2" color="white">
-      A simple {name} alert with{" "}
-      <SuiTypography component="a" href="#" variant="body2" fontWeight="medium" color="white">
+      A simple {name} alert with{' '}
+      <SuiTypography
+        component="a"
+        href="#"
+        variant="body2"
+        fontWeight="medium"
+        color="white"
+      >
         an example link
       </SuiTypography>
       . Give it a click if you like.
@@ -122,28 +128,28 @@ function Notifications() {
               </SuiBox>
               <SuiBox pt={2} px={2}>
                 <SuiAlert color="primary" dismissible>
-                  {alertContent("primary")}
+                  {alertContent('primary')}
                 </SuiAlert>
                 <SuiAlert color="secondary" dismissible>
-                  {alertContent("secondary")}
+                  {alertContent('secondary')}
                 </SuiAlert>
                 <SuiAlert color="success" dismissible>
-                  {alertContent("success")}
+                  {alertContent('success')}
                 </SuiAlert>
                 <SuiAlert color="error" dismissible>
-                  {alertContent("error")}
+                  {alertContent('error')}
                 </SuiAlert>
                 <SuiAlert color="warning" dismissible>
-                  {alertContent("warning")}
+                  {alertContent('warning')}
                 </SuiAlert>
                 <SuiAlert color="info" dismissible>
-                  {alertContent("info")}
+                  {alertContent('info')}
                 </SuiAlert>
                 <SuiAlert color="light" dismissible>
-                  {alertContent("light")}
+                  {alertContent('light')}
                 </SuiAlert>
                 <SuiAlert color="dark" dismissible>
-                  {alertContent("dark")}
+                  {alertContent('dark')}
                 </SuiAlert>
               </SuiBox>
             </Card>
@@ -153,32 +159,57 @@ function Notifications() {
             <Card>
               <SuiBox p={2} lineHeight={0}>
                 <SuiTypography variant="h5">Notifications</SuiTypography>
-                <SuiTypography variant="button" color="text" fontWeight="regular">
-                  Notifications on this page use Toasts from Bootstrap. Read more details here.
+                <SuiTypography
+                  variant="button"
+                  color="text"
+                  fontWeight="regular"
+                >
+                  Notifications on this page use Toasts from Bootstrap. Read
+                  more details here.
                 </SuiTypography>
               </SuiBox>
               <SuiBox p={2}>
                 <Grid container spacing={3}>
                   <Grid item xs={12} sm={6} lg={3}>
-                    <SuiButton variant="gradient" color="success" onClick={openSuccessSB} fullWidth>
+                    <SuiButton
+                      variant="gradient"
+                      color="success"
+                      onClick={openSuccessSB}
+                      fullWidth
+                    >
                       success notification
                     </SuiButton>
                     {renderSuccessSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
-                    <SuiButton variant="gradient" color="info" onClick={openInfoSB} fullWidth>
+                    <SuiButton
+                      variant="gradient"
+                      color="info"
+                      onClick={openInfoSB}
+                      fullWidth
+                    >
                       info notification
                     </SuiButton>
                     {renderInfoSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
-                    <SuiButton variant="gradient" color="warning" onClick={openWarningSB} fullWidth>
+                    <SuiButton
+                      variant="gradient"
+                      color="warning"
+                      onClick={openWarningSB}
+                      fullWidth
+                    >
                       warning notification
                     </SuiButton>
                     {renderWarningSB}
                   </Grid>
                   <Grid item xs={12} sm={6} lg={3}>
-                    <SuiButton variant="gradient" color="error" onClick={openErrorSB} fullWidth>
+                    <SuiButton
+                      variant="gradient"
+                      color="error"
+                      onClick={openErrorSB}
+                      fullWidth
+                    >
                       error notification
                     </SuiButton>
                     {renderErrorSB}

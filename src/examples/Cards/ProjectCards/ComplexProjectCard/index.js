@@ -1,33 +1,41 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Divider from '@mui/material/Divider';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiAvatar from "components/SuiAvatar";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiAvatar from 'components/SuiAvatar';
 
 // Custom styles for ComplexProjectCard
-function ComplexProjectCard({ color, image, title, dateTime, description, members, dropdown }) {
+function ComplexProjectCard({
+  color,
+  image,
+  title,
+  dateTime,
+  description,
+  members,
+  dropdown,
+}) {
   const renderMembers = members.map((member, key) => {
     const memberKey = `member-${key}`;
 
@@ -39,15 +47,15 @@ function ComplexProjectCard({ color, image, title, dateTime, description, member
         size="xs"
         sx={({ borders: { borderWidth }, palette: { white } }) => ({
           border: `${borderWidth[2]} solid ${white.main}`,
-          cursor: "pointer",
-          position: "relative",
+          cursor: 'pointer',
+          position: 'relative',
 
-          "&:not(:first-of-type)": {
+          '&:not(:first-of-type)': {
             ml: -1.25,
           },
 
-          "&:hover, &:focus": {
-            zIndex: "10",
+          '&:hover, &:focus': {
+            zIndex: '10',
           },
         })}
       />
@@ -64,27 +72,40 @@ function ComplexProjectCard({ color, image, title, dateTime, description, member
             size="xl"
             variant="rounded"
             bgColor={color}
-            sx={{ p: 1 }}
+            sx={{
+              p: 1,
+            }}
           />
           <SuiBox ml={2} lineHeight={0}>
             <SuiBox mb={1} lineHeight={0}>
-              <SuiTypography variant="h6" textTransform="capitalize" fontWeight="medium">
+              <SuiTypography
+                variant="h6"
+                textTransform="capitalize"
+                fontWeight="medium"
+              >
                 {title}
               </SuiTypography>
             </SuiBox>
-            {members.length > -1 ? <SuiBox display="flex">{renderMembers}</SuiBox> : null}
+            {members.length > -1 ? (
+              <SuiBox display="flex">{renderMembers}</SuiBox>
+            ) : null}
           </SuiBox>
           {dropdown && (
             <SuiTypography
               color="secondary"
               onClick={dropdown.action}
               sx={{
-                ml: "auto",
-                alignSelf: "flex-start",
+                ml: 'auto',
+                alignSelf: 'flex-start',
                 py: 1.25,
               }}
             >
-              <Icon fontSize="default" sx={{ cursor: "pointer" }}>
+              <Icon
+                fontSize="default"
+                sx={{
+                  cursor: 'pointer',
+                }}
+              >
                 more_vert
               </Icon>
             </SuiTypography>
@@ -97,13 +118,21 @@ function ComplexProjectCard({ color, image, title, dateTime, description, member
           </SuiTypography>
         </SuiBox>
         <Divider />
-        <SuiBox display="flex" justifyContent="space-between" alignItems="center">
+        <SuiBox
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+        >
           {members.length > -1 ? (
             <SuiBox display="flex" flexDirection="column" lineHeight={0}>
               <SuiTypography variant="button" fontWeight="medium">
                 {members.length}
               </SuiTypography>
-              <SuiTypography variant="button" fontWeight="medium" color="secondary">
+              <SuiTypography
+                variant="button"
+                fontWeight="medium"
+                color="secondary"
+              >
                 Participants
               </SuiTypography>
             </SuiBox>
@@ -113,7 +142,11 @@ function ComplexProjectCard({ color, image, title, dateTime, description, member
               <SuiTypography variant="button" fontWeight="medium">
                 {dateTime}
               </SuiTypography>
-              <SuiTypography variant="button" fontWeight="medium" color="secondary">
+              <SuiTypography
+                variant="button"
+                fontWeight="medium"
+                color="secondary"
+              >
                 Due date
               </SuiTypography>
             </SuiBox>
@@ -126,8 +159,8 @@ function ComplexProjectCard({ color, image, title, dateTime, description, member
 
 // Setting default values for the props of ComplexProjectCard
 ComplexProjectCard.defaultProps = {
-  color: "dark",
-  dateTime: "",
+  color: 'dark',
+  dateTime: '',
   members: [],
   dropdown: false,
 };
@@ -135,14 +168,14 @@ ComplexProjectCard.defaultProps = {
 // Typechecking props for the ProfileInfoCard
 ComplexProjectCard.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-    "light",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+    'light',
   ]),
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

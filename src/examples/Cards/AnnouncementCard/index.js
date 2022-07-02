@@ -1,33 +1,33 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
-import SuiAvatar from "components/SuiAvatar";
-import SuiBadge from "components/SuiBadge";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
+import SuiAvatar from 'components/SuiAvatar';
+import SuiBadge from 'components/SuiBadge';
 
 // Custom styles for AnnouncementCard
 // import style from "examples/Cards/AnnouncementCard/style";
@@ -37,15 +37,34 @@ function AnnouncementCard({ by, badge, title, description, value, action }) {
 
   return (
     <Card>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="flex-start" p={2}>
+      <SuiBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="flex-start"
+        p={2}
+      >
         {by.image || by.name || by.date ? (
           <SuiBox display="flex" mr={2}>
             {by.image ? (
-              <SuiAvatar src={by.image} alt={by.name} size="sm" variant="rounded" />
+              <SuiAvatar
+                src={by.image}
+                alt={by.name}
+                size="sm"
+                variant="rounded"
+              />
             ) : null}
-            <SuiBox display="flex" flexDirection="column" justifyContent="center" ml={1}>
+            <SuiBox
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              ml={1}
+            >
               {by.name ? (
-                <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
+                <SuiTypography
+                  variant="button"
+                  fontWeight="medium"
+                  textTransform="capitalize"
+                >
                   {by.name}
                 </SuiTypography>
               ) : null}
@@ -58,7 +77,12 @@ function AnnouncementCard({ by, badge, title, description, value, action }) {
           </SuiBox>
         ) : null}
         {badge.color && badge.label ? (
-          <SuiBadge color={badge.color} badgeContent={badge.label} size="sm" container />
+          <SuiBadge
+            color={badge.color}
+            badgeContent={badge.label}
+            size="sm"
+            container
+          />
         ) : null}
       </SuiBox>
       <SuiBox pt={0.5} pb={2} px={2}>
@@ -107,8 +131,13 @@ function AnnouncementCard({ by, badge, title, description, value, action }) {
           ) : (
             <SuiBox />
           )}
-          {action.type === "internal" ? (
-            <SuiButton component={Link} to={action.route} variant="outlined" color="dark">
+          {action.type === 'internal' ? (
+            <SuiButton
+              component={Link}
+              to={action.route}
+              variant="outlined"
+              color="dark"
+            >
               {action.label}
             </SuiButton>
           ) : (
@@ -144,7 +173,15 @@ AnnouncementCard.propTypes = {
     date: PropTypes.string,
   }),
   badge: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    color: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+    ]),
     label: PropTypes.string,
   }),
   title: PropTypes.string.isRequired,
@@ -155,7 +192,7 @@ AnnouncementCard.propTypes = {
     method: PropTypes.string,
   }),
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["enternal", "internal"]).isRequired,
+    type: PropTypes.oneOf(['enternal', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

@@ -1,45 +1,49 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import DataTable from "examples/Tables/DataTable";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
+import DataTable from 'examples/Tables/DataTable';
 
 // ProductPage page components
-import ProductImages from "layouts/ecommerce/products/product-page/components/ProductImages";
-import ProductInfo from "layouts/ecommerce/products/product-page/components/ProductInfo";
+import ProductImages from 'layouts/ecommerce/products/product-page/components/ProductImages';
+import ProductInfo from 'layouts/ecommerce/products/product-page/components/ProductInfo';
 
 // Data
-import dataTableData from "layouts/ecommerce/products/product-page/data/dataTableData";
+import dataTableData from 'layouts/ecommerce/products/product-page/data/dataTableData';
 
 function ProductPage() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <SuiBox py={3}>
-        <Card sx={{ overflow: "visible" }}>
+        <Card
+          sx={{
+            overflow: 'visible',
+          }}
+        >
           <SuiBox p={3}>
             <SuiBox mb={3}>
               <SuiTypography variant="h5" fontWeight="medium">
@@ -51,7 +55,14 @@ function ProductPage() {
               <Grid item xs={12} lg={6} xl={5}>
                 <ProductImages />
               </Grid>
-              <Grid item xs={12} lg={5} sx={{ mx: "auto" }}>
+              <Grid
+                item
+                xs={12}
+                lg={5}
+                sx={{
+                  mx: 'auto',
+                }}
+              >
                 <ProductInfo />
               </Grid>
             </Grid>

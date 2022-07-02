@@ -1,37 +1,37 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-routers components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import typography from "assets/theme/base/typography";
+import colors from 'assets/theme/base/colors';
+import typography from 'assets/theme/base/typography';
 
 function ProfileInfoCard({ title, description, info, social, action }) {
   const labels = [];
@@ -43,7 +43,10 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   Object.keys(info).forEach((el) => {
     if (el.match(/[A-Z\s]+/)) {
       const uppercaseLetter = Array.from(el).find((i) => i.match(/[A-Z]+/));
-      const newElement = el.replace(uppercaseLetter, ` ${uppercaseLetter.toLowerCase()}`);
+      const newElement = el.replace(
+        uppercaseLetter,
+        ` ${uppercaseLetter.toLowerCase()}`
+      );
 
       labels.push(newElement);
     } else {
@@ -57,11 +60,16 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   // Render the card info items
   const renderItems = labels.map((label, key) => (
     <SuiBox key={label} display="flex" py={1} pr={2}>
-      <SuiTypography variant="button" fontWeight="bold" textTransform="capitalize">
+      <SuiTypography
+        variant="button"
+        fontWeight="bold"
+        textTransform="capitalize"
+      >
         {label}: &nbsp;
       </SuiTypography>
       <SuiTypography variant="button" fontWeight="regular" color="text">
-        &nbsp;{values[key]}
+        &nbsp;
+        {values[key]}
       </SuiTypography>
     </SuiBox>
   ));
@@ -85,12 +93,31 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   ));
 
   return (
-    <Card sx={{ height: "100%" }}>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
-        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+    <Card
+      sx={{
+        height: '100%',
+      }}
+    >
+      <SuiBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
+        <SuiTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           {title}
         </SuiTypography>
-        <SuiTypography component={Link} to={action.route} variant="body2" color="secondary">
+        <SuiTypography
+          component={Link}
+          to={action.route}
+          variant="body2"
+          color="secondary"
+        >
           <Tooltip title={action.tooltip} placement="top">
             <Icon>edit</Icon>
           </Tooltip>
@@ -108,7 +135,11 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         <SuiBox>
           {renderItems}
           <SuiBox display="flex" py={1} pr={2}>
-            <SuiTypography variant="button" fontWeight="bold" textTransform="capitalize">
+            <SuiTypography
+              variant="button"
+              fontWeight="bold"
+              textTransform="capitalize"
+            >
               social: &nbsp;
             </SuiTypography>
             {renderSocial}

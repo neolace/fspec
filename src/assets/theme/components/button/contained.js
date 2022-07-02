@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React Base Styles
 import colors from "assets/theme/base/colors";
@@ -21,86 +21,159 @@ import boxShadows from "assets/theme/base/boxShadows";
 // Soft UI Dashboard PRO React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-const { white, text, info, secondary } = colors;
-const { size } = typography;
-const { buttonBoxShadow } = boxShadows;
+const {
+  white,
+  text,
+  info,
+  secondary,
+} =
+  colors;
+const {
+  size,
+} =
+  typography;
+const {
+  buttonBoxShadow,
+} =
+  boxShadows;
 
-const contained = {
-  base: {
-    backgroundColor: white.main,
-    minHeight: pxToRem(40),
-    color: text.main,
-    boxShadow: buttonBoxShadow.main,
-    padding: `${pxToRem(12)} ${pxToRem(24)}`,
+const contained =
+  {
+    base: {
+      backgroundColor:
+        white.main,
+      minHeight:
+        pxToRem(
+          40
+        ),
+      color:
+        text.main,
+      boxShadow:
+        buttonBoxShadow.main,
+      padding: `${pxToRem(
+        12
+      )} ${pxToRem(
+        24
+      )}`,
 
-    "&:hover": {
-      backgroundColor: white.main,
-      boxShadow: buttonBoxShadow.stateOf,
+      "&:hover":
+        {
+          backgroundColor:
+            white.main,
+          boxShadow:
+            buttonBoxShadow.stateOf,
+        },
+
+      "&:focus":
+        {
+          boxShadow:
+            buttonBoxShadow.stateOf,
+        },
+
+      "&:active, &:active:focus, &:active:hover":
+        {
+          opacity: 0.85,
+          boxShadow:
+            buttonBoxShadow.stateOf,
+        },
+
+      "&:disabled":
+        {
+          boxShadow:
+            buttonBoxShadow.main,
+        },
+
+      "& .material-icon, .material-icons-round, svg":
+        {
+          fontSize: `${pxToRem(
+            16
+          )} !important`,
+        },
     },
 
-    "&:focus": {
-      boxShadow: buttonBoxShadow.stateOf,
-    },
+    small:
+      {
+        minHeight:
+          pxToRem(
+            32
+          ),
+        padding: `${pxToRem(
+          8
+        )} ${pxToRem(
+          32
+        )}`,
+        fontSize:
+          size.xs,
 
-    "&:active, &:active:focus, &:active:hover": {
-      opacity: 0.85,
-      boxShadow: buttonBoxShadow.stateOf,
-    },
+        "& .material-icon, .material-icons-round, svg":
+          {
+            fontSize: `${pxToRem(
+              12
+            )} !important`,
+          },
+      },
 
-    "&:disabled": {
-      boxShadow: buttonBoxShadow.main,
-    },
+    large:
+      {
+        minHeight:
+          pxToRem(
+            47
+          ),
+        padding: `${pxToRem(
+          14
+        )} ${pxToRem(
+          64
+        )}`,
+        fontSize:
+          size.sm,
 
-    "& .material-icon, .material-icons-round, svg": {
-      fontSize: `${pxToRem(16)} !important`,
-    },
-  },
+        "& .material-icon, .material-icons-round, svg":
+          {
+            fontSize: `${pxToRem(
+              22
+            )} !important`,
+          },
+      },
 
-  small: {
-    minHeight: pxToRem(32),
-    padding: `${pxToRem(8)} ${pxToRem(32)}`,
-    fontSize: size.xs,
+    primary:
+      {
+        backgroundColor:
+          info.main,
 
-    "& .material-icon, .material-icons-round, svg": {
-      fontSize: `${pxToRem(12)} !important`,
-    },
-  },
+        "&:hover":
+          {
+            backgroundColor:
+              info.main,
+          },
 
-  large: {
-    minHeight: pxToRem(47),
-    padding: `${pxToRem(14)} ${pxToRem(64)}`,
-    fontSize: size.sm,
+        "&:focus:not(:hover)":
+          {
+            backgroundColor:
+              info.focus,
+            boxShadow:
+              buttonBoxShadow.stateOfNotHover,
+          },
+      },
 
-    "& .material-icon, .material-icons-round, svg": {
-      fontSize: `${pxToRem(22)} !important`,
-    },
-  },
+    secondary:
+      {
+        backgroundColor:
+          secondary.main,
 
-  primary: {
-    backgroundColor: info.main,
+        "&:hover":
+          {
+            backgroundColor:
+              secondary.main,
+          },
 
-    "&:hover": {
-      backgroundColor: info.main,
-    },
-
-    "&:focus:not(:hover)": {
-      backgroundColor: info.focus,
-      boxShadow: buttonBoxShadow.stateOfNotHover,
-    },
-  },
-
-  secondary: {
-    backgroundColor: secondary.main,
-
-    "&:hover": {
-      backgroundColor: secondary.main,
-    },
-
-    "&:focus:not(:hover)": {
-      backgroundColor: secondary.focus,
-      boxShadow: buttonBoxShadow.stateOfNotHover,
-    },
-  },
-};
+        "&:focus:not(:hover)":
+          {
+            backgroundColor:
+              secondary.focus,
+            boxShadow:
+              buttonBoxShadow.stateOfNotHover,
+          },
+      },
+  };
 
 export default contained;

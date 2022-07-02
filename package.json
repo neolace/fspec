@@ -1,9 +1,9 @@
 {
-  "name": "factory-spec-v1.0.0",
+  "name": "soft-ui-dashboard-pro-react",
   "version": "3.1.0",
-  "author": "Tertius Geldenhuys",
-  "license": "SEE LICENSE IN TGA",
-  "description": "FactorySpec - Focus on the edge",
+  "author": "Creative Tim",
+  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
+  "description": "React version of Soft UI Dashboard PRO by Creative Tim",
   "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-pro-react/#/dashboards/default",
   "bugs": {
     "url": "https://github.com/creativetimofficial/ct-soft-ui-dashboard-pro-react/issues"
@@ -13,11 +13,13 @@
     "url": "git+https://github.com/creativetimofficial/ct-soft-ui-dashboard-pro-react.git"
   },
   "engines": {
-    "node": "18",
+    "node": "14 || 15 || 16",
     "npm": ">=6"
   },
   "dependencies": {
     "@asseinfo/react-kanban": "2.2.0",
+    "@babel/core": "7.0.0",
+    "@babel/plugin-syntax-flow": "7.14.5",
     "@emotion/cache": "11.7.1",
     "@emotion/react": "11.8.1",
     "@emotion/styled": "11.8.1",
@@ -37,13 +39,12 @@
     "chart.js": "3.4.1",
     "chroma-js": "2.4.2",
     "dropzone": "5.9.3",
-    "eslint": "5.12.0",
     "flatpickr": "4.6.9",
     "formik": "2.2.9",
     "html-react-parser": "1.4.8",
     "leaflet": "1.7.1",
     "prop-types": "15.8.1",
-    "react": "17.0.2",
+    "react": "17.0.0",
     "react-chartjs-2": "3.0.4",
     "react-circular-slider-svg": "0.1.5",
     "react-countup": "6.1.1",
@@ -52,23 +53,23 @@
     "react-github-btn": "1.2.1",
     "react-images-viewer": "1.7.1",
     "react-leaflet": "3.2.5",
-    "react-quill": "^0.0.2",
+    "react-quill": "1.3.5",
     "react-router-dom": "6.2.1",
-    "react-scripts": "^2.1.3",
+    "react-scripts": "5.0.0",
     "react-select": "5.2.2",
     "react-table": "7.7.0",
     "stylis": "4.0.13",
     "stylis-plugin-rtl": "2.1.1",
     "sweetalert2": "11.4.4",
-    "three": "^0.142.0",
+    "three": "0.121.1",
+    "typescript": "2.8",
     "uuid": "8.3.2",
     "vanilla-tilt": "1.7.2",
     "web-vitals": "2.1.4",
-    "yarn": "^1.22.19",
     "yup": "0.32.11"
   },
   "scripts": {
-    "start": "react-scripts start  --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -94,6 +95,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "8.10.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.4.0",
     "eslint-config-react-app": "^7.0.0",

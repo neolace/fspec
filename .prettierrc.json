@@ -1,21 +1,8 @@
 {
-  "printWidth": 0,
+  "printWidth": 100,
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": true,
   "singleQuote": false,
-  "endOfLine": "auto",
-    "jsxSingleQuote": false,
-    "jsxBracketSameLine": true,
-    "arrowParens": "always",
-    "overrides": [
-      {
-        "files": "*.json",
-        "options": {
-          "tabWidth": 4,
-          "singleQuote": false
-        }
-      }
-    ],
-    "htmlWhitespaceSensitivity": "css"
+  "endOfLine": "auto"
 }

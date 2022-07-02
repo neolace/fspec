@@ -1,28 +1,26 @@
-
-
-import { useRef, useEffect, useState, useMemo } from "react";
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-chartjs-2 components
-import { Line } from "react-chartjs-2";
+import { Line } from 'react-chartjs-2';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React helper functions
-import gradientChartLine from "assets/theme/functions/gradientChartLine";
+import gradientChartLine from 'assets/theme/functions/gradientChartLine';
 
 // Chart configurations
-import configs from "layouts/pages/widgets/components/Chart/configs";
+import configs from 'layouts/pages/widgets/components/Chart/configs';
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 function Chart({ title, count, percentage, chart }) {
   const chartRef = useRef(null);
@@ -51,19 +49,34 @@ function Chart({ title, count, percentage, chart }) {
   return (
     <Card>
       <SuiBox p={2}>
-        <SuiTypography variant="button" textTransform="capitalize" fontWeight="medium" color="text">
+        <SuiTypography
+          variant="button"
+          textTransform="capitalize"
+          fontWeight="medium"
+          color="text"
+        >
           {title}
         </SuiTypography>
         <SuiTypography variant="h5" fontWeight="bold" color="dark">
-          {count}&nbsp;
-          <SuiTypography variant="button" fontWeight="bold" color={percentage.color}>
+          {count}
+          &nbsp;
+          <SuiTypography
+            variant="button"
+            fontWeight="bold"
+            color={percentage.color}
+          >
             {percentage.label}
           </SuiTypography>
         </SuiTypography>
       </SuiBox>
       {useMemo(
         () => (
-          <SuiBox ref={chartRef} sx={{ height: "6.25rem" }}>
+          <SuiBox
+            ref={chartRef}
+            sx={{
+              height: '6.25rem',
+            }}
+          >
             <Line data={data} options={options} />
           </SuiBox>
         ),
@@ -78,7 +91,15 @@ Chart.propTypes = {
   title: PropTypes.string.isRequired,
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   percentage: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    color: PropTypes.oneOf([
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+    ]),
     label: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   }).isRequired,
   chart: PropTypes.objectOf(PropTypes.array).isRequired,

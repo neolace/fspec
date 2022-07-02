@@ -1,20 +1,20 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 const { gradients, dark } = colors;
 
@@ -25,10 +25,10 @@ function configs(labels, datasets) {
     datasets.backgroundColors.forEach((color) => {
       if (gradients[color]) {
         if (
-          color === "secondary" ||
-          color === "primary" ||
-          color === "dark" ||
-          color === "warning"
+          color === 'secondary' ||
+          color === 'primary' ||
+          color === 'dark' ||
+          color === 'warning'
         ) {
           backgroundColors.push(gradients[color].state);
         } else {
@@ -70,7 +70,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: "index",
+        mode: 'index',
       },
       scales: {
         y: {

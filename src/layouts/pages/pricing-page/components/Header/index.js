@@ -1,39 +1,39 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import AppBar from "@mui/material/AppBar";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
+import Grid from '@mui/material/Grid';
+import AppBar from '@mui/material/AppBar';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
 
 // Soft UI Dashboard PRO React page layout routes
-import pageRoutes from "page.routes";
+import pageRoutes from 'page.routes';
 
 // Images
-import waves from "assets/images/shapes/waves-white.svg";
+import waves from 'assets/images/shapes/waves-white.svg';
 
 function Header({ tabValue, tabHandler }) {
   return (
@@ -41,10 +41,10 @@ function Header({ tabValue, tabHandler }) {
       <DefaultNavbar
         routes={pageRoutes}
         action={{
-          type: "external",
-          route: "https://creative-tim.com/product/soft-ui-dashboard-pro-react",
-          label: "buy now",
-          color: "dark",
+          type: 'external',
+          route: 'https://creative-tim.com/product/soft-ui-dashboard-pro-react',
+          label: 'buy now',
+          color: 'dark',
         }}
         transparent
         light
@@ -68,7 +68,14 @@ function Header({ tabValue, tabHandler }) {
           position="absolute"
           top={0}
         />
-        <Grid container spacing={3} justifyContent="center" sx={{ textAlign: "center" }}>
+        <Grid
+          container
+          spacing={3}
+          justifyContent="center"
+          sx={{
+            textAlign: 'center',
+          }}
+        >
           <Grid item xs={10} lg={5}>
             <SuiBox mb={1}>
               <SuiTypography variant="h3" color="white" fontWeight="bold">
@@ -77,10 +84,21 @@ function Header({ tabValue, tabHandler }) {
             </SuiBox>
             <SuiBox mb={2}>
               <SuiTypography variant="body2" color="white" fontWeight="regular">
-                You have Free Unlimited Updates and Premium Support on each package.
+                You have Free Unlimited Updates and Premium Support on each
+                package.
               </SuiTypography>
             </SuiBox>
-            <Grid container item xs={12} sm={10} md={8} lg={7} sx={{ mx: "auto" }}>
+            <Grid
+              container
+              item
+              xs={12}
+              sm={10}
+              md={8}
+              lg={7}
+              sx={{
+                mx: 'auto',
+              }}
+            >
               <SuiBox width="100%" mt={6}>
                 <AppBar position="static">
                   <Tabs value={tabValue} onChange={tabHandler}>

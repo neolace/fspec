@@ -1,28 +1,28 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function WeatherCard({ color, title, weather, icon }) {
   return (
@@ -36,10 +36,16 @@ function WeatherCard({ color, title, weather, icon }) {
         variant="gradient"
       >
         <Grid container spacing={2} alignItems="center">
-          <Grid item xs={8} sx={{ lineHeight: 0 }}>
+          <Grid
+            item
+            xs={8}
+            sx={{
+              lineHeight: 0,
+            }}
+          >
             <SuiTypography
               variant="button"
-              color={color === "light" ? "dark" : "white"}
+              color={color === 'light' ? 'dark' : 'white'}
               textTransform="capitalize"
               fontWeight="medium"
               opacity={0.7}
@@ -48,10 +54,11 @@ function WeatherCard({ color, title, weather, icon }) {
             </SuiTypography>
             <SuiTypography
               variant="h5"
-              color={color === "light" ? "dark" : "white"}
+              color={color === 'light' ? 'dark' : 'white'}
               fontWeight="bold"
             >
-              {weather.location} - {weather.degree}&deg;C
+              {weather.location} - {weather.degree}
+              &deg;C
             </SuiTypography>
           </Grid>
           <Grid item xs={4}>
@@ -66,7 +73,7 @@ function WeatherCard({ color, title, weather, icon }) {
               <SuiBox ml="auto" mr={1}>
                 <SuiTypography
                   variant="h5"
-                  color={color === "light" ? "dark" : "white"}
+                  color={color === 'light' ? 'dark' : 'white'}
                   textTransform="capitalize"
                 >
                   {icon.text}
@@ -82,16 +89,25 @@ function WeatherCard({ color, title, weather, icon }) {
 
 // Setting default values for the props of WeatherCard
 WeatherCard.defaultProps = {
-  color: "info",
+  color: 'info',
 };
 
 // Typechecking props for the WeatherCard
 WeatherCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+  ]),
   title: PropTypes.string.isRequired,
   weather: PropTypes.shape({
     location: PropTypes.string.isRequired,
-    degree: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    degree: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      .isRequired,
   }).isRequired,
   icon: PropTypes.shape({
     text: PropTypes.string.isRequired,

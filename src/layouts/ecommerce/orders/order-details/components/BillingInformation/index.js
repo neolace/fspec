@@ -1,21 +1,21 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function BillingInformation() {
   return (
@@ -33,16 +33,29 @@ function BillingInformation() {
         p={3}
         mt={2}
       >
-        <SuiBox width="100%" display="flex" flexDirection="column" lineHeight={1}>
+        <SuiBox
+          width="100%"
+          display="flex"
+          flexDirection="column"
+          lineHeight={1}
+        >
           <SuiBox mb={2}>
-            <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
+            <SuiTypography
+              variant="button"
+              fontWeight="medium"
+              textTransform="capitalize"
+            >
               Oliver Liam
             </SuiTypography>
           </SuiBox>
           <SuiBox mb={1} lineHeight={0}>
             <SuiTypography variant="caption" color="text">
               Company Name:&nbsp;&nbsp;&nbsp;
-              <SuiTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+              <SuiTypography
+                variant="caption"
+                fontWeight="medium"
+                textTransform="capitalize"
+              >
                 Viking Burrito
               </SuiTypography>
             </SuiTypography>

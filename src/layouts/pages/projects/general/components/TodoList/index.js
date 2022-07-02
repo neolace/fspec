@@ -12,7 +12,13 @@ import Todo from "layouts/pages/projects/general/components/Todo";
 function TodoList() {
   return (
     <Card>
-      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
+      <SuiBox
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        pt={2}
+        px={2}
+      >
         <SuiTypography variant="h6" fontWeight="medium">
           To do list
         </SuiTypography>
@@ -22,7 +28,13 @@ function TodoList() {
       </SuiBox>
       <Divider />
       <SuiBox pb={2} px={2}>
-        <SuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
+        <SuiBox
+          component="ul"
+          display="flex"
+          flexDirection="column"
+          p={0}
+          m={0}
+        >
           <Todo
             title="Check status"
             date="24 March 2019"
@@ -48,7 +60,7 @@ function TodoList() {
           />
           <Todo
             color="success"
-            title="IOS App development"
+            title="IOS Fspec development"
             date="26 March 2019"
             project="88s1_349DA2sa"
             company="Facebook"

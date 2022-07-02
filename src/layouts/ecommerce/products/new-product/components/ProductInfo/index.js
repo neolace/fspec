@@ -1,35 +1,35 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiEditor from "components/SuiEditor";
-import SuiSelect from "components/SuiSelect";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiEditor from 'components/SuiEditor';
+import SuiSelect from 'components/SuiSelect';
 
 // NewProduct page components
-import FormField from "layouts/ecommerce/products/new-product/components/FormField";
+import FormField from 'layouts/ecommerce/products/new-product/components/FormField';
 
 function ProductInfo() {
   const [editorValue, setEditorValue] = useState(
-    "<p>Some initial <strong>bold</strong> text</p><br><br><br>"
+    '<p>Some initial <strong>bold</strong> text</p><br><br><br>'
   );
 
   return (
@@ -49,9 +49,17 @@ function ProductInfo() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography component="label" variant="caption" fontWeight="bold">
+              <SuiTypography
+                component="label"
+                variant="caption"
+                fontWeight="bold"
+              >
                 Description&nbsp;&nbsp;
-                <SuiTypography variant="caption" fontWeight="regular" color="text">
+                <SuiTypography
+                  variant="caption"
+                  fontWeight="regular"
+                  color="text"
+                >
                   (optional)
                 </SuiTypography>
               </SuiTypography>
@@ -71,13 +79,31 @@ function ProductInfo() {
                 </SuiTypography>
               </SuiBox>
               <SuiSelect
-                defaultValue={{ value: "clothing", label: "Clothing" }}
+                defaultValue={{
+                  value: 'clothing',
+                  label: 'Clothing',
+                }}
                 options={[
-                  { value: "clothing", label: "Clothing" },
-                  { value: "electronics", label: "Electronics" },
-                  { value: "furniture", label: "Furniture" },
-                  { value: "others", label: "Others" },
-                  { value: "real estate", label: "Real Estate" },
+                  {
+                    value: 'clothing',
+                    label: 'Clothing',
+                  },
+                  {
+                    value: 'electronics',
+                    label: 'Electronics',
+                  },
+                  {
+                    value: 'furniture',
+                    label: 'Furniture',
+                  },
+                  {
+                    value: 'others',
+                    label: 'Others',
+                  },
+                  {
+                    value: 'real estate',
+                    label: 'Real Estate',
+                  },
                 ]}
               />
             </SuiBox>
@@ -92,13 +118,31 @@ function ProductInfo() {
               </SuiTypography>
             </SuiBox>
             <SuiSelect
-              defaultValue={{ value: "medium", label: "Medium" }}
+              defaultValue={{
+                value: 'medium',
+                label: 'Medium',
+              }}
               options={[
-                { value: "extra large", label: "Extra Large" },
-                { value: "extra small", label: "Extra Small" },
-                { value: "large", label: "Large" },
-                { value: "medium", label: "Medium" },
-                { value: "small", label: "Small" },
+                {
+                  value: 'extra large',
+                  label: 'Extra Large',
+                },
+                {
+                  value: 'extra small',
+                  label: 'Extra Small',
+                },
+                {
+                  value: 'large',
+                  label: 'Large',
+                },
+                {
+                  value: 'medium',
+                  label: 'Medium',
+                },
+                {
+                  value: 'small',
+                  label: 'Small',
+                },
               ]}
             />
           </Grid>

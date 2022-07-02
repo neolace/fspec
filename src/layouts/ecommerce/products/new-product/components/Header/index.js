@@ -1,19 +1,19 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -54,9 +54,9 @@ function Header() {
         : setTabsOrientation("horizontal");
     }
 
-    /** 
+    /**
      The event listener that's calling the handleTabsOrientation function when resizing the window.
-    */
+     */
     window.addEventListener("resize", handleTabsOrientation);
 
     // Call the handleTabsOrientation function to set the state with the initial value.
@@ -78,7 +78,10 @@ function Header() {
         minHeight="18.75rem"
         borderRadius="xl"
         sx={{
-          backgroundImage: ({ functions: { rgba, linearGradient }, palette: { gradients } }) =>
+          backgroundImage: ({
+            functions: { rgba, linearGradient },
+            palette: { gradients },
+          }) =>
             `${linearGradient(
               rgba(gradients.info.main, 0.6),
               rgba(gradients.info.state, 0.6)
@@ -91,7 +94,8 @@ function Header() {
       <Card
         sx={{
           backdropFilter: `saturate(200%) blur(30px)`,
-          backgroundColor: ({ functions: { rgba }, palette: { white } }) => rgba(white.main, 0.8),
+          backgroundColor: ({ functions: { rgba }, palette: { white } }) =>
+            rgba(white.main, 0.8),
           boxShadow: ({ boxShadows: { navbarBoxShadow } }) => navbarBoxShadow,
           position: "relative",
           mt: -8,
@@ -120,15 +124,25 @@ function Header() {
               </SuiTypography>
             </SuiBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={4} sx={{ ml: "auto" }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={4}
+            sx={{
+              ml: "auto",
+            }}
+          >
             <AppBar position="static">
               <Tabs
                 orientation={tabsOrientation}
                 value={tabValue}
                 onChange={handleSetTabValue}
-                sx={{ backgroundColor: "transparent" }}
+                sx={{
+                  backgroundColor: "transparent",
+                }}
               >
-                <Tab label="App" icon={<Cube />} />
+                <Tab label="Fspec" icon={<Cube />} />
                 <Tab label="Message" icon={<Document />} />
                 <Tab label="Settings" icon={<Settings />} />
               </Tabs>

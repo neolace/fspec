@@ -1,22 +1,22 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import { styled } from "@mui/material/styles";
+import { styled } from '@mui/material/styles';
 
-export default styled("span")(({ theme }) => {
+export default styled('span')(({ theme }) => {
   const { palette, typography, functions, transitions } = theme;
 
   const { white } = palette;
@@ -30,14 +30,14 @@ export default styled("span")(({ theme }) => {
     marginLeft: pxToRem(40),
     fontWeight: fontWeightMedium,
     opacity: 0.5,
-    cursor: "pointer",
+    cursor: 'pointer',
     lineHeight: 0,
-    transition: transitions.create("opacity", {
+    transition: transitions.create('opacity', {
       easing: transitions.easing.easeInOut,
       duration: transitions.duration.shorter,
     }),
 
-    "&:hover": {
+    '&:hover': {
       opacity: 1,
     },
   };

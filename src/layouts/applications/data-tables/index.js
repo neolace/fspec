@@ -1,33 +1,33 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import DataTable from "examples/Tables/DataTable";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
+import DataTable from 'examples/Tables/DataTable';
 
 // Data
-import dataTableData from "layouts/applications/data-tables/data/dataTableData";
+import dataTableData from 'layouts/applications/data-tables/data/dataTableData';
 
 function DataTables() {
   return (
@@ -41,7 +41,8 @@ function DataTables() {
                 Datatable Simple
               </SuiTypography>
               <SuiTypography variant="button" fontWeight="regular" color="text">
-                A lightweight, extendable, dependency-free javascript HTML table plugin.
+                A lightweight, extendable, dependency-free javascript HTML table
+                plugin.
               </SuiTypography>
             </SuiBox>
             <DataTable table={dataTableData} />
@@ -53,7 +54,8 @@ function DataTables() {
               Datatable Search
             </SuiTypography>
             <SuiTypography variant="button" fontWeight="regular" color="text">
-              A lightweight, extendable, dependency-free javascript HTML table plugin.
+              A lightweight, extendable, dependency-free javascript HTML table
+              plugin.
             </SuiTypography>
           </SuiBox>
           <DataTable table={dataTableData} canSearch />

@@ -1,29 +1,29 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiInput from 'components/SuiInput';
+import SuiButton from 'components/SuiButton';
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'layouts/authentication/components/CoverLayout';
 
 // Images
-import curved6 from "assets/images/curved-images/curved6.jpg";
+import curved6 from 'assets/images/curved-images/curved6.jpg';
 
 function Cover() {
   return (
@@ -36,7 +36,11 @@ function Cover() {
       <SuiBox component="form" role="form">
         <SuiBox mb={2} lineHeight={1.25}>
           <SuiBox mb={1} ml={0.5}>
-            <SuiTypography component="label" variant="caption" fontWeight="bold">
+            <SuiTypography
+              component="label"
+              variant="caption"
+              fontWeight="bold"
+            >
               Email
             </SuiTypography>
           </SuiBox>

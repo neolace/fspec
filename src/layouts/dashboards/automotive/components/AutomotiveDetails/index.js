@@ -1,31 +1,31 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
 
 // Images
-import mercedesEQC from "assets/images/mercedes-eqc.png";
-import wavesWhite from "assets/images/shapes/waves-white.svg";
+import mercedesEQC from 'assets/images/mercedes-eqc.png';
+import wavesWhite from 'assets/images/shapes/waves-white.svg';
 
 function AutomotiveDetails() {
   return (
@@ -33,7 +33,10 @@ function AutomotiveDetails() {
       position="relative"
       bgColor="secondary"
       py={3}
-      px={{ xs: 3, sm: 6 }}
+      px={{
+        xs: 3,
+        sm: 6,
+      }}
       mt={3}
       borderRadius="xl"
       variant="gradient"
@@ -50,30 +53,67 @@ function AutomotiveDetails() {
       />
       <Grid container alignItems="center" position="relative">
         <Grid item xs={12} lg={3}>
-          <SuiBox px={{ xs: 0, md: 1.5 }}>
-            <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.9}>
+          <SuiBox
+            px={{
+              xs: 0,
+              md: 1.5,
+            }}
+          >
+            <SuiTypography
+              variant="h4"
+              color="white"
+              textTransform="capitalize"
+              opacity={0.9}
+            >
               since last charge
             </SuiTypography>
             <Divider light />
             <SuiBox display="flex">
               <SuiBox>
-                <SuiTypography variant="h6" color="white" textTransform="capitalize" opacity={0.7}>
+                <SuiTypography
+                  variant="h6"
+                  color="white"
+                  textTransform="capitalize"
+                  opacity={0.7}
+                >
                   distance
                 </SuiTypography>
                 <SuiTypography variant="h3" fontWeight="bold" color="white">
-                  145{" "}
-                  <SuiTypography variant="button" color="white" verticalAlign="top">
+                  145{' '}
+                  <SuiTypography
+                    variant="button"
+                    color="white"
+                    verticalAlign="top"
+                  >
                     Km
                   </SuiTypography>
                 </SuiTypography>
               </SuiBox>
-              <SuiBox ml={{ xs: 3, md: 8 }} mb={{ xs: 1, md: 0 }}>
-                <SuiTypography variant="h6" color="white" textTransform="capitalize" opacity={0.7}>
+              <SuiBox
+                ml={{
+                  xs: 3,
+                  md: 8,
+                }}
+                mb={{
+                  xs: 1,
+                  md: 0,
+                }}
+              >
+                <SuiTypography
+                  variant="h6"
+                  color="white"
+                  textTransform="capitalize"
+                  opacity={0.7}
+                >
                   average energy
                 </SuiTypography>
                 <SuiTypography variant="h3" fontWeight="bold" color="white">
-                  300{" "}
-                  <SuiTypography variant="button" color="white" verticalAlign="top">
+                  300{' '}
+                  <SuiTypography
+                    variant="button"
+                    color="white"
+                    verticalAlign="top"
+                  >
                     Kw
                   </SuiTypography>
                 </SuiTypography>
@@ -87,17 +127,31 @@ function AutomotiveDetails() {
               component="img"
               src={mercedesEQC}
               alt="car image"
-              display={{ xs: "none", md: "block" }}
+              display={{
+                xs: 'none',
+                md: 'block',
+              }}
               width="auto"
-              mt={{ xs: 0, lg: -16 }}
+              mt={{
+                xs: 0,
+                lg: -16,
+              }}
             />
             <SuiBox
               display="flex"
-              justifyContent={{ xs: "flex-start", md: "center" }}
+              justifyContent={{
+                xs: 'flex-start',
+                md: 'center',
+              }}
               alignItems="center"
               mb={1}
             >
-              <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.7}>
+              <SuiTypography
+                variant="h4"
+                color="white"
+                textTransform="capitalize"
+                opacity={0.7}
+              >
                 available range
               </SuiTypography>
               <SuiBox ml={1}>
@@ -117,8 +171,18 @@ function AutomotiveDetails() {
           </SuiBox>
         </Grid>
         <Grid item xs={12} lg={3}>
-          <SuiBox px={{ xs: 0, md: 1.5 }}>
-            <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.9}>
+          <SuiBox
+            px={{
+              xs: 0,
+              md: 1.5,
+            }}
+          >
+            <SuiTypography
+              variant="h4"
+              color="white"
+              textTransform="capitalize"
+              opacity={0.9}
+            >
               nearest charger
             </SuiTypography>
             <Divider light />

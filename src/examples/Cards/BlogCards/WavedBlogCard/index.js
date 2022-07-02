@@ -1,53 +1,53 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
+import MuiLink from '@mui/material/Link';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Custom styles for the WavedBlogCard
-import WavedBlogCardWavesRoot from "examples/Cards/BlogCards/WavedBlogCard/WavedBlogCardWavesRoot";
+import WavedBlogCardWavesRoot from 'examples/Cards/BlogCards/WavedBlogCard/WavedBlogCardWavesRoot';
 
 function WavedBlogCard({ image, title, description, action }) {
   const cardActionStyles = {
-    display: "inline-block",
-    textDecoration: "none",
+    display: 'inline-block',
+    textDecoration: 'none',
 
-    "& .MuiTypography-root": {
-      display: "flex",
-      alignItems: "center",
+    '& .MuiTypography-root': {
+      display: 'flex',
+      alignItems: 'center',
     },
 
-    "& .material-icons, .material-icons-round,": {
-      fontSize: "1.125rem",
+    '& .material-icons, .material-icons-round,': {
+      fontSize: '1.125rem',
       transform: `translateX(2px)`,
-      transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+      transition: 'transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)',
     },
 
-    "&:hover .material-icons, &:focus .material-icons, &:hover .material-icons-round, &:focus .material-icons-round":
+    '&:hover .material-icons, &:focus .material-icons, &:hover .material-icons-round, &:focus .material-icons-round':
       {
         transform: `translateX(6px)`,
       },
@@ -56,7 +56,13 @@ function WavedBlogCard({ image, title, description, action }) {
   return (
     <Card>
       <SuiBox component="img" src={image} alt={title} width="100%" />
-      <SuiBox position="relative" height="3.125rem" overflow="hidden" zIndex={2} mt={-6.25}>
+      <SuiBox
+        position="relative"
+        height="3.125rem"
+        overflow="hidden"
+        zIndex={2}
+        mt={-6.25}
+      >
         <SuiBox position="absolute" width="100%" top={0} zIndex={1}>
           <SuiBox
             component="svg"
@@ -79,12 +85,42 @@ function WavedBlogCard({ image, title, description, action }) {
               />
             </defs>
             <WavedBlogCardWavesRoot>
-              <use xlinkHref="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30" />
-              <use xlinkHref="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
-              <use xlinkHref="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
-              <use xlinkHref="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
-              <use xlinkHref="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
-              <use xlinkHref="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)" />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="-1"
+                fill="rgba(255,255,255,0.30"
+              />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.35)"
+              />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.25)"
+              />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="8"
+                fill="rgba(255,255,255,0.20)"
+              />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="13"
+                fill="rgba(255,255,255,0.15)"
+              />
+              <use
+                xlinkHref="#card-wave"
+                x="48"
+                y="16"
+                fill="rgba(255,255,255,0.99)"
+              />
             </WavedBlogCardWavesRoot>
           </SuiBox>
         </SuiBox>
@@ -98,7 +134,7 @@ function WavedBlogCard({ image, title, description, action }) {
             {description}
           </SuiTypography>
         </SuiBox>
-        {action.type === "internal" ? (
+        {action.type === 'internal' ? (
           <Link to={action.route} sx={cardActionStyles}>
             <SuiTypography
               variant="body2"
@@ -107,11 +143,22 @@ function WavedBlogCard({ image, title, description, action }) {
               component="span"
             >
               {action.label}
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              <Icon
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                arrow_forward
+              </Icon>
             </SuiTypography>
           </Link>
         ) : (
-          <MuiLink href={action.route} target="_blank" rel="noreferrer" sx={cardActionStyles}>
+          <MuiLink
+            href={action.route}
+            target="_blank"
+            rel="noreferrer"
+            sx={cardActionStyles}
+          >
             <SuiTypography
               variant="body2"
               color={action.color}
@@ -119,7 +166,13 @@ function WavedBlogCard({ image, title, description, action }) {
               component="span"
             >
               {action.label}
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              <Icon
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                arrow_forward
+              </Icon>
             </SuiTypography>
           </MuiLink>
         )}
@@ -134,20 +187,20 @@ WavedBlogCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]),
+    type: PropTypes.oneOf(['external', 'internal']),
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "inherit",
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
-      "text",
+      'inherit',
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark',
+      'text',
     ]).isRequired,
   }).isRequired,
 };

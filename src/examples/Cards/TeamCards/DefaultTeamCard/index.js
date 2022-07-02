@@ -1,37 +1,43 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card';
+import MuiLink from '@mui/material/Link';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function DefaultTeamCard({ image, name, jobTitle, action }) {
   const template = (
     <Card>
       <SuiBox p={2} textAlign="center" lineHeight={1}>
-        <SuiBox component="img" src={image} alt={name} width="100%" borderRadius="md" />
+        <SuiBox
+          component="img"
+          src={image}
+          alt={name}
+          width="100%"
+          borderRadius="md"
+        />
         <SuiBox mt={2} mb={0.5}>
           <SuiTypography variant="h5" textTransform="capitalize">
             {name}
@@ -41,7 +47,7 @@ function DefaultTeamCard({ image, name, jobTitle, action }) {
           variant="caption"
           textTransform="uppercase"
           fontWeight="bold"
-          color={jobTitle.color ? jobTitle.color : "info"}
+          color={jobTitle.color ? jobTitle.color : 'info'}
           textGradient
         >
           {jobTitle.label}
@@ -50,7 +56,7 @@ function DefaultTeamCard({ image, name, jobTitle, action }) {
     </Card>
   );
 
-  return action.type === "external" ? (
+  return action.type === 'external' ? (
     <MuiLink href={action.route} target="_blank" rel="noreferrer">
       {template}
     </MuiLink>
@@ -65,19 +71,19 @@ DefaultTeamCard.propTypes = {
   name: PropTypes.string.isRequired,
   jobTitle: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "light",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+      'light',
     ]),
     label: PropTypes.string.isRequired,
   }).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
   }).isRequired,
 };

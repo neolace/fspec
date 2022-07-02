@@ -1,27 +1,27 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
-import boxShadows from "assets/theme/base/boxShadows";
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
+import boxShadows from 'assets/theme/base/boxShadows';
 
 // Soft UI Dashboard PRO React helper functions
-import rgba from "assets/theme/functions/rgba";
-import pxToRem from "assets/theme/functions/pxToRem";
-import linearGradient from "assets/theme/functions/linearGradient";
+import rgba from 'assets/theme/functions/rgba';
+import pxToRem from 'assets/theme/functions/pxToRem';
+import linearGradient from 'assets/theme/functions/linearGradient';
 
 const { white, light, gradients } = colors;
 const { borderWidth } = borders;
@@ -39,31 +39,34 @@ const switchButton = {
       margin: `${pxToRem(4)} 0`,
       padding: 0,
       borderRadius: pxToRem(160),
-      transition: "transform 250ms ease-in",
+      transition: 'transform 250ms ease-in',
     },
 
     switchBase: {
       padding: 0,
-      top: "50%",
+      top: '50%',
       transform: `translate(${pxToRem(2)}, -50%)`,
       transition: `transform 250ms ease-in-out`,
 
-      "&.Mui-checked": {
+      '&.Mui-checked': {
         transform: `translate(${pxToRem(22)}, -50%)`,
 
-        "& + .MuiSwitch-track": {
+        '& + .MuiSwitch-track': {
           backgroundColor: `${rgba(gradients.dark.state, 0.95)} !important`,
           borderColor: `${rgba(gradients.dark.state, 0.95)} !important`,
           opacity: 1,
         },
       },
 
-      "&.Mui-disabled + .MuiSwitch-track": {
-        opacity: "0.3 !important",
+      '&.Mui-disabled + .MuiSwitch-track': {
+        opacity: '0.3 !important',
       },
 
-      "&.Mui-focusVisible .MuiSwitch-thumb": {
-        backgroundImage: linearGradient(gradients.info.main, gradients.info.state),
+      '&.Mui-focusVisible .MuiSwitch-thumb': {
+        backgroundImage: linearGradient(
+          gradients.info.main,
+          gradients.info.state
+        ),
       },
     },
 
@@ -72,7 +75,7 @@ const switchButton = {
       height: pxToRem(16),
       backgroundColor: white.main,
       boxShadow: md,
-      top: "50%",
+      top: '50%',
     },
 
     track: {

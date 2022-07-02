@@ -1,36 +1,44 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
-import Tooltip from "@mui/material/Tooltip";
+import Card from '@mui/material/Card';
+import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
-import SuiAvatar from "components/SuiAvatar";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
+import SuiAvatar from 'components/SuiAvatar';
 
-function EventCard({ id, image, title, dateTime, description, members, action }) {
+function EventCard({
+  id,
+  image,
+  title,
+  dateTime,
+  description,
+  members,
+  action,
+}) {
   const renderMembers = members.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <SuiAvatar
@@ -40,11 +48,11 @@ function EventCard({ id, image, title, dateTime, description, members, action })
         sx={({ borders: { borderWidth }, palette: { white } }) => ({
           border: `${borderWidth[2]} solid ${white.main}`,
           ml: -1.25,
-          cursor: "pointer",
-          position: "relative",
+          cursor: 'pointer',
+          position: 'relative',
 
-          "&:hover, &:focus": {
-            zIndex: "10",
+          '&:hover, &:focus': {
+            zIndex: '10',
           },
         })}
       />
@@ -57,7 +65,11 @@ function EventCard({ id, image, title, dateTime, description, members, action })
         <SuiBox display="flex" alignItems="center">
           <SuiAvatar src={image} alt={title} size="lg" variant="rounded" />
           <SuiBox ml={1} lineHeight={0}>
-            <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+            <SuiTypography
+              variant="h6"
+              fontWeight="medium"
+              textTransform="capitalize"
+            >
               {title}
             </SuiTypography>
             {dateTime ? (
@@ -79,7 +91,12 @@ function EventCard({ id, image, title, dateTime, description, members, action })
         </SuiBox>
         {id ? (
           <SuiBox>
-            <SuiTypography component="span" variant="body2" fontWeight="bold" color="text">
+            <SuiTypography
+              component="span"
+              variant="body2"
+              fontWeight="bold"
+              color="text"
+            >
               Meeting ID:&nbsp;
             </SuiTypography>
             <SuiTypography component="span" variant="body2" color="text">
@@ -88,8 +105,12 @@ function EventCard({ id, image, title, dateTime, description, members, action })
           </SuiBox>
         ) : null}
         <Divider />
-        <SuiBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
+        <SuiBox
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          {action.type === 'internal' ? (
             <SuiButton
               component={Link}
               to={action.route}
@@ -119,8 +140,8 @@ function EventCard({ id, image, title, dateTime, description, members, action })
 
 // Setting default values for the props of EventCard
 EventCard.defaultProps = {
-  id: "",
-  dateTime: "",
+  id: '',
+  dateTime: '',
   members: [],
 };
 
@@ -133,17 +154,17 @@ EventCard.propTypes = {
   description: PropTypes.node.isRequired,
   members: PropTypes.arrayOf(PropTypes.object),
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["enternal", "internal"]).isRequired,
+    type: PropTypes.oneOf(['enternal', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "light",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+      'light',
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

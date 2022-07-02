@@ -1,33 +1,33 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiBadge from "components/SuiBadge";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiBadge from 'components/SuiBadge';
+import SuiButton from 'components/SuiButton';
 
 function DefaultPricingCard({ badge, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ label, includes }) => (
@@ -40,12 +40,24 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
         height="1.5rem"
         borderRadius="50%"
         shaodw="md"
-        bgColor={includes ? "success" : "secondary"}
+        bgColor={includes ? 'success' : 'secondary'}
         variant="gradient"
         mr={2}
       >
-        <SuiTypography variant="button" color="white" sx={{ lineHeight: 0 }}>
-          <Icon sx={{ fontWeight: "bold" }}>{includes ? "done" : "remove"}</Icon>
+        <SuiTypography
+          variant="button"
+          color="white"
+          sx={{
+            lineHeight: 0,
+          }}
+        >
+          <Icon
+            sx={{
+              fontWeight: 'bold',
+            }}
+          >
+            {includes ? 'done' : 'remove'}
+          </Icon>
         </SuiTypography>
       </SuiBox>
       <SuiTypography variant="body2" color="text">
@@ -76,7 +88,7 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
       </SuiBox>
       <SuiBox pb={3} px={3}>
         {renderSpecifications}
-        {action.type === "internal" ? (
+        {action.type === 'internal' ? (
           <SuiBox mt={3}>
             <SuiButton
               component={Link}
@@ -85,8 +97,15 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               color={action.color}
               fullWidth
             >
-              {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {action.label}
+              &nbsp;
+              <Icon
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                arrow_forward
+              </Icon>
             </SuiButton>
           </SuiBox>
         ) : (
@@ -100,8 +119,15 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
               color={action.color}
               fullWidth
             >
-              {action.label}&nbsp;
-              <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+              {action.label}
+              &nbsp;
+              <Icon
+                sx={{
+                  fontWeight: 'bold',
+                }}
+              >
+                arrow_forward
+              </Icon>
             </SuiButton>
           </SuiBox>
         )}
@@ -114,14 +140,14 @@ function DefaultPricingCard({ badge, price, specifications, action }) {
 DefaultPricingCard.propTypes = {
   badge: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark',
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
@@ -131,18 +157,18 @@ DefaultPricingCard.propTypes = {
   }).isRequired,
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'light',
+      'dark',
     ]).isRequired,
   }).isRequired,
 };

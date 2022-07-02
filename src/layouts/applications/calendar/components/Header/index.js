@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
 import Divider from "@mui/material/Divider";
@@ -32,50 +32,152 @@ import team4 from "assets/images/team-4.jpg";
 import team5 from "assets/images/team-5.jpg";
 
 function Header() {
-  const avatarStyles = {
-    border: ({ borders: { borderWidth }, palette: { white } }) =>
-      `${borderWidth[2]} solid ${white.main}`,
-    cursor: "pointer",
-    position: "relative",
-    ml: -1.5,
+  const avatarStyles =
+    {
+      border:
+        ({
+          borders:
+            {
+              borderWidth,
+            },
+          palette:
+            {
+              white,
+            },
+        }) =>
+          `${borderWidth[2]} solid ${white.main}`,
+      cursor:
+        "pointer",
+      position:
+        "relative",
+      ml: -1.5,
 
-    "&:hover, &:focus": {
-      zIndex: "10",
-    },
-  };
+      "&:hover, &:focus":
+        {
+          zIndex:
+            "10",
+        },
+    };
 
   return (
-    <SuiBox display="flex" alignItems="center">
-      <SuiBox mt={0.5} pr={1}>
-        <SuiBox mb={1} lineHeight={0}>
-          <SuiTypography variant="caption" color="secondary" fontWeight="medium">
-            Team members:
+    <SuiBox
+      display="flex"
+      alignItems="center">
+      <SuiBox
+        mt={
+          0.5
+        }
+        pr={
+          1
+        }>
+        <SuiBox
+          mb={
+            1
+          }
+          lineHeight={
+            0
+          }>
+          <SuiTypography
+            variant="caption"
+            color="secondary"
+            fontWeight="medium">
+            Team
+            members:
           </SuiTypography>
         </SuiBox>
         <SuiBox display="flex">
-          <Tooltip title="Jessica Rowland" placement="top">
-            <SuiAvatar src={team1} alt="team-1" size="sm" sx={avatarStyles} />
+          <Tooltip
+            title="Jessica Rowland"
+            placement="top">
+            <SuiAvatar
+              src={
+                team1
+              }
+              alt="team-1"
+              size="sm"
+              sx={
+                avatarStyles
+              }
+            />
           </Tooltip>
-          <Tooltip title="Audrey Love" placement="top">
-            <SuiAvatar src={team2} alt="team-1" size="sm" sx={avatarStyles} />
+          <Tooltip
+            title="Audrey Love"
+            placement="top">
+            <SuiAvatar
+              src={
+                team2
+              }
+              alt="team-1"
+              size="sm"
+              sx={
+                avatarStyles
+              }
+            />
           </Tooltip>
-          <Tooltip title="Michael Lewis" placement="top">
-            <SuiAvatar src={team3} alt="team-1" size="sm" sx={avatarStyles} />
+          <Tooltip
+            title="Michael Lewis"
+            placement="top">
+            <SuiAvatar
+              src={
+                team3
+              }
+              alt="team-1"
+              size="sm"
+              sx={
+                avatarStyles
+              }
+            />
           </Tooltip>
-          <Tooltip title="Lucia Linda" placement="top">
-            <SuiAvatar src={team4} alt="team-1" size="sm" sx={avatarStyles} />
+          <Tooltip
+            title="Lucia Linda"
+            placement="top">
+            <SuiAvatar
+              src={
+                team4
+              }
+              alt="team-1"
+              size="sm"
+              sx={
+                avatarStyles
+              }
+            />
           </Tooltip>
-          <Tooltip title="Ronald Miller" placement="top">
-            <SuiAvatar src={team5} alt="team-1" size="sm" sx={avatarStyles} />
+          <Tooltip
+            title="Ronald Miller"
+            placement="top">
+            <SuiAvatar
+              src={
+                team5
+              }
+              alt="team-1"
+              size="sm"
+              sx={
+                avatarStyles
+              }
+            />
           </Tooltip>
         </SuiBox>
       </SuiBox>
-      <SuiBox height="75%" alignSelf="flex-end">
+      <SuiBox
+        height="75%"
+        alignSelf="flex-end">
         <Divider orientation="vertical" />
       </SuiBox>
-      <SuiBox pl={1}>
-        <SuiButton variant="outlined" color="dark" iconOnly>
-          <Icon sx={{ fontWeight: "bold" }}>add</Icon>
+      <SuiBox
+        pl={
+          1
+        }>
+        <SuiButton
+          variant="outlined"
+          color="dark"
+          iconOnly>
+          <Icon
+            sx={{
+              fontWeight:
+                "bold",
+            }}>
+            add
+          </Icon>
         </SuiButton>
       </SuiBox>
     </SuiBox>

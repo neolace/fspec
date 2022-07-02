@@ -1,56 +1,86 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Collapse from "@mui/material/Collapse";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import Icon from "@mui/material/Icon";
+import Collapse from '@mui/material/Collapse';
+import ListItem from '@mui/material/ListItem';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 // Custom styles for the SidenavCollapse
 import {
-  collapseItem,
-  collapseIconBox,
-  collapseIcon,
-  collapseText,
   collapseArrow,
-} from "examples/Sidenav/styles/sidenavCollapse";
+  collapseIcon,
+  collapseIconBox,
+  collapseItem,
+  collapseText,
+} from 'examples/Sidenav/styles/sidenavCollapse';
 
 // Soft UI Dashboard PRO React context
-import { useSoftUIController } from "context";
+import { useSoftUIController } from 'context';
 
-function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...rest }) {
+function SidenavCollapse({
+  icon,
+  name,
+  children,
+  active,
+  noCollapse,
+  open,
+  ...rest
+}) {
   const [controller] = useSoftUIController();
   const { miniSidenav, transparentSidenav, sidenavColor } = controller;
 
   return (
     <>
       <ListItem component="li">
-        <SuiBox {...rest} sx={(theme) => collapseItem(theme, { active, transparentSidenav })}>
+        <SuiBox
+          {...rest}
+          sx={(theme) =>
+            collapseItem(theme, {
+              active,
+              transparentSidenav,
+            })
+          }
+        >
           <ListItemIcon
-            sx={(theme) => collapseIconBox(theme, { active, transparentSidenav, sidenavColor })}
+            sx={(theme) =>
+              collapseIconBox(theme, {
+                active,
+                transparentSidenav,
+                sidenavColor,
+              })
+            }
           >
-            {typeof icon === "string" ? (
-              <Icon sx={(theme) => collapseIcon(theme, { active })}>{icon}</Icon>
+            {typeof icon === 'string' ? (
+              <Icon
+                sx={(theme) =>
+                  collapseIcon(theme, {
+                    active,
+                  })
+                }
+              >
+                {icon}
+              </Icon>
             ) : (
               icon
             )}
@@ -58,12 +88,23 @@ function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...re
 
           <ListItemText
             primary={name}
-            sx={(theme) => collapseText(theme, { miniSidenav, transparentSidenav, active })}
+            sx={(theme) =>
+              collapseText(theme, {
+                miniSidenav,
+                transparentSidenav,
+                active,
+              })
+            }
           />
 
           <Icon
             sx={(theme) =>
-              collapseArrow(theme, { noCollapse, transparentSidenav, miniSidenav, open })
+              collapseArrow(theme, {
+                noCollapse,
+                transparentSidenav,
+                miniSidenav,
+                open,
+              })
             }
           >
             expand_less
@@ -81,7 +122,7 @@ function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...re
 
 // Setting default values for the props of SidenavCollapse
 SidenavCollapse.defaultProps = {
-  color: "info",
+  color: 'info',
   active: false,
   noCollapse: false,
   children: false,
@@ -90,7 +131,15 @@ SidenavCollapse.defaultProps = {
 
 // Typechecking props for the SidenavCollapse
 SidenavCollapse.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+  ]),
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.node,

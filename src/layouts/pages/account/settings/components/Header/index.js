@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 import { useState } from "react";
 
@@ -29,45 +29,114 @@ import SuiAvatar from "components/SuiAvatar";
 import burceMars from "assets/images/bruce-mars.jpg";
 
 function Header() {
-  const [visible, setVisible] = useState(true);
+  const [
+    visible,
+    setVisible,
+  ] =
+    useState(
+      true
+    );
 
-  const handleSetVisible = () => setVisible(!visible);
+  const handleSetVisible =
+    () =>
+      setVisible(
+        !visible
+      );
 
   return (
     <Card id="profile">
-      <SuiBox p={2}>
-        <Grid container spacing={3} alignItems="center">
-          <Grid item>
+      <SuiBox
+        p={
+          2
+        }>
+        <Grid
+          container
+          spacing={
+            3
+          }
+          alignItems="center">
+          <Grid
+            item>
             <SuiAvatar
-              src={burceMars}
+              src={
+                burceMars
+              }
               alt="profile-image"
               variant="rounded"
               size="xl"
               shadow="sm"
             />
           </Grid>
-          <Grid item>
-            <SuiBox height="100%" mt={0.5} lineHeight={1}>
-              <SuiTypography variant="h5" fontWeight="medium">
-                Alex Thompson
+          <Grid
+            item>
+            <SuiBox
+              height="100%"
+              mt={
+                0.5
+              }
+              lineHeight={
+                1
+              }>
+              <SuiTypography
+                variant="h5"
+                fontWeight="medium">
+                Alex
+                Thompson
               </SuiTypography>
-              <SuiTypography variant="button" color="text" fontWeight="medium">
-                CEO / Co-Founder
+              <SuiTypography
+                variant="button"
+                color="text"
+                fontWeight="medium">
+                CEO
+                /
+                Co-Founder
               </SuiTypography>
             </SuiBox>
           </Grid>
-          <Grid item xs={12} md={6} lg={3} sx={{ ml: "auto" }}>
+          <Grid
+            item
+            xs={
+              12
+            }
+            md={
+              6
+            }
+            lg={
+              3
+            }
+            sx={{
+              ml: "auto",
+            }}>
             <SuiBox
               display="flex"
-              justifyContent={{ md: "flex-end" }}
+              justifyContent={{
+                md: "flex-end",
+              }}
               alignItems="center"
-              lineHeight={1}
-            >
-              <SuiTypography variant="caption" fontWeight="regular">
-                Switch to {visible ? "invisible" : "visible"}
+              lineHeight={
+                1
+              }>
+              <SuiTypography
+                variant="caption"
+                fontWeight="regular">
+                Switch
+                to{" "}
+                {visible
+                  ? "invisible"
+                  : "visible"}
               </SuiTypography>
-              <SuiBox mx={1}>
-                <Switch checked={visible} onChange={handleSetVisible} />
+              <SuiBox
+                mx={
+                  1
+                }>
+                <Switch
+                  checked={
+                    visible
+                  }
+                  onChange={
+                    handleSetVisible
+                  }
+                />
               </SuiBox>
             </SuiBox>
           </Grid>

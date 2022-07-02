@@ -1,32 +1,32 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
 
 function MessageCard({ image, text, action }) {
   return (
@@ -50,7 +50,7 @@ function MessageCard({ image, text, action }) {
                 {text}
               </SuiTypography>
             </SuiBox>
-            {action.type === "internal" ? (
+            {action.type === 'internal' ? (
               <SuiButton
                 component={Link}
                 to={action.route}
@@ -85,17 +85,17 @@ MessageCard.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      "default",
-      "primary",
-      "secondary",
-      "info",
-      "warning",
-      "error",
-      "light",
-      "dark",
+      'default',
+      'primary',
+      'secondary',
+      'info',
+      'warning',
+      'error',
+      'light',
+      'dark',
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

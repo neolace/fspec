@@ -1,55 +1,56 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // @asseinfo/react-kanban components
-import Board from "@asseinfo/react-kanban";
+import Board from '@asseinfo/react-kanban';
 
 // html-react-parser components
-import parse from "html-react-parser";
+import parse from 'html-react-parser';
 // uuid is a library for generating unique id
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiButton from "components/SuiButton";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
+import SuiBox from 'components/SuiBox';
+import SuiButton from 'components/SuiButton';
+import SuiTypography from 'components/SuiTypography';
+import SuiInput from 'components/SuiInput';
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
+import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
+import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
+import Footer from 'examples/Footer';
 
 // Kanban application components
-import Header from "layouts/applications/kanban/components/Header";
+import Header from 'layouts/applications/kanban/components/Header';
 
 // Data
-import boards from "layouts/applications/kanban/data";
+import boards from 'layouts/applications/kanban/data';
 
 function Kanban() {
   const [newCardForm, setNewCardForm] = useState(false);
-  const [formValue, setFormValue] = useState("");
+  const [formValue, setFormValue] = useState('');
 
   const openNewCardForm = (event, id) => setNewCardForm(id);
   const closeNewCardForm = () => setNewCardForm(false);
-  const handeSetFormValue = ({ currentTarget }) => setFormValue(currentTarget.value);
+  const handeSetFormValue = ({ currentTarget }) =>
+    setFormValue(currentTarget.value);
 
   return (
     <DashboardLayout>
@@ -61,8 +62,12 @@ function Kanban() {
         <SuiBox
           position="relative"
           my={4}
-          sx={({ palette: { light }, functions: { pxToRem }, borders: { borderRadius } }) => ({
-            "& .react-kanban-column": {
+          sx={({
+            palette: { light },
+            functions: { pxToRem },
+            borders: { borderRadius },
+          }) => ({
+            '& .react-kanban-column': {
               backgroundColor: light.main,
               width: pxToRem(450),
               margin: `0 ${pxToRem(10)}`,
@@ -77,10 +82,23 @@ function Kanban() {
             allowAddColumn
             renderColumnHeader={({ id, title }, { addCard }) => (
               <>
-                <SuiBox display="flex" justifyContent="space-between" alignItems="center" mb={3}>
+                <SuiBox
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  mb={3}
+                >
                   <SuiTypography variant="h6">{title}</SuiTypography>
-                  <SuiButton size="small" onClick={(event) => openNewCardForm(event, id)}>
-                    <Icon sx={{ fontWeight: "bold", color: ({ palette: { dark } }) => dark.main }}>
+                  <SuiButton
+                    size="small"
+                    onClick={(event) => openNewCardForm(event, id)}
+                  >
+                    <Icon
+                      sx={{
+                        fontWeight: 'bold',
+                        color: ({ palette: { dark } }) => dark.main,
+                      }}
+                    >
                       add
                     </Icon>
                   </SuiButton>
@@ -89,7 +107,9 @@ function Kanban() {
                   <SuiBox my={2.5}>
                     <SuiInput
                       value={formValue}
-                      inputProps={{ rows: 2 }}
+                      inputProps={{
+                        rows: 2,
+                      }}
                       onChange={handeSetFormValue}
                       multiline
                     />
@@ -99,8 +119,11 @@ function Kanban() {
                         color="success"
                         size="small"
                         onClick={() => {
-                          addCard({ id: uuidv4(), template: formValue });
-                          setFormValue("");
+                          addCard({
+                            id: uuidv4(),
+                            template: formValue,
+                          });
+                          setFormValue('');
                         }}
                       >
                         add
@@ -137,7 +160,7 @@ function Kanban() {
                   fontSize: ({ typography: { size } }) => size.md,
                 }}
               >
-                {typeof template === "string" ? parse(template) : template}
+                {typeof template === 'string' ? parse(template) : template}
               </SuiBox>
             )}
             onCardNew={() => null}

@@ -1,28 +1,28 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
   return (
@@ -44,9 +44,18 @@ function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
               <SuiTypography variant="h5" fontWeight="bold">
                 {count}
               </SuiTypography>
-              <SuiTypography variant="button" fontWeight="bold" color={percentage.color}>
-                {percentage.value}&nbsp;
-                <SuiTypography variant="button" fontWeight="regular" color="secondary">
+              <SuiTypography
+                variant="button"
+                fontWeight="bold"
+                color={percentage.color}
+              >
+                {percentage.value}
+                &nbsp;
+                <SuiTypography
+                  variant="button"
+                  fontWeight="regular"
+                  color="secondary"
+                >
                   {percentage.label}
                 </SuiTypography>
               </SuiTypography>
@@ -58,7 +67,9 @@ function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
                 <SuiTypography
                   variant="caption"
                   color="secondary"
-                  sx={{ cursor: "pointer" }}
+                  sx={{
+                    cursor: 'pointer',
+                  }}
                   onClick={dropdown.action}
                 >
                   {dropdown.value}
@@ -76,9 +87,9 @@ function DefaultStatisticsCard({ title, count, percentage, dropdown }) {
 // Setting default values for the props of DefaultStatisticsCard
 DefaultStatisticsCard.defaultProps = {
   percentage: {
-    color: "success",
-    value: "",
-    label: "",
+    color: 'success',
+    value: '',
+    label: '',
   },
   dropdown: false,
 };
@@ -89,14 +100,14 @@ DefaultStatisticsCard.propTypes = {
   count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   percentage: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "white",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+      'white',
     ]),
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     label: PropTypes.string,

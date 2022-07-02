@@ -1,35 +1,35 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // react-images-viewer components
-import ImgsViewer from "react-images-viewer";
+import ImgsViewer from 'react-images-viewer';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+import Grid from '@mui/material/Grid';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 // Images
-import image1 from "assets/images/ecommerce/wooden-table.jpeg";
-import image2 from "assets/images/ecommerce/chair-pink.jpeg";
-import image3 from "assets/images/ecommerce/black-chair.jpeg";
-import image4 from "assets/images/ecommerce/chair-steel.jpeg";
-import image5 from "assets/images/ecommerce/chair-wood.jpeg";
+import image1 from 'assets/images/ecommerce/wooden-table.jpeg';
+import image2 from 'assets/images/ecommerce/chair-pink.jpeg';
+import image3 from 'assets/images/ecommerce/black-chair.jpeg';
+import image4 from 'assets/images/ecommerce/chair-steel.jpeg';
+import image5 from 'assets/images/ecommerce/chair-wood.jpeg';
 
 function ProductImages() {
   const [currentImage, setCurrentImage] = useState(image1);
@@ -49,7 +49,23 @@ function ProductImages() {
   return (
     <SuiBox>
       <ImgsViewer
-        imgs={[{ src: image1 }, { src: image2 }, { src: image3 }, { src: image4 }, { src: image5 }]}
+        imgs={[
+          {
+            src: image1,
+          },
+          {
+            src: image2,
+          },
+          {
+            src: image3,
+          },
+          {
+            src: image4,
+          },
+          {
+            src: image5,
+          },
+        ]}
         isOpen={imgsViewer}
         onClose={closeImgsViewer}
         currImg={imgsViewerCurrent}
@@ -78,7 +94,11 @@ function ProductImages() {
               borderRadius="lg"
               shadow="md"
               width="100%"
-              sx={{ cursor: "pointer", height: "100%", objectFit: "cover" }}
+              sx={{
+                cursor: 'pointer',
+                height: '100%',
+                objectFit: 'cover',
+              }}
               onClick={handleSetCurrentImage}
             />
           </Grid>
@@ -91,7 +111,11 @@ function ProductImages() {
               borderRadius="lg"
               shadow="md"
               width="100%"
-              sx={{ cursor: "pointer", height: "100%", objectFit: "cover" }}
+              sx={{
+                cursor: 'pointer',
+                height: '100%',
+                objectFit: 'cover',
+              }}
               onClick={handleSetCurrentImage}
             />
           </Grid>
@@ -104,7 +128,11 @@ function ProductImages() {
               borderRadius="lg"
               shadow="md"
               width="100%"
-              sx={{ cursor: "pointer", height: "100%", objectFit: "cover" }}
+              sx={{
+                cursor: 'pointer',
+                height: '100%',
+                objectFit: 'cover',
+              }}
               onClick={handleSetCurrentImage}
             />
           </Grid>
@@ -117,7 +145,11 @@ function ProductImages() {
               borderRadius="lg"
               shadow="md"
               width="100%"
-              sx={{ cursor: "pointer", height: "100%", objectFit: "cover" }}
+              sx={{
+                cursor: 'pointer',
+                height: '100%',
+                objectFit: 'cover',
+              }}
               onClick={handleSetCurrentImage}
             />
           </Grid>
@@ -130,7 +162,11 @@ function ProductImages() {
               borderRadius="lg"
               shadow="md"
               width="100%"
-              sx={{ cursor: "pointer", height: "100%", objectFit: "cover" }}
+              sx={{
+                cursor: 'pointer',
+                height: '100%',
+                objectFit: 'cover',
+              }}
               onClick={handleSetCurrentImage}
             />
           </Grid>

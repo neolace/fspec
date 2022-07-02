@@ -1,4 +1,3 @@
-
 function configs(labels, datasets) {
   return {
     data: {
@@ -15,7 +14,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: "index",
+        mode: 'index',
       },
       scales: {
         y: {

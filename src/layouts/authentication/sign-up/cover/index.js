@@ -1,37 +1,37 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useState } from "react";
+import { useState } from 'react';
 
 // react-router-dom components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @mui material components
-import Checkbox from "@mui/material/Checkbox";
+import Checkbox from '@mui/material/Checkbox';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiInput from 'components/SuiInput';
+import SuiButton from 'components/SuiButton';
 
 // Authentication layout components
-import CoverLayout from "layouts/authentication/components/CoverLayout";
+import CoverLayout from 'layouts/authentication/components/CoverLayout';
 
 // Images
-import curved11 from "assets/images/curved-images/curved11.jpg";
+import curved11 from 'assets/images/curved-images/curved11.jpg';
 
 function Cover() {
   const [agreement, setAgreement] = useState(true);
@@ -48,7 +48,11 @@ function Cover() {
       <SuiBox component="form" role="form">
         <SuiBox mb={2} lineHeight={1.25}>
           <SuiBox mb={1} ml={0.5}>
-            <SuiTypography component="label" variant="caption" fontWeight="bold">
+            <SuiTypography
+              component="label"
+              variant="caption"
+              fontWeight="bold"
+            >
               Name
             </SuiTypography>
           </SuiBox>
@@ -56,7 +60,11 @@ function Cover() {
         </SuiBox>
         <SuiBox mb={2} lineHeight={1.25}>
           <SuiBox mb={1} ml={0.5}>
-            <SuiTypography component="label" variant="caption" fontWeight="bold">
+            <SuiTypography
+              component="label"
+              variant="caption"
+              fontWeight="bold"
+            >
               Email
             </SuiTypography>
           </SuiBox>
@@ -64,7 +72,11 @@ function Cover() {
         </SuiBox>
         <SuiBox mb={2} lineHeight={1.25}>
           <SuiBox mb={1} ml={0.5}>
-            <SuiTypography component="label" variant="caption" fontWeight="bold">
+            <SuiTypography
+              component="label"
+              variant="caption"
+              fontWeight="bold"
+            >
               Password
             </SuiTypography>
           </SuiBox>
@@ -76,11 +88,20 @@ function Cover() {
             variant="button"
             fontWeight="regular"
             onClick={handleSetAgremment}
-            sx={{ cursor: "pointer", userSelect: "none" }}
+            sx={{
+              cursor: 'pointer',
+              userSelect: 'none',
+            }}
           >
             &nbsp;&nbsp;I agree the&nbsp;
           </SuiTypography>
-          <SuiTypography component="a" href="#" variant="button" fontWeight="bold" textGradient>
+          <SuiTypography
+            component="a"
+            href="#"
+            variant="button"
+            fontWeight="bold"
+            textGradient
+          >
             Terms and Conditions
           </SuiTypography>
         </SuiBox>

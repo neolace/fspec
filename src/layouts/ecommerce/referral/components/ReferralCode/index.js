@@ -1,31 +1,31 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Tooltip from "@mui/material/Tooltip";
-import Link from "@mui/material/Link";
+import Tooltip from '@mui/material/Tooltip';
+import Link from '@mui/material/Link';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiInput from "components/SuiInput";
-import SuiButton from "components/SuiButton";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiInput from 'components/SuiInput';
+import SuiButton from 'components/SuiButton';
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
+import colors from 'assets/theme/base/colors';
+import borders from 'assets/theme/base/borders';
 
 function ReferralCode() {
   const { secondary } = colors;
@@ -51,7 +51,14 @@ function ReferralCode() {
       >
         <SuiBox mb={1} lineHeight={0}>
           <SuiTypography variant="caption" color="text">
-            Generated 23 days ago by <span sx={{ fontWeight: "bold" }}>softuidash23</span>
+            Generated 23 days ago by{' '}
+            <span
+              sx={{
+                fontWeight: 'bold',
+              }}
+            >
+              softuidash23
+            </span>
           </SuiTypography>
         </SuiBox>
         <SuiBox mb={2} lineHeight={0}>
@@ -64,7 +71,10 @@ function ReferralCode() {
             <SuiInput
               size="small"
               defaultValue="soft-ui-dashboard-vmsk392"
-              icon={{ component: "lock", direction: "right" }}
+              icon={{
+                component: 'lock',
+                direction: 'right',
+              }}
               disabled
             />
           </SuiBox>
@@ -73,7 +83,9 @@ function ReferralCode() {
               variant="outlined"
               color="secondary"
               size="small"
-              sx={{ padding: "0.5rem 1rem" }}
+              sx={{
+                padding: '0.5rem 1rem',
+              }}
             >
               copy
             </SuiButton>
@@ -91,7 +103,7 @@ function ReferralCode() {
               className="color-background"
             >
               Contact us
-            </SuiTypography>{" "}
+            </SuiTypography>{' '}
             to generate more referrals link.
           </SuiTypography>
         </SuiBox>

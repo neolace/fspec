@@ -7,8 +7,8 @@ function defaultItemIconBox(theme, ownerState) {
   const { borderRadius } = borders;
 
   return {
-    display: "grid",
-    placeItems: "center",
+    display: 'grid',
+    placeItems: 'center',
     width: pxToRem(48),
     height: pxToRem(48),
     borderRadius: borderRadius.md,
@@ -29,7 +29,7 @@ function defaultItemIcon(theme, ownerState) {
     backgroundImage: gradients[color]
       ? linearGradient(gradients[color].main, gradients[color].state)
       : linearGradient(gradients.info.main, gradients.info.state),
-    WebkitBackgroundClip: "text",
+    WebkitBackgroundClip: 'text',
     WebkitTextFillColor: transparent.main,
   };
 }

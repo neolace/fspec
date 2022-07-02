@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
 import { Link } from "react-router-dom";
@@ -28,69 +28,173 @@ import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
 
-function DefaultBlogCard({ image, category, title, description, author, action }) {
+function DefaultBlogCard({
+  image,
+  category,
+  title,
+  description,
+  author,
+  action,
+}) {
   return (
     <Card>
-      <SuiBox mt={2} mx={2}>
-        {action.type === "internal" ? (
-          <Link to={action.route}>
-            <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
+      <SuiBox
+        mt={
+          2
+        }
+        mx={
+          2
+        }>
+        {action.type ===
+        "internal" ? (
+          <Link
+            to={
+              action.route
+            }>
+            <SuiBox
+              component="img"
+              src={
+                image
+              }
+              alt={
+                title
+              }
+              width="100%"
+              borderRadius="lg"
+            />
           </Link>
         ) : (
-          <MuiLink href={action.route} target="_blank" rel="noreferrer">
-            <SuiBox component="img" src={image} alt={title} width="100%" borderRadius="lg" />
+          <MuiLink
+            href={
+              action.route
+            }
+            target="_blank"
+            rel="noreferrer">
+            <SuiBox
+              component="img"
+              src={
+                image
+              }
+              alt={
+                title
+              }
+              width="100%"
+              borderRadius="lg"
+            />
           </MuiLink>
         )}
       </SuiBox>
-      <SuiBox pb={3} px={3}>
+      <SuiBox
+        pb={
+          3
+        }
+        px={
+          3
+        }>
         {category && (
           <SuiTypography
             variant="caption"
-            color={category.color}
+            color={
+              category.color
+            }
             textTransform="uppercase"
             fontWeight="medium"
-            textGradient
-          >
-            {category.label}
+            textGradient>
+            {
+              category.label
+            }
           </SuiTypography>
         )}
-        <SuiBox display="block" mt={0.5} mb={1}>
-          {action.type === "internal" ? (
-            <Link to={action.route}>
+        <SuiBox
+          display="block"
+          mt={
+            0.5
+          }
+          mb={
+            1
+          }>
+          {action.type ===
+          "internal" ? (
+            <Link
+              to={
+                action.route
+              }>
               <SuiTypography
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
-                className="color-background"
-              >
-                {title}
+                className="color-background">
+                {
+                  title
+                }
               </SuiTypography>
             </Link>
           ) : (
-            <MuiLink href={action.route} target="_blank" rel="noreferrer">
+            <MuiLink
+              href={
+                action.route
+              }
+              target="_blank"
+              rel="noreferrer">
               <SuiTypography
                 display="inline"
                 variant="h5"
                 textTransform="capitalize"
-                className="color-background"
-              >
-                {title}
+                className="color-background">
+                {
+                  title
+                }
               </SuiTypography>
             </MuiLink>
           )}
         </SuiBox>
-        <SuiTypography variant="body2" component="p" color="text">
-          {description}
+        <SuiTypography
+          variant="body2"
+          component="p"
+          color="text">
+          {
+            description
+          }
         </SuiTypography>
         {author && (
-          <SuiBox display="flex" alignItems="center" mt={3}>
-            <SuiAvatar variant="rounded" src={author.image} alt={author.name} shadow="md" />
-            <SuiBox pl={2} lineHeight={0}>
-              <SuiTypography component="h6" variant="button" fontWeight="medium" gutterBottom>
-                {author.name}
+          <SuiBox
+            display="flex"
+            alignItems="center"
+            mt={
+              3
+            }>
+            <SuiAvatar
+              variant="rounded"
+              src={
+                author.image
+              }
+              alt={
+                author.name
+              }
+              shadow="md"
+            />
+            <SuiBox
+              pl={
+                2
+              }
+              lineHeight={
+                0
+              }>
+              <SuiTypography
+                component="h6"
+                variant="button"
+                fontWeight="medium"
+                gutterBottom>
+                {
+                  author.name
+                }
               </SuiTypography>
-              <SuiTypography variant="caption" color="text">
-                {author.date}
+              <SuiTypography
+                variant="caption"
+                color="text">
+                {
+                  author.date
+                }
               </SuiTypography>
             </SuiBox>
           </SuiBox>
@@ -101,43 +205,95 @@ function DefaultBlogCard({ image, category, title, description, author, action }
 }
 
 // Setting default props for the DefaultBlogCard
-DefaultBlogCard.defaultProps = {
-  category: false,
-  author: false,
-};
+DefaultBlogCard.defaultProps =
+  {
+    category: false,
+    author: false,
+  };
 
 // Typechecking props for the DefaultBlogCard
-DefaultBlogCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  category: PropTypes.oneOfType([
-    PropTypes.shape({
-      color: PropTypes.oneOf([
-        "primary",
-        "secondary",
-        "info",
-        "success",
-        "warning",
-        "error",
-        "dark",
-      ]).isRequired,
-      label: PropTypes.string.isRequired,
-    }),
-    PropTypes.bool,
-  ]),
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  author: PropTypes.oneOfType([
-    PropTypes.shape({
-      image: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      date: PropTypes.oneOfType([PropTypes.string, PropTypes.func]).isRequired,
-    }),
-    PropTypes.bool,
-  ]),
-  action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
-    route: PropTypes.string.isRequired,
-  }).isRequired,
-};
+DefaultBlogCard.propTypes =
+  {
+    image:
+      PropTypes
+        .string
+        .isRequired,
+    category:
+      PropTypes.oneOfType(
+        [
+          PropTypes.shape(
+            {
+              color:
+                PropTypes.oneOf(
+                  [
+                    "primary",
+                    "secondary",
+                    "info",
+                    "success",
+                    "warning",
+                    "error",
+                    "dark",
+                  ]
+                )
+                  .isRequired,
+              label:
+                PropTypes
+                  .string
+                  .isRequired,
+            }
+          ),
+          PropTypes.bool,
+        ]
+      ),
+    title:
+      PropTypes
+        .string
+        .isRequired,
+    description:
+      PropTypes
+        .string
+        .isRequired,
+    author:
+      PropTypes.oneOfType(
+        [
+          PropTypes.shape(
+            {
+              image:
+                PropTypes
+                  .string
+                  .isRequired,
+              name: PropTypes
+                .string
+                .isRequired,
+              date: PropTypes.oneOfType(
+                [
+                  PropTypes.string,
+                  PropTypes.func,
+                ]
+              )
+                .isRequired,
+            }
+          ),
+          PropTypes.bool,
+        ]
+      ),
+    action:
+      PropTypes.shape(
+        {
+          type: PropTypes.oneOf(
+            [
+              "external",
+              "internal",
+            ]
+          )
+            .isRequired,
+          route:
+            PropTypes
+              .string
+              .isRequired,
+        }
+      )
+        .isRequired,
+  };
 
 export default DefaultBlogCard;

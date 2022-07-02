@@ -1,63 +1,63 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from "components/SuiTypography";
+import SuiTypography from 'components/SuiTypography';
 
 const categoriesListData = [
   {
-    color: "dark",
-    icon: "devices_other",
-    name: "Devices",
+    color: 'dark',
+    icon: 'devices_other',
+    name: 'Devices',
     description: (
       <>
-        250 in stock,{" "}
+        250 in stock,{' '}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           346+ sold
         </SuiTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
   {
-    color: "dark",
-    icon: "settings",
-    name: "Tickets",
+    color: 'dark',
+    icon: 'settings',
+    name: 'Tickets',
     description: (
       <>
-        123 closed,{" "}
+        123 closed,{' '}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           15 open
         </SuiTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
   {
-    color: "dark",
-    icon: "info",
-    name: "Error logs",
+    color: 'dark',
+    icon: 'info',
+    name: 'Error logs',
     description: (
       <>
-        1 is active,{" "}
+        1 is active,{' '}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           40 closed
         </SuiTypography>
       </>
     ),
-    route: "/",
+    route: '/',
   },
 ];
 

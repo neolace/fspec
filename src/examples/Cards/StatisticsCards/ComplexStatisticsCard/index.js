@@ -1,42 +1,45 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
+import Card from '@mui/material/Card';
+import Grid from '@mui/material/Grid';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React base styles
-import typography from "assets/theme/base/typography";
+import typography from 'assets/theme/base/typography';
 
 // Images
-import whiteCurved from "assets/images/curved-images/white-curved.jpeg";
+import whiteCurved from 'assets/images/curved-images/white-curved.jpeg';
 
 function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
   const { size } = typography;
 
   return (
     <Card
-      sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
+      sx={({
+        functions: { linearGradient, rgba },
+        palette: { gradients },
+      }) => ({
         background: gradients[color]
           ? `${linearGradient(
               rgba(gradients[color].main, 0.9),
@@ -65,12 +68,21 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
             >
               <Icon
                 sx={{
-                  backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
+                  backgroundImage: ({
+                    functions: { linearGradient },
+                    palette: { gradients },
+                  }) =>
                     gradients[color]
-                      ? linearGradient(gradients[color].main, gradients[color].state)
-                      : linearGradient(gradients.dark.main, gradients.dark.state),
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                      ? linearGradient(
+                          gradients[color].main,
+                          gradients[color].state
+                        )
+                      : linearGradient(
+                          gradients.dark.main,
+                          gradients.dark.state
+                        ),
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
                 }}
               >
                 {icon}
@@ -94,13 +106,24 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
             <SuiBox textAlign="right">
               {dropdown && (
                 <SuiBox mb={7} lineHeight={1} color="white">
-                  <Icon fontSize="default" onClick={dropdown.action} sx={{ cursor: "pointer" }}>
+                  <Icon
+                    fontSize="default"
+                    onClick={dropdown.action}
+                    sx={{
+                      cursor: 'pointer',
+                    }}
+                  >
                     more_horiz
                   </Icon>
                   {dropdown.menu}
                 </SuiBox>
               )}
-              <SuiTypography variant="button" fontWeight="bold" color="white" align="right">
+              <SuiTypography
+                variant="button"
+                fontWeight="bold"
+                color="white"
+                align="right"
+              >
                 {percentage}
               </SuiTypography>
             </SuiBox>
@@ -113,16 +136,25 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
 
 // Setting default values for the props of ComplexStatisticsCard
 ComplexStatisticsCard.defaultProps = {
-  color: "dark",
+  color: 'dark',
   dropdown: false,
 };
 
 // Typechecking props for the ComplexStatisticsCard
 ComplexStatisticsCard.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+  ]),
   icon: PropTypes.node.isRequired,
   count: PropTypes.shape({
-    number: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+    number: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+      .isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
   percentage: PropTypes.string.isRequired,

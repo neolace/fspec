@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 import { useState } from "react";
 
@@ -34,56 +34,122 @@ import IllustrationLayout from "layouts/authentication/components/IllustrationLa
 import chat from "assets/images/illustrations/chat.png";
 
 function Illustration() {
-  const [rememberMe, setRememberMe] = useState(false);
+  const [
+    rememberMe,
+    setRememberMe,
+  ] =
+    useState(
+      false
+    );
 
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const handleSetRememberMe =
+    () =>
+      setRememberMe(
+        !rememberMe
+      );
 
   return (
     <IllustrationLayout
       title="Sign In"
       description="Enter your email and password to sign in"
       illustration={{
-        image: chat,
-        title: '"Attention is the new currency"',
+        image:
+          chat,
+        title:
+          '"Attention is the new currency"',
         description:
           "The more effortless the writing looks, the more effort the writer actually put into the process.",
-      }}
-    >
-      <SuiBox component="form" role="form">
-        <SuiBox mb={2}>
-          <SuiInput type="email" placeholder="Email" size="large" />
+      }}>
+      <SuiBox
+        component="form"
+        role="form">
+        <SuiBox
+          mb={
+            2
+          }>
+          <SuiInput
+            type="email"
+            placeholder="Email"
+            size="large"
+          />
         </SuiBox>
-        <SuiBox mb={2}>
-          <SuiInput type="password" placeholder="Password" size="large" />
+        <SuiBox
+          mb={
+            2
+          }>
+          <SuiInput
+            type="password"
+            placeholder="Password"
+            size="large"
+          />
         </SuiBox>
-        <SuiBox display="flex" alignItems="center">
-          <Switch checked={rememberMe} onChange={handleSetRememberMe} />
+        <SuiBox
+          display="flex"
+          alignItems="center">
+          <Switch
+            checked={
+              rememberMe
+            }
+            onChange={
+              handleSetRememberMe
+            }
+          />
           <SuiTypography
             variant="button"
             fontWeight="regular"
-            onClick={handleSetRememberMe}
-            sx={{ cursor: "pointer", userSelect: "none" }}
-          >
-            &nbsp;&nbsp;Remember me
+            onClick={
+              handleSetRememberMe
+            }
+            sx={{
+              cursor:
+                "pointer",
+              userSelect:
+                "none",
+            }}>
+            &nbsp;&nbsp;Remember
+            me
           </SuiTypography>
         </SuiBox>
-        <SuiBox mt={4} mb={1}>
-          <SuiButton variant="gradient" color="info" size="large" fullWidth>
-            sign in
+        <SuiBox
+          mt={
+            4
+          }
+          mb={
+            1
+          }>
+          <SuiButton
+            variant="gradient"
+            color="info"
+            size="large"
+            fullWidth>
+            sign
+            in
           </SuiButton>
         </SuiBox>
-        <SuiBox mt={3} textAlign="center">
-          <SuiTypography variant="button" color="text" fontWeight="regular">
-            Don&apos;t have an account?{" "}
+        <SuiBox
+          mt={
+            3
+          }
+          textAlign="center">
+          <SuiTypography
+            variant="button"
+            color="text"
+            fontWeight="regular">
+            Don&apos;t
+            have
+            an
+            account?{" "}
             <SuiTypography
-              component={Link}
+              component={
+                Link
+              }
               to="/authentication/sign-up/illustration"
               variant="button"
               color="info"
               fontWeight="medium"
-              textGradient
-            >
-              Sign up
+              textGradient>
+              Sign
+              up
             </SuiTypography>
           </SuiTypography>
         </SuiBox>

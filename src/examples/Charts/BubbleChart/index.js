@@ -1,38 +1,38 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { useMemo } from "react";
+import { useMemo } from 'react';
 
 // porp-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-chartjs-2 components
-import { Bubble } from "react-chartjs-2";
+import { Bubble } from 'react-chartjs-2';
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // BubbleChart configurations
-import configs from "examples/Charts/BubbleChart/configs";
+import configs from 'examples/Charts/BubbleChart/configs';
 
 // Soft UI Dashboard PRO React base styles
-import colors from "assets/theme/base/colors";
+import colors from 'assets/theme/base/colors';
 
 function BubbleChart({ title, description, height, chart }) {
   const chartDatasets = chart.datasets
@@ -42,10 +42,10 @@ function BubbleChart({ title, description, height, chart }) {
         borderWidth: 3,
         pointRadius: 2,
         backgroundColor: colors[dataset.color]
-          ? colors[dataset.color || "dark"].main
+          ? colors[dataset.color || 'dark'].main
           : colors.dark.main,
         borderColor: colors[dataset.color]
-          ? colors[dataset.color || "dark"].main
+          ? colors[dataset.color || 'dark'].main
           : colors.dark.main,
         maxBarThickness: 6,
       }))
@@ -63,7 +63,12 @@ function BubbleChart({ title, description, height, chart }) {
             </SuiBox>
           )}
           <SuiBox mb={2}>
-            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
+            <SuiTypography
+              component="div"
+              variant="button"
+              fontWeight="regular"
+              color="text"
+            >
               {description}
             </SuiTypography>
           </SuiBox>
@@ -85,9 +90,9 @@ function BubbleChart({ title, description, height, chart }) {
 
 // Setting default values for the props of BubbleChart
 BubbleChart.defaultProps = {
-  title: "",
-  description: "",
-  height: "100%",
+  title: '',
+  description: '',
+  height: '100%',
 };
 
 // Typechecking props for the BubbleChart

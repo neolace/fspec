@@ -1,24 +1,32 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Checkbox from "@mui/material/Checkbox";
-import Divider from "@mui/material/Divider";
-import Icon from "@mui/material/Icon";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
+import Checkbox from '@mui/material/Checkbox';
+import Divider from '@mui/material/Divider';
+import Icon from '@mui/material/Icon';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 // Soft UI Dashboard PRO Material components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO Material base styles
-import borders from "assets/theme/base/borders";
-import colors from "assets/theme/base/colors";
+import borders from 'assets/theme/base/borders';
+import colors from 'assets/theme/base/colors';
 
-function Todo({ color, title, date, project, company, defaultChecked, noDivider }) {
+function Todo({
+  color,
+  title,
+  date,
+  project,
+  company,
+  defaultChecked,
+  noDivider,
+}) {
   const { borderWidth } = borders;
   const [openMenu, setOpenMenu] = useState(null);
 
@@ -28,8 +36,14 @@ function Todo({ color, title, date, project, company, defaultChecked, noDivider 
   const renderMenu = () => (
     <Menu
       anchorEl={openMenu}
-      anchorOrigin={{ vertical: "top", horizontal: "left" }}
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'left',
+      }}
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
       open={Boolean(openMenu)}
       onClose={handleCloseMenu}
       keepMounted
@@ -47,7 +61,9 @@ function Todo({ color, title, date, project, company, defaultChecked, noDivider 
       pr={2}
       mb={2}
       borderLeft={`${borderWidth[3]} solid ${colors[color].main}`}
-      sx={{ listStyle: "none" }}
+      sx={{
+        listStyle: 'none',
+      }}
     >
       <SuiBox width="100%" pl={1} ml={2}>
         <SuiBox display="flex" alignItems="center">
@@ -58,7 +74,13 @@ function Todo({ color, title, date, project, company, defaultChecked, noDivider 
             </SuiTypography>
           </SuiBox>
           <SuiBox ml="auto" color="secondary" pr={3} lineHeight={0}>
-            <Icon fontSize="default" sx={{ cursor: "pointer" }} onClick={handleOpenMenu}>
+            <Icon
+              fontSize="default"
+              sx={{
+                cursor: 'pointer',
+              }}
+              onClick={handleOpenMenu}
+            >
               more_horiz
             </Icon>
           </SuiBox>
@@ -66,30 +88,73 @@ function Todo({ color, title, date, project, company, defaultChecked, noDivider 
         </SuiBox>
         <SuiBox
           display="flex"
-          alignItems={{ xs: "flex-start", sm: "center" }}
-          flexDirection={{ xs: "column", sm: "row" }}
+          alignItems={{
+            xs: 'flex-start',
+            sm: 'center',
+          }}
+          flexDirection={{
+            xs: 'column',
+            sm: 'row',
+          }}
           mt={2}
           ml={3}
           pl={0.5}
         >
-          <SuiBox lineHeight={1} mb={{ xs: 1, sm: 0 }}>
-            <SuiTypography display="block" variant="caption" fontWeight="medium" color="secondary">
+          <SuiBox
+            lineHeight={1}
+            mb={{
+              xs: 1,
+              sm: 0,
+            }}
+          >
+            <SuiTypography
+              display="block"
+              variant="caption"
+              fontWeight="medium"
+              color="secondary"
+            >
               Date
             </SuiTypography>
             <SuiTypography variant="caption" fontWeight="bold" color="text">
               {date}
             </SuiTypography>
           </SuiBox>
-          <SuiBox ml={{ xs: 0, sm: "auto" }} mb={{ xs: 1, sm: 0 }} lineHeight={1}>
-            <SuiTypography display="block" variant="caption" fontWeight="medium" color="secondary">
+          <SuiBox
+            ml={{
+              xs: 0,
+              sm: 'auto',
+            }}
+            mb={{
+              xs: 1,
+              sm: 0,
+            }}
+            lineHeight={1}
+          >
+            <SuiTypography
+              display="block"
+              variant="caption"
+              fontWeight="medium"
+              color="secondary"
+            >
               Project
             </SuiTypography>
             <SuiTypography variant="caption" fontWeight="bold" color="text">
               {project}
             </SuiTypography>
           </SuiBox>
-          <SuiBox mx={{ xs: 0, sm: "auto" }} lineHeight={1}>
-            <SuiTypography display="block" variant="caption" fontWeight="medium" color="secondary">
+          <SuiBox
+            mx={{
+              xs: 0,
+              sm: 'auto',
+            }}
+            lineHeight={1}
+          >
+            <SuiTypography
+              display="block"
+              variant="caption"
+              fontWeight="medium"
+              color="secondary"
+            >
               Company
             </SuiTypography>
             <SuiTypography variant="caption" fontWeight="bold" color="text">
@@ -98,21 +163,35 @@ function Todo({ color, title, date, project, company, defaultChecked, noDivider 
           </SuiBox>
         </SuiBox>
       </SuiBox>
-      {noDivider ? null : <Divider sx={{ marginBottom: 0 }} />}
+      {noDivider ? null : (
+        <Divider
+          sx={{
+            marginBottom: 0,
+          }}
+        />
+      )}
     </SuiBox>
   );
 }
 
 // Setting default values for the props of Todo
 Todo.defaultProps = {
-  color: "info",
+  color: 'info',
   noDivider: false,
   defaultChecked: false,
 };
 
 // Typechecking props for the Todo
 Todo.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'error',
+    'dark',
+  ]),
   title: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   project: PropTypes.string.isRequired,

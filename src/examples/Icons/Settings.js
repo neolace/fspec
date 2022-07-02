@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
@@ -19,26 +19,53 @@ import PropTypes from "prop-types";
 // Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-function Settings({ color, size }) {
+function Settings({
+  color,
+  size,
+}) {
   return (
     <svg
-      width={size}
-      height={size}
+      width={
+        size
+      }
+      height={
+        size
+      }
       viewBox="0 0 42 42"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-    >
-      <title>settings</title>
-      <g id="Basic-Elements" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+      xmlnsXlink="http://www.w3.org/1999/xlink">
+      <title>
+        settings
+      </title>
+      <g
+        id="Basic-Elements"
+        stroke="none"
+        strokeWidth="1"
+        fill="none"
+        fillRule="evenodd">
         <g
           id="Rounded-Icons"
           transform="translate(-2020.000000, -442.000000)"
-          fill={colors[color] ? colors[color].main : colors.dark.main}
-          fillRule="nonzero"
-        >
-          <g id="Icons-with-opacity" transform="translate(1716.000000, 291.000000)">
-            <g id="settings" transform="translate(304.000000, 151.000000)">
+          fill={
+            colors[
+              color
+            ]
+              ? colors[
+                  color
+                ]
+                  .main
+              : colors
+                  .dark
+                  .main
+          }
+          fillRule="nonzero">
+          <g
+            id="Icons-with-opacity"
+            transform="translate(1716.000000, 291.000000)">
+            <g
+              id="settings"
+              transform="translate(304.000000, 151.000000)">
               <polygon
                 id="Path"
                 opacity="0.596981957"
@@ -62,25 +89,36 @@ function Settings({ color, size }) {
 }
 
 // Setting default values for the props of Settings
-Settings.defaultProps = {
-  color: "dark",
-  size: "16px",
-};
+Settings.defaultProps =
+  {
+    color:
+      "dark",
+    size: "16px",
+  };
 
 // Typechecking props for the Settings
-Settings.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-    "light",
-    "white",
-  ]),
-  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-};
+Settings.propTypes =
+  {
+    color:
+      PropTypes.oneOf(
+        [
+          "primary",
+          "secondary",
+          "info",
+          "success",
+          "warning",
+          "error",
+          "dark",
+          "light",
+          "white",
+        ]
+      ),
+    size: PropTypes.oneOfType(
+      [
+        PropTypes.number,
+        PropTypes.string,
+      ]
+    ),
+  };
 
 export default Settings;

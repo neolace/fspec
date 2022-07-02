@@ -1,16 +1,20 @@
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React example components
-import DefaultItem from "examples/Items/DefaultItem";
+import DefaultItem from 'examples/Items/DefaultItem';
 
 function OrdersOverview() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card
+      sx={{
+        height: '100%',
+      }}
+    >
       <SuiBox pt={2} px={2}>
         <SuiTypography variant="h6" fontWeight="bold">
           الأحداث القادمة

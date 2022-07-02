@@ -1,75 +1,125 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-leaflet map components
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer } from 'react-leaflet';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import Divider from "@mui/material/Divider";
-import Hidden from "@mui/material/Hidden";
-import Slider from "@mui/material/Slider";
-import Tooltip from "@mui/material/Tooltip";
-import Icon from "@mui/material/Icon";
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import Hidden from '@mui/material/Hidden';
+import Slider from '@mui/material/Slider';
+import Tooltip from '@mui/material/Tooltip';
+import Icon from '@mui/material/Icon';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
-import SuiButton from "components/SuiButton";
-import SuiInput from "components/SuiInput";
-import SuiAvatar from "components/SuiAvatar";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
+import SuiButton from 'components/SuiButton';
+import SuiInput from 'components/SuiInput';
+import SuiAvatar from 'components/SuiAvatar';
 
 // Images
-import curved10 from "assets/images/curved-images/curved10.jpg";
-import spotifyLogo from "assets/images/small-logos/logo-spotify.svg";
+import curved10 from 'assets/images/curved-images/curved10.jpg';
+import spotifyLogo from 'assets/images/small-logos/logo-spotify.svg';
 
 function AutomotiveMonitor() {
   return (
-    <SuiBox bgColor="dark" borderRadius="xl" position="relative" variant="gradient">
+    <SuiBox
+      bgColor="dark"
+      borderRadius="xl"
+      position="relative"
+      variant="gradient"
+    >
       <SuiBox p={3}>
-        <Grid container spacing={3} justifyContent="space-between" alignItems="center">
+        <Grid
+          container
+          spacing={3}
+          justifyContent="space-between"
+          alignItems="center"
+        >
           <Grid item xs={12} md={6} lg={4}>
             <SuiInput
               size="large"
-              icon={{ component: "search", direction: "left" }}
+              icon={{
+                component: 'search',
+                direction: 'left',
+              }}
               placeholder="Search anything..."
             />
           </Grid>
           <Grid item xs={12} md={6} lg={6} my="auto" ml="auto">
-            <SuiBox display="flex" justifyContent="flex-end" alignItems="center">
-              <SuiBox color="white" lineHeight={0} ml={{ xs: 1, sm: 2 }}>
+            <SuiBox
+              display="flex"
+              justifyContent="flex-end"
+              alignItems="center"
+            >
+              <SuiBox
+                color="white"
+                lineHeight={0}
+                ml={{
+                  xs: 1,
+                  sm: 2,
+                }}
+              >
                 <Tooltip title="Headphones connected" placement="top" arrow>
                   <Icon fontSize="default">headphones</Icon>
                 </Tooltip>
               </SuiBox>
-              <SuiBox color="white" lineHeight={0} ml={{ xs: 1, sm: 2 }}>
+              <SuiBox
+                color="white"
+                lineHeight={0}
+                ml={{
+                  xs: 1,
+                  sm: 2,
+                }}
+              >
                 <Tooltip title="Music is playing" placement="top" arrow>
                   <Icon fontSize="large">play_arrow</Icon>
                 </Tooltip>
               </SuiBox>
-              <SuiBox color="white" lineHeight={0} ml={{ xs: 1, sm: 2 }}>
+              <SuiBox
+                color="white"
+                lineHeight={0}
+                ml={{
+                  xs: 1,
+                  sm: 2,
+                }}
+              >
                 <Tooltip title="Start radio" placement="top" arrow>
                   <Icon fontSize="default">power_settings_new</Icon>
                 </Tooltip>
               </SuiBox>
-              <SuiBox color="white" lineHeight={0} ml={{ xs: 1, sm: 2 }}>
+              <SuiBox
+                color="white"
+                lineHeight={0}
+                ml={{
+                  xs: 1,
+                  sm: 2,
+                }}
+              >
                 <Tooltip title="Time tracker" placement="top" arrow>
                   <Icon fontSize="default">timer</Icon>
                 </Tooltip>
               </SuiBox>
-              <SuiBox ml={{ xs: 1.5, sm: 3 }}>
+              <SuiBox
+                ml={{
+                  xs: 1.5,
+                  sm: 3,
+                }}
+              >
                 <SuiTypography variant="h4" color="white">
                   10:45
                 </SuiTypography>
@@ -97,11 +147,24 @@ function AutomotiveMonitor() {
             </SuiBox>
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
-            <SuiBox display="flex" justifyContent="center" alignItems="center" position="relative">
-              <SuiBox ml={{ md: "auto" }}>
+            <SuiBox
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              position="relative"
+            >
+              <SuiBox
+                ml={{
+                  md: 'auto',
+                }}
+              >
                 <SuiTypography variant="h3" color="white" fontWeight="bold">
                   2.4
-                  <SuiTypography variant="button" color="white" verticalAlign="top">
+                  <SuiTypography
+                    variant="button"
+                    color="white"
+                    verticalAlign="top"
+                  >
                     Km
                   </SuiTypography>
                 </SuiTypography>
@@ -120,10 +183,19 @@ function AutomotiveMonitor() {
           </Grid>
           <Grid item xs={12} md={6} lg={4}>
             <SuiBox display="flex" alignItems="center" position="relative">
-              <SuiBox ml={{ xs: 0, lg: "auto" }}>
+              <SuiBox
+                ml={{
+                  xs: 0,
+                  lg: 'auto',
+                }}
+              >
                 <SuiTypography variant="h3" color="white" fontWeight="bold">
                   6.3
-                  <SuiTypography variant="button" color="white" verticalAlign="top">
+                  <SuiTypography
+                    variant="button"
+                    color="white"
+                    verticalAlign="top"
+                  >
                     Km
                   </SuiTypography>
                 </SuiTypography>
@@ -142,7 +214,10 @@ function AutomotiveMonitor() {
           center={[38.89, -77.03]}
           zoom={11}
           maxZoom={19}
-          style={{ width: "100%", height: "100%" }}
+          style={{
+            width: '100%',
+            height: '100%',
+          }}
         >
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -168,7 +243,12 @@ function AutomotiveMonitor() {
                 />
               </SuiBox>
               <SuiBox px={2}>
-                <SuiTypography component="p" variant="button" fontWeight="medium" color="white">
+                <SuiTypography
+                  component="p"
+                  variant="button"
+                  fontWeight="medium"
+                  color="white"
+                >
                   You&apos;re Mines Still (feat Drake)
                 </SuiTypography>
                 <SuiTypography
@@ -193,8 +273,8 @@ function AutomotiveMonitor() {
                 sx={{
                   mx: 1.5,
 
-                  "& .material-icons": {
-                    fontSize: "2rem",
+                  '& .material-icons': {
+                    fontSize: '2rem',
                   },
                 }}
               >
@@ -208,8 +288,8 @@ function AutomotiveMonitor() {
                 sx={{
                   mx: 1.5,
 
-                  "& .material-icons": {
-                    fontSize: "2rem",
+                  '& .material-icons': {
+                    fontSize: '2rem',
                   },
                 }}
               >
@@ -223,8 +303,8 @@ function AutomotiveMonitor() {
                 sx={{
                   mx: 1.5,
 
-                  "& .material-icons": {
-                    fontSize: "2rem",
+                  '& .material-icons': {
+                    fontSize: '2rem',
                   },
                 }}
               >
@@ -242,14 +322,22 @@ function AutomotiveMonitor() {
                 sx={{
                   py: 1.25,
 
-                  "& .MuiSlider-rail": {
+                  '& .MuiSlider-rail': {
                     opacity: 1,
                   },
                 }}
               />
             </SuiBox>
           </Grid>
-          <Grid item xs={4} md={6} lg={1} sx={{ ml: "auto" }}>
+          <Grid
+            item
+            xs={4}
+            md={6}
+            lg={1}
+            sx={{
+              ml: 'auto',
+            }}
+          >
             <SuiBox display="flex" alignItems="center">
               <SuiBox color="white" lineHeight={0}>
                 <Tooltip title="Hide menu" placement="top" arrow>

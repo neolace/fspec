@@ -1,6 +1,8 @@
-
-
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -39,68 +41,190 @@ import incomeChartData from "layouts/pages/rtl/data/incomeChartData";
 import caloriesChartData from "layouts/pages/rtl/data/caloriesChartData";
 
 // Soft UI Dashboard PRO React contexts
-import { useSoftUIController, setDirection } from "context";
+import {
+  setDirection,
+  useSoftUIController,
+} from "context";
 
 function RTL() {
-  const [, dispatch] = useSoftUIController();
-  const [lights, setLights] = useState(false);
+  const [
+    ,
+    dispatch,
+  ] =
+    useSoftUIController();
+  const [
+    lights,
+    setLights,
+  ] =
+    useState(
+      false
+    );
 
-  const handleSetLights = () => setLights(!lights);
+  const handleSetLights =
+    () =>
+      setLights(
+        !lights
+      );
 
   // Changing the direction to rtl
   useEffect(() => {
-    setDirection(dispatch, "rtl");
+    setDirection(
+      dispatch,
+      "rtl"
+    );
 
-    return () => setDirection(dispatch, "ltr");
+    return () =>
+      setDirection(
+        dispatch,
+        "ltr"
+      );
   }, []);
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox my={3}>
-        <SuiBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
-              <SuiBox mb={3}>
+      <SuiBox
+        my={
+          3
+        }>
+        <SuiBox
+          mb={
+            3
+          }>
+          <Grid
+            container
+            spacing={
+              3
+            }>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
+              <SuiBox
+                mb={
+                  3
+                }>
                 <MiniStatisticsCard
                   bgColor="info"
-                  title={{ text: "John", fontWeight: "regular" }}
+                  title={{
+                    text: "John",
+                    fontWeight:
+                      "regular",
+                  }}
                   count="99 %"
-                  icon={{ color:"", component: "music_note" }}
+                  icon={{
+                    color:
+                      "",
+                    component:
+                      "music_note",
+                  }}
                 />
               </SuiBox>
               <MiniStatisticsCard
                 bgColor="info"
-                title={{ text: "Wendy", fontWeight: "regular" }}
+                title={{
+                  text: "Wendy",
+                  fontWeight:
+                    "regular",
+                }}
                 count="15/100"
-                icon={{ color: "info", component: "music_note" }}
+                icon={{
+                  color:
+                    "info",
+                  component:
+                    "music_note",
+                }}
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={3}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <Chart
                 title="دخل"
                 count="$130,832"
-                percentage={{ color: "success", label: "+90%" }}
-                chart={incomeChartData}
+                percentage={{
+                  color:
+                    "success",
+                  label:
+                    "+90%",
+                }}
+                chart={
+                  incomeChartData
+                }
               />
             </Grid>
-            <Grid item xs={12} lg={6}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              lg={
+                6
+              }>
               <ProgressLineChart
                 icon="date_range"
                 title="مهام"
-                count={480}
-                progress={60}
-                chart={progressLineChartData}
+                count={
+                  480
+                }
+                progress={
+                  60
+                }
+                chart={
+                  progressLineChartData
+                }
               />
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} lg={4}>
+        <SuiBox
+          mb={
+            3
+          }>
+          <Grid
+            container
+            spacing={
+              3
+            }>
+            <Grid
+              item
+              xs={
+                12
+              }
+              sm={
+                6
+              }
+              lg={
+                4
+              }>
               <UpcomingEvents />
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              sm={
+                3
+              }
+              lg={
+                2
+              }>
               <DefaultInfoCard
                 icon="account_balance"
                 title="مرتب"
@@ -108,7 +232,17 @@ function RTL() {
                 value="+$2000"
               />
             </Grid>
-            <Grid item xs={12} sm={3} lg={2}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              sm={
+                3
+              }
+              lg={
+                2
+              }>
               <DefaultInfoCard
                 icon="paypal"
                 title="fdg"
@@ -116,43 +250,122 @@ function RTL() {
                 value="$455.00"
               />
             </Grid>
-            <Grid item xs={12} lg={4}>
-              <MasterCard number={4562112245947852} holder="tyr" expires="11/22" />
+            <Grid
+              item
+              xs={
+                12
+              }
+              lg={
+                4
+              }>
+              <MasterCard
+                number={
+                  4562112245947852
+                }
+                holder="tyr"
+                expires="11/22"
+              />
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
+        <SuiBox
+          mb={
+            3
+          }>
+          <Grid
+            container
+            spacing={
+              3
+            }>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                3
+              }>
               <FullBody />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                2
+              }>
               <ControllerCard
-                state={lights}
+                state={
+                  lights
+                }
                 icon={
-                  <Icon className={lights ? "text-white" : "text-dark"} fontSize="large">
+                  <Icon
+                    className={
+                      lights
+                        ? "text-white"
+                        : "text-dark"
+                    }
+                    fontSize="large">
                     lightbulb
                   </Icon>
                 }
                 title=""
-                onChange={handleSetLights}
+                onChange={
+                  handleSetLights
+                }
               />
             </Grid>
-            <Grid item xs={12} lg={3}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              lg={
+                3
+              }>
               <Chart
                 title="fsdg"
-                count={97}
-                percentage={{ color: "success", label: "+5%" }}
-                chart={caloriesChartData}
+                count={
+                  97
+                }
+                percentage={{
+                  color:
+                    "success",
+                  label:
+                    "+5%",
+                }}
+                chart={
+                  caloriesChartData
+                }
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                2
+              }>
               <MiniInfoCard
                 icon="shortcut"
                 title={
                   <>
                     754&nbsp;
-                    <SuiTypography variant="button" color="secondary" fontWeight="medium">
+                    <SuiTypography
+                      variant="button"
+                      color="secondary"
+                      fontWeight="medium">
                       f
                     </SuiTypography>
                   </>
@@ -160,35 +373,88 @@ function RTL() {
                 description="dfsfda"
               />
             </Grid>
-            <Grid item xs={12} md={6} lg={2}>
+            <Grid
+              item
+              xs={
+                12
+              }
+              md={
+                6
+              }
+              lg={
+                2
+              }>
               <Steps />
             </Grid>
           </Grid>
         </SuiBox>
-        <Grid container spacing={3}>
-          <Grid item xs={12} lg={5}>
+        <Grid
+          container
+          spacing={
+            3
+          }>
+          <Grid
+            item
+            xs={
+              12
+            }
+            lg={
+              5
+            }>
             {useMemo(
               () => (
                 <Calendar
-                  header={{ title: "تقويم", date: "Monday, 2021" }}
-                  headerToolbar={false}
+                  header={{
+                    title:
+                      "تقويم",
+                    date: "Monday, 2021",
+                  }}
+                  headerToolbar={
+                    false
+                  }
                   initialView="dayGridMonth"
                   initialDate="2021-08-10"
-                  events={calendarEventsData}
+                  events={
+                    calendarEventsData
+                  }
                   selectable
                   editable
                 />
               ),
-              [calendarEventsData]
+              [
+                calendarEventsData,
+              ]
             )}
           </Grid>
-          <Grid item xs={12} lg={3}>
-            <SuiBox mb={3}>
-              <CategoriesList title="فئات" categories={categoriesListData} />
+          <Grid
+            item
+            xs={
+              12
+            }
+            lg={
+              3
+            }>
+            <SuiBox
+              mb={
+                3
+              }>
+              <CategoriesList
+                title="فئات"
+                categories={
+                  categoriesListData
+                }
+              />
             </SuiBox>
             <MediaPlayer />
           </Grid>
-          <Grid item xs={12} lg={4}>
+          <Grid
+            item
+            xs={
+              12
+            }
+            lg={
+              4
+            }>
             <OrdersOverview />
           </Grid>
         </Grid>

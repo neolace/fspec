@@ -37,7 +37,7 @@ import {
 // Images
 import brand from "assets/images/logo-ct.png";
 
-export default function App() {
+export default function Fspec() {
   const [controller, dispatch] = useSoftUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } =
     controller;

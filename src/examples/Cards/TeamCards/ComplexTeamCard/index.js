@@ -1,37 +1,43 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // prop-types is a library for typechecking of props
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // @mui material components
-import Card from "@mui/material/Card";
-import MuiLink from "@mui/material/Link";
+import Card from '@mui/material/Card';
+import MuiLink from '@mui/material/Link';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 function ComplexTeamCard({ image, name, jobTitle, project, action }) {
   const template = (
     <Card>
       <SuiBox p={2} textAlign="center" lineHeight={1}>
-        <SuiBox component="img" src={image} alt={name} width="100%" borderRadius="md" />
+        <SuiBox
+          component="img"
+          src={image}
+          alt={name}
+          width="100%"
+          borderRadius="md"
+        />
       </SuiBox>
       <SuiBox py={2.5} px={4} mb={3} mx={3} textAlign="center">
         <SuiTypography variant="h4" textTransform="capitalize">
@@ -43,7 +49,10 @@ function ComplexTeamCard({ image, name, jobTitle, project, action }) {
           </SuiTypography>
         </SuiBox>
         <SuiBox textAlign="center" lineHeight={1}>
-          <SuiTypography variant="h5" color={project.color ? project.color : "info"}>
+          <SuiTypography
+            variant="h5"
+            color={project.color ? project.color : 'info'}
+          >
             {project.count}
           </SuiTypography>
           <SuiTypography variant="button" fontWeight="regular" color="text">
@@ -54,7 +63,7 @@ function ComplexTeamCard({ image, name, jobTitle, project, action }) {
     </Card>
   );
 
-  return action.type === "external" ? (
+  return action.type === 'external' ? (
     <MuiLink href={action.route} target="_blank" rel="noreferrer">
       {template}
     </MuiLink>
@@ -70,21 +79,21 @@ ComplexTeamCard.propTypes = {
   jobTitle: PropTypes.string.isRequired,
   project: PropTypes.shape({
     color: PropTypes.oneOf([
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "dark",
-      "light",
-      "text",
+      'primary',
+      'secondary',
+      'info',
+      'success',
+      'warning',
+      'error',
+      'dark',
+      'light',
+      'text',
     ]),
     count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    type: PropTypes.oneOf(['external', 'internal']).isRequired,
     route: PropTypes.string.isRequired,
   }).isRequired,
 };

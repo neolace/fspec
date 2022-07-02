@@ -1,37 +1,37 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
-import { Fragment } from "react";
+import { Fragment } from 'react';
 
 // prop-types is a library for typechecking of props.
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // react-router components
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 // @mui material components
-import Grid from "@mui/material/Grid";
-import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
+import Grid from '@mui/material/Grid';
+import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
+import SuiBox from 'components/SuiBox';
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbarCategory from "examples/Navbars/DefaultNavbar/DefaultNavbarCategory";
-import DefaultNavbarMenu from "examples/Navbars/DefaultNavbar/DefaultNavbarMenu";
+import DefaultNavbarCategory from 'examples/Navbars/DefaultNavbar/DefaultNavbarCategory';
+import DefaultNavbarMenu from 'examples/Navbars/DefaultNavbar/DefaultNavbarMenu';
 
 function PagesMenu({ routes, open, close, mobileMenu }) {
   const renderPagesMenuRoute = (routeName) =>
@@ -60,25 +60,49 @@ function PagesMenu({ routes, open, close, mobileMenu }) {
     <SuiBox py={1} px={2}>
       <Grid container spacing={3}>
         <Grid item xs={12} lg={3}>
-          {renderPagesMenuRoute("dashboards")}
-          <SuiBox mt={2}>{renderPagesMenuRoute("users")}</SuiBox>
+          {renderPagesMenuRoute('dashboards')}
+          <SuiBox mt={2}>{renderPagesMenuRoute('users')}</SuiBox>
         </Grid>
-        <Grid item xs={12} lg={4} sx={{ display: "flex" }}>
-          <SuiBox display={{ xs: "none", lg: "block" }}>
+        <Grid
+          item
+          xs={12}
+          lg={4}
+          sx={{
+            display: 'flex',
+          }}
+        >
+          <SuiBox
+            display={{
+              xs: 'none',
+              lg: 'block',
+            }}
+          >
             <Divider orientation="vertical" />
           </SuiBox>
           <SuiBox>
-            {renderPagesMenuRoute("extra")}
-            <SuiBox mt={2}>{renderPagesMenuRoute("projects")}</SuiBox>
+            {renderPagesMenuRoute('extra')}
+            <SuiBox mt={2}>{renderPagesMenuRoute('projects')}</SuiBox>
           </SuiBox>
         </Grid>
-        <Grid item xs={12} lg={5} sx={{ display: "flex" }}>
-          <SuiBox display={{ xs: "none", lg: "block" }}>
+        <Grid
+          item
+          xs={12}
+          lg={5}
+          sx={{
+            display: 'flex',
+          }}
+        >
+          <SuiBox
+            display={{
+              xs: 'none',
+              lg: 'block',
+            }}
+          >
             <Divider orientation="vertical" />
           </SuiBox>
           <SuiBox width="100%">
-            {renderPagesMenuRoute("account")}
-            <SuiBox mt={2}>{renderPagesMenuRoute("profile")}</SuiBox>
+            {renderPagesMenuRoute('account')}
+            <SuiBox mt={2}>{renderPagesMenuRoute('profile')}</SuiBox>
           </SuiBox>
         </Grid>
       </Grid>

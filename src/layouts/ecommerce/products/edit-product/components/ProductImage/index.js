@@ -1,17 +1,17 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -27,27 +27,50 @@ const sofa =
 
 function ProductImage() {
   return (
-    <Card sx={{ height: "100%" }}>
-      <SuiBox p={3}>
-        <SuiTypography variant="h5" fontWeight="bold">
-          Product Image
+    <Card
+      sx={{
+        height:
+          "100%",
+      }}>
+      <SuiBox
+        p={
+          3
+        }>
+        <SuiTypography
+          variant="h5"
+          fontWeight="bold">
+          Product
+          Image
         </SuiTypography>
         <SuiBox
           component="img"
-          src={sofa}
+          src={
+            sofa
+          }
           alt="Product Image"
           borderRadius="lg"
           shadow="lg"
           width="100%"
-          my={3}
+          my={
+            3
+          }
         />
         <SuiBox display="flex">
-          <SuiBox mr={1}>
-            <SuiButton variant="gradient" color="info" size="small">
+          <SuiBox
+            mr={
+              1
+            }>
+            <SuiButton
+              variant="gradient"
+              color="info"
+              size="small">
               edit
             </SuiButton>
           </SuiBox>
-          <SuiButton variant="outlined" color="dark" size="small">
+          <SuiButton
+            variant="outlined"
+            color="dark"
+            size="small">
             remove
           </SuiButton>
         </SuiBox>

@@ -1,4 +1,3 @@
-
 // @mui material components
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
@@ -12,60 +11,133 @@ import SuiButton from "components/SuiButton";
 import curved1 from "assets/images/curved-images/curved1.jpg";
 
 function MediaPlayer() {
-  const mediaPlayerButtonStyles = ({ functions: { pxToRem } }) => ({
-    width: pxToRem(46),
-    height: pxToRem(46),
-    minWidth: pxToRem(46),
-    minHeight: pxToRem(46),
-    mr: 1,
-  });
+  const mediaPlayerButtonStyles =
+    ({
+      functions:
+        {
+          pxToRem,
+        },
+    }) => ({
+      width:
+        pxToRem(
+          46
+        ),
+      height:
+        pxToRem(
+          46
+        ),
+      minWidth:
+        pxToRem(
+          46
+        ),
+      minHeight:
+        pxToRem(
+          46
+        ),
+      mr: 1,
+    });
 
   return (
     <Card
-      sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
+      sx={({
+        functions:
+          {
+            linearGradient,
+            rgba,
+          },
+        palette:
+          {
+            gradients,
+          },
+      }) => ({
         backgroundImage: `${linearGradient(
-          rgba(gradients.dark.main, 0.85),
-          rgba(gradients.dark.state, 0.85)
+          rgba(
+            gradients
+              .dark
+              .main,
+            0.85
+          ),
+          rgba(
+            gradients
+              .dark
+              .state,
+            0.85
+          )
         )}, url(${curved1})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      })}
-    >
-      <SuiBox p={3} position="relative" lineHeight={0}>
-        <SuiTypography variant="h5" color="white" fontWeight="bold">
-          نوع من البلوز
+        backgroundSize:
+          "cover",
+        backgroundPosition:
+          "center",
+      })}>
+      <SuiBox
+        p={
+          3
+        }
+        position="relative"
+        lineHeight={
+          0
+        }>
+        <SuiTypography
+          variant="h5"
+          color="white"
+          fontWeight="bold">
+          نوع
+          من
+          البلوز
         </SuiTypography>
-        <SuiTypography variant="button" color="white" fontWeight="medium">
+        <SuiTypography
+          variant="button"
+          color="white"
+          fontWeight="medium">
           ديفتونز
         </SuiTypography>
-        <SuiBox display="flex" mt={3} pt={1}>
-          <SuiBox display="flex" alignItems="center" justifyContent="center">
+        <SuiBox
+          display="flex"
+          mt={
+            3
+          }
+          pt={
+            1
+          }>
+          <SuiBox
+            display="flex"
+            alignItems="center"
+            justifyContent="center">
             <SuiButton
               variant="outlined"
               size="large"
               circular
               iconOnly
-              sx={mediaPlayerButtonStyles}
-            >
-              <Icon>skip_previous</Icon>
+              sx={
+                mediaPlayerButtonStyles
+              }>
+              <Icon>
+                skip_previous
+              </Icon>
             </SuiButton>
             <SuiButton
               variant="outlined"
               size="large"
               circular
               iconOnly
-              sx={mediaPlayerButtonStyles}
-            >
-              <Icon>play_arrow</Icon>
+              sx={
+                mediaPlayerButtonStyles
+              }>
+              <Icon>
+                play_arrow
+              </Icon>
             </SuiButton>
             <SuiButton
               variant="outlined"
               size="large"
               circular
               iconOnly
-              sx={mediaPlayerButtonStyles}
-            >
-              <Icon>skip_next</Icon>
+              sx={
+                mediaPlayerButtonStyles
+              }>
+              <Icon>
+                skip_next
+              </Icon>
             </SuiButton>
           </SuiBox>
         </SuiBox>

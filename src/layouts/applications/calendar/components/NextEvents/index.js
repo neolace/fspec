@@ -1,38 +1,46 @@
 /**
-=========================================================
-* Soft UI Dashboard PRO React - v3.1.0
-=========================================================
+ =========================================================
+ * Soft UI Dashboard PRO React - v3.1.0
+ =========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+ * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
+ * Copyright 2022 Creative Tim (https://www.creative-tim.com)
 
-Coded by www.creative-tim.com
+ Coded by www.creative-tim.com
 
  =========================================================
 
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ */
 
 // @mui material components
-import Card from "@mui/material/Card";
+import Card from '@mui/material/Card';
 
 // Soft UI Dashboard PRO React components
-import SuiBox from "components/SuiBox";
-import SuiTypography from "components/SuiTypography";
+import SuiBox from 'components/SuiBox';
+import SuiTypography from 'components/SuiTypography';
 
 // Soft UI Dashboard PRO React example components
-import DefaultItem from "examples/Items/DefaultItem";
+import DefaultItem from 'examples/Items/DefaultItem';
 
 function NextEvents() {
   return (
-    <Card sx={{ height: "100%" }}>
+    <Card
+      sx={{
+        height: '100%',
+      }}
+    >
       <SuiBox pt={2} px={2}>
         <SuiTypography variant="h6" fontWeight="medium">
           Next events
         </SuiTypography>
       </SuiBox>
       <SuiBox p={2}>
-        <DefaultItem icon="paid" title="Cyber Week" description="27 March 2020, at 12:30 PM" />
+        <DefaultItem
+          icon="paid"
+          title="Cyber Week"
+          description="27 March 2020, at 12:30 PM"
+        />
         <SuiBox mt={3.5}>
           <DefaultItem
             color="primary"
