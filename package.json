@@ -1,9 +1,9 @@
 {
-  "name": "soft-ui-dashboard-pro-react",
+  "name": "factory-spec-v1.0.0",
   "version": "3.1.0",
   "author": "Tertius Geldenhuys",
-  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
-  "description": "React version of Soft UI Dashboard PRO by l4t3nc1",
+  "license": "SEE LICENSE IN TGA",
+  "description": "FactorySpec - Focus on the edge",
   "homepage": "https://demos.creative-tim.com/soft-ui-dashboard-pro-react/#/dashboards/default",
   "bugs": {
     "url": "https://github.com/creativetimofficial/ct-soft-ui-dashboard-pro-react/issues"
