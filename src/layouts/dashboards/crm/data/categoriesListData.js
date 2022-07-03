@@ -14,50 +14,50 @@
  */
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from 'components/SuiTypography';
+import SuiTypography from "components/SuiTypography";
 
 const categoriesListData = [
   {
-    color: 'dark',
-    icon: 'devices_other',
-    name: 'Devices',
+    color: "dark",
+    icon: "devices_other",
+    name: "Devices",
     description: (
       <>
-        250 in stock,{' '}
+        250 in stock,{" "}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           346+ sold
         </SuiTypography>
       </>
     ),
-    route: '/',
+    route: "/",
   },
   {
-    color: 'dark',
-    icon: 'settings',
-    name: 'Tickets',
+    color: "dark",
+    icon: "settings",
+    name: "Tickets",
     description: (
       <>
-        123 closed,{' '}
+        123 closed,{" "}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           15 open
         </SuiTypography>
       </>
     ),
-    route: '/',
+    route: "/",
   },
   {
-    color: 'dark',
-    icon: 'info',
-    name: 'Error logs',
+    color: "dark",
+    icon: "info",
+    name: "Error logs",
     description: (
       <>
-        1 is active,{' '}
+        1 is active,{" "}
         <SuiTypography variant="caption" color="text" fontWeight="medium">
           40 closed
         </SuiTypography>
       </>
     ),
-    route: '/',
+    route: "/",
   },
 ];
 

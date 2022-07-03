@@ -14,22 +14,22 @@
  */
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Custom styles for the WavedPricingCard
-import WavedPricingCardWavesRoot from 'examples/Cards/PricingCards/WavedPricingCard/WavedPricingCardWavesRoot';
+import WavedPricingCardWavesRoot from "examples/Cards/PricingCards/WavedPricingCard/WavedPricingCardWavesRoot";
 
 function WavedPricingCard({ color, title, price, specifications, action }) {
   const renderSpecifications = specifications.map(({ count, label }, key) => (
@@ -37,7 +37,7 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
       <SuiTypography variant="body2" color="text">
         <SuiBox component="strong" color="text">
           {count}
-        </SuiBox>{' '}
+        </SuiBox>{" "}
         {label}
       </SuiTypography>
       {specifications.length - 1 === key ? null : <Divider />}
@@ -56,22 +56,15 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
         variant="gradient"
       >
         <SuiBox position="relative" zIndex={1}>
-          <SuiTypography
-            variant="h5"
-            color={color === 'light' ? 'dark' : 'white'}
-            gutterBottom
-          >
+          <SuiTypography variant="h5" color={color === "light" ? "dark" : "white"} gutterBottom>
             {title}
           </SuiTypography>
           <SuiTypography
             variant="h1"
             fontWeight="bold"
-            color={color === 'light' ? 'dark' : 'white'}
+            color={color === "light" ? "dark" : "white"}
           >
-            <SuiBox
-              component="small"
-              color={color === 'light' ? 'dark' : 'white'}
-            >
+            <SuiBox component="small" color={color === "light" ? "dark" : "white"}>
               {price.currency}
             </SuiBox>
             {price.value}
@@ -79,20 +72,14 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
           <SuiTypography
             variant="body2"
             fontWeight="medium"
-            color={color === 'light' ? 'dark' : 'white'}
+            color={color === "light" ? "dark" : "white"}
             gutterBottom
           >
             {price.type}
           </SuiTypography>
         </SuiBox>
       </SuiBox>
-      <SuiBox
-        position="relative"
-        height="3.125rem"
-        overflow="hidden"
-        zIndex={2}
-        mt={-5}
-      >
+      <SuiBox position="relative" height="3.125rem" overflow="hidden" zIndex={2} mt={-5}>
         <SuiBox position="absolute" width="100%" top={0} zIndex={1}>
           <SuiBox
             component="svg"
@@ -115,42 +102,12 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
               />
             </defs>
             <WavedPricingCardWavesRoot>
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="-1"
-                fill="rgba(255,255,255,0.30"
-              />
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="3"
-                fill="rgba(255,255,255,0.35)"
-              />
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="5"
-                fill="rgba(255,255,255,0.25)"
-              />
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="8"
-                fill="rgba(255,255,255,0.20)"
-              />
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="13"
-                fill="rgba(255,255,255,0.15)"
-              />
-              <use
-                xlinkHref="#card-wave"
-                x="48"
-                y="16"
-                fill="rgba(255,255,255,0.99)"
-              />
+              <use xlinkHref="#card-wave" x="48" y="-1" fill="rgba(255,255,255,0.30" />
+              <use xlinkHref="#card-wave" x="48" y="3" fill="rgba(255,255,255,0.35)" />
+              <use xlinkHref="#card-wave" x="48" y="5" fill="rgba(255,255,255,0.25)" />
+              <use xlinkHref="#card-wave" x="48" y="8" fill="rgba(255,255,255,0.20)" />
+              <use xlinkHref="#card-wave" x="48" y="13" fill="rgba(255,255,255,0.15)" />
+              <use xlinkHref="#card-wave" x="48" y="16" fill="rgba(255,255,255,0.99)" />
             </WavedPricingCardWavesRoot>
           </SuiBox>
         </SuiBox>
@@ -160,12 +117,12 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
           component="ul"
           mx="auto"
           sx={{
-            listStyle: 'none',
+            listStyle: "none",
           }}
         >
           {renderSpecifications}
         </SuiBox>
-        {action.type === 'internal' ? (
+        {action.type === "internal" ? (
           <SuiBox mt={4.5}>
             <SuiButton
               component={Link}
@@ -199,20 +156,20 @@ function WavedPricingCard({ color, title, price, specifications, action }) {
 
 // Setting default props for the WavedPricingCard
 WavedPricingCard.defaultProps = {
-  color: 'dark',
+  color: "dark",
 };
 
 // Typechecking props for the WavedPricingCard
 WavedPricingCard.propTypes = {
   color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'light',
-    'dark',
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "light",
+    "dark",
   ]),
   title: PropTypes.string.isRequired,
   price: PropTypes.shape({
@@ -222,7 +179,7 @@ WavedPricingCard.propTypes = {
   }).isRequired,
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(['external', 'internal']).isRequired,
+    type: PropTypes.oneOf(["external", "internal"]).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

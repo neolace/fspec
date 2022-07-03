@@ -13,26 +13,26 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // prop-types is a library for typechecking of props.
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Menu from '@mui/material/Menu';
+import Menu from "@mui/material/Menu";
 // import Grid from "@mui/material/Grid";
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbarLink from 'examples/Navbars/DefaultNavbar/DefaultNavbarLink';
+import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
 
 // DefaultNavbar dropdown menus
-import PagesMenu from 'examples/Navbars/DefaultNavbar/Menus/PagesMenu';
-import AuthenticationMenu from 'examples/Navbars/DefaultNavbar/Menus/AuthenticationMenu';
-import ApplicationsMenu from 'examples/Navbars/DefaultNavbar/Menus/ApplicationsMenu';
-import EcommerceMenu from 'examples/Navbars/DefaultNavbar/Menus/EcommerceMenu';
-import DocsMenu from 'examples/Navbars/DefaultNavbar/Menus/DocsMenu';
+import PagesMenu from "examples/Navbars/DefaultNavbar/Menus/PagesMenu";
+import AuthenticationMenu from "examples/Navbars/DefaultNavbar/Menus/AuthenticationMenu";
+import ApplicationsMenu from "examples/Navbars/DefaultNavbar/Menus/ApplicationsMenu";
+import EcommerceMenu from "examples/Navbars/DefaultNavbar/Menus/EcommerceMenu";
+import DocsMenu from "examples/Navbars/DefaultNavbar/Menus/DocsMenu";
 
 function DefaultNavbarMobile({ routes, open, close }) {
   const { width } = open && open.getBoundingClientRect();
@@ -44,12 +44,12 @@ function DefaultNavbarMobile({ routes, open, close }) {
   return (
     <Menu
       anchorOrigin={{
-        vertical: 'bottom',
-        horizontal: 'center',
+        vertical: "bottom",
+        horizontal: "center",
       }}
       transformOrigin={{
-        vertical: 'top',
-        horizontal: 'center',
+        vertical: "top",
+        horizontal: "center",
       }}
       anchorEl={open}
       open={Boolean(open)}
@@ -63,8 +63,8 @@ function DefaultNavbarMobile({ routes, open, close }) {
       <SuiBox px={0.5}>
         <DefaultNavbarLink
           name="pages"
-          collapseStatus={openCollapse === 'pages'}
-          onClick={() => handleSepOpenCollapse('pages')}
+          collapseStatus={openCollapse === "pages"}
+          onClick={() => handleSepOpenCollapse("pages")}
         >
           <SuiBox maxHeight="16rem" overflow="auto">
             <PagesMenu routes={routes} mobileMenu />
@@ -72,8 +72,8 @@ function DefaultNavbarMobile({ routes, open, close }) {
         </DefaultNavbarLink>
         <DefaultNavbarLink
           name="authentication"
-          collapseStatus={openCollapse === 'authentication'}
-          onClick={() => handleSepOpenCollapse('authentication')}
+          collapseStatus={openCollapse === "authentication"}
+          onClick={() => handleSepOpenCollapse("authentication")}
         >
           <SuiBox maxHeight="16rem" overflow="auto">
             <AuthenticationMenu routes={routes} mobileMenu />
@@ -81,8 +81,8 @@ function DefaultNavbarMobile({ routes, open, close }) {
         </DefaultNavbarLink>
         <DefaultNavbarLink
           name="applications"
-          collapseStatus={openCollapse === 'applications'}
-          onClick={() => handleSepOpenCollapse('applications')}
+          collapseStatus={openCollapse === "applications"}
+          onClick={() => handleSepOpenCollapse("applications")}
         >
           <SuiBox maxHeight="16rem" overflow="auto">
             <ApplicationsMenu routes={routes} mobileMenu />
@@ -90,8 +90,8 @@ function DefaultNavbarMobile({ routes, open, close }) {
         </DefaultNavbarLink>
         <DefaultNavbarLink
           name="ecommerce"
-          collapseStatus={openCollapse === 'ecommerce'}
-          onClick={() => handleSepOpenCollapse('ecommerce')}
+          collapseStatus={openCollapse === "ecommerce"}
+          onClick={() => handleSepOpenCollapse("ecommerce")}
         >
           <SuiBox maxHeight="16rem" overflow="auto">
             <EcommerceMenu routes={routes} mobileMenu />
@@ -99,8 +99,8 @@ function DefaultNavbarMobile({ routes, open, close }) {
         </DefaultNavbarLink>
         <DefaultNavbarLink
           name="docs"
-          collapseStatus={openCollapse === 'docs'}
-          onClick={() => handleSepOpenCollapse('docs')}
+          collapseStatus={openCollapse === "docs"}
+          onClick={() => handleSepOpenCollapse("docs")}
         >
           <SuiBox maxHeight="16rem" overflow="auto">
             <DocsMenu routes={routes} mobileMenu />
@@ -115,8 +115,7 @@ function DefaultNavbarMobile({ routes, open, close }) {
 DefaultNavbarMobile.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
   open: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
-  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object])
-    .isRequired,
+  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object]).isRequired,
 };
 
 export default DefaultNavbarMobile;

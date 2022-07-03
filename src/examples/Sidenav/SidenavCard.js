@@ -14,26 +14,21 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Icon from '@mui/material/Icon';
-import Link from '@mui/material/Link';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import Icon from "@mui/material/Icon";
+import Link from "@mui/material/Link";
 
 // Soft UI Dashboard PRO React components
-import SuiButton from 'components/SuiButton';
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiButton from "components/SuiButton";
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Custom styles for the SidenavCard
-import {
-  card,
-  cardContent,
-  cardIcon,
-  cardIconBox,
-} from 'examples/Sidenav/styles/sidenavCard';
+import { card, cardContent, cardIcon, cardIconBox } from "examples/Sidenav/styles/sidenavCard";
 
 // Soft UI Dashboard PRO React context
-import { useSoftUIController } from 'context';
+import { useSoftUIController } from "context";
 
 function SidenavCard() {
   const [controller] = useSoftUIController();

@@ -33,39 +33,12 @@ import SuiProgress from "components/SuiProgress";
 // ProgressLineChart configurations
 import configs from "examples/Charts/LineCharts/ProgressLineChart/config";
 
-function ProgressLineChart({
-  color,
-  icon,
-  title,
-  count,
-  progress,
-  height,
-  chart,
-}) {
-  const {
-    data,
-    options,
-  } =
-    configs(
-      color,
-      chart.labels ||
-        [],
-      title,
-      chart.data ||
-        []
-    );
+function ProgressLineChart({ color, icon, title, count, progress, height, chart }) {
+  const { data, options } = configs(color, chart.labels || [], title, chart.data || []);
 
   return (
     <Card>
-      <SuiBox
-        display="flex"
-        alignItems="center"
-        pt={
-          2
-        }
-        px={
-          2
-        }>
+      <SuiBox display="flex" alignItems="center" pt={2} px={2}>
         <SuiBox
           width="3rem"
           height="3rem"
@@ -75,155 +48,69 @@ function ProgressLineChart({
           borderRadius="md"
           shadow="md"
           color="white"
-          bgColor={
-            color
-          }
-          variant="gradient">
-          <Icon fontSize="default">
-            {
-              icon
-            }
-          </Icon>
+          bgColor={color}
+          variant="gradient"
+        >
+          <Icon fontSize="default">{icon}</Icon>
         </SuiBox>
-        <SuiBox
-          ml={
-            2
-          }
-          lineHeight={
-            1
-          }>
+        <SuiBox ml={2} lineHeight={1}>
           <SuiTypography
             variant="button"
             fontWeight="medium"
             textTransform="capitalize"
-            color="text">
-            {
-              title
-            }
+            color="text"
+          >
+            {title}
           </SuiTypography>
           {count ? (
-            <SuiTypography
-              variant="h5"
-              fontWeight="bold">
-              {
-                count
-              }
+            <SuiTypography variant="h5" fontWeight="bold">
+              {count}
             </SuiTypography>
           ) : null}
         </SuiBox>
-        <SuiBox
-          width="25%"
-          ml="auto">
-          <SuiTypography
-            display="block"
-            variant="caption"
-            fontWeight="medium"
-            color="text">
-            {
-              progress
-            }
-            %
+        <SuiBox width="25%" ml="auto">
+          <SuiTypography display="block" variant="caption" fontWeight="medium" color="text">
+            {progress}%
           </SuiTypography>
-          <SuiBox
-            mt={
-              0.25
-            }>
-            <SuiProgress
-              variant="gradient"
-              color={
-                color
-              }
-              value={
-                progress
-              }
-            />
+          <SuiBox mt={0.25}>
+            <SuiProgress variant="gradient" color={color} value={progress} />
           </SuiBox>
         </SuiBox>
       </SuiBox>
       {useMemo(
         () => (
-          <SuiBox
-            mt={
-              2
-            }>
+          <SuiBox mt={2}>
             <Line
-              data={
-                data
-              }
-              options={
-                options
-              }
+              data={data}
+              options={options}
               style={{
                 height,
               }}
             />
           </SuiBox>
         ),
-        [
-          chart,
-          height,
-          color,
-        ]
+        [chart, height, color]
       )}
     </Card>
   );
 }
 
 // Setting default values for the props of ProgressLineChart
-ProgressLineChart.defaultProps =
-  {
-    color:
-      "info",
-    count: 0,
-    height:
-      "6.25rem",
-  };
+ProgressLineChart.defaultProps = {
+  color: "info",
+  count: 0,
+  height: "6.25rem",
+};
 
 // Typechecking props for the ProgressLineChart
-ProgressLineChart.propTypes =
-  {
-    color:
-      PropTypes.oneOf(
-        [
-          "primary",
-          "secondary",
-          "info",
-          "success",
-          "warning",
-          "error",
-          "dark",
-        ]
-      ),
-    icon: PropTypes
-      .node
-      .isRequired,
-    title:
-      PropTypes
-        .string
-        .isRequired,
-    count:
-      PropTypes.oneOfType(
-        [
-          PropTypes.string,
-          PropTypes.number,
-        ]
-      ),
-    progress:
-      PropTypes
-        .number
-        .isRequired,
-    height:
-      PropTypes.oneOfType(
-        [
-          PropTypes.string,
-          PropTypes.number,
-        ]
-      ),
-    chart:
-      PropTypes.objectOf(
-        PropTypes.array
-      )
-        .isRequired,
-  };
+ProgressLineChart.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  progress: PropTypes.number.isRequired,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  chart: PropTypes.objectOf(PropTypes.array).isRequired,
+};
 
 export default ProgressLineChart;

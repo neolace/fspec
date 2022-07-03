@@ -21,31 +21,11 @@ import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiAvatar from "components/SuiAvatar";
 
-function CustomerCell({
-  image,
-  name,
-  color,
-}) {
+function CustomerCell({ image, name, color }) {
   return (
-    <SuiBox
-      display="flex"
-      alignItems="center">
-      <SuiBox
-        mr={
-          1
-        }>
-        <SuiAvatar
-          bgColor={
-            color
-          }
-          src={
-            image
-          }
-          alt={
-            name
-          }
-          size="xs"
-        />
+    <SuiBox display="flex" alignItems="center">
+      <SuiBox mr={1}>
+        <SuiAvatar bgColor={color} src={image} alt={name} size="xs" />
       </SuiBox>
       <SuiTypography
         variant="caption"
@@ -53,46 +33,35 @@ function CustomerCell({
         color="text"
         sx={{
           lineHeight: 0,
-        }}>
-        {
-          name
-        }
+        }}
+      >
+        {name}
       </SuiTypography>
     </SuiBox>
   );
 }
 
 // Setting default value for the props of CustomerCell
-CustomerCell.defaultProps =
-  {
-    image:
-      "",
-    color:
-      "dark",
-  };
+CustomerCell.defaultProps = {
+  image: "",
+  color: "dark",
+};
 
 // Typechecking props for the CustomerCell
-CustomerCell.propTypes =
-  {
-    image:
-      PropTypes.string,
-    name: PropTypes
-      .string
-      .isRequired,
-    color:
-      PropTypes.oneOf(
-        [
-          "transparent",
-          "primary",
-          "secondary",
-          "info",
-          "success",
-          "warning",
-          "error",
-          "light",
-          "dark",
-        ]
-      ),
-  };
+CustomerCell.propTypes = {
+  image: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  color: PropTypes.oneOf([
+    "transparent",
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "light",
+    "dark",
+  ]),
+};
 
 export default CustomerCell;

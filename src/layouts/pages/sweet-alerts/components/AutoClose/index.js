@@ -1,16 +1,18 @@
 // sweetalert2 components
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 // Sweet Alerts page components
-import Template from 'layouts/pages/sweet-alerts/components/Template';
+import Template from "layouts/pages/sweet-alerts/components/Template";
+
+import { error } from "react-dom/test-utils";
 
 function AutoClose() {
   let timerInterval;
 
   const showAlert = () =>
     Swal.fire({
-      title: 'Auto close alert!',
-      html: 'I will close in <b></b> milliseconds.',
+      title: "Auto close alert!",
+      html: "I will close in <b></b> milliseconds.",
       timer: 2000,
       timerProgressBar: true,
       didOpen: () => {
@@ -18,7 +20,7 @@ function AutoClose() {
         timerInterval = setInterval(() => {
           const content = Swal.getHtmlContainer();
           if (content) {
-            const b = content.querySelector('b');
+            const b = content.querySelector("b");
             if (b) {
               b.textContent = Swal.getTimerLeft().toString();
             }
@@ -31,7 +33,7 @@ function AutoClose() {
     }).then((result) => {
       /* Read more about handling dismissals below */
       if (result.dismiss === Swal.DismissReason.timer) {
-        console.log('I was closed by the timer');
+        error.log("I was closed by the timer");
       }
     });
 

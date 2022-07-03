@@ -36,142 +36,61 @@ import SuiButton from "components/SuiButton";
 // Images
 import whiteCurved from "assets/images/curved-images/white-curved.jpeg";
 
-function AnimatedStatisticsCard({
-  color,
-  title,
-  count,
-  percentage,
-  action,
-}) {
-  const sharedStyles =
-    {
+function AnimatedStatisticsCard({ color, title, count, percentage, action }) {
+  const sharedStyles = {
+    transform: `translateZ(50px) scale(0.7)`,
+    transition: "all 500ms linear",
+  };
+
+  const actionStyles = {
+    my: 1,
+    width: ({ functions: { pxToRem } }) => pxToRem(160),
+    ...sharedStyles,
+
+    "&:hover, &:focus": {
       transform: `translateZ(50px) scale(0.7)`,
-      transition:
-        "all 500ms linear",
-    };
+    },
+  };
 
-  const actionStyles =
-    {
-      my: 1,
-      width:
-        ({
-          functions:
-            {
-              pxToRem,
-            },
-        }) =>
-          pxToRem(
-            160
-          ),
-      ...sharedStyles,
-
-      "&:hover, &:focus":
-        {
-          transform: `translateZ(50px) scale(0.7)`,
-        },
-    };
-
-  const tiltRef =
-    useRef();
+  const tiltRef = useRef();
 
   useEffect(() => {
-    const {
-      current:
-        tiltNode,
-    } =
-      tiltRef;
-    const vanillaTiltOptions =
-      {
-        reverse: false,
-        max: 35,
-        perspective: 1000,
-        scale: 1,
-        speed: 300,
-        transition: true,
-        axis: null,
-        reset: true,
-        easing:
-          "cubic-bezier(0.03,0.98,0.52,0.99)",
-      };
-    VanillaTilt.init(
-      tiltNode,
-      vanillaTiltOptions
-    );
-    return () =>
-      tiltNode.vanillaTilt.destroy();
+    const { current: tiltNode } = tiltRef;
+    const vanillaTiltOptions = {
+      reverse: false,
+      max: 35,
+      perspective: 1000,
+      scale: 1,
+      speed: 300,
+      transition: true,
+      axis: null,
+      reset: true,
+      easing: "cubic-bezier(0.03,0.98,0.52,0.99)",
+    };
+    VanillaTilt.init(tiltNode, vanillaTiltOptions);
+    return () => tiltNode.vanillaTilt.destroy();
   }, []);
 
   return (
-    <div
-      ref={
-        tiltRef
-      }>
+    <div ref={tiltRef}>
       <Card
-        sx={({
-          functions:
-            {
-              linearGradient,
-              rgba,
-            },
-          palette:
-            {
-              gradients,
-            },
-        }) => ({
-          backgroundImage:
-            gradients[
-              color
-            ]
-              ? `${linearGradient(
-                  rgba(
-                    gradients[
-                      color
-                    ]
-                      .main,
-                    0.85
-                  ),
-                  rgba(
-                    gradients[
-                      color
-                    ]
-                      .state,
-                    0.85
-                  )
-                )}, url(${whiteCurved})`
-              : `${linearGradient(
-                  rgba(
-                    gradients[
-                      color
-                    ]
-                      .main,
-                    0.85
-                  ),
-                  rgba(
-                    gradients[
-                      color
-                    ]
-                      .state,
-                    0.85
-                  )
-                )}, url(${whiteCurved})`,
-          backgroundSize:
-            "cover",
-          backgroundPosition:
-            "50%",
-          overflow:
-            "visible",
-        })}>
-        <SuiBox
-          p={
-            3
-          }
-          display="flex"
-          flexDirection="column"
-          alignItems="center">
-          <SuiBox
-            mt={
-              1
-            }>
+        sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
+          backgroundImage: gradients[color]
+            ? `${linearGradient(
+                rgba(gradients[color].main, 0.85),
+                rgba(gradients[color].state, 0.85)
+              )}, url(${whiteCurved})`
+            : `${linearGradient(
+                rgba(gradients[color].main, 0.85),
+                rgba(gradients[color].state, 0.85)
+              )}, url(${whiteCurved})`,
+          backgroundSize: "cover",
+          backgroundPosition: "50%",
+          overflow: "visible",
+        })}
+      >
+        <SuiBox p={3} display="flex" flexDirection="column" alignItems="center">
+          <SuiBox mt={1}>
             <SuiTypography
               variant="h2"
               color="white"
@@ -180,37 +99,21 @@ function AnimatedStatisticsCard({
               sx={{
                 mt: 1,
                 ...sharedStyles,
-              }}>
-              {
-                title
-              }
+              }}
+            >
+              {title}
             </SuiTypography>
           </SuiBox>
-          <SuiTypography
-            variant="h1"
-            fontWeight="bold"
-            color="white"
-            sx={
-              sharedStyles
-            }>
-            {
-              count
-            }
+          <SuiTypography variant="h1" fontWeight="bold" color="white" sx={sharedStyles}>
+            {count}
           </SuiTypography>
-          <SuiBox
-            sx={
-              sharedStyles
-            }>
+          <SuiBox sx={sharedStyles}>
             <SuiBadge
-              color={
-                percentage.color
-              }
+              color={percentage.color}
               badgeContent={
                 <>
                   &nbsp;
-                  {
-                    percentage.label
-                  }
+                  {percentage.label}
                   &nbsp;
                 </>
               }
@@ -218,41 +121,28 @@ function AnimatedStatisticsCard({
               container
             />
           </SuiBox>
-          {action.type ===
-          "internal" ? (
+          {action.type === "internal" ? (
             <SuiButton
-              component={
-                Link
-              }
-              to={
-                action.route
-              }
+              component={Link}
+              to={action.route}
               variant="outlined"
               color="white"
-              sx={
-                actionStyles
-              }>
-              {
-                action.label
-              }
+              sx={actionStyles}
+            >
+              {action.label}
             </SuiButton>
           ) : (
             <SuiButton
               component="a"
-              href={
-                action.route
-              }
+              href={action.route}
               target="_blank"
               rel="noreferrer"
               variant="outlined"
               color="white"
               size="small"
-              sx={
-                actionStyles
-              }>
-              {
-                action.label
-              }
+              sx={actionStyles}
+            >
+              {action.label}
             </SuiButton>
           )}
         </SuiBox>
@@ -262,79 +152,25 @@ function AnimatedStatisticsCard({
 }
 
 // Setting default values for the props of AnimatedStatisticsCard
-AnimatedStatisticsCard.defaultProps =
-  {
-    color:
-      "info",
-  };
+AnimatedStatisticsCard.defaultProps = {
+  color: "info",
+};
 
 // Typechecking props for the AnimatedStatisticsCard
-AnimatedStatisticsCard.propTypes =
-  {
-    color:
-      PropTypes.oneOf(
-        [
-          "primary",
-          "secondary",
-          "info",
-          "success",
-          "warning",
-          "error",
-          "dark",
-        ]
-      ),
-    title:
-      PropTypes
-        .string
-        .isRequired,
-    count:
-      PropTypes
-        .string
-        .isRequired,
-    percentage:
-      PropTypes.shape(
-        {
-          color:
-            PropTypes.oneOf(
-              [
-                "primary",
-                "secondary",
-                "info",
-                "success",
-                "warning",
-                "error",
-                "dark",
-              ]
-            )
-              .isRequired,
-          label:
-            PropTypes
-              .string
-              .isRequired,
-        }
-      )
-        .isRequired,
-    action:
-      PropTypes.shape(
-        {
-          type: PropTypes.oneOf(
-            [
-              "external",
-              "internal",
-            ]
-          )
-            .isRequired,
-          route:
-            PropTypes
-              .string
-              .isRequired,
-          label:
-            PropTypes
-              .string
-              .isRequired,
-        }
-      )
-        .isRequired,
-  };
+AnimatedStatisticsCard.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+  title: PropTypes.string.isRequired,
+  count: PropTypes.string.isRequired,
+  percentage: PropTypes.shape({
+    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"])
+      .isRequired,
+    label: PropTypes.string.isRequired,
+  }).isRequired,
+  action: PropTypes.shape({
+    type: PropTypes.oneOf(["external", "internal"]).isRequired,
+    route: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default AnimatedStatisticsCard;

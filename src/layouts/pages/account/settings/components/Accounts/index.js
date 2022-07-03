@@ -13,27 +13,27 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
-import Switch from '@mui/material/Switch';
-import Tooltip from '@mui/material/Tooltip';
-import Divider from '@mui/material/Divider';
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
+import Switch from "@mui/material/Switch";
+import Tooltip from "@mui/material/Tooltip";
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiAvatar from 'components/SuiAvatar';
-import SuiInput from 'components/SuiInput';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiAvatar from "components/SuiAvatar";
+import SuiInput from "components/SuiInput";
+import SuiButton from "components/SuiButton";
 
 // Images
-import logoSlack from 'assets/images/small-logos/logo-slack.svg';
-import logoSpotify from 'assets/images/small-logos/logo-spotify.svg';
-import logoAtlassian from 'assets/images/small-logos/logo-atlassian.svg';
-import logoAsana from 'assets/images/small-logos/logo-asana.svg';
+import logoSlack from "assets/images/small-logos/logo-slack.svg";
+import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
+import logoAsana from "assets/images/small-logos/logo-asana.svg";
 
 function Accounts() {
   const [slack2FA, setSlack2FA] = useState(true);
@@ -61,12 +61,12 @@ function Accounts() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiBox display="flex" alignItems="center">
@@ -76,11 +76,7 @@ function Accounts() {
                 Slack
               </SuiTypography>
               <SuiBox display="flex" alignItems="flex-end">
-                <SuiTypography
-                  variant="button"
-                  color="text"
-                  fontWeight="regular"
-                >
+                <SuiTypography variant="button" color="text" fontWeight="regular">
                   Show less
                 </SuiTypography>
                 <SuiTypography
@@ -100,8 +96,8 @@ function Accounts() {
             alignItems="center"
             justifyContent="flex-end"
             width={{
-              xs: '100%',
-              sm: 'auto',
+              xs: "100%",
+              sm: "auto",
             }}
             mt={{
               xs: 1,
@@ -110,7 +106,7 @@ function Accounts() {
           >
             <SuiBox lineHeight={0} mx={2}>
               <SuiTypography variant="button" color="text" fontWeight="regular">
-                {slack2FA ? 'Enabled' : 'Disabled'}
+                {slack2FA ? "Enabled" : "Disabled"}
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={1}>
@@ -120,10 +116,9 @@ function Accounts() {
         </SuiBox>
         <SuiBox ml={2} pl={6} pt={2} lineHeight={1}>
           <SuiTypography variant="button" color="text" fontWeight="regular">
-            You haven&apos;t added your Slack yet or you aren&apos;t authorized.
-            Please add our Slack Bot to your account by clicking on here. When
-            you&apos;ve added the bot, send your verification code that you have
-            received.
+            You haven&apos;t added your Slack yet or you aren&apos;t authorized. Please add our
+            Slack Bot to your account by clicking on here. When you&apos;ve added the bot, send your
+            verification code that you have received.
           </SuiTypography>
           <SuiBox
             bgColor="grey-100"
@@ -131,12 +126,12 @@ function Accounts() {
             display="flex"
             justifyContent="space-between"
             alignItems={{
-              xs: 'flex-start',
-              sm: 'center',
+              xs: "flex-start",
+              sm: "center",
             }}
             flexDirection={{
-              xs: 'column',
-              sm: 'row',
+              xs: "column",
+              sm: "row",
             }}
             my={3}
             py={1}
@@ -151,9 +146,9 @@ function Accounts() {
             </SuiTypography>
             <SuiBox
               width={{
-                xs: '100%',
-                sm: '25%',
-                md: '15%',
+                xs: "100%",
+                sm: "25%",
+                md: "15%",
               }}
               mt={{
                 xs: 1,
@@ -171,12 +166,12 @@ function Accounts() {
             display="flex"
             justifyContent="space-between"
             alignItems={{
-              xs: 'flex-start',
-              sm: 'center',
+              xs: "flex-start",
+              sm: "center",
             }}
             flexDirection={{
-              xs: 'column',
-              sm: 'row',
+              xs: "column",
+              sm: "row",
             }}
             my={3}
             py={1}
@@ -192,12 +187,12 @@ function Accounts() {
             <SuiBox
               display="flex"
               alignItems={{
-                xs: 'flex-start',
-                sm: 'center',
+                xs: "flex-start",
+                sm: "center",
               }}
               flexDirection={{
-                xs: 'column',
-                sm: 'row',
+                xs: "column",
+                sm: "row",
               }}
             >
               <SuiBox
@@ -223,12 +218,12 @@ function Accounts() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiBox display="flex" alignItems="center">
@@ -247,8 +242,8 @@ function Accounts() {
             justifyContent="flex-end"
             alignItems="center"
             width={{
-              xs: '100%',
-              sm: 'auto',
+              xs: "100%",
+              sm: "auto",
             }}
             mt={{
               xs: 1,
@@ -257,7 +252,7 @@ function Accounts() {
           >
             <SuiBox lineHeight={0} mx={2}>
               <SuiTypography variant="button" color="text" fontWeight="regular">
-                {spotify2FA ? 'Enabled' : 'Disabled'}
+                {spotify2FA ? "Enabled" : "Disabled"}
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={1}>
@@ -270,12 +265,12 @@ function Accounts() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiBox display="flex" alignItems="center">
@@ -294,8 +289,8 @@ function Accounts() {
             justifyContent="flex-end"
             alignItems="center"
             width={{
-              xs: '100%',
-              sm: 'auto',
+              xs: "100%",
+              sm: "auto",
             }}
             mt={{
               xs: 1,
@@ -304,7 +299,7 @@ function Accounts() {
           >
             <SuiBox lineHeight={0} mx={2}>
               <SuiTypography variant="button" color="text" fontWeight="regular">
-                {atlassian2FA ? 'Enabled' : 'Disabled'}
+                {atlassian2FA ? "Enabled" : "Disabled"}
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={1}>
@@ -317,12 +312,12 @@ function Accounts() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiBox display="flex" alignItems="center">
@@ -341,8 +336,8 @@ function Accounts() {
             alignItems="center"
             justifyContent="flex-end"
             width={{
-              xs: '100%',
-              sm: 'auto',
+              xs: "100%",
+              sm: "auto",
             }}
             mt={{
               xs: 1,
@@ -351,7 +346,7 @@ function Accounts() {
           >
             <SuiBox lineHeight={0} mx={2}>
               <SuiTypography variant="button" color="text" fontWeight="regular">
-                {asana2FA ? 'Enabled' : 'Disabled'}
+                {asana2FA ? "Enabled" : "Disabled"}
               </SuiTypography>
             </SuiBox>
             <SuiBox mr={1}>

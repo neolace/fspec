@@ -14,12 +14,12 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiBadge from 'components/SuiBadge';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiBadge from "components/SuiBadge";
 
 function Steps() {
   return (
@@ -33,12 +33,7 @@ function Steps() {
             11.4K
           </SuiTypography>
         </SuiBox>
-        <SuiBadge
-          variant="contained"
-          color="success"
-          badgeContent="+4.3%"
-          container
-        />
+        <SuiBadge variant="contained" color="success" badgeContent="+4.3%" container />
       </SuiBox>
     </Card>
   );

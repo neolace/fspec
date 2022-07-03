@@ -16,12 +16,7 @@
 const controllerCardIcons = {
   // Light icons
   humidityIconLight: (
-    <svg
-      width={60}
-      viewBox="0 0 296 179"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={60} viewBox="0 0 296 179" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter1_f)">
         <path
           d="M165.907 34.625C165.907 34.625 156.143 47.861 148.512 47.425C138.946 46.863 137.312 35.325 128.444 34.625C119.166 34.764 118.219 46.725 108.163 47.425C99.1529 47.264 95.3359 34.843 86.7469 34.625C78.1579 34.407 69.0029 47.425 69.0029 47.425"
@@ -69,24 +64,14 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
       </defs>
     </svg>
   ),
   temperatureIconLight: (
-    <svg
-      width={40}
-      viewBox="0 0 217 342"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={40} viewBox="0 0 217 342" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter3_f)">
         <path
           d="M67 178.583C93.5097 178.583 115 157.092 115 130.583C115 104.073 93.5097 82.5825 67 82.5825C40.4903 82.5825 19 104.073 19 130.583C19 157.092 40.4903 178.583 67 178.583Z"
@@ -132,12 +117,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation={1} result="effect1_foregroundBlur" />
         </filter>
         <filter
@@ -150,12 +130,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation={10} result="effect1_foregroundBlur" />
         </filter>
         <filter
@@ -175,10 +150,7 @@ const controllerCardIcons = {
           />
           <feOffset dx={10} dy={2} />
           <feGaussianBlur stdDeviation={15} />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 00 0"
-          />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 00 0" />
           <feBlend mode="normal" in2="BackgroundImageFix" />
           <feBlend mode="normal" in="SourceGraphic" result="shape" />
         </filter>
@@ -197,12 +169,7 @@ const controllerCardIcons = {
     </svg>
   ),
   airConditionerIconLight: (
-    <svg
-      width={70}
-      viewBox="0 0 306 180"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={70} viewBox="0 0 306 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f)">
         <path
           d="M165.907 35.625C165.907 35.625 156.143 48.861 148.512 48.425C138.946 47.863 137.312 36.325 128.444 35.625C119.166 35.764 118.219 47.725 108.163 48.425C99.1529 48.264 95.3359 35.843 86.7469 35.625C78.1579 35.407 69.0029 48.425 69.0029 48.425"
@@ -325,33 +292,16 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
       </defs>
     </svg>
   ),
   lightsIconLight: (
-    <svg
-      width={72}
-      viewBox="0 0 301 157"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={72} viewBox="0 0 301 157" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f)">
-        <mask
-          mask-type="alpha"
-          maskUnits="userSpaceOnUse"
-          x={0}
-          y={0}
-          width={301}
-          height={156}
-        >
+        <mask mask-type="alpha" maskUnits="userSpaceOnUse" x={0} y={0} width={301} height={156}>
           <rect width={301} height={156} fill="#FFFFFF" />
         </mask>
         <g mask="url(#mask0)">
@@ -392,12 +342,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
         <filter
@@ -410,12 +355,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation={10} result="effect1_foregroundBlur" />
         </filter>
       </defs>
@@ -430,13 +370,7 @@ const controllerCardIcons = {
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <title>wifi</title>
-      <g
-        id="Page-1"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
         <g id="wifi" transform="translate(3.000000, 3.000000)">
           <path
             d="M7.37102658,14.6156105 C12.9664408,9.02476091 22.0335592,9.02476091 27.6289734,14.6156105"
@@ -445,13 +379,7 @@ const controllerCardIcons = {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle
-            id="Oval"
-            fill="#FFFFFF"
-            cx="17.5039082"
-            cy="22.7484921"
-            r="4.9082855"
-          />
+          <circle id="Oval" fill="#FFFFFF" cx="17.5039082" cy="22.7484921" r="4.9082855" />
           <path
             d="M0,7.24718945 C9.66583791,-2.41572982 25.3341621,-2.41572982 35,7.24718945"
             stroke="#FFFFFF"
@@ -467,12 +395,7 @@ const controllerCardIcons = {
 
   // Dark icons
   humidityIconDark: (
-    <svg
-      width={60}
-      viewBox="0 0 296 179"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={60} viewBox="0 0 296 179" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter1_f)">
         <path
           d="M165.907 34.625C165.907 34.625 156.143 47.861 148.512 47.425C138.946 46.863 137.312 35.325 128.444 34.625C119.166 34.764 118.219 46.725 108.163 47.425C99.1529 47.264 95.3359 34.843 86.7469 34.625C78.1579 34.407 69.0029 47.425 69.0029 47.425"
@@ -520,24 +443,14 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
       </defs>
     </svg>
   ),
   airConditionerIconDark: (
-    <svg
-      width={70}
-      viewBox="0 0 306 180"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={70} viewBox="0 0 306 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f)">
         <path
           d="M165.907 35.625C165.907 35.625 156.143 48.861 148.512 48.425C138.946 47.863 137.312 36.325 128.444 35.625C119.166 35.764 118.219 47.725 108.163 48.425C99.1529 48.264 95.3359 35.843 86.7469 35.625C78.1579 35.407 69.0029 48.425 69.0029 48.425"
@@ -660,33 +573,16 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
       </defs>
     </svg>
   ),
   lightsIconDark: (
-    <svg
-      width={72}
-      viewBox="0 0 301 157"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width={72} viewBox="0 0 301 157" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_f)">
-        <mask
-          mask-type="alpha"
-          maskUnits="userSpaceOnUse"
-          x={0}
-          y={0}
-          width={301}
-          height={156}
-        >
+        <mask mask-type="alpha" maskUnits="userSpaceOnUse" x={0} y={0} width={301} height={156}>
           <rect width={301} height={156} fill="#FFFFFF" />
         </mask>
         <g mask="url(#mask0)">
@@ -727,12 +623,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur" />
         </filter>
         <filter
@@ -745,12 +636,7 @@ const controllerCardIcons = {
           colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity={0} result="BackgroundImageFix" />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="BackgroundImageFix"
-            result="shape"
-          />
+          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
           <feGaussianBlur stdDeviation={10} result="effect1_foregroundBlur" />
         </filter>
       </defs>
@@ -765,13 +651,7 @@ const controllerCardIcons = {
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <title>wifi</title>
-      <g
-        id="Page-1"
-        stroke="none"
-        strokeWidth={1}
-        fill="none"
-        fillRule="evenodd"
-      >
+      <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
         <g id="wifi" transform="translate(3.000000, 3.000000)">
           <path
             d="M7.37102658,14.6156105 C12.9664408,9.02476091 22.0335592,9.02476091 27.6289734,14.6156105"
@@ -780,13 +660,7 @@ const controllerCardIcons = {
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <circle
-            id="Oval"
-            fill="#CED4DA"
-            cx="17.5039082"
-            cy="22.7484921"
-            r="4.9082855"
-          />
+          <circle id="Oval" fill="#CED4DA" cx="17.5039082" cy="22.7484921" r="4.9082855" />
           <path
             d="M0,7.24718945 C9.66583791,-2.41572982 25.3341621,-2.41572982 35,7.24718945"
             stroke="#CED4DA"

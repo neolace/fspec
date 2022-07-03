@@ -14,21 +14,21 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import TimelineItem from 'examples/Timeline/TimelineItem';
+import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
       <SuiBox pt={3} px={3}>
@@ -37,14 +37,10 @@ function OrdersOverview() {
         </SuiTypography>
         <SuiBox mt={1} mb={2}>
           <SuiTypography variant="button" color="text" fontWeight="regular">
-            <SuiTypography
-              display="inline"
-              variant="body2"
-              verticalAlign="middle"
-            >
+            <SuiTypography display="inline" variant="body2" verticalAlign="middle">
               <Icon
                 sx={{
-                  fontWeight: 'bold',
+                  fontWeight: "bold",
                   color: ({ palette: { success } }) => success.main,
                 }}
               >
@@ -54,7 +50,7 @@ function OrdersOverview() {
             &nbsp;
             <SuiTypography variant="button" color="text" fontWeight="medium">
               24%
-            </SuiTypography>{' '}
+            </SuiTypography>{" "}
             this month
           </SuiTypography>
         </SuiBox>

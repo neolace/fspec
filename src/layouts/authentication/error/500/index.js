@@ -14,31 +14,31 @@
  */
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
-import PageLayout from 'examples/LayoutContainers/PageLayout';
+import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Soft UI Dashboard PRO React base styles
-import typography from 'assets/theme/base/typography';
+import typography from "assets/theme/base/typography";
 
 // Authentication layout components
-import Footer from 'layouts/authentication/components/Footer';
+import Footer from "layouts/authentication/components/Footer";
 
 // Soft UI Dashboard PRO React page layout routes
-import pageRoutes from 'page.routes';
+import pageRoutes from "page.routes";
 
 // Images
-import error500 from 'assets/images/illustrations/error-500.png';
+import error500 from "assets/images/illustrations/error-500.png";
 
 function Error500() {
   const { d1, d3, d4, d5 } = typography;
@@ -49,10 +49,10 @@ function Error500() {
         routes={pageRoutes}
         transparent
         action={{
-          type: 'external',
-          route: 'https://creative-tim.com/product/soft-ui-dashboard-pro-react',
-          label: 'buy now',
-          color: 'dark',
+          type: "external",
+          route: "https://creative-tim.com/product/soft-ui-dashboard-pro-react",
+          label: "buy now",
+          color: "dark",
         }}
       />
       <SuiBox my={18} height="calc(100vh - 18rem)">
@@ -62,7 +62,7 @@ function Error500() {
           justifyContent="center"
           alignItems="center"
           sx={{
-            height: '100%',
+            height: "100%",
           }}
         >
           <Grid item xs={11} sm={9} container alignItems="center">
@@ -76,12 +76,7 @@ function Error500() {
                 }}
                 lineHeight={1.2}
               >
-                <SuiTypography
-                  variant="inherit"
-                  color="warning"
-                  textGradient
-                  fontWeight="bold"
-                >
+                <SuiTypography variant="inherit" color="warning" textGradient fontWeight="bold">
                   Error 500
                 </SuiTypography>
               </SuiBox>
@@ -90,28 +85,17 @@ function Error500() {
               </SuiTypography>
               <SuiBox mt={1} mb={2}>
                 <SuiTypography variant="body1" color="text" opacity={0.6}>
-                  We suggest you to go to the homepage while we solve this
-                  issue.
+                  We suggest you to go to the homepage while we solve this issue.
                 </SuiTypography>
               </SuiBox>
               <SuiBox mt={4} mb={2}>
-                <SuiButton
-                  component={Link}
-                  to="/"
-                  variant="gradient"
-                  color="warning"
-                >
+                <SuiButton component={Link} to="/" variant="gradient" color="warning">
                   go to homepage
                 </SuiButton>
               </SuiBox>
             </Grid>
             <Grid item xs={12} lg={7}>
-              <SuiBox
-                component="img"
-                src={error500}
-                alt="error-404"
-                width="100%"
-              />
+              <SuiBox component="img" src={error500} alt="error-404" width="100%" />
             </Grid>
           </Grid>
         </Grid>

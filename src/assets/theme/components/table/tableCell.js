@@ -14,11 +14,11 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
-import colors from 'assets/theme/base/colors';
+import borders from "assets/theme/base/borders";
+import colors from "assets/theme/base/colors";
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderWidth } = borders;
 const { light } = colors;

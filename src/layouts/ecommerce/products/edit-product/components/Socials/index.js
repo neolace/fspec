@@ -27,56 +27,20 @@ import FormField from "layouts/ecommerce/products/edit-product/components/FormFi
 function Socials() {
   return (
     <Card>
-      <SuiBox
-        p={
-          3
-        }>
-        <SuiTypography
-          variant="h5"
-          fontWeight="bold">
+      <SuiBox p={3}>
+        <SuiTypography variant="h5" fontWeight="bold">
           Socials
         </SuiTypography>
-        <SuiBox
-          mt={
-            1
-          }>
-          <Grid
-            container
-            spacing={
-              2
-            }>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <FormField
-                type="text"
-                label="shoppify handle"
-                defaultValue="@soft"
-              />
+        <SuiBox mt={1}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <FormField type="text" label="shoppify handle" defaultValue="@soft" />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <FormField
-                type="text"
-                label="facebook account"
-                defaultValue="https://..."
-              />
+            <Grid item xs={12}>
+              <FormField type="text" label="facebook account" defaultValue="https://..." />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <FormField
-                type="text"
-                label="instagram account"
-                defaultValue="https://..."
-              />
+            <Grid item xs={12}>
+              <FormField type="text" label="instagram account" defaultValue="https://..." />
             </Grid>
           </Grid>
         </SuiBox>

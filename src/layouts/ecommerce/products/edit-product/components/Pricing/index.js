@@ -29,210 +29,107 @@ function Pricing() {
   return (
     <Card
       sx={{
-        overflow:
-          "visible",
-      }}>
-      <SuiBox
-        p={
-          3
-        }>
-        <SuiTypography
-          variant="h5"
-          fontWeight="bold">
+        overflow: "visible",
+      }}
+    >
+      <SuiBox p={3}>
+        <SuiTypography variant="h5" fontWeight="bold">
           Pricing
         </SuiTypography>
-        <SuiBox
-          mt={
-            1
-          }>
-          <Grid
-            container
-            spacing={
-              3
-            }>
-            <Grid
-              item
-              xs={
-                12
-              }
-              sm={
-                3
-              }>
-              <FormField
-                type="number"
-                label="price"
-                defaultValue="99.00"
-              />
+        <SuiBox mt={1}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={3}>
+              <FormField type="number" label="price" defaultValue="99.00" />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }
-              sm={
-                4
-              }>
-              <SuiBox
-                mb={
-                  1
-                }
-                ml={
-                  0.5
-                }
-                lineHeight={
-                  0
-                }
-                display="inline-block">
+            <Grid item xs={12} sm={4}>
+              <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
                 <SuiTypography
                   component="label"
                   variant="caption"
                   fontWeight="bold"
-                  textTransform="capitalize">
+                  textTransform="capitalize"
+                >
                   Currency
                 </SuiTypography>
               </SuiBox>
               <SuiSelect
                 defaultValue={{
-                  value:
-                    "usd",
-                  label:
-                    "USD",
+                  value: "usd",
+                  label: "USD",
                 }}
                 options={[
                   {
-                    value:
-                      "btc",
-                    label:
-                      "BTC",
+                    value: "btc",
+                    label: "BTC",
                   },
                   {
-                    value:
-                      "cny",
-                    label:
-                      "CNY",
+                    value: "cny",
+                    label: "CNY",
                   },
                   {
-                    value:
-                      "eur",
-                    label:
-                      "EUR",
+                    value: "eur",
+                    label: "EUR",
                   },
                   {
-                    value:
-                      "gbp",
-                    label:
-                      "GBP",
+                    value: "gbp",
+                    label: "GBP",
                   },
                   {
-                    value:
-                      "inr",
-                    label:
-                      "INR",
+                    value: "inr",
+                    label: "INR",
                   },
                   {
-                    value:
-                      "use",
-                    label:
-                      "USD",
+                    value: "use",
+                    label: "USD",
                   },
                 ]}
               />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }
-              sm={
-                5
-              }>
-              <FormField
-                type="text"
-                label="SKU"
-                defaultValue="71283476591"
-              />
+            <Grid item xs={12} sm={5}>
+              <FormField type="text" label="SKU" defaultValue="71283476591" />
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox
-          mt={
-            1
-          }>
-          <Grid
-            container
-            spacing={
-              3
-            }>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <SuiBox
-                mb={
-                  1
-                }
-                ml={
-                  0.5
-                }
-                lineHeight={
-                  0
-                }
-                display="inline-block">
-                <SuiTypography
-                  component="label"
-                  variant="caption"
-                  fontWeight="bold">
-                  Project
-                  Tags
+        <SuiBox mt={1}>
+          <Grid container spacing={3}>
+            <Grid item xs={12}>
+              <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
+                <SuiTypography component="label" variant="caption" fontWeight="bold">
+                  Project Tags
                 </SuiTypography>
               </SuiBox>
               <SuiSelect
                 defaultValue={[
                   {
-                    value:
-                      "in stock",
-                    label:
-                      "In Stock",
+                    value: "in stock",
+                    label: "In Stock",
                   },
                   {
-                    value:
-                      "out of stock",
-                    label:
-                      "Out of Stock",
+                    value: "out of stock",
+                    label: "Out of Stock",
                   },
                 ]}
                 options={[
                   {
-                    value:
-                      "black friday",
-                    label:
-                      "Black Friday",
+                    value: "black friday",
+                    label: "Black Friday",
                   },
                   {
-                    value:
-                      "expired",
-                    label:
-                      "Expired",
+                    value: "expired",
+                    label: "Expired",
                     isDisabled: true,
                   },
                   {
-                    value:
-                      "out of stock",
-                    label:
-                      "Out of Stock",
+                    value: "out of stock",
+                    label: "Out of Stock",
                   },
                   {
-                    value:
-                      "in stock",
-                    label:
-                      "In Stock",
+                    value: "in stock",
+                    label: "In Stock",
                   },
                   {
-                    value:
-                      "sale",
-                    label:
-                      "Sale",
+                    value: "sale",
+                    label: "Sale",
                   },
                 ]}
                 size="large"

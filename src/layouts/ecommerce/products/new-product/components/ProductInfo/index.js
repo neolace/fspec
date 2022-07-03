@@ -13,23 +13,23 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiEditor from 'components/SuiEditor';
-import SuiSelect from 'components/SuiSelect';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiEditor from "components/SuiEditor";
+import SuiSelect from "components/SuiSelect";
 
 // NewProduct page components
-import FormField from 'layouts/ecommerce/products/new-product/components/FormField';
+import FormField from "layouts/ecommerce/products/new-product/components/FormField";
 
 function ProductInfo() {
   const [editorValue, setEditorValue] = useState(
-    '<p>Some initial <strong>bold</strong> text</p><br><br><br>'
+    "<p>Some initial <strong>bold</strong> text</p><br><br><br>"
   );
 
   return (
@@ -49,17 +49,9 @@ function ProductInfo() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography
-                component="label"
-                variant="caption"
-                fontWeight="bold"
-              >
+              <SuiTypography component="label" variant="caption" fontWeight="bold">
                 Description&nbsp;&nbsp;
-                <SuiTypography
-                  variant="caption"
-                  fontWeight="regular"
-                  color="text"
-                >
+                <SuiTypography variant="caption" fontWeight="regular" color="text">
                   (optional)
                 </SuiTypography>
               </SuiTypography>
@@ -80,29 +72,29 @@ function ProductInfo() {
               </SuiBox>
               <SuiSelect
                 defaultValue={{
-                  value: 'clothing',
-                  label: 'Clothing',
+                  value: "clothing",
+                  label: "Clothing",
                 }}
                 options={[
                   {
-                    value: 'clothing',
-                    label: 'Clothing',
+                    value: "clothing",
+                    label: "Clothing",
                   },
                   {
-                    value: 'electronics',
-                    label: 'Electronics',
+                    value: "electronics",
+                    label: "Electronics",
                   },
                   {
-                    value: 'furniture',
-                    label: 'Furniture',
+                    value: "furniture",
+                    label: "Furniture",
                   },
                   {
-                    value: 'others',
-                    label: 'Others',
+                    value: "others",
+                    label: "Others",
                   },
                   {
-                    value: 'real estate',
-                    label: 'Real Estate',
+                    value: "real estate",
+                    label: "Real Estate",
                   },
                 ]}
               />
@@ -119,29 +111,29 @@ function ProductInfo() {
             </SuiBox>
             <SuiSelect
               defaultValue={{
-                value: 'medium',
-                label: 'Medium',
+                value: "medium",
+                label: "Medium",
               }}
               options={[
                 {
-                  value: 'extra large',
-                  label: 'Extra Large',
+                  value: "extra large",
+                  label: "Extra Large",
                 },
                 {
-                  value: 'extra small',
-                  label: 'Extra Small',
+                  value: "extra small",
+                  label: "Extra Small",
                 },
                 {
-                  value: 'large',
-                  label: 'Large',
+                  value: "large",
+                  label: "Large",
                 },
                 {
-                  value: 'medium',
-                  label: 'Medium',
+                  value: "medium",
+                  label: "Medium",
                 },
                 {
-                  value: 'small',
-                  label: 'Small',
+                  value: "small",
+                  label: "Small",
                 },
               ]}
             />

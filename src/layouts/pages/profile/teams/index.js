@@ -46,320 +46,164 @@ import logoInvision from "assets/images/small-logos/logo-invision.svg";
 
 function Teams() {
   // TeamProfileCard dropdown menu state
-  const [
-    marketingMenu,
-    setMarketingMenu,
-  ] =
-    useState(
-      null
-    );
-  const [
-    designMenu,
-    setDesignMenu,
-  ] =
-    useState(
-      null
-    );
+  const [marketingMenu, setMarketingMenu] = useState(null);
+  const [designMenu, setDesignMenu] = useState(null);
 
   // TeamProfileCard dropdown menu handlers
-  const openMarketingMenu =
-    (
-      event
-    ) =>
-      setMarketingMenu(
-        event.currentTarget
-      );
-  const closeMarketingMenu =
-    () =>
-      setMarketingMenu(
-        null
-      );
-  const openDesignMenu =
-    (
-      event
-    ) =>
-      setDesignMenu(
-        event.currentTarget
-      );
-  const closeDesignMenu =
-    () =>
-      setDesignMenu(
-        null
-      );
+  const openMarketingMenu = (event) => setMarketingMenu(event.currentTarget);
+  const closeMarketingMenu = () => setMarketingMenu(null);
+  const openDesignMenu = (event) => setDesignMenu(event.currentTarget);
+  const closeDesignMenu = () => setDesignMenu(null);
 
   // Dropdown menu for the digital marketing TeamProfileCard
-  const renderMarketingMenu =
-    (
-      <Menu
-        anchorEl={
-          marketingMenu
-        }
-        anchorOrigin={{
-          vertical:
-            "top",
-          horizontal:
-            "left",
-        }}
-        transformOrigin={{
-          vertical:
-            "top",
-          horizontal:
-            "right",
-        }}
-        open={Boolean(
-          marketingMenu
-        )}
-        onClose={
-          closeMarketingMenu
-        }
-        keepMounted>
-        <MenuItem
-          onClick={
-            closeMarketingMenu
-          }>
-          Action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            closeMarketingMenu
-          }>
-          Another
-          action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            closeMarketingMenu
-          }>
-          Something
-          else
-          here
-        </MenuItem>
-      </Menu>
-    );
+  const renderMarketingMenu = (
+    <Menu
+      anchorEl={marketingMenu}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "left",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={Boolean(marketingMenu)}
+      onClose={closeMarketingMenu}
+      keepMounted
+    >
+      <MenuItem onClick={closeMarketingMenu}>Action</MenuItem>
+      <MenuItem onClick={closeMarketingMenu}>Another action</MenuItem>
+      <MenuItem onClick={closeMarketingMenu}>Something else here</MenuItem>
+    </Menu>
+  );
 
   // Dropdown menu for the design TeamProfileCard
-  const renderDesignMenu =
-    (
-      <Menu
-        anchorEl={
-          designMenu
-        }
-        anchorOrigin={{
-          vertical:
-            "top",
-          horizontal:
-            "left",
-        }}
-        transformOrigin={{
-          vertical:
-            "top",
-          horizontal:
-            "right",
-        }}
-        open={Boolean(
-          designMenu
-        )}
-        onClose={
-          closeDesignMenu
-        }
-        keepMounted>
-        <MenuItem
-          onClick={
-            closeDesignMenu
-          }>
-          Action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            closeDesignMenu
-          }>
-          Another
-          action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            closeDesignMenu
-          }>
-          Something
-          else
-          here
-        </MenuItem>
-      </Menu>
-    );
+  const renderDesignMenu = (
+    <Menu
+      anchorEl={designMenu}
+      anchorOrigin={{
+        vertical: "top",
+        horizontal: "left",
+      }}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={Boolean(designMenu)}
+      onClose={closeDesignMenu}
+      keepMounted
+    >
+      <MenuItem onClick={closeDesignMenu}>Action</MenuItem>
+      <MenuItem onClick={closeDesignMenu}>Another action</MenuItem>
+      <MenuItem onClick={closeDesignMenu}>Something else here</MenuItem>
+    </Menu>
+  );
 
   return (
     <DashboardLayout>
       <Header />
-      <SuiBox
-        my={
-          3
-        }>
+      <SuiBox my={3}>
         <Stories />
       </SuiBox>
-      <SuiBox
-        mb={
-          3
-        }>
-        <Grid
-          container
-          spacing={
-            3
-          }>
-          <Grid
-            item
-            xs={
-              12
-            }
-            lg={
-              8
-            }>
+      <SuiBox mb={3}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} lg={8}>
             <Post />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            lg={
-              4
-            }>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <SuiBox
-                mb={
-                  3
-                }>
+          <Grid item xs={12} lg={4}>
+            <Grid item xs={12}>
+              <SuiBox mb={3}>
                 <TeamProfileCard
                   title="digital marketing"
                   description="A group of people who collectively are responsible for all of the work necessary to produce working, validated assets."
                   industry="marketing team"
-                  rating={
-                    4.5
-                  }
+                  rating={4.5}
                   members={[
                     {
-                      image:
-                        team1,
+                      image: team1,
                       name: "Alexa Tompson",
                     },
                     {
-                      image:
-                        team2,
+                      image: team2,
                       name: "Martin Doe",
                     },
                     {
-                      image:
-                        team3,
+                      image: team3,
                       name: "Alexaner Smith",
                     },
                     {
-                      image:
-                        team4,
+                      image: team4,
                       name: "Romina Hadid",
                     },
                   ]}
                   dropdown={{
-                    action:
-                      openMarketingMenu,
+                    action: openMarketingMenu,
                     menu: renderMarketingMenu,
                   }}
                 />
               </SuiBox>
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <SuiBox
-                mb={
-                  3
-                }>
+            <Grid item xs={12}>
+              <SuiBox mb={3}>
                 <TeamProfileCard
                   title="design"
                   description="Because it's about motivating the doers. Because I’m here to follow my dreams and inspire other people to follow their dreams, too."
                   industry="design team"
-                  rating={
-                    5
-                  }
+                  rating={5}
                   members={[
                     {
-                      image:
-                        team1,
+                      image: team1,
                       name: "Alexa Tompson",
                     },
                     {
-                      image:
-                        team2,
+                      image: team2,
                       name: "Martin Doe",
                     },
                     {
-                      image:
-                        team3,
+                      image: team3,
                       name: "Alexaner Smith",
                     },
                     {
-                      image:
-                        team4,
+                      image: team4,
                       name: "Romina Hadid",
                     },
                   ]}
                   dropdown={{
-                    action:
-                      openDesignMenu,
+                    action: openDesignMenu,
                     menu: renderDesignMenu,
                   }}
                 />
               </SuiBox>
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }>
-              <SuiBox
-                mb={
-                  3
-                }>
+            <Grid item xs={12}>
+              <SuiBox mb={3}>
                 <EventCard
                   id="902-128-281"
-                  image={
-                    logoSlack
-                  }
+                  image={logoSlack}
                   title="slack meet"
                   dateTime="11:00 AM"
                   description="You have an upcoming meet for Marketing Planning"
                   action={{
                     type: "internal",
-                    route:
-                      "/",
-                    color:
-                      "success",
-                    label:
-                      "join",
+                    route: "/",
+                    color: "success",
+                    label: "join",
                   }}
                   members={[
                     {
-                      image:
-                        team1,
+                      image: team1,
                       name: "Alexa Tompson",
                     },
                     {
-                      image:
-                        team2,
+                      image: team2,
                       name: "Martin Doe",
                     },
                     {
-                      image:
-                        team3,
+                      image: team3,
                       name: "Alexaner Smith",
                     },
                     {
-                      image:
-                        team5,
+                      image: team5,
                       name: "Romina Hadid",
                     },
                   ]}
@@ -367,67 +211,42 @@ function Teams() {
               </SuiBox>
             </Grid>
 
-            <Grid
-              item
-              xs={
-                12
-              }>
+            <Grid item xs={12}>
               <EventCard
                 id="111-968-981"
-                image={
-                  logoInvision
-                }
+                image={logoInvision}
                 title="invision"
                 dateTime="4:45 PM"
                 description={
                   <>
-                    You
-                    have
-                    an
-                    upcoming
-                    video
-                    call
-                    for{" "}
-                    <SuiTypography
-                      component="span"
-                      variant="body2"
-                      color="info">
-                      Soft
-                      Design
+                    You have an upcoming video call for{" "}
+                    <SuiTypography component="span" variant="body2" color="info">
+                      Soft Design
                     </SuiTypography>{" "}
-                    at
-                    5:00
-                    PM.
+                    at 5:00 PM.
                   </>
                 }
                 action={{
                   type: "internal",
-                  route:
-                    "/",
-                  color:
-                    "success",
-                  label:
-                    "join",
+                  route: "/",
+                  color: "success",
+                  label: "join",
                 }}
                 members={[
                   {
-                    image:
-                      team1,
+                    image: team1,
                     name: "Alexa Tompson",
                   },
                   {
-                    image:
-                      team2,
+                    image: team2,
                     name: "Martin Doe",
                   },
                   {
-                    image:
-                      team3,
+                    image: team3,
                     name: "Alexaner Smith",
                   },
                   {
-                    image:
-                      team5,
+                    image: team5,
                     name: "Romina Hadid",
                   },
                 ]}

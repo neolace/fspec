@@ -14,25 +14,25 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import DataTable from 'examples/Tables/DataTable';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import DataTable from "examples/Tables/DataTable";
 
 // ProductPage page components
-import ProductImages from 'layouts/ecommerce/products/product-page/components/ProductImages';
-import ProductInfo from 'layouts/ecommerce/products/product-page/components/ProductInfo';
+import ProductImages from "layouts/ecommerce/products/product-page/components/ProductImages";
+import ProductInfo from "layouts/ecommerce/products/product-page/components/ProductInfo";
 
 // Data
-import dataTableData from 'layouts/ecommerce/products/product-page/data/dataTableData';
+import dataTableData from "layouts/ecommerce/products/product-page/data/dataTableData";
 
 function ProductPage() {
   return (
@@ -41,7 +41,7 @@ function ProductPage() {
       <SuiBox py={3}>
         <Card
           sx={{
-            overflow: 'visible',
+            overflow: "visible",
           }}
         >
           <SuiBox p={3}>
@@ -60,7 +60,7 @@ function ProductPage() {
                 xs={12}
                 lg={5}
                 sx={{
-                  mx: 'auto',
+                  mx: "auto",
                 }}
               >
                 <ProductInfo />

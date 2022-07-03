@@ -37,110 +37,46 @@ function Basic() {
   return (
     <PageLayout background="light">
       <DefaultNavbar
-        routes={
-          pageRoutes
-        }
+        routes={pageRoutes}
         action={{
           type: "external",
-          route:
-            "https://creative-tim.com/product/soft-ui-dashboard-pro-react",
-          label:
-            "buy now",
+          route: "https://creative-tim.com/product/soft-ui-dashboard-pro-react",
+          label: "buy now",
         }}
       />
       <Grid
         container
-        spacing={
-          3
-        }
+        spacing={3}
         justifyContent="center"
         sx={{
-          minHeight:
-            "75vh",
-        }}>
-        <Grid
-          item
-          xs={
-            10
-          }
-          md={
-            6
-          }
-          lg={
-            4
-          }>
+          minHeight: "75vh",
+        }}
+      >
+        <Grid item xs={10} md={6} lg={4}>
           <SuiBox
-            mt={
-              32
-            }
-            mb={
-              3
-            }
+            mt={32}
+            mb={3}
             px={{
               xs: 0,
               lg: 2,
-            }}>
+            }}
+          >
             <Card>
-              <SuiBox
-                pt={
-                  3
-                }
-                px={
-                  3
-                }
-                pb={
-                  1
-                }
-                textAlign="center">
-                <SuiTypography
-                  variant="h4"
-                  fontWeight="bold"
-                  textGradient>
-                  Reset
-                  password
+              <SuiBox pt={3} px={3} pb={1} textAlign="center">
+                <SuiTypography variant="h4" fontWeight="bold" textGradient>
+                  Reset password
                 </SuiTypography>
-                <SuiTypography
-                  variant="body2"
-                  color="text">
-                  You
-                  will
-                  receive
-                  an
-                  e-mail
-                  in
-                  maximum
-                  60
-                  seconds
+                <SuiTypography variant="body2" color="text">
+                  You will receive an e-mail in maximum 60 seconds
                 </SuiTypography>
               </SuiBox>
-              <SuiBox
-                p={
-                  3
-                }>
-                <SuiBox
-                  component="form"
-                  role="form">
-                  <SuiBox
-                    mb={
-                      2
-                    }>
-                    <SuiInput
-                      type="email"
-                      placeholder="Email"
-                    />
+              <SuiBox p={3}>
+                <SuiBox component="form" role="form">
+                  <SuiBox mb={2}>
+                    <SuiInput type="email" placeholder="Email" />
                   </SuiBox>
-                  <SuiBox
-                    mt={
-                      5
-                    }
-                    mb={
-                      1
-                    }>
-                    <SuiButton
-                      variant="gradient"
-                      color="dark"
-                      size="large"
-                      fullWidth>
+                  <SuiBox mt={5} mb={1}>
+                    <SuiButton variant="gradient" color="dark" size="large" fullWidth>
                       send
                     </SuiButton>
                   </SuiBox>

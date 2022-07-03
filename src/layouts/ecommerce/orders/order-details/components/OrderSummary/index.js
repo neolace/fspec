@@ -14,8 +14,8 @@
  */
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function OrderSummary() {
   return (

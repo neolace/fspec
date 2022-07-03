@@ -14,21 +14,21 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiInput from 'components/SuiInput';
-import SuiButton from 'components/SuiButton';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiInput from "components/SuiInput";
+import SuiButton from "components/SuiButton";
+import SuiAvatar from "components/SuiAvatar";
 
 // Authentication layout components
-import BasicLayout from 'layouts/authentication/components/BasicLayout';
+import BasicLayout from "layouts/authentication/components/BasicLayout";
 
 // Images
-import curved8 from 'assets/images/curved-images/curved8.jpg';
-import team4 from 'assets/images/team-4.jpg';
+import curved8 from "assets/images/curved-images/curved8.jpg";
+import team4 from "assets/images/team-4.jpg";
 
 function Basic() {
   return (
@@ -36,12 +36,7 @@ function Basic() {
       <Card>
         <SuiBox py={4} px={3} textAlign="center">
           <SuiBox display="flex" justifyContent="center" mb={3}>
-            <SuiAvatar
-              src={team4}
-              alt="profile-picture"
-              size="xxl"
-              variant="rounded"
-            />
+            <SuiAvatar src={team4} alt="profile-picture" size="xxl" variant="rounded" />
           </SuiBox>
           <SuiTypography variant="h4" fontWeight="bold">
             Mike Priesler

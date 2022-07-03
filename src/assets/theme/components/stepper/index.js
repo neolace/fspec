@@ -14,10 +14,10 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
+import colors from "assets/theme/base/colors";
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const { transparent } = colors;
 
@@ -27,7 +27,7 @@ const stepper = {
       margin: `${pxToRem(48)} 0`,
       padding: `0 ${pxToRem(12)}`,
 
-      '&.MuiPaper-root': {
+      "&.MuiPaper-root": {
         backgroundColor: transparent.main,
       },
     },

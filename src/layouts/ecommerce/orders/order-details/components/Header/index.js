@@ -14,9 +14,9 @@
  */
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function Header() {
   return (
@@ -27,39 +27,29 @@ function Header() {
             Order Details
           </SuiTypography>
         </SuiBox>
-        <SuiTypography
-          component="p"
-          variant="button"
-          fontWeight="regular"
-          color="text"
-        >
-          Order no.{' '}
+        <SuiTypography component="p" variant="button" fontWeight="regular" color="text">
+          Order no.{" "}
           <span
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
           >
             241342
-          </span>{' '}
+          </span>{" "}
           from
           <span
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
           >
             23.02.2021
           </span>
         </SuiTypography>
-        <SuiTypography
-          component="p"
-          variant="button"
-          fontWeight="regular"
-          color="text"
-        >
-          Code:{' '}
+        <SuiTypography component="p" variant="button" fontWeight="regular" color="text">
+          Code:{" "}
           <span
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
           >
             KF332

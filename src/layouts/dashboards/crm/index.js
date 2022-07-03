@@ -12,36 +12,36 @@
 
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import MiniGradientLineChart from 'examples/Charts/LineCharts/MiniGradientLineChart';
-import PlaceholderCard from 'examples/Cards/PlaceholderCard';
-import BackgroundBlogCard from 'examples/Cards/BlogCards/BackgroundBlogCard';
-import CategoriesList from 'examples/Lists/CategoriesList';
-import MessageCard from 'examples/Cards/MessageCard';
-import RankingsList from 'examples/Lists/RankingsList';
-import Calendar from 'examples/Calendar';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import MiniGradientLineChart from "examples/Charts/LineCharts/MiniGradientLineChart";
+import PlaceholderCard from "examples/Cards/PlaceholderCard";
+import BackgroundBlogCard from "examples/Cards/BlogCards/BackgroundBlogCard";
+import CategoriesList from "examples/Lists/CategoriesList";
+import MessageCard from "examples/Cards/MessageCard";
+import RankingsList from "examples/Lists/RankingsList";
+import Calendar from "examples/Calendar";
 
 // Data
-import miniGradientLineChartData from 'layouts/dashboards/crm/data/miniGradientLineChartData';
-import categoriesListData from 'layouts/dashboards/crm/data/categoriesListData';
-import rankingsListData from 'layouts/dashboards/crm/data/rankingsListData';
-import calendarEventsData from 'layouts/dashboards/crm/data/calendarEventsData';
+import miniGradientLineChartData from "layouts/dashboards/crm/data/miniGradientLineChartData";
+import categoriesListData from "layouts/dashboards/crm/data/categoriesListData";
+import rankingsListData from "layouts/dashboards/crm/data/rankingsListData";
+import calendarEventsData from "layouts/dashboards/crm/data/calendarEventsData";
 
 // Images
-import ivancik from 'assets/images/ivancik.jpg';
-import kalVisualsSquare from 'assets/images/kal-visuals-square.jpg';
+import ivancik from "assets/images/ivancik.jpg";
+import kalVisualsSquare from "assets/images/kal-visuals-square.jpg";
 
 function CRM() {
   const { visitorsChart, incomeChart } = miniGradientLineChartData;
@@ -60,12 +60,8 @@ function CRM() {
                     title="visitors"
                     description={
                       <SuiTypography variant="h5" fontWeight="bold">
-                        5,927{' '}
-                        <SuiTypography
-                          variant="button"
-                          color="success"
-                          fontWeight="bold"
-                        >
+                        5,927{" "}
+                        <SuiTypography variant="button" color="success" fontWeight="bold">
                           +55%
                         </SuiTypography>
                       </SuiTypography>
@@ -78,12 +74,8 @@ function CRM() {
                     title="income"
                     description={
                       <SuiTypography variant="h5" fontWeight="bold">
-                        $130,832{' '}
-                        <SuiTypography
-                          variant="button"
-                          color="success"
-                          fontWeight="bold"
-                        >
+                        $130,832{" "}
+                        <SuiTypography variant="button" color="success" fontWeight="bold">
                           +90%
                         </SuiTypography>
                       </SuiTypography>
@@ -94,8 +86,8 @@ function CRM() {
                 <Grid item xs={12} sm={4}>
                   <PlaceholderCard
                     title={{
-                      variant: 'h6',
-                      text: 'New tab',
+                      variant: "h6",
+                      text: "New tab",
                     }}
                     hasBorder
                   />
@@ -107,8 +99,8 @@ function CRM() {
                     () => (
                       <Calendar
                         header={{
-                          title: 'calendar',
-                          date: 'Monday, 2021',
+                          title: "calendar",
+                          date: "Monday, 2021",
                         }}
                         headerToolbar={false}
                         initialView="dayGridMonth"
@@ -132,37 +124,33 @@ function CRM() {
                     description={
                       <>
                         Wealth creation is an evolutionarily recent <br />
-                        positive-sum game. It is all about who take the
-                        opportunity first.
+                        positive-sum game. It is all about who take the opportunity first.
                       </>
                     }
                     buttonText="read more"
                     action={{
-                      type: 'internal',
-                      route: '/dashboards/crm',
-                      label: 'read more',
+                      type: "internal",
+                      route: "/dashboards/crm",
+                      label: "read more",
                     }}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6} lg={12}>
-                  <CategoriesList
-                    title="categories"
-                    categories={categoriesListData}
-                  />
+                  <CategoriesList title="categories" categories={categoriesListData} />
                 </Grid>
                 <Grid item xs={12} sm={6} lg={12}>
                   <MessageCard
                     image={kalVisualsSquare}
                     text="Today is Martina's birthday. Wish her the best of luck!"
                     button={{
-                      color: 'dark',
-                      text: 'send message',
+                      color: "dark",
+                      text: "send message",
                     }}
                     action={{
-                      type: 'internal',
-                      route: '/dashboards/crm',
-                      color: 'dark',
-                      label: 'send message',
+                      type: "internal",
+                      route: "/dashboards/crm",
+                      color: "dark",
+                      label: "send message",
                     }}
                   />
                 </Grid>
@@ -179,11 +167,7 @@ function CRM() {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <RankingsList
-              title="revenue"
-              date="01 - 07 June 2021"
-              rankings={revenueData}
-            />
+            <RankingsList title="revenue" date="01 - 07 June 2021" rankings={revenueData} />
           </Grid>
         </Grid>
       </SuiBox>

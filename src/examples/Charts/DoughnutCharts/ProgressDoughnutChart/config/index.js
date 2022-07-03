@@ -15,7 +15,7 @@
 
 /* eslint-disable no-dupe-keys */
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
+import colors from "assets/theme/base/colors";
 
 const { gradients } = colors;
 
@@ -65,7 +65,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: "index",
       },
       scales: {
         y: {

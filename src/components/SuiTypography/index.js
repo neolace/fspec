@@ -21,115 +21,69 @@ import PropTypes from "prop-types";
 // Custom styles for SuiTypography
 import SuiTypographyRoot from "components/SuiTypography/SuiTypographyRoot";
 
-const SuiTypography =
-  forwardRef(
-    (
-      {
+const SuiTypography = forwardRef(
+  (
+    { color, fontWeight, textTransform, verticalAlign, textGradient, opacity, children, ...rest },
+    ref
+  ) => (
+    <SuiTypographyRoot
+      {...rest}
+      ref={ref}
+      ownerState={{
         color,
-        fontWeight,
         textTransform,
         verticalAlign,
-        textGradient,
+        fontWeight,
         opacity,
-        children,
-        ...rest
-      },
-      ref
-    ) => (
-      <SuiTypographyRoot
-        {...rest}
-        ref={
-          ref
-        }
-        ownerState={{
-          color,
-          textTransform,
-          verticalAlign,
-          fontWeight,
-          opacity,
-          textGradient,
-        }}>
-        {
-          children
-        }
-      </SuiTypographyRoot>
-    )
-  );
+        textGradient,
+      }}
+    >
+      {children}
+    </SuiTypographyRoot>
+  )
+);
 
 // Setting default values for the props of SuiTypography
-SuiTypography.defaultProps =
-  {
-    color:
-      "dark",
-    fontWeight: false,
-    textTransform:
-      "none",
-    verticalAlign:
-      "unset",
-    textGradient: false,
-    opacity: 1,
-  };
+SuiTypography.defaultProps = {
+  color: "dark",
+  fontWeight: false,
+  textTransform: "none",
+  verticalAlign: "unset",
+  textGradient: false,
+  opacity: 1,
+};
 
 // Typechecking props for the SuiTypography
-SuiTypography.propTypes =
-  {
-    color:
-      PropTypes.oneOf(
-        [
-          "inherit",
-          "primary",
-          "secondary",
-          "info",
-          "success",
-          "warning",
-          "error",
-          "light",
-          "dark",
-          "text",
-          "white",
-        ]
-      ),
-    fontWeight:
-      PropTypes.oneOf(
-        [
-          false,
-          "light",
-          "regular",
-          "medium",
-          "bold",
-        ]
-      ),
-    textTransform:
-      PropTypes.oneOf(
-        [
-          "none",
-          "capitalize",
-          "uppercase",
-          "lowercase",
-        ]
-      ),
-    verticalAlign:
-      PropTypes.oneOf(
-        [
-          "unset",
-          "baseline",
-          "sub",
-          "super",
-          "text-top",
-          "text-bottom",
-          "middle",
-          "top",
-          "bottom",
-        ]
-      ),
-    textGradient:
-      PropTypes.bool,
-    children:
-      PropTypes
-        .node
-        .isRequired,
-    opacity:
-      PropTypes.number,
-  };
+SuiTypography.propTypes = {
+  color: PropTypes.oneOf([
+    "inherit",
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "light",
+    "dark",
+    "text",
+    "white",
+  ]),
+  fontWeight: PropTypes.oneOf([false, "light", "regular", "medium", "bold"]),
+  textTransform: PropTypes.oneOf(["none", "capitalize", "uppercase", "lowercase"]),
+  verticalAlign: PropTypes.oneOf([
+    "unset",
+    "baseline",
+    "sub",
+    "super",
+    "text-top",
+    "text-bottom",
+    "middle",
+    "top",
+    "bottom",
+  ]),
+  textGradient: PropTypes.bool,
+  children: PropTypes.node.isRequired,
+  opacity: PropTypes.number,
+};
 
 export default SuiTypography;

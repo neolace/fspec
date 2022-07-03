@@ -14,51 +14,36 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Tooltip from '@mui/material/Tooltip';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Tooltip from "@mui/material/Tooltip";
+import Icon from "@mui/material/Icon";
 
 // @mui icons
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import RedditIcon from '@mui/icons-material/Reddit';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import RedditIcon from "@mui/icons-material/Reddit";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Analytics application components
-import SocialItem from 'layouts/applications/analytics/components/SocialItem';
+import SocialItem from "layouts/applications/analytics/components/SocialItem";
 
 function Social() {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
-      <SuiBox
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        pt={2}
-        px={2}
-      >
+      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
         <SuiTypography variant="h6">Social</SuiTypography>
-        <Tooltip
-          title="See how much traffic do you get from social media"
-          placement="bottom"
-        >
-          <SuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            circular
-            iconOnly
-          >
+        <Tooltip title="See how much traffic do you get from social media" placement="bottom">
+          <SuiButton variant="outlined" color="secondary" size="small" circular iconOnly>
             <Icon>priority_high</Icon>
           </SuiButton>
         </Tooltip>
@@ -66,7 +51,7 @@ function Social() {
       <SuiBox p={2}>
         <SocialItem
           icon={{
-            color: 'facebook',
+            color: "facebook",
             component: <FacebookIcon />,
           }}
           title="Facebook"
@@ -74,7 +59,7 @@ function Social() {
         />
         <SocialItem
           icon={{
-            color: 'twitter',
+            color: "twitter",
             component: <TwitterIcon />,
           }}
           title="Facebook"
@@ -82,7 +67,7 @@ function Social() {
         />
         <SocialItem
           icon={{
-            color: 'reddit',
+            color: "reddit",
             component: <RedditIcon />,
           }}
           title="Reddit"
@@ -90,7 +75,7 @@ function Social() {
         />
         <SocialItem
           icon={{
-            color: 'youtube',
+            color: "youtube",
             component: <YouTubeIcon />,
           }}
           title="Youtube"
@@ -98,7 +83,7 @@ function Social() {
         />
         <SocialItem
           icon={{
-            color: 'instagram',
+            color: "instagram",
             component: <InstagramIcon />,
           }}
           title="Instagram"

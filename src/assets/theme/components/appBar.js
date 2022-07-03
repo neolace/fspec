@@ -15,12 +15,12 @@
 
 const appBar = {
   defaultProps: {
-    color: 'transparent',
+    color: "transparent",
   },
 
   styleOverrides: {
     root: {
-      boxShadow: 'none',
+      boxShadow: "none",
     },
   },
 };

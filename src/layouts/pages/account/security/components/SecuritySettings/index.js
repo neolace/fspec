@@ -14,13 +14,13 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Switch from '@mui/material/Switch';
+import Card from "@mui/material/Card";
+import Switch from "@mui/material/Switch";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function SecuritySettings() {
   return (

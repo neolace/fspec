@@ -14,48 +14,38 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
-import SuiBadge from 'components/SuiBadge';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
+import SuiBadge from "components/SuiBadge";
 
 function Authentication() {
   return (
     <Card
       id="2fa"
       sx={{
-        overflow: 'visible',
+        overflow: "visible",
       }}
     >
-      <SuiBox
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        p={3}
-      >
+      <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <SuiTypography variant="h5">Two-factor authentication</SuiTypography>
-        <SuiBadge
-          variant="contained"
-          color="success"
-          badgeContent="enabled"
-          container
-        />
+        <SuiBadge variant="contained" color="success" badgeContent="enabled" container />
       </SuiBox>
       <SuiBox p={3}>
         <SuiBox
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiTypography variant="body2" color="text">
@@ -64,12 +54,12 @@ function Authentication() {
           <SuiBox
             display="flex"
             alignItems={{
-              xs: 'flex-start',
-              sm: 'center',
+              xs: "flex-start",
+              sm: "center",
             }}
             flexDirection={{
-              xs: 'column',
-              sm: 'row',
+              xs: "column",
+              sm: "row",
             }}
           >
             <SuiBox
@@ -96,12 +86,12 @@ function Authentication() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiTypography variant="body2" color="text">
@@ -110,12 +100,12 @@ function Authentication() {
           <SuiBox
             display="flex"
             alignItems={{
-              xs: 'flex-start',
-              sm: 'center',
+              xs: "flex-start",
+              sm: "center",
             }}
             flexDirection={{
-              xs: 'column',
-              sm: 'row',
+              xs: "column",
+              sm: "row",
             }}
           >
             <SuiBox
@@ -142,12 +132,12 @@ function Authentication() {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiTypography variant="body2" color="text">
@@ -156,12 +146,12 @@ function Authentication() {
           <SuiBox
             display="flex"
             alignItems={{
-              xs: 'flex-start',
-              sm: 'center',
+              xs: "flex-start",
+              sm: "center",
             }}
             flexDirection={{
-              xs: 'column',
-              sm: 'row',
+              xs: "column",
+              sm: "row",
             }}
           >
             <SuiBox

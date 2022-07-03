@@ -14,8 +14,8 @@
  */
 
 // @mui material components
-import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
 
 export default styled(Button)(({ theme, ownerState }) => {
   const { palette, functions } = theme;
@@ -31,7 +31,7 @@ export default styled(Button)(({ theme, ownerState }) => {
 
   // styles for the button with circular={true}
   const circularStyles = () => ({
-    borderRadius: '50%',
+    borderRadius: "50%",
   });
 
   // styles for the button with iconOnly={true}
@@ -39,18 +39,18 @@ export default styled(Button)(({ theme, ownerState }) => {
     // width, height, minWidth and minHeight values
     let sizeValue = pxToRem(38);
 
-    if (size === 'small') {
+    if (size === "small") {
       sizeValue = pxToRem(25.4);
-    } else if (size === 'large') {
+    } else if (size === "large") {
       sizeValue = pxToRem(52);
     }
 
     // padding value
     let paddingValue = `${pxToRem(11)} ${pxToRem(11)} ${pxToRem(10)}`;
 
-    if (size === 'small') {
+    if (size === "small") {
       paddingValue = pxToRem(4.5);
-    } else if (size === 'large') {
+    } else if (size === "large") {
       paddingValue = pxToRem(16);
     }
 
@@ -67,18 +67,18 @@ export default styled(Button)(({ theme, ownerState }) => {
     backgroundColor: backgroundColorValue,
     color: white.main,
 
-    '&:hover': {
+    "&:hover": {
       backgroundColor: backgroundColorValue,
     },
 
-    '&:focus:not(:hover)': {
+    "&:focus:not(:hover)": {
       backgroundColor: socialMediaColors[color]
         ? socialMediaColors[color].dark
         : socialMediaColors.facebook.dark,
-      boxShadow: 'none',
+      boxShadow: "none",
     },
 
-    '&:disabled': {
+    "&:disabled": {
       backgroundColor: backgroundColorValue,
       color: white.main,
     },

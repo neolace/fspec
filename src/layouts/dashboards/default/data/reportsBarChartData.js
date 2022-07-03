@@ -15,54 +15,54 @@
 
 const reportsBarChartData = {
   chart: {
-    labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     datasets: {
-      label: 'Sales',
+      label: "Sales",
       data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
     },
   },
   items: [
     {
       icon: {
-        color: 'primary',
-        component: 'library_books',
+        color: "primary",
+        component: "library_books",
       },
-      label: 'users',
+      label: "users",
       progress: {
-        content: '36K',
+        content: "36K",
         percentage: 60,
       },
     },
     {
       icon: {
-        color: 'info',
-        component: 'touch_app',
+        color: "info",
+        component: "touch_app",
       },
-      label: 'clicks',
+      label: "clicks",
       progress: {
-        content: '2M',
+        content: "2M",
         percentage: 90,
       },
     },
     {
       icon: {
-        color: 'warning',
-        component: 'payment',
+        color: "warning",
+        component: "payment",
       },
-      label: 'sales',
+      label: "sales",
       progress: {
-        content: '$435',
+        content: "$435",
         percentage: 30,
       },
     },
     {
       icon: {
-        color: 'error',
-        component: 'extension',
+        color: "error",
+        component: "extension",
       },
-      label: 'items',
+      label: "items",
       progress: {
-        content: '43',
+        content: "43",
         percentage: 50,
       },
     },

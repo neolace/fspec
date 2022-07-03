@@ -14,30 +14,23 @@
  */
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import Tooltip from '@mui/material/Tooltip';
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
+import SuiAvatar from "components/SuiAvatar";
 
-function DefaultProjectCard({
-  image,
-  label,
-  title,
-  description,
-  action,
-  authors,
-}) {
+function DefaultProjectCard({ image, label, title, description, action, authors }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <SuiAvatar
@@ -46,12 +39,12 @@ function DefaultProjectCard({
         size="xs"
         sx={({ borders: { borderWidth }, palette: { white } }) => ({
           border: `${borderWidth[2]} solid ${white.main}`,
-          cursor: 'pointer',
-          position: 'relative',
+          cursor: "pointer",
+          position: "relative",
           ml: -1.25,
 
-          '&:hover, &:focus': {
-            zIndex: '10',
+          "&:hover, &:focus": {
+            zIndex: "10",
           },
         })}
       />
@@ -61,11 +54,11 @@ function DefaultProjectCard({
   return (
     <Card
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: 'transparent',
-        boxShadow: 'none',
-        overflow: 'visible',
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        overflow: "visible",
       }}
     >
       <SuiBox position="relative" width="100.25%" shadow="xl" borderRadius="xl">
@@ -74,11 +67,11 @@ function DefaultProjectCard({
           component="img"
           title={title}
           sx={{
-            maxWidth: '100%',
+            maxWidth: "100%",
             margin: 0,
             boxShadow: ({ boxShadows: { md } }) => md,
-            objectFit: 'cover',
-            objectPosition: 'center',
+            objectFit: "cover",
+            objectPosition: "center",
           }}
         />
       </SuiBox>
@@ -94,7 +87,7 @@ function DefaultProjectCard({
           </SuiTypography>
         </SuiBox>
         <SuiBox mb={1}>
-          {action.type === 'internal' ? (
+          {action.type === "internal" ? (
             <SuiTypography
               component={Link}
               to={action.route}
@@ -121,12 +114,8 @@ function DefaultProjectCard({
             {description}
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          {action.type === 'internal' ? (
+        <SuiBox display="flex" justifyContent="space-between" alignItems="center">
+          {action.type === "internal" ? (
             <SuiButton
               component={Link}
               to={action.route}
@@ -168,18 +157,18 @@ DefaultProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(['external', 'internal']),
+    type: PropTypes.oneOf(["external", "internal"]),
     route: PropTypes.string.isRequired,
     color: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'info',
-      'success',
-      'warning',
-      'error',
-      'light',
-      'dark',
-      'white',
+      "primary",
+      "secondary",
+      "info",
+      "success",
+      "warning",
+      "error",
+      "light",
+      "dark",
+      "white",
     ]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

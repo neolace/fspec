@@ -21,30 +21,11 @@ import SuiDropzone from "components/SuiDropzone";
 function Media() {
   return (
     <SuiBox>
-      <SuiTypography variant="h5">
-        Media
-      </SuiTypography>
-      <SuiBox
-        mt={
-          3
-        }>
-        <SuiBox
-          mb={
-            1
-          }
-          ml={
-            0.5
-          }
-          lineHeight={
-            0
-          }
-          display="inline-block">
-          <SuiTypography
-            component="label"
-            variant="caption"
-            fontWeight="bold">
-            Product
-            Image
+      <SuiTypography variant="h5">Media</SuiTypography>
+      <SuiBox mt={3}>
+        <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
+          <SuiTypography component="label" variant="caption" fontWeight="bold">
+            Product Image
           </SuiTypography>
         </SuiBox>
         <SuiDropzone

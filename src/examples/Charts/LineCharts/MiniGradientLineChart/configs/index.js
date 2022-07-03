@@ -14,7 +14,7 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import typography from 'assets/theme/base/typography';
+import typography from "assets/theme/base/typography";
 
 function configs(labels, datasets, customTick) {
   return {
@@ -32,7 +32,7 @@ function configs(labels, datasets, customTick) {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: "index",
       },
       scales: {
         y: {
@@ -48,7 +48,7 @@ function configs(labels, datasets, customTick) {
             family: typography.fontFamily,
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
           },
         },
         x: {
@@ -63,7 +63,7 @@ function configs(labels, datasets, customTick) {
             family: typography.fontFamily,
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
           },
         },
       },

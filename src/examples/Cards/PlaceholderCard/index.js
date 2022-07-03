@@ -14,28 +14,25 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function PlaceholderCard({ icon, title, hasBorder, outlined }) {
   return (
     <Card
       raised
       sx={({ borders: { borderWidth, borderColor } }) => ({
-        height: '100%',
-        backgroundColor: outlined && 'transparent',
-        boxShadow: outlined && 'none',
-        border:
-          hasBorder || outlined
-            ? `${borderWidth[1]} solid ${borderColor}`
-            : 'none',
+        height: "100%",
+        backgroundColor: outlined && "transparent",
+        boxShadow: outlined && "none",
+        border: hasBorder || outlined ? `${borderWidth[1]} solid ${borderColor}` : "none",
       })}
     >
       <SuiBox
@@ -50,7 +47,7 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
           <Icon
             fontSize="default"
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
           >
             {icon}
@@ -66,7 +63,7 @@ function PlaceholderCard({ icon, title, hasBorder, outlined }) {
 
 // Setting default values for the props of PlaceholderCard
 PlaceholderCard.defaultProps = {
-  icon: 'add',
+  icon: "add",
   hasBorder: false,
   outlined: false,
 };

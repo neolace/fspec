@@ -14,37 +14,26 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function PasswordRequirements() {
   const passwordRequirements = [
-    'One special characters',
-    'Min 6 characters',
-    'One number (2 are recommended)',
-    'Change it often',
+    "One special characters",
+    "Min 6 characters",
+    "One number (2 are recommended)",
+    "Change it often",
   ];
 
   const renderPasswordRequirements = passwordRequirements.map((item, key) => {
     const itemKey = `element-${key}`;
 
     return (
-      <SuiBox
-        key={itemKey}
-        component="li"
-        color="text"
-        fontSize="1.25rem"
-        lineHeight={1.25}
-      >
-        <SuiTypography
-          variant="button"
-          color="text"
-          fontWeight="regular"
-          verticalAlign="middle"
-        >
+      <SuiBox key={itemKey} component="li" color="text" fontSize="1.25rem" lineHeight={1.25}>
+        <SuiTypography variant="button" color="text" fontWeight="regular" verticalAlign="middle">
           {item}
         </SuiTypography>
       </SuiBox>

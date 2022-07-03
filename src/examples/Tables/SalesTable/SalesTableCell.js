@@ -14,14 +14,14 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import TableCell from '@mui/material/TableCell';
+import TableCell from "@mui/material/TableCell";
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from 'components/SuiTypography';
-import SuiBox from 'components/SuiBox';
+import SuiTypography from "components/SuiTypography";
+import SuiBox from "components/SuiBox";
 
 function SalesTableCell({ title, content, image, noBorder, ...rest }) {
   let template;
@@ -37,13 +37,7 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
         }}
       >
         <SuiBox display="flex" alignItems="center" width="max-content">
-          <SuiBox
-            component="img"
-            src={image}
-            alt={content}
-            width="1.5rem"
-            height="auto"
-          />{' '}
+          <SuiBox component="img" src={image} alt={content} width="1.5rem" height="auto" />{" "}
           <SuiBox display="flex" flexDirection="column" ml={3}>
             <SuiTypography
               variant="caption"
@@ -53,11 +47,7 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
             >
               {title}:
             </SuiTypography>
-            <SuiTypography
-              variant="button"
-              fontWeight="medium"
-              textTransform="capitalize"
-            >
+            <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
               {content}
             </SuiTypography>
           </SuiBox>
@@ -82,11 +72,7 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
           >
             {title}:
           </SuiTypography>
-          <SuiTypography
-            variant="button"
-            fontWeight="medium"
-            textTransform="capitalize"
-          >
+          <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
             {content}
           </SuiTypography>
         </SuiBox>
@@ -99,7 +85,7 @@ function SalesTableCell({ title, content, image, noBorder, ...rest }) {
 
 // Setting default values for the props of SalesTableCell
 SalesTableCell.defaultProps = {
-  image: '',
+  image: "",
   noBorder: false,
 };
 

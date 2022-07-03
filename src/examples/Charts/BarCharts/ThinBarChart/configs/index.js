@@ -15,7 +15,7 @@
 
 /* eslint-disable no-dupe-keys */
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
+import colors from "assets/theme/base/colors";
 
 function configs(color, labels, datasets) {
   return {
@@ -28,9 +28,7 @@ function configs(color, labels, datasets) {
           borderWidth: 0,
           borderRadius: 4,
           borderSkipped: false,
-          backgroundColor: colors[color]
-            ? colors[color].main
-            : colors.dark.main,
+          backgroundColor: colors[color] ? colors[color].main : colors.dark.main,
           data: datasets.data,
           maxBarThickness: 6,
         },
@@ -47,7 +45,7 @@ function configs(color, labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: "index",
       },
       scales: {
         y: {
@@ -72,10 +70,10 @@ function configs(color, labels, datasets) {
             beginAtZero: true,
             font: {
               size: 12,
-              family: 'Open Sans',
-              style: 'normal',
+              family: "Open Sans",
+              style: "normal",
             },
-            color: '#9ca2b7',
+            color: "#9ca2b7",
           },
         },
         y: {
@@ -89,7 +87,7 @@ function configs(color, labels, datasets) {
           ticks: {
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
           },
         },
         x: {
@@ -103,7 +101,7 @@ function configs(color, labels, datasets) {
           ticks: {
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
           },
         },
       },

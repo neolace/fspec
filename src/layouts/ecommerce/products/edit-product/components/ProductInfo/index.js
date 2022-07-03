@@ -13,20 +13,20 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiEditor from 'components/SuiEditor';
-import SuiSelect from 'components/SuiSelect';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiEditor from "components/SuiEditor";
+import SuiSelect from "components/SuiSelect";
 
 // NewProduct page components
-import FormField from 'layouts/ecommerce/products/edit-product/components/FormField';
+import FormField from "layouts/ecommerce/products/edit-product/components/FormField";
 
 function ProductInfo() {
   const [editorValue, setEditorValue] = useState(
@@ -38,7 +38,7 @@ function ProductInfo() {
   return (
     <Card
       sx={{
-        overflow: 'visible',
+        overflow: "visible",
       }}
     >
       <SuiBox p={3}>
@@ -46,11 +46,7 @@ function ProductInfo() {
         <SuiBox mt={1}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
-              <FormField
-                type="text"
-                label="name"
-                defaultValue="Minimal Bar Stool"
-              />
+              <FormField type="text" label="name" defaultValue="Minimal Bar Stool" />
             </Grid>
             <Grid item xs={12} sm={6}>
               <FormField type="number" label="weight" defaultValue={2} />
@@ -74,17 +70,9 @@ function ProductInfo() {
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
               <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-                <SuiTypography
-                  component="label"
-                  variant="caption"
-                  fontWeight="bold"
-                >
+                <SuiTypography component="label" variant="caption" fontWeight="bold">
                   Description&nbsp;&nbsp;
-                  <SuiTypography
-                    variant="caption"
-                    fontWeight="regular"
-                    color="text"
-                  >
+                  <SuiTypography variant="caption" fontWeight="regular" color="text">
                     (optional)
                   </SuiTypography>
                 </SuiTypography>
@@ -105,29 +93,29 @@ function ProductInfo() {
                 </SuiBox>
                 <SuiSelect
                   defaultValue={{
-                    value: 'clothing',
-                    label: 'Clothing',
+                    value: "clothing",
+                    label: "Clothing",
                   }}
                   options={[
                     {
-                      value: 'clothing',
-                      label: 'Clothing',
+                      value: "clothing",
+                      label: "Clothing",
                     },
                     {
-                      value: 'electronics',
-                      label: 'Electronics',
+                      value: "electronics",
+                      label: "Electronics",
                     },
                     {
-                      value: 'furniture',
-                      label: 'Furniture',
+                      value: "furniture",
+                      label: "Furniture",
                     },
                     {
-                      value: 'others',
-                      label: 'Others',
+                      value: "others",
+                      label: "Others",
                     },
                     {
-                      value: 'real estate',
-                      label: 'Real Estate',
+                      value: "real estate",
+                      label: "Real Estate",
                     },
                   ]}
                 />
@@ -144,29 +132,29 @@ function ProductInfo() {
               </SuiBox>
               <SuiSelect
                 defaultValue={{
-                  value: 'black',
-                  label: 'Black',
+                  value: "black",
+                  label: "Black",
                 }}
                 options={[
                   {
-                    value: 'black',
-                    label: 'Black',
+                    value: "black",
+                    label: "Black",
                   },
                   {
-                    value: 'blue',
-                    label: 'Blue',
+                    value: "blue",
+                    label: "Blue",
                   },
                   {
-                    value: 'green',
-                    label: 'Green',
+                    value: "green",
+                    label: "Green",
                   },
                   {
-                    value: 'orange',
-                    label: 'Orange',
+                    value: "orange",
+                    label: "Orange",
                   },
                   {
-                    value: 'white',
-                    label: 'White',
+                    value: "white",
+                    label: "White",
                   },
                 ]}
               />

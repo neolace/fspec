@@ -13,37 +13,31 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from "react";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-table components
-import {
-  useAsyncDebounce,
-  useGlobalFilter,
-  usePagination,
-  useSortBy,
-  useTable,
-} from 'react-table';
+import { useAsyncDebounce, useGlobalFilter, usePagination, useSortBy, useTable } from "react-table";
 
 // @mui material components
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
-import Icon from '@mui/material/Icon';
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiSelect from 'components/SuiSelect';
-import SuiInput from 'components/SuiInput';
-import SuiPagination from 'components/SuiPagination';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiSelect from "components/SuiSelect";
+import SuiInput from "components/SuiInput";
+import SuiPagination from "components/SuiPagination";
 
 // Soft UI Dashboard PRO React example components
-import DataTableHeadCell from 'examples/Tables/DataTable/DataTableHeadCell';
-import DataTableBodyCell from 'examples/Tables/DataTable/DataTableBodyCell';
+import DataTableHeadCell from "examples/Tables/DataTable/DataTableHeadCell";
+import DataTableBodyCell from "examples/Tables/DataTable/DataTableBodyCell";
 
 function DataTable({
   entriesPerPage,
@@ -54,12 +48,8 @@ function DataTable({
   isSorted,
   noEndBorder,
 }) {
-  const defaultValue = entriesPerPage.defaultValue
-    ? entriesPerPage.defaultValue
-    : 10;
-  const entries = entriesPerPage.entries
-    ? entriesPerPage.entries
-    : [5, 10, 15, 20, 25];
+  const defaultValue = entriesPerPage.defaultValue ? entriesPerPage.defaultValue : 10;
+  const entries = entriesPerPage.entries ? entriesPerPage.entries : [5, 10, 15, 20, 25];
   const columns = useMemo(() => table.columns, [table]);
   const data = useMemo(() => table.rows, [table]);
 
@@ -114,16 +104,13 @@ function DataTable({
 
   // Handler for the input to set the pagination index
   const handleInputPagination = ({ target: { value } }) =>
-    value > pageOptions.length || value < 0
-      ? gotoPage(0)
-      : gotoPage(Number(value));
+    value > pageOptions.length || value < 0 ? gotoPage(0) : gotoPage(Number(value));
 
   // Customized page options starting from 1
   const customizedPageOptions = pageOptions.map((option) => option + 1);
 
   // Setting value for the pagination input
-  const handleInputPaginationValue = ({ target: value }) =>
-    gotoPage(Number(value.value - 1));
+  const handleInputPaginationValue = ({ target: value }) => gotoPage(Number(value.value - 1));
 
   // Search input value state
   const [search, setSearch] = useState(globalFilter);
@@ -138,9 +125,9 @@ function DataTable({
     let sortedValue;
 
     if (isSorted && column.isSorted) {
-      sortedValue = column.isSortedDesc ? 'desc' : 'asce';
+      sortedValue = column.isSortedDesc ? "desc" : "asce";
     } else if (isSorted) {
-      sortedValue = 'none';
+      sortedValue = "none";
     } else {
       sortedValue = false;
     }
@@ -149,8 +136,7 @@ function DataTable({
   };
 
   // Setting the entries starting point
-  const entriesStart =
-    pageIndex === 0 ? pageIndex + 1 : pageIndex * pageSize + 1;
+  const entriesStart = pageIndex === 0 ? pageIndex + 1 : pageIndex * pageSize + 1;
 
   // Setting the entries ending point
   let entriesEnd;
@@ -166,16 +152,11 @@ function DataTable({
   return (
     <TableContainer
       sx={{
-        boxShadow: 'none',
+        boxShadow: "none",
       }}
     >
       {entriesPerPage || canSearch ? (
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          p={3}
-        >
+        <SuiBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
           {entriesPerPage && (
             <SuiBox display="flex" alignItems="center">
               <SuiSelect
@@ -215,14 +196,12 @@ function DataTable({
             <TableRow {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column) => (
                 <DataTableHeadCell
-                  {...column.getHeaderProps(
-                    isSorted && column.getSortByToggleProps()
-                  )}
-                  width={column.width ? column.width : 'auto'}
-                  align={column.align ? column.align : 'left'}
+                  {...column.getHeaderProps(isSorted && column.getSortByToggleProps())}
+                  width={column.width ? column.width : "auto"}
+                  align={column.align ? column.align : "left"}
                   sorted={setSortedValue(column)}
                 >
-                  {column.render('Header')}
+                  {column.render("Header")}
                 </DataTableHeadCell>
               ))}
             </TableRow>
@@ -236,10 +215,10 @@ function DataTable({
                 {row.cells.map((cell) => (
                   <DataTableBodyCell
                     noBorder={noEndBorder && rows.length - 1 === key}
-                    align={cell.column.align ? cell.column.align : 'left'}
+                    align={cell.column.align ? cell.column.align : "left"}
                     {...cell.getCellProps()}
                   >
-                    {cell.render('Cell')}
+                    {cell.render("Cell")}
                   </DataTableBodyCell>
                 ))}
               </TableRow>
@@ -251,13 +230,13 @@ function DataTable({
       <SuiBox
         display="flex"
         flexDirection={{
-          xs: 'column',
-          sm: 'row',
+          xs: "column",
+          sm: "row",
         }}
         justifyContent="space-between"
         alignItems={{
-          xs: 'flex-start',
-          sm: 'center',
+          xs: "flex-start",
+          sm: "center",
         }}
         p={!showTotalEntries && pageOptions.length === 1 ? 0 : 3}
       >
@@ -268,25 +247,21 @@ function DataTable({
               sm: 0,
             }}
           >
-            <SuiTypography
-              variant="button"
-              color="secondary"
-              fontWeight="regular"
-            >
+            <SuiTypography variant="button" color="secondary" fontWeight="regular">
               Showing {entriesStart} to {entriesEnd} of {rows.length} entries
             </SuiTypography>
           </SuiBox>
         )}
         {pageOptions.length > 1 && (
           <SuiPagination
-            variant={pagination.variant ? pagination.variant : 'gradient'}
-            color={pagination.color ? pagination.color : 'info'}
+            variant={pagination.variant ? pagination.variant : "gradient"}
+            color={pagination.color ? pagination.color : "info"}
           >
             {canPreviousPage && (
               <SuiPagination item onClick={() => previousPage()}>
                 <Icon
                   sx={{
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                   }}
                 >
                   chevron_left
@@ -297,7 +272,7 @@ function DataTable({
               <SuiBox width="5rem" mx={1}>
                 <SuiInput
                   inputProps={{
-                    type: 'number',
+                    type: "number",
                     min: 1,
                     max: customizedPageOptions.length,
                   }}
@@ -312,7 +287,7 @@ function DataTable({
               <SuiPagination item onClick={() => nextPage()}>
                 <Icon
                   sx={{
-                    fontWeight: 'bold',
+                    fontWeight: "bold",
                   }}
                 >
                   chevron_right
@@ -335,8 +310,8 @@ DataTable.defaultProps = {
   canSearch: false,
   showTotalEntries: true,
   pagination: {
-    variant: 'gradient',
-    color: 'info',
+    variant: "gradient",
+    color: "info",
   },
   isSorted: true,
   noEndBorder: false,
@@ -355,16 +330,16 @@ DataTable.propTypes = {
   showTotalEntries: PropTypes.bool,
   table: PropTypes.objectOf(PropTypes.array).isRequired,
   pagination: PropTypes.shape({
-    variant: PropTypes.oneOf(['contained', 'gradient']),
+    variant: PropTypes.oneOf(["contained", "gradient"]),
     color: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'info',
-      'success',
-      'warning',
-      'error',
-      'dark',
-      'light',
+      "primary",
+      "secondary",
+      "info",
+      "success",
+      "warning",
+      "error",
+      "dark",
+      "light",
     ]),
   }),
   isSorted: PropTypes.bool,

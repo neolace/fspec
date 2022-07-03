@@ -14,19 +14,19 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiInput from 'components/SuiInput';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiInput from "components/SuiInput";
+import SuiButton from "components/SuiButton";
 
 // Authentication layout components
-import IllustrationLayout from 'layouts/authentication/components/IllustrationLayout';
+import IllustrationLayout from "layouts/authentication/components/IllustrationLayout";
 
 // Image
-import chat from 'assets/images/illustrations/danger-chat-ill.png';
+import chat from "assets/images/illustrations/danger-chat-ill.png";
 
 function Illustration() {
   return (
@@ -43,7 +43,7 @@ function Illustration() {
         image: chat,
         title: '"Attention is the new currency"',
         description:
-          'The more effortless the writing looks, the more effort the writer actually put into the process.',
+          "The more effortless the writing looks, the more effort the writer actually put into the process.",
       }}
     >
       <SuiBox component="form" role="form">
@@ -90,7 +90,7 @@ function Illustration() {
         </SuiBox>
         <SuiBox textAlign="center">
           <SuiTypography variant="button" color="text" fontWeight="regular">
-            Haven&apos;t received it?{' '}
+            Haven&apos;t received it?{" "}
             <SuiTypography component="a" href="#verification" variant="button">
               Resend a new code
             </SuiTypography>

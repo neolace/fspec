@@ -14,18 +14,18 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
-import Icon from '@mui/material/Icon';
+import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Images
-import mercedesEQC from 'assets/images/mercedes-eqc.png';
-import wavesWhite from 'assets/images/shapes/waves-white.svg';
+import mercedesEQC from "assets/images/mercedes-eqc.png";
+import wavesWhite from "assets/images/shapes/waves-white.svg";
 
 function AutomotiveDetails() {
   return (
@@ -59,32 +59,18 @@ function AutomotiveDetails() {
               md: 1.5,
             }}
           >
-            <SuiTypography
-              variant="h4"
-              color="white"
-              textTransform="capitalize"
-              opacity={0.9}
-            >
+            <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.9}>
               since last charge
             </SuiTypography>
             <Divider light />
             <SuiBox display="flex">
               <SuiBox>
-                <SuiTypography
-                  variant="h6"
-                  color="white"
-                  textTransform="capitalize"
-                  opacity={0.7}
-                >
+                <SuiTypography variant="h6" color="white" textTransform="capitalize" opacity={0.7}>
                   distance
                 </SuiTypography>
                 <SuiTypography variant="h3" fontWeight="bold" color="white">
-                  145{' '}
-                  <SuiTypography
-                    variant="button"
-                    color="white"
-                    verticalAlign="top"
-                  >
+                  145{" "}
+                  <SuiTypography variant="button" color="white" verticalAlign="top">
                     Km
                   </SuiTypography>
                 </SuiTypography>
@@ -99,21 +85,12 @@ function AutomotiveDetails() {
                   md: 0,
                 }}
               >
-                <SuiTypography
-                  variant="h6"
-                  color="white"
-                  textTransform="capitalize"
-                  opacity={0.7}
-                >
+                <SuiTypography variant="h6" color="white" textTransform="capitalize" opacity={0.7}>
                   average energy
                 </SuiTypography>
                 <SuiTypography variant="h3" fontWeight="bold" color="white">
-                  300{' '}
-                  <SuiTypography
-                    variant="button"
-                    color="white"
-                    verticalAlign="top"
-                  >
+                  300{" "}
+                  <SuiTypography variant="button" color="white" verticalAlign="top">
                     Kw
                   </SuiTypography>
                 </SuiTypography>
@@ -128,8 +105,8 @@ function AutomotiveDetails() {
               src={mercedesEQC}
               alt="car image"
               display={{
-                xs: 'none',
-                md: 'block',
+                xs: "none",
+                md: "block",
               }}
               width="auto"
               mt={{
@@ -140,18 +117,13 @@ function AutomotiveDetails() {
             <SuiBox
               display="flex"
               justifyContent={{
-                xs: 'flex-start',
-                md: 'center',
+                xs: "flex-start",
+                md: "center",
               }}
               alignItems="center"
               mb={1}
             >
-              <SuiTypography
-                variant="h4"
-                color="white"
-                textTransform="capitalize"
-                opacity={0.7}
-              >
+              <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.7}>
                 available range
               </SuiTypography>
               <SuiBox ml={1}>
@@ -177,12 +149,7 @@ function AutomotiveDetails() {
               md: 1.5,
             }}
           >
-            <SuiTypography
-              variant="h4"
-              color="white"
-              textTransform="capitalize"
-              opacity={0.9}
-            >
+            <SuiTypography variant="h4" color="white" textTransform="capitalize" opacity={0.9}>
               nearest charger
             </SuiTypography>
             <Divider light />

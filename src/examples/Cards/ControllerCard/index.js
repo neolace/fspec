@@ -1,40 +1,25 @@
-/**
- =========================================================
- * Soft UI Dashboard PRO React - v3.1.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
- * Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
- Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Switch from '@mui/material/Switch';
+import Card from "@mui/material/Card";
+import Switch from "@mui/material/Switch";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function ControllerCard({ color, state, icon, title, description, onChange }) {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
       <SuiBox
         p={3}
         height="100%"
-        bgColor={state ? color : 'white'}
+        bgColor={state ? color : "white"}
         variant="gradient"
         display="flex"
         flexDirection="column"
@@ -47,8 +32,8 @@ function ControllerCard({ color, state, icon, title, description, onChange }) {
           mb={2}
           lineHeight={1}
         >
-          <SuiTypography variant="body2" color={state ? 'white' : 'text'}>
-            {state ? 'On' : 'Off'}
+          <SuiTypography variant="body2" color={state ? "white" : "text"}>
+            {state ? "On" : "Off"}
           </SuiTypography>
           <SuiBox mr={1}>
             <Switch checked={state} onChange={onChange} />
@@ -58,14 +43,14 @@ function ControllerCard({ color, state, icon, title, description, onChange }) {
         <SuiBox mt={1} lineHeight={1}>
           <SuiTypography
             variant="body2"
-            color={state ? 'white' : 'text'}
+            color={state ? "white" : "text"}
             textTransform="capitalize"
             fontWeight="medium"
           >
             {title}
           </SuiTypography>
           {description ? (
-            <SuiTypography variant="caption" color={state ? 'white' : 'text'}>
+            <SuiTypography variant="caption" color={state ? "white" : "text"}>
               {description}
             </SuiTypography>
           ) : null}
@@ -77,22 +62,14 @@ function ControllerCard({ color, state, icon, title, description, onChange }) {
 
 // Setting default values for the props of ControllerCard
 ControllerCard.defaultProps = {
-  color: 'info',
+  color: "info",
   state: false,
-  description: '',
+  description: "",
 };
 
 // Typechecking props for the ControllerCard
 ControllerCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   state: PropTypes.bool,
   icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,

@@ -16,94 +16,60 @@
 // Soft UI Dashboard PRO React components
 import SuiTypography from "components/SuiTypography";
 
-const categoriesListData =
-  [
-    {
-      color:
-        "dark",
-      icon: "devices_other",
-      name: "Devices",
-      description:
-        (
-          <>
-            250
-            in
-            stock,{" "}
-            <SuiTypography
-              variant="caption"
-              color="text"
-              fontWeight="medium">
-              346+
-              sold
-            </SuiTypography>
-          </>
-        ),
-      route:
-        "/",
-    },
-    {
-      color:
-        "dark",
-      icon: "settings",
-      name: "Tickets",
-      description:
-        (
-          <>
-            123
-            closed,{" "}
-            <SuiTypography
-              variant="caption"
-              color="text"
-              fontWeight="medium">
-              15
-              open
-            </SuiTypography>
-          </>
-        ),
-      route:
-        "/",
-    },
-    {
-      color:
-        "dark",
-      icon: "info",
-      name: "Error logs",
-      description:
-        (
-          <>
-            1
-            is
-            active,{" "}
-            <SuiTypography
-              variant="caption"
-              color="text"
-              fontWeight="medium">
-              40
-              closed
-            </SuiTypography>
-          </>
-        ),
-      route:
-        "/",
-    },
-    {
-      color:
-        "dark",
-      icon: "thumb_up",
-      name: "Happy users",
-      description:
-        (
-          <SuiTypography
-            variant="caption"
-            color="text"
-            fontWeight="medium">
-            +
-            430
-          </SuiTypography>
-        ),
-      route:
-        "/",
-    },
-  ];
+const categoriesListData = [
+  {
+    color: "dark",
+    icon: "devices_other",
+    name: "Devices",
+    description: (
+      <>
+        250 in stock,{" "}
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
+          346+ sold
+        </SuiTypography>
+      </>
+    ),
+    route: "/",
+  },
+  {
+    color: "dark",
+    icon: "settings",
+    name: "Tickets",
+    description: (
+      <>
+        123 closed,{" "}
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
+          15 open
+        </SuiTypography>
+      </>
+    ),
+    route: "/",
+  },
+  {
+    color: "dark",
+    icon: "info",
+    name: "Error logs",
+    description: (
+      <>
+        1 is active,{" "}
+        <SuiTypography variant="caption" color="text" fontWeight="medium">
+          40 closed
+        </SuiTypography>
+      </>
+    ),
+    route: "/",
+  },
+  {
+    color: "dark",
+    icon: "thumb_up",
+    name: "Happy users",
+    description: (
+      <SuiTypography variant="caption" color="text" fontWeight="medium">
+        + 430
+      </SuiTypography>
+    ),
+    route: "/",
+  },
+];
 
 export default categoriesListData;

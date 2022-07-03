@@ -14,15 +14,15 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
+import colors from "assets/theme/base/colors";
+import borders from "assets/theme/base/borders";
 
 function TableCell({ width, align, padding, noBorder, children }) {
   const { light } = colors;
@@ -48,8 +48,8 @@ function TableCell({ width, align, padding, noBorder, children }) {
 
 // Setting default values for the props of TableCell
 TableCell.defaultProps = {
-  width: 'auto',
-  align: 'left',
+  width: "auto",
+  align: "left",
   padding: [],
   noBorder: false,
 };

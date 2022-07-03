@@ -14,22 +14,21 @@
  */
 
 // prop-type is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // NewUser page components
-import FormField from 'layouts/pages/users/new-user/components/FormField';
+import FormField from "layouts/pages/users/new-user/components/FormField";
 
 function UserInfo({ formData }) {
   const { formField, values, errors, touched } = formData;
-  const { firstName, lastName, company, email, password, repeatPassword } =
-    formField;
+  const { firstName, lastName, company, email, password, repeatPassword } = formField;
   const {
     firstName: firstNameV,
     lastName: lastNameV,
@@ -107,7 +106,7 @@ function UserInfo({ formData }) {
               error={errors.password && touched.password}
               success={passwordV.length > 0 && !errors.password}
               inputProps={{
-                autoComplete: '',
+                autoComplete: "",
               }}
             />
           </Grid>
@@ -121,7 +120,7 @@ function UserInfo({ formData }) {
               error={errors.repeatPassword && touched.repeatPassword}
               success={repeatPasswordV.length > 0 && !errors.repeatPassword}
               inputProps={{
-                autoComplete: '',
+                autoComplete: "",
               }}
             />
           </Grid>

@@ -34,142 +34,65 @@ import IllustrationLayout from "layouts/authentication/components/IllustrationLa
 import rocket from "assets/images/illustrations/rocket-white.png";
 
 function Illustration() {
-  const [
-    agreement,
-    setAgreemnet,
-  ] =
-    useState(
-      true
-    );
+  const [agreement, setAgreemnet] = useState(true);
 
-  const handleSetAgremment =
-    () =>
-      setAgreemnet(
-        !agreement
-      );
+  const handleSetAgremment = () => setAgreemnet(!agreement);
 
   return (
     <IllustrationLayout
       title="Sign Up"
       description="Enter your email and password to register"
       illustration={{
-        image:
-          rocket,
-        title:
-          "Your journey starts here",
+        image: rocket,
+        title: "Your journey starts here",
         description:
           "Just as it takes a company to sustain a product, it takes a community to sustain a protocol.",
-      }}>
-      <SuiBox
-        component="form"
-        role="form">
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            placeholder="Name"
-            size="large"
-          />
+      }}
+    >
+      <SuiBox component="form" role="form">
+        <SuiBox mb={2}>
+          <SuiInput placeholder="Name" size="large" />
         </SuiBox>
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            type="email"
-            placeholder="Email"
-            size="large"
-          />
+        <SuiBox mb={2}>
+          <SuiInput type="email" placeholder="Email" size="large" />
         </SuiBox>
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            type="password"
-            placeholder="Password"
-            size="large"
-          />
+        <SuiBox mb={2}>
+          <SuiInput type="password" placeholder="Password" size="large" />
         </SuiBox>
-        <SuiBox
-          display="flex"
-          alignItems="center">
-          <Checkbox
-            checked={
-              agreement
-            }
-            onChange={
-              handleSetAgremment
-            }
-          />
+        <SuiBox display="flex" alignItems="center">
+          <Checkbox checked={agreement} onChange={handleSetAgremment} />
           <SuiTypography
             variant="button"
             fontWeight="regular"
-            onClick={
-              handleSetAgremment
-            }
+            onClick={handleSetAgremment}
             sx={{
-              cursor:
-                "pointer",
-              userSelect:
-                "none",
-            }}>
-            &nbsp;&nbsp;I
-            agree
-            the&nbsp;
+              cursor: "pointer",
+              userSelect: "none",
+            }}
+          >
+            &nbsp;&nbsp;I agree the&nbsp;
           </SuiTypography>
-          <SuiTypography
-            component="a"
-            href="#"
-            variant="button"
-            fontWeight="bold"
-            textGradient>
-            Terms
-            and
-            Conditions
+          <SuiTypography component="a" href="#" variant="button" fontWeight="bold" textGradient>
+            Terms and Conditions
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          mt={
-            4
-          }
-          mb={
-            1
-          }>
-          <SuiButton
-            variant="gradient"
-            color="info"
-            size="large"
-            fullWidth>
-            sign
-            up
+        <SuiBox mt={4} mb={1}>
+          <SuiButton variant="gradient" color="info" size="large" fullWidth>
+            sign up
           </SuiButton>
         </SuiBox>
-        <SuiBox
-          mt={
-            3
-          }
-          textAlign="center">
-          <SuiTypography
-            variant="button"
-            color="text"
-            fontWeight="regular">
-            Already
-            have
-            an
-            account?&nbsp;
+        <SuiBox mt={3} textAlign="center">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
+            Already have an account?&nbsp;
             <SuiTypography
-              component={
-                Link
-              }
+              component={Link}
               to="/authentication/sign-in/illustration"
               variant="button"
               color="info"
               fontWeight="bold"
-              textGradient>
-              Sign
-              in
+              textGradient
+            >
+              Sign in
             </SuiTypography>
           </SuiTypography>
         </SuiBox>

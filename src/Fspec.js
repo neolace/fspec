@@ -28,19 +28,14 @@ import createCache from "@emotion/cache";
 import routes from "routes";
 
 // Soft UI Dashboard PRO React contexts
-import {
-  setMiniSidenav,
-  setOpenConfigurator,
-  useSoftUIController,
-} from "context";
+import { setMiniSidenav, setOpenConfigurator, useSoftUIController } from "context";
 
 // Images
 import brand from "assets/images/logo-ct.png";
 
 export default function Fspec() {
   const [controller, dispatch] = useSoftUIController();
-  const { miniSidenav, direction, layout, openConfigurator, sidenavColor } =
-    controller;
+  const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
   const [onMouseEnter, setOnMouseEnter] = useState(false);
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
@@ -72,8 +67,7 @@ export default function Fspec() {
   };
 
   // Change the openConfigurator state
-  const handleConfiguratorOpen = () =>
-    setOpenConfigurator(dispatch, !openConfigurator);
+  const handleConfiguratorOpen = () => setOpenConfigurator(dispatch, !openConfigurator);
 
   // Setting the dir attribute for the body element
   useEffect(() => {
@@ -93,14 +87,7 @@ export default function Fspec() {
       }
 
       if (route.route) {
-        return (
-          <Route
-            element={route.component}
-            exact
-            key={route.key}
-            path={route.route}
-          />
-        );
+        return <Route element={route.component} exact key={route.key} path={route.route} />;
       }
 
       return null;

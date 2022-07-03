@@ -14,9 +14,9 @@
  */
 
 // @mui material components
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 
-export default styled('div')(({ theme, ownerState }) => {
+export default styled("div")(({ theme, ownerState }) => {
   const { palette, functions, borders } = theme;
   const { error, success, disabled } = ownerState;
 
@@ -34,14 +34,14 @@ export default styled('div')(({ theme, ownerState }) => {
   }
 
   return {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
     backgroundColor: disabled ? grey[200] : white.main,
     border: `${borderWidth[1]} solid`,
     borderRadius: borderRadius.md,
     borderColor: borderColorValue,
 
-    '& .MuiInputBase-input': {
+    "& .MuiInputBase-input": {
       height: pxToRem(20),
     },
   };

@@ -14,32 +14,29 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React base styles
-import typography from 'assets/theme/base/typography';
+import typography from "assets/theme/base/typography";
 
 // Images
-import whiteCurved from 'assets/images/curved-images/white-curved.jpeg';
+import whiteCurved from "assets/images/curved-images/white-curved.jpeg";
 
 function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
   const { size } = typography;
 
   return (
     <Card
-      sx={({
-        functions: { linearGradient, rgba },
-        palette: { gradients },
-      }) => ({
+      sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
         background: gradients[color]
           ? `${linearGradient(
               rgba(gradients[color].main, 0.9),
@@ -68,21 +65,12 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
             >
               <Icon
                 sx={{
-                  backgroundImage: ({
-                    functions: { linearGradient },
-                    palette: { gradients },
-                  }) =>
+                  backgroundImage: ({ functions: { linearGradient }, palette: { gradients } }) =>
                     gradients[color]
-                      ? linearGradient(
-                          gradients[color].main,
-                          gradients[color].state
-                        )
-                      : linearGradient(
-                          gradients.dark.main,
-                          gradients.dark.state
-                        ),
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
+                      ? linearGradient(gradients[color].main, gradients[color].state)
+                      : linearGradient(gradients.dark.main, gradients.dark.state),
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
                 }}
               >
                 {icon}
@@ -110,7 +98,7 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
                     fontSize="default"
                     onClick={dropdown.action}
                     sx={{
-                      cursor: 'pointer',
+                      cursor: "pointer",
                     }}
                   >
                     more_horiz
@@ -118,12 +106,7 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
                   {dropdown.menu}
                 </SuiBox>
               )}
-              <SuiTypography
-                variant="button"
-                fontWeight="bold"
-                color="white"
-                align="right"
-              >
+              <SuiTypography variant="button" fontWeight="bold" color="white" align="right">
                 {percentage}
               </SuiTypography>
             </SuiBox>
@@ -136,25 +119,16 @@ function ComplexStatisticsCard({ color, icon, count, percentage, dropdown }) {
 
 // Setting default values for the props of ComplexStatisticsCard
 ComplexStatisticsCard.defaultProps = {
-  color: 'dark',
+  color: "dark",
   dropdown: false,
 };
 
 // Typechecking props for the ComplexStatisticsCard
 ComplexStatisticsCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   icon: PropTypes.node.isRequired,
   count: PropTypes.shape({
-    number: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-      .isRequired,
+    number: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
   percentage: PropTypes.string.isRequired,

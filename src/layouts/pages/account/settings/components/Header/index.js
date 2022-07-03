@@ -29,114 +29,55 @@ import SuiAvatar from "components/SuiAvatar";
 import burceMars from "assets/images/bruce-mars.jpg";
 
 function Header() {
-  const [
-    visible,
-    setVisible,
-  ] =
-    useState(
-      true
-    );
+  const [visible, setVisible] = useState(true);
 
-  const handleSetVisible =
-    () =>
-      setVisible(
-        !visible
-      );
+  const handleSetVisible = () => setVisible(!visible);
 
   return (
     <Card id="profile">
-      <SuiBox
-        p={
-          2
-        }>
-        <Grid
-          container
-          spacing={
-            3
-          }
-          alignItems="center">
-          <Grid
-            item>
+      <SuiBox p={2}>
+        <Grid container spacing={3} alignItems="center">
+          <Grid item>
             <SuiAvatar
-              src={
-                burceMars
-              }
+              src={burceMars}
               alt="profile-image"
               variant="rounded"
               size="xl"
               shadow="sm"
             />
           </Grid>
-          <Grid
-            item>
-            <SuiBox
-              height="100%"
-              mt={
-                0.5
-              }
-              lineHeight={
-                1
-              }>
-              <SuiTypography
-                variant="h5"
-                fontWeight="medium">
-                Alex
-                Thompson
+          <Grid item>
+            <SuiBox height="100%" mt={0.5} lineHeight={1}>
+              <SuiTypography variant="h5" fontWeight="medium">
+                Alex Thompson
               </SuiTypography>
-              <SuiTypography
-                variant="button"
-                color="text"
-                fontWeight="medium">
-                CEO
-                /
-                Co-Founder
+              <SuiTypography variant="button" color="text" fontWeight="medium">
+                CEO / Co-Founder
               </SuiTypography>
             </SuiBox>
           </Grid>
           <Grid
             item
-            xs={
-              12
-            }
-            md={
-              6
-            }
-            lg={
-              3
-            }
+            xs={12}
+            md={6}
+            lg={3}
             sx={{
               ml: "auto",
-            }}>
+            }}
+          >
             <SuiBox
               display="flex"
               justifyContent={{
                 md: "flex-end",
               }}
               alignItems="center"
-              lineHeight={
-                1
-              }>
-              <SuiTypography
-                variant="caption"
-                fontWeight="regular">
-                Switch
-                to{" "}
-                {visible
-                  ? "invisible"
-                  : "visible"}
+              lineHeight={1}
+            >
+              <SuiTypography variant="caption" fontWeight="regular">
+                Switch to {visible ? "invisible" : "visible"}
               </SuiTypography>
-              <SuiBox
-                mx={
-                  1
-                }>
-                <Switch
-                  checked={
-                    visible
-                  }
-                  onChange={
-                    handleSetVisible
-                  }
-                />
+              <SuiBox mx={1}>
+                <Switch checked={visible} onChange={handleSetVisible} />
               </SuiBox>
             </SuiBox>
           </Grid>

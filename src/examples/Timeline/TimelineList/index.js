@@ -14,29 +14,25 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Timeline context
-import { TimelineProvider } from 'examples/Timeline/context';
+import { TimelineProvider } from "examples/Timeline/context";
 
 function TimelineList({ title, dark, children }) {
   return (
     <TimelineProvider value={dark}>
       <Card>
-        <SuiBox bgColor={dark ? 'dark' : 'white'} variant="gradient">
+        <SuiBox bgColor={dark ? "dark" : "white"} variant="gradient">
           <SuiBox pt={3} px={3}>
-            <SuiTypography
-              variant="h6"
-              fontWeight="medium"
-              color={dark ? 'white' : 'dark'}
-            >
+            <SuiTypography variant="h6" fontWeight="medium" color={dark ? "white" : "dark"}>
               {title}
             </SuiTypography>
           </SuiBox>

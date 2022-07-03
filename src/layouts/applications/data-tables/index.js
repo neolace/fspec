@@ -14,20 +14,20 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import DataTable from 'examples/Tables/DataTable';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import DataTable from "examples/Tables/DataTable";
 
 // Data
-import dataTableData from 'layouts/applications/data-tables/data/dataTableData';
+import dataTableData from "layouts/applications/data-tables/data/dataTableData";
 
 function DataTables() {
   return (
@@ -41,8 +41,7 @@ function DataTables() {
                 Datatable Simple
               </SuiTypography>
               <SuiTypography variant="button" fontWeight="regular" color="text">
-                A lightweight, extendable, dependency-free javascript HTML table
-                plugin.
+                A lightweight, extendable, dependency-free javascript HTML table plugin.
               </SuiTypography>
             </SuiBox>
             <DataTable table={dataTableData} />
@@ -54,8 +53,7 @@ function DataTables() {
               Datatable Search
             </SuiTypography>
             <SuiTypography variant="button" fontWeight="regular" color="text">
-              A lightweight, extendable, dependency-free javascript HTML table
-              plugin.
+              A lightweight, extendable, dependency-free javascript HTML table plugin.
             </SuiTypography>
           </SuiBox>
           <DataTable table={dataTableData} canSearch />

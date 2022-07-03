@@ -29,19 +29,12 @@ import borders from "assets/theme/base/borders";
 import masterCardLogo from "assets/images/logos/mastercard.png";
 
 function PaymentDetails() {
-  const {
-    borderWidth,
-    borderColor,
-  } =
-    borders;
+  const { borderWidth, borderColor } = borders;
 
   return (
     <>
-      <SuiTypography
-        variant="h6"
-        fontWeight="medium">
-        Payment
-        details
+      <SuiTypography variant="h6" fontWeight="medium">
+        Payment details
       </SuiTypography>
       <SuiBox
         border={`${borderWidth[1]} solid ${borderColor}`}
@@ -49,47 +42,21 @@ function PaymentDetails() {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        p={
-          3
-        }
-        mt={
-          2
-        }>
-        <SuiBox
-          component="img"
-          src={
-            masterCardLogo
-          }
-          alt="master card"
-          width="10%"
-          mr={
-            2
-          }
-        />
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium">
+        p={3}
+        mt={2}
+      >
+        <SuiBox component="img" src={masterCardLogo} alt="master card" width="10%" mr={2} />
+        <SuiTypography variant="h6" fontWeight="medium">
           ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;7852
         </SuiTypography>
-        <SuiBox
-          ml="auto"
-          lineHeight={
-            0
-          }>
-          <Tooltip
-            title="We do not store card details"
-            placement="bottom">
-            <SuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              iconOnly
-              circular>
+        <SuiBox ml="auto" lineHeight={0}>
+          <Tooltip title="We do not store card details" placement="bottom">
+            <SuiButton variant="outlined" color="secondary" size="small" iconOnly circular>
               <Icon
                 sx={{
-                  cursor:
-                    "pointer",
-                }}>
+                  cursor: "pointer",
+                }}
+              >
                 priority_high
               </Icon>
             </SuiButton>

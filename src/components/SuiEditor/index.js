@@ -13,13 +13,13 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 // react-quill components
-import ReactQuill from 'react-quill';
+import ReactQuill from "react-quill";
 
 // react-quill styles
-import 'react-quill/dist/quill.snow.css';
+import "react-quill/dist/quill.snow.css";
 
 // Custom styles for the SuiEditor
-import SuiEditorRoot from 'components/SuiEditor/SuiEditorRoot';
+import SuiEditorRoot from "components/SuiEditor/SuiEditorRoot";
 
 function SuiEditor(props) {
   return (

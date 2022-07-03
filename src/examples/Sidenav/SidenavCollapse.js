@@ -14,17 +14,17 @@
  */
 
 // prop-types is a library for typechecking of props.
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Collapse from '@mui/material/Collapse';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Icon from '@mui/material/Icon';
+import Collapse from "@mui/material/Collapse";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Custom styles for the SidenavCollapse
 import {
@@ -33,20 +33,12 @@ import {
   collapseIconBox,
   collapseItem,
   collapseText,
-} from 'examples/Sidenav/styles/sidenavCollapse';
+} from "examples/Sidenav/styles/sidenavCollapse";
 
 // Soft UI Dashboard PRO React context
-import { useSoftUIController } from 'context';
+import { useSoftUIController } from "context";
 
-function SidenavCollapse({
-  icon,
-  name,
-  children,
-  active,
-  noCollapse,
-  open,
-  ...rest
-}) {
+function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...rest }) {
   const [controller] = useSoftUIController();
   const { miniSidenav, transparentSidenav, sidenavColor } = controller;
 
@@ -71,7 +63,7 @@ function SidenavCollapse({
               })
             }
           >
-            {typeof icon === 'string' ? (
+            {typeof icon === "string" ? (
               <Icon
                 sx={(theme) =>
                   collapseIcon(theme, {
@@ -122,7 +114,7 @@ function SidenavCollapse({
 
 // Setting default values for the props of SidenavCollapse
 SidenavCollapse.defaultProps = {
-  color: 'info',
+  color: "info",
   active: false,
   noCollapse: false,
   children: false,
@@ -131,15 +123,7 @@ SidenavCollapse.defaultProps = {
 
 // Typechecking props for the SidenavCollapse
 SidenavCollapse.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   icon: PropTypes.node.isRequired,
   name: PropTypes.string.isRequired,
   children: PropTypes.node,

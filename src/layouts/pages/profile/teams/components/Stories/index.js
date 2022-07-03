@@ -14,21 +14,21 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiAvatar from "components/SuiAvatar";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
+import colors from "assets/theme/base/colors";
+import borders from "assets/theme/base/borders";
 
 // Soft UI Dashboard PRO React data variables
-import storiesData from 'layouts/pages/profile/teams/components/Stories/data/storiesData';
+import storiesData from "layouts/pages/profile/teams/components/Stories/data/storiesData";
 
 function Stories() {
   const { borderWidth } = borders;
@@ -42,7 +42,7 @@ function Stories() {
       md={2}
       lg={1}
       sx={{
-        flex: '0 0 100%',
+        flex: "0 0 100%",
       }}
     >
       <SuiBox
@@ -56,7 +56,7 @@ function Stories() {
         mx="auto"
         border={`${borderWidth[1]} solid ${colors[color].main}`}
         sx={{
-          cursor: 'pointer',
+          cursor: "pointer",
         }}
       >
         <SuiAvatar src={image} alt={name} />
@@ -72,7 +72,7 @@ function Stories() {
   return (
     <Card
       sx={{
-        overflow: 'scroll',
+        overflow: "scroll",
       }}
     >
       <SuiBox width="100%" pt={3} pb={2.5} px={3}>
@@ -84,7 +84,7 @@ function Stories() {
             md={2}
             lg={1}
             sx={{
-              flex: '0 0 100%',
+              flex: "0 0 100%",
             }}
           >
             <SuiBox
@@ -99,7 +99,7 @@ function Stories() {
               mx="auto"
               variant="gradient"
               sx={{
-                cursor: 'pointer',
+                cursor: "pointer",
               }}
             >
               <Icon fontSize="small">add</Icon>

@@ -9,37 +9,17 @@ import SuiBox from "components/SuiBox";
 import SuiTypography from "components/SuiTypography";
 import SuiButton from "components/SuiButton";
 
-function Template({
-  title,
-  action,
-}) {
+function Template({ title, action }) {
   return (
     <Card>
-      <SuiBox
-        p={
-          3
-        }
-        textAlign="center">
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiTypography
-            variant="body2"
-            color="text">
-            {
-              title
-            }
+      <SuiBox p={3} textAlign="center">
+        <SuiBox mb={2}>
+          <SuiTypography variant="body2" color="text">
+            {title}
           </SuiTypography>
         </SuiBox>
-        <SuiButton
-          variant="gradient"
-          color="info"
-          onClick={
-            action
-          }>
-          try
-          me!
+        <SuiButton variant="gradient" color="info" onClick={action}>
+          try me!
         </SuiButton>
       </SuiBox>
     </Card>
@@ -47,16 +27,9 @@ function Template({
 }
 
 // Typechecking props for the Template
-Template.propTypes =
-  {
-    title:
-      PropTypes
-        .string
-        .isRequired,
-    action:
-      PropTypes
-        .func
-        .isRequired,
-  };
+Template.propTypes = {
+  title: PropTypes.string.isRequired,
+  action: PropTypes.func.isRequired,
+};
 
 export default Template;

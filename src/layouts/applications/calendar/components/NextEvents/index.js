@@ -14,20 +14,20 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DefaultItem from 'examples/Items/DefaultItem';
+import DefaultItem from "examples/Items/DefaultItem";
 
 function NextEvents() {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
       <SuiBox pt={2} px={2}>
@@ -36,11 +36,7 @@ function NextEvents() {
         </SuiTypography>
       </SuiBox>
       <SuiBox p={2}>
-        <DefaultItem
-          icon="paid"
-          title="Cyber Week"
-          description="27 March 2020, at 12:30 PM"
-        />
+        <DefaultItem icon="paid" title="Cyber Week" description="27 March 2020, at 12:30 PM" />
         <SuiBox mt={3.5}>
           <DefaultItem
             color="primary"

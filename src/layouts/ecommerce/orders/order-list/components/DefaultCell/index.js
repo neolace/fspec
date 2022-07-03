@@ -14,10 +14,10 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from 'components/SuiTypography';
+import SuiTypography from "components/SuiTypography";
 
 function DefaultCell({ value, suffix }) {
   return (
@@ -35,7 +35,7 @@ function DefaultCell({ value, suffix }) {
 
 // Setting default values for the props of DefaultCell
 DefaultCell.defaultProps = {
-  suffix: '',
+  suffix: "",
 };
 
 // Typechecking props for the DefaultCell

@@ -14,16 +14,16 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-flatpickr components
-import Flatpickr from 'react-flatpickr';
+import Flatpickr from "react-flatpickr";
 
 // react-flatpickr styles
-import 'flatpickr/dist/flatpickr.css';
+import "flatpickr/dist/flatpickr.css";
 
 // Soft UI Dashboard PRO React components
-import SuiInput from 'components/SuiInput';
+import SuiInput from "components/SuiInput";
 
 function SuiDatePicker({ input, ...rest }) {
   return (

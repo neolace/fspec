@@ -33,133 +33,68 @@ function Automotive() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <SuiBox
-        pt={
-          3
-        }>
-        <SuiBox
-          mb={
-            3
-          }>
+      <SuiBox pt={3}>
+        <SuiBox mb={3}>
           <AutomotiveDetails />
         </SuiBox>
-        <SuiBox
-          mb={
-            3
-          }>
-          <Grid
-            container
-            spacing={
-              3
-            }>
-            <Grid
-              item
-              xs={
-                12
-              }
-              md={
-                6
-              }
-              lg={
-                3
-              }>
+        <SuiBox mb={3}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6} lg={3}>
               <MiniStatisticsCard
                 bgColor="secondary"
                 title={{
                   text: "today's trip",
-                  fontWeight:
-                    "medium",
+                  fontWeight: "medium",
                 }}
                 count="145 Km"
                 icon={{
-                  component:
-                    "paid",
+                  component: "paid",
                 }}
               />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }
-              md={
-                6
-              }
-              lg={
-                3
-              }>
+            <Grid item xs={12} md={6} lg={3}>
               <MiniStatisticsCard
                 bgColor="secondary"
                 title={{
                   text: "battery health",
-                  fontWeight:
-                    "medium",
+                  fontWeight: "medium",
                 }}
                 count="99 %"
                 icon={{
-                  component:
-                    "sports_esports",
+                  component: "sports_esports",
                 }}
               />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }
-              md={
-                6
-              }
-              lg={
-                3
-              }>
+            <Grid item xs={12} md={6} lg={3}>
               <MiniStatisticsCard
                 bgColor="secondary"
                 title={{
                   text: "average speed",
-                  fontWeight:
-                    "medium",
+                  fontWeight: "medium",
                 }}
                 count="56 Km/h"
                 icon={{
-                  component:
-                    "speed",
+                  component: "speed",
                 }}
               />
             </Grid>
-            <Grid
-              item
-              xs={
-                12
-              }
-              md={
-                6
-              }
-              lg={
-                3
-              }>
+            <Grid item xs={12} md={6} lg={3}>
               <MiniStatisticsCard
                 bgColor="secondary"
                 title={{
                   text: "music volume",
-                  fontWeight:
-                    "medium",
+                  fontWeight: "medium",
                 }}
                 count="15/100"
                 icon={{
-                  color:
-                    "info",
-                  component:
-                    "music_note",
+                  color: "info",
+                  component: "music_note",
                 }}
               />
             </Grid>
           </Grid>
         </SuiBox>
-        <SuiBox
-          mb={
-            3
-          }>
+        <SuiBox mb={3}>
           <AutomotiveMonitor />
         </SuiBox>
       </SuiBox>

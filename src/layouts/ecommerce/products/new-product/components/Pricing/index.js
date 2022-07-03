@@ -14,15 +14,15 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiSelect from 'components/SuiSelect';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiSelect from "components/SuiSelect";
 
 // NewProduct page components
-import FormField from 'layouts/ecommerce/products/new-product/components/FormField';
+import FormField from "layouts/ecommerce/products/new-product/components/FormField";
 
 function Pricing() {
   return (
@@ -46,33 +46,33 @@ function Pricing() {
             </SuiBox>
             <SuiSelect
               defaultValue={{
-                value: 'usd',
-                label: 'USD',
+                value: "usd",
+                label: "USD",
               }}
               options={[
                 {
-                  value: 'btc',
-                  label: 'BTC',
+                  value: "btc",
+                  label: "BTC",
                 },
                 {
-                  value: 'cny',
-                  label: 'CNY',
+                  value: "cny",
+                  label: "CNY",
                 },
                 {
-                  value: 'eur',
-                  label: 'EUR',
+                  value: "eur",
+                  label: "EUR",
                 },
                 {
-                  value: 'gbp',
-                  label: 'GBP',
+                  value: "gbp",
+                  label: "GBP",
                 },
                 {
-                  value: 'inr',
-                  label: 'INR',
+                  value: "inr",
+                  label: "INR",
                 },
                 {
-                  value: 'use',
-                  label: 'USD',
+                  value: "use",
+                  label: "USD",
                 },
               ]}
             />
@@ -86,46 +86,42 @@ function Pricing() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography
-                component="label"
-                variant="caption"
-                fontWeight="bold"
-              >
+              <SuiTypography component="label" variant="caption" fontWeight="bold">
                 Project Tags
               </SuiTypography>
             </SuiBox>
             <SuiSelect
               defaultValue={[
                 {
-                  value: 'in stock',
-                  label: 'In Stock',
+                  value: "in stock",
+                  label: "In Stock",
                 },
                 {
-                  value: 'out of stock',
-                  label: 'Out of Stock',
+                  value: "out of stock",
+                  label: "Out of Stock",
                 },
               ]}
               options={[
                 {
-                  value: 'black friday',
-                  label: 'Black Friday',
+                  value: "black friday",
+                  label: "Black Friday",
                 },
                 {
-                  value: 'expired',
-                  label: 'Expired',
+                  value: "expired",
+                  label: "Expired",
                   isDisabled: true,
                 },
                 {
-                  value: 'out of stock',
-                  label: 'Out of Stock',
+                  value: "out of stock",
+                  label: "Out of Stock",
                 },
                 {
-                  value: 'in stock',
-                  label: 'In Stock',
+                  value: "in stock",
+                  label: "In Stock",
                 },
                 {
-                  value: 'sale',
-                  label: 'Sale',
+                  value: "sale",
+                  label: "Sale",
                 },
               ]}
               size="large"

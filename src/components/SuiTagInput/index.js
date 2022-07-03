@@ -13,17 +13,17 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-tag-input components
-import ReactTagInput from '@pathofdev/react-tag-input';
-import '@pathofdev/react-tag-input/build/index.css';
+import ReactTagInput from "@pathofdev/react-tag-input";
+import "@pathofdev/react-tag-input/build/index.css";
 
 // Custom styles for SuiTagInput
-import SuiTagInputRoot from 'components/SuiTagInput/SuiTagInputRoot';
+import SuiTagInputRoot from "components/SuiTagInput/SuiTagInputRoot";
 
 const SuiTagInput = forwardRef(({ size, error, success, ...rest }, ref) => (
   <SuiTagInputRoot
@@ -39,14 +39,14 @@ const SuiTagInput = forwardRef(({ size, error, success, ...rest }, ref) => (
 
 // Setting default values for the props of SuiTagInput
 SuiTagInput.defaultProps = {
-  size: 'medium',
+  size: "medium",
   error: false,
   success: false,
 };
 
 // Typechecking props for the SuiTagInput
 SuiTagInput.propTypes = {
-  size: PropTypes.oneOf(['medium', 'large']),
+  size: PropTypes.oneOf(["medium", "large"]),
   error: PropTypes.bool,
   success: PropTypes.bool,
 };

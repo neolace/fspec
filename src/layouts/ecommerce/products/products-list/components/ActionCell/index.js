@@ -14,12 +14,12 @@
  */
 
 // @mui material components
-import Icon from '@mui/material/Icon';
-import Tooltip from '@mui/material/Tooltip';
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function ActionCell() {
   return (
@@ -28,7 +28,7 @@ function ActionCell() {
         variant="body1"
         color="secondary"
         sx={{
-          cursor: 'pointer',
+          cursor: "pointer",
           lineHeight: 0,
         }}
       >
@@ -41,7 +41,7 @@ function ActionCell() {
           variant="body1"
           color="secondary"
           sx={{
-            cursor: 'pointer',
+            cursor: "pointer",
             lineHeight: 0,
           }}
         >
@@ -54,7 +54,7 @@ function ActionCell() {
         variant="body1"
         color="secondary"
         sx={{
-          cursor: 'pointer',
+          cursor: "pointer",
           lineHeight: 0,
         }}
       >

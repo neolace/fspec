@@ -1,27 +1,27 @@
 /* eslint-disable no-dupe-keys */
 // sweetalert2 components
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 // Sweet Alerts page components
-import Template from 'layouts/pages/sweet-alerts/components/Template';
+import Template from "layouts/pages/sweet-alerts/components/Template";
 
 function GithubAvatarRequest() {
   const showAlert = () => {
     const newSwal = Swal.mixin({
       customClass: {
-        confirmButton: 'button button-success',
-        cancelButton: 'button button-error',
+        confirmButton: "button button-success",
+        cancelButton: "button button-error",
       },
     });
     newSwal
       .fire({
-        title: 'Submit your Github username',
-        input: 'text',
+        title: "Submit your Github username",
+        input: "text",
         inputAttributes: {
-          autocapitalize: 'off',
+          autocapitalize: "off",
         },
         showCancelButton: true,
-        confirmButtonText: 'Look up',
+        confirmButtonText: "Look up",
         showLoaderOnConfirm: true,
         preConfirm: (login) =>
           fetch(`//api.github.com/users/${login}`)

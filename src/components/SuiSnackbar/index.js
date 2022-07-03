@@ -33,180 +33,91 @@ import typography from "assets/theme/base/typography";
 // Custom styles for the SuiSnackbar
 import SuiSnackbarIconRoot from "components/SuiSnackbar/SuiSnackbarIconRoot";
 
-function SuiSnackbar({
-  color,
-  icon,
-  title,
-  dateTime,
-  content,
-  close,
-  bgWhite,
-  ...rest
-}) {
-  const {
-    size,
-  } =
-    typography;
+function SuiSnackbar({ color, icon, title, dateTime, content, close, bgWhite, ...rest }) {
+  const { size } = typography;
   let titleColor;
   let dateTimeColor;
   let dividerColor;
 
-  if (
-    bgWhite
-  ) {
-    titleColor =
-      color;
-    dateTimeColor =
-      "dark";
+  if (bgWhite) {
+    titleColor = color;
+    dateTimeColor = "dark";
     dividerColor = false;
-  } else if (
-    color ===
-    "light"
-  ) {
-    titleColor =
-      "dark";
-    dateTimeColor =
-      "text";
+  } else if (color === "light") {
+    titleColor = "dark";
+    dateTimeColor = "text";
     dividerColor = false;
   } else {
-    titleColor =
-      "white";
-    dateTimeColor =
-      "white";
+    titleColor = "white";
+    dateTimeColor = "white";
     dividerColor = true;
   }
 
   return (
     <Snackbar
-      TransitionComponent={
-        Fade
-      }
-      autoHideDuration={
-        5000
-      }
+      TransitionComponent={Fade}
+      autoHideDuration={5000}
       anchorOrigin={{
-        vertical:
-          "bottom",
-        horizontal:
-          "right",
+        vertical: "bottom",
+        horizontal: "right",
       }}
       {...rest}
       action={
-        <IconButton
-          size="small"
-          aria-label="close"
-          color="inherit"
-          onClick={
-            close
-          }>
-          <Icon fontSize="small">
-            close
-          </Icon>
+        <IconButton size="small" aria-label="close" color="inherit" onClick={close}>
+          <Icon fontSize="small">close</Icon>
         </IconButton>
-      }>
+      }
+    >
       <SuiBox
-        variant={
-          bgWhite
-            ? "contained"
-            : "gradient"
-        }
-        bgColor={
-          bgWhite
-            ? "white"
-            : color
-        }
+        variant={bgWhite ? "contained" : "gradient"}
+        bgColor={bgWhite ? "white" : color}
         minWidth="21.875rem"
         maxWidth="100%"
         shadow="md"
         borderRadius="md"
-        p={
-          1
-        }>
+        p={1}
+      >
         <SuiBox
           display="flex"
           justifyContent="space-between"
           alignItems="center"
           color="dark"
-          p={
-            1.5
-          }>
-          <SuiBox
-            display="flex"
-            alignItems="center"
-            lineHeight={
-              0
-            }>
+          p={1.5}
+        >
+          <SuiBox display="flex" alignItems="center" lineHeight={0}>
             <SuiSnackbarIconRoot
               fontSize="small"
               ownerState={{
                 color,
                 bgWhite,
-              }}>
-              {
-                icon
-              }
+              }}
+            >
+              {icon}
             </SuiSnackbarIconRoot>
             <SuiTypography
               variant="button"
               fontWeight="medium"
-              color={
-                titleColor
-              }
-              textGradient={
-                bgWhite
-              }>
-              {
-                title
-              }
+              color={titleColor}
+              textGradient={bgWhite}
+            >
+              {title}
             </SuiTypography>
           </SuiBox>
-          <SuiBox
-            display="flex"
-            alignItems="center"
-            lineHeight={
-              0
-            }>
-            <SuiTypography
-              variant="caption"
-              color={
-                dateTimeColor
-              }>
-              {
-                dateTime
-              }
+          <SuiBox display="flex" alignItems="center" lineHeight={0}>
+            <SuiTypography variant="caption" color={dateTimeColor}>
+              {dateTime}
             </SuiTypography>
             <Icon
               sx={{
-                color:
-                  ({
-                    palette:
-                      {
-                        dark,
-                        white,
-                      },
-                  }) =>
-                    bgWhite ||
-                    color ===
-                      "light"
-                      ? dark.main
-                      : white.main,
-                fontWeight:
-                  ({
-                    typography:
-                      {
-                        fontWeightBold,
-                      },
-                  }) =>
-                    fontWeightBold,
-                cursor:
-                  "pointer",
+                color: ({ palette: { dark, white } }) =>
+                  bgWhite || color === "light" ? dark.main : white.main,
+                fontWeight: ({ typography: { fontWeightBold } }) => fontWeightBold,
+                cursor: "pointer",
                 marginLeft: 2,
-                transform:
-                  "translateY(-1px)",
+                transform: "translateY(-1px)",
               }}
-              onClick={
-                close
-              }>
+              onClick={close}
+            >
               close
             </Icon>
           </SuiBox>
@@ -215,27 +126,10 @@ function SuiSnackbar({
           sx={{
             margin: 0,
           }}
-          light={
-            dividerColor
-          }
+          light={dividerColor}
         />
-        <SuiBox
-          p={
-            1.5
-          }
-          color={
-            bgWhite ||
-            color ===
-              "light"
-              ? "text"
-              : "white"
-          }
-          fontSize={
-            size.sm
-          }>
-          {
-            content
-          }
+        <SuiBox p={1.5} color={bgWhite || color === "light" ? "text" : "white"} fontSize={size.sm}>
+          {content}
         </SuiBox>
       </SuiBox>
     </Snackbar>
@@ -243,50 +137,29 @@ function SuiSnackbar({
 }
 
 // Setting default values for the props of SuiSnackbar
-SuiSnackbar.defaultProps =
-  {
-    bgWhite: false,
-    color:
-      "info",
-  };
+SuiSnackbar.defaultProps = {
+  bgWhite: false,
+  color: "info",
+};
 
 // Typechecking props for SuiSnackbar
-SuiSnackbar.propTypes =
-  {
-    color:
-      PropTypes.oneOf(
-        [
-          "primary",
-          "secondary",
-          "info",
-          "success",
-          "warning",
-          "error",
-          "dark",
-          "light",
-        ]
-      ),
-    icon: PropTypes
-      .node
-      .isRequired,
-    title:
-      PropTypes
-        .string
-        .isRequired,
-    dateTime:
-      PropTypes
-        .string
-        .isRequired,
-    content:
-      PropTypes
-        .node
-        .isRequired,
-    close:
-      PropTypes
-        .func
-        .isRequired,
-    bgWhite:
-      PropTypes.bool,
-  };
+SuiSnackbar.propTypes = {
+  color: PropTypes.oneOf([
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "dark",
+    "light",
+  ]),
+  icon: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
+  dateTime: PropTypes.string.isRequired,
+  content: PropTypes.node.isRequired,
+  close: PropTypes.func.isRequired,
+  bgWhite: PropTypes.bool,
+};
 
 export default SuiSnackbar;

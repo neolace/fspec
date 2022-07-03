@@ -14,14 +14,14 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Billing page components
-import Bill from 'layouts/pages/account/billing/components/Bill';
+import Bill from "layouts/pages/account/billing/components/Bill";
 
 function BillingInformation() {
   return (
@@ -32,13 +32,7 @@ function BillingInformation() {
         </SuiTypography>
       </SuiBox>
       <SuiBox pt={1} pb={2} px={2}>
-        <SuiBox
-          component="ul"
-          display="flex"
-          flexDirection="column"
-          p={0}
-          m={0}
-        >
+        <SuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           <Bill
             name="oliver liam"
             company="viking burrito"

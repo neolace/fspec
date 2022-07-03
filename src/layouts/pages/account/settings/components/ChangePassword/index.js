@@ -14,42 +14,31 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Settings page components
-import FormField from 'layouts/pages/account/components/FormField';
+import FormField from "layouts/pages/account/components/FormField";
 
 function ChangePassword() {
   const passwordRequirements = [
-    'One special characters',
-    'Min 6 characters',
-    'One number (2 are recommended)',
-    'Change it often',
+    "One special characters",
+    "Min 6 characters",
+    "One number (2 are recommended)",
+    "Change it often",
   ];
 
   const renderPasswordRequirements = passwordRequirements.map((item, key) => {
     const itemKey = `element-${key}`;
 
     return (
-      <SuiBox
-        key={itemKey}
-        component="li"
-        color="text"
-        fontSize="1.25rem"
-        lineHeight={1}
-      >
-        <SuiTypography
-          variant="button"
-          color="text"
-          fontWeight="regular"
-          verticalAlign="middle"
-        >
+      <SuiBox key={itemKey} component="li" color="text" fontSize="1.25rem" lineHeight={1}>
+        <SuiTypography variant="button" color="text" fontWeight="regular" verticalAlign="middle">
           {item}
         </SuiTypography>
       </SuiBox>
@@ -68,8 +57,8 @@ function ChangePassword() {
               label="current password"
               placeholder="Current Password"
               inputProps={{
-                type: 'password',
-                autoComplete: '',
+                type: "password",
+                autoComplete: "",
               }}
             />
           </Grid>
@@ -78,8 +67,8 @@ function ChangePassword() {
               label="new password"
               placeholder="New Password"
               inputProps={{
-                type: 'password',
-                autoComplete: '',
+                type: "password",
+                autoComplete: "",
               }}
             />
           </Grid>
@@ -88,8 +77,8 @@ function ChangePassword() {
               label="confirm new password"
               placeholder="Confirm Password"
               inputProps={{
-                type: 'password',
-                autoComplete: '',
+                type: "password",
+                autoComplete: "",
               }}
             />
           </Grid>
@@ -102,12 +91,7 @@ function ChangePassword() {
             Please follow this guide for a strong password
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="flex-end"
-          flexWrap="wrap"
-        >
+        <SuiBox display="flex" justifyContent="space-between" alignItems="flex-end" flexWrap="wrap">
           <SuiBox
             component="ul"
             m={0}

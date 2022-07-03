@@ -14,93 +14,72 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function RankingList({ title, date, rankings }) {
-  const renderRankings = rankings.map(
-    ({ color, icon, name, description, value }, key) => (
-      <SuiBox key={name} component="li" pt={1} pr={2}>
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-        >
-          <SuiBox display="flex" alignItems="center">
-            <SuiBox mr={2}>
-              <SuiButton
-                variant="outlined"
-                color={color}
-                size="small"
-                iconOnly
-                circular
-                sx={({ functions: { pxToRem } }) => ({
-                  width: pxToRem(34),
-                  minWidth: pxToRem(34),
-                  height: pxToRem(34),
-                  minHeight: pxToRem(34),
-                })}
-              >
-                <Icon>{icon}</Icon>
-              </SuiButton>
-            </SuiBox>
-            <SuiBox display="flex" flexDirection="column">
-              <SuiTypography variant="button" fontWeight="medium" gutterBottom>
-                {name}
-              </SuiTypography>
-              <SuiTypography variant="caption" color="text">
-                {description}
-              </SuiTypography>
-            </SuiBox>
+  const renderRankings = rankings.map(({ color, icon, name, description, value }, key) => (
+    <SuiBox key={name} component="li" pt={1} pr={2}>
+      <SuiBox display="flex" justifyContent="space-between" alignItems="center">
+        <SuiBox display="flex" alignItems="center">
+          <SuiBox mr={2}>
+            <SuiButton
+              variant="outlined"
+              color={color}
+              size="small"
+              iconOnly
+              circular
+              sx={({ functions: { pxToRem } }) => ({
+                width: pxToRem(34),
+                minWidth: pxToRem(34),
+                height: pxToRem(34),
+                minHeight: pxToRem(34),
+              })}
+            >
+              <Icon>{icon}</Icon>
+            </SuiButton>
           </SuiBox>
-          <SuiTypography
-            variant="button"
-            color={color}
-            fontWeight="medium"
-            textGradient
-          >
-            {value}
-          </SuiTypography>
+          <SuiBox display="flex" flexDirection="column">
+            <SuiTypography variant="button" fontWeight="medium" gutterBottom>
+              {name}
+            </SuiTypography>
+            <SuiTypography variant="caption" color="text">
+              {description}
+            </SuiTypography>
+          </SuiBox>
         </SuiBox>
-        {key === rankings.length - 1 ? null : (
-          <Divider
-            sx={{
-              mt: 2,
-              mb: 1,
-            }}
-          />
-        )}
+        <SuiTypography variant="button" color={color} fontWeight="medium" textGradient>
+          {value}
+        </SuiTypography>
       </SuiBox>
-    )
-  );
+      {key === rankings.length - 1 ? null : (
+        <Divider
+          sx={{
+            mt: 2,
+            mb: 1,
+          }}
+        />
+      )}
+    </SuiBox>
+  ));
 
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
-      <SuiBox
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        pt={2}
-        px={2}
-      >
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
+      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
+        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </SuiTypography>
         <SuiTypography
@@ -108,7 +87,7 @@ function RankingList({ title, date, rankings }) {
           color="text"
           fontWeight="regular"
           sx={{
-            display: 'flex',
+            display: "flex",
           }}
         >
           <Icon
@@ -132,7 +111,7 @@ function RankingList({ title, date, rankings }) {
           p={0}
           m={0}
           sx={{
-            listStyle: 'none',
+            listStyle: "none",
           }}
         >
           {renderRankings}

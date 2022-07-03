@@ -14,36 +14,26 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 // import Divider from "@mui/material/Divider";
-import Icon from '@mui/material/Icon';
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 // import SuiButton from "components/SuiButton";
 // Billing page components
-import Transaction from 'layouts/pages/account/billing/components/Transaction';
+import Transaction from "layouts/pages/account/billing/components/Transaction";
 
 function Transactions() {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
-      <SuiBox
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        pt={3}
-        px={2}
-      >
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
+      <SuiBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
+        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           Your Transaction&apos;s
         </SuiTypography>
         <SuiBox display="flex" alignItems="flex-start">
@@ -59,12 +49,7 @@ function Transactions() {
       </SuiBox>
       <SuiBox pt={3} pb={2} px={2}>
         <SuiBox mb={2}>
-          <SuiTypography
-            variant="caption"
-            color="text"
-            fontWeight="bold"
-            textTransform="uppercase"
-          >
+          <SuiTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
             newest
           </SuiTypography>
         </SuiBox>
@@ -75,7 +60,7 @@ function Transactions() {
           p={0}
           m={0}
           sx={{
-            listStyle: 'none',
+            listStyle: "none",
           }}
         >
           <Transaction
@@ -94,12 +79,7 @@ function Transactions() {
           />
         </SuiBox>
         <SuiBox mt={1} mb={2}>
-          <SuiTypography
-            variant="caption"
-            color="text"
-            fontWeight="bold"
-            textTransform="uppercase"
-          >
+          <SuiTypography variant="caption" color="text" fontWeight="bold" textTransform="uppercase">
             yesterday
           </SuiTypography>
         </SuiBox>
@@ -110,7 +90,7 @@ function Transactions() {
           p={0}
           m={0}
           sx={{
-            listStyle: 'none',
+            listStyle: "none",
           }}
         >
           <Transaction

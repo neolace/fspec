@@ -14,18 +14,18 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import TableRow from '@mui/material/TableRow';
+import TableRow from "@mui/material/TableRow";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
+import colors from "assets/theme/base/colors";
+import borders from "assets/theme/base/borders";
 
 function PagesBodyCell({ rows, noBorder }) {
   const { light } = colors;
@@ -37,7 +37,7 @@ function PagesBodyCell({ rows, noBorder }) {
       component="td"
       width="100%"
       textAlign="left"
-      borderBottom={noBorder ? 'none' : `${borderWidth[1]} solid ${light.main}`}
+      borderBottom={noBorder ? "none" : `${borderWidth[1]} solid ${light.main}`}
       p={1}
     >
       <SuiTypography
@@ -46,7 +46,7 @@ function PagesBodyCell({ rows, noBorder }) {
         fontWeight="medium"
         color="text"
         sx={{
-          width: 'max-content',
+          width: "max-content",
         }}
       >
         {row}
@@ -64,9 +64,7 @@ PagesBodyCell.defaultProps = {
 
 // Typechecking props for the PagesBodyCell
 PagesBodyCell.propTypes = {
-  rows: PropTypes.arrayOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  ).isRequired,
+  rows: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])).isRequired,
   noBorder: PropTypes.bool,
 };
 

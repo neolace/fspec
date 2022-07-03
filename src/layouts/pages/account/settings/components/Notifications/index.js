@@ -14,18 +14,18 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Table from '@mui/material/Table';
-import TableRow from '@mui/material/TableRow';
-import TableBody from '@mui/material/TableBody';
-import Switch from '@mui/material/Switch';
+import Card from "@mui/material/Card";
+import Table from "@mui/material/Table";
+import TableRow from "@mui/material/TableRow";
+import TableBody from "@mui/material/TableBody";
+import Switch from "@mui/material/Switch";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Setting pages components
-import TableCell from 'layouts/pages/account/settings/components/TableCell';
+import TableCell from "layouts/pages/account/settings/components/TableCell";
 
 function Notifications() {
   return (
@@ -35,20 +35,20 @@ function Notifications() {
           <SuiTypography variant="h5">Notifications</SuiTypography>
         </SuiBox>
         <SuiTypography variant="button" color="text" fontWeight="regular">
-          Choose how you receive notifications. These notification settings
-          apply to the things you’re watching.
+          Choose how you receive notifications. These notification settings apply to the things
+          you’re watching.
         </SuiTypography>
       </SuiBox>
       <SuiBox pb={3} px={3}>
         <SuiBox
           minWidth="auto"
           sx={{
-            overflow: 'scroll',
+            overflow: "scroll",
           }}
         >
           <Table
             sx={{
-              minWidth: '36rem',
+              minWidth: "36rem",
             }}
           >
             <SuiBox component="thead">
@@ -71,18 +71,10 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <SuiBox lineHeight={1.4}>
-                    <SuiTypography
-                      display="block"
-                      variant="button"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography display="block" variant="button" fontWeight="regular">
                       Mentions
                     </SuiTypography>
-                    <SuiTypography
-                      variant="caption"
-                      color="text"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography variant="caption" color="text" fontWeight="regular">
                       Notify when another user mentions you in a comment
                     </SuiTypography>
                   </SuiBox>
@@ -100,18 +92,10 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <SuiBox lineHeight={1.4}>
-                    <SuiTypography
-                      display="block"
-                      variant="button"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography display="block" variant="button" fontWeight="regular">
                       Comments
                     </SuiTypography>
-                    <SuiTypography
-                      variant="caption"
-                      color="text"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography variant="caption" color="text" fontWeight="regular">
                       Notify when another user comments your item.
                     </SuiTypography>
                   </SuiBox>
@@ -129,18 +113,10 @@ function Notifications() {
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]}>
                   <SuiBox lineHeight={1.4}>
-                    <SuiTypography
-                      display="block"
-                      variant="button"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography display="block" variant="button" fontWeight="regular">
                       Follows
                     </SuiTypography>
-                    <SuiTypography
-                      variant="caption"
-                      color="text"
-                      fontWeight="regular"
-                    >
+                    <SuiTypography variant="caption" color="text" fontWeight="regular">
                       Notify when another user follows you.
                     </SuiTypography>
                   </SuiBox>
@@ -157,12 +133,7 @@ function Notifications() {
               </TableRow>
               <TableRow>
                 <TableCell padding={[1, 1, 1, 0.5]} noBorder>
-                  <SuiTypography
-                    display="block"
-                    variant="button"
-                    color="text"
-                    fontWeight="regular"
-                  >
+                  <SuiTypography display="block" variant="button" color="text" fontWeight="regular">
                     Log in from a new device
                   </SuiTypography>
                 </TableCell>

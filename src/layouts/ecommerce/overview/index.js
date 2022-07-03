@@ -13,48 +13,46 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Tooltip from '@mui/material/Tooltip';
-import Icon from '@mui/material/Icon';
-import Card from '@mui/material/Card';
+import Grid from "@mui/material/Grid";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import Tooltip from "@mui/material/Tooltip";
+import Icon from "@mui/material/Icon";
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiBadgeDot from 'components/SuiBadgeDot';
-import SuiButton from 'components/SuiButton';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiBadgeDot from "components/SuiBadgeDot";
+import SuiButton from "components/SuiButton";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import DefaultStatisticsCard from 'examples/Cards/StatisticsCards/DefaultStatisticsCard';
-import DefaultLineChart from 'examples/Charts/LineCharts/DefaultLineChart';
-import HorizontalBarChart from 'examples/Charts/BarCharts/HorizontalBarChart';
-import SalesTable from 'examples/Tables/SalesTable';
-import DataTable from 'examples/Tables/DataTable';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import DefaultStatisticsCard from "examples/Cards/StatisticsCards/DefaultStatisticsCard";
+import DefaultLineChart from "examples/Charts/LineCharts/DefaultLineChart";
+import HorizontalBarChart from "examples/Charts/BarCharts/HorizontalBarChart";
+import SalesTable from "examples/Tables/SalesTable";
+import DataTable from "examples/Tables/DataTable";
 
 // Overview page components
-import ChannelsChart from 'layouts/ecommerce/overview/components/ChannelsChart';
+import ChannelsChart from "layouts/ecommerce/overview/components/ChannelsChart";
 
 // Data
-import defaultLineChartData from 'layouts/ecommerce/overview/data/defaultLineChartData';
-import horizontalBarChartData from 'layouts/ecommerce/overview/data/horizontalBarChartData';
-import salesTableData from 'layouts/ecommerce/overview/data/salesTableData';
-import dataTableData from 'layouts/ecommerce/overview/data/dataTableData';
+import defaultLineChartData from "layouts/ecommerce/overview/data/defaultLineChartData";
+import horizontalBarChartData from "layouts/ecommerce/overview/data/horizontalBarChartData";
+import salesTableData from "layouts/ecommerce/overview/data/salesTableData";
+import dataTableData from "layouts/ecommerce/overview/data/dataTableData";
 
 function Overview() {
   // DefaultStatisticsCard state for the dropdown value
-  const [salesDropdownValue, setSalesDropdownValue] = useState('6 May - 7 May');
-  const [customersDropdownValue, setCustomersDropdownValue] =
-    useState('6 May - 7 May');
-  const [revenueDropdownValue, setRevenueDropdownValue] =
-    useState('6 May - 7 May');
+  const [salesDropdownValue, setSalesDropdownValue] = useState("6 May - 7 May");
+  const [customersDropdownValue, setCustomersDropdownValue] = useState("6 May - 7 May");
+  const [revenueDropdownValue, setRevenueDropdownValue] = useState("6 May - 7 May");
 
   // DefaultStatisticsCard state for the dropdown action
   const [salesDropdown, setSalesDropdown] = useState(null);
@@ -62,20 +60,17 @@ function Overview() {
   const [revenueDropdown, setRevenueDropdown] = useState(null);
 
   // DefaultStatisticsCard handler for the dropdown action
-  const openSalesDropdown = ({ currentTarget }) =>
-    setSalesDropdown(currentTarget);
+  const openSalesDropdown = ({ currentTarget }) => setSalesDropdown(currentTarget);
   const closeSalesDropdown = ({ currentTarget }) => {
     setSalesDropdown(null);
     setSalesDropdownValue(currentTarget.innerText || salesDropdownValue);
   };
-  const openCustomersDropdown = ({ currentTarget }) =>
-    setCustomersDropdown(currentTarget);
+  const openCustomersDropdown = ({ currentTarget }) => setCustomersDropdown(currentTarget);
   const closeCustomersDropdown = ({ currentTarget }) => {
     setCustomersDropdown(null);
     setCustomersDropdownValue(currentTarget.innerText || salesDropdownValue);
   };
-  const openRevenueDropdown = ({ currentTarget }) =>
-    setRevenueDropdown(currentTarget);
+  const openRevenueDropdown = ({ currentTarget }) => setRevenueDropdown(currentTarget);
   const closeRevenueDropdown = ({ currentTarget }) => {
     setRevenueDropdown(null);
     setRevenueDropdownValue(currentTarget.innerText || salesDropdownValue);
@@ -86,8 +81,8 @@ function Overview() {
     <Menu
       anchorEl={state}
       transformOrigin={{
-        vertical: 'top',
-        horizontal: 'center',
+        vertical: "top",
+        horizontal: "center",
       }}
       open={Boolean(state)}
       onClose={close}
@@ -111,9 +106,9 @@ function Overview() {
                 title="sales"
                 count="$230,220"
                 percentage={{
-                  color: 'success',
-                  value: '+55%',
-                  label: 'since last month',
+                  color: "success",
+                  value: "+55%",
+                  label: "since last month",
                 }}
                 dropdown={{
                   action: openSalesDropdown,
@@ -127,9 +122,9 @@ function Overview() {
                 title="customers"
                 count="3.200"
                 percentage={{
-                  color: 'success',
-                  value: '+12%',
-                  label: 'since last month',
+                  color: "success",
+                  value: "+12%",
+                  label: "since last month",
                 }}
                 dropdown={{
                   action: openCustomersDropdown,
@@ -143,9 +138,9 @@ function Overview() {
                 title="avg. revenue"
                 count="$1.200"
                 percentage={{
-                  color: 'secondary',
-                  value: '+$213',
-                  label: 'since last month',
+                  color: "secondary",
+                  value: "+$213",
+                  label: "since last month",
                 }}
                 dropdown={{
                   action: openRevenueDropdown,
@@ -167,23 +162,11 @@ function Overview() {
                 description={
                   <SuiBox display="flex" justifyContent="space-between">
                     <SuiBox display="flex" ml={-1}>
-                      <SuiBadgeDot
-                        color="info"
-                        size="sm"
-                        badgeContent="Facebook Ads"
-                      />
-                      <SuiBadgeDot
-                        color="dark"
-                        size="sm"
-                        badgeContent="Google Ads"
-                      />
+                      <SuiBadgeDot color="info" size="sm" badgeContent="Facebook Ads" />
+                      <SuiBadgeDot color="dark" size="sm" badgeContent="Google Ads" />
                     </SuiBox>
                     <SuiBox mt={-5.25} mr={-1}>
-                      <Tooltip
-                        title="See which ads perform better"
-                        placement="left"
-                        arrow
-                      >
+                      <Tooltip title="See which ads perform better" placement="left" arrow>
                         <SuiButton
                           variant="outlined"
                           color="secondary"
@@ -205,10 +188,7 @@ function Overview() {
         <SuiBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
-              <HorizontalBarChart
-                title="Sales by age"
-                chart={horizontalBarChartData}
-              />
+              <HorizontalBarChart title="Sales by age" chart={horizontalBarChartData} />
             </Grid>
             <Grid item xs={12} lg={4}>
               <SalesTable title="Sales by Country" rows={salesTableData} />

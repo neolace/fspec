@@ -14,16 +14,16 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
-import Tooltip from '@mui/material/Tooltip';
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function RefundsCell({ value, icon, tooltip }) {
   return (
@@ -34,7 +34,7 @@ function RefundsCell({ value, icon, tooltip }) {
       <SuiBox color={icon.color} lineHeight={0}>
         <Icon
           sx={{
-            fontWeight: 'bold',
+            fontWeight: "bold",
           }}
           fontSize="default"
         >
@@ -44,13 +44,7 @@ function RefundsCell({ value, icon, tooltip }) {
       {tooltip && (
         <SuiBox ml={2}>
           <Tooltip title={tooltip} placement="left">
-            <SuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              circular
-              iconOnly
-            >
+            <SuiButton variant="outlined" color="secondary" size="small" circular iconOnly>
               <Icon>priority_high</Icon>
             </SuiButton>
           </Tooltip>
@@ -62,14 +56,14 @@ function RefundsCell({ value, icon, tooltip }) {
 
 // Setting default values for the props or RefundsCell
 RefundsCell.defaultProps = {
-  tooltip: '',
+  tooltip: "",
 };
 
 // Typechecking props for the RefundsCell
 RefundsCell.propTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   icon: PropTypes.shape({
-    color: PropTypes.oneOf(['info', 'success', 'warning', 'error']).isRequired,
+    color: PropTypes.oneOf(["info", "success", "warning", "error"]).isRequired,
     name: PropTypes.string.isRequired,
   }).isRequired,
   tooltip: PropTypes.string,

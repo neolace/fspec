@@ -14,8 +14,8 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import typography from 'assets/theme/base/typography';
+import colors from "assets/theme/base/colors";
+import typography from "assets/theme/base/typography";
 
 const { grey } = colors;
 const { size } = typography;

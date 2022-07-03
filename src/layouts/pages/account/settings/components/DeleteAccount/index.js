@@ -14,13 +14,13 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Switch from '@mui/material/Switch';
+import Card from "@mui/material/Card";
+import Switch from "@mui/material/Switch";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function DeleteAccount() {
   return (
@@ -30,8 +30,7 @@ function DeleteAccount() {
           <SuiTypography variant="h5">Delete Account</SuiTypography>
         </SuiBox>
         <SuiTypography variant="button" color="text" fontWeight="regular">
-          Once you delete your account, there is no going back. Please be
-          certain.
+          Once you delete your account, there is no going back. Please be certain.
         </SuiTypography>
       </SuiBox>
       <SuiBox
@@ -40,12 +39,12 @@ function DeleteAccount() {
         display="flex"
         justifyContent="space-between"
         alignItems={{
-          xs: 'flex-start',
-          sm: 'center',
+          xs: "flex-start",
+          sm: "center",
         }}
         flexDirection={{
-          xs: 'column',
-          sm: 'row',
+          xs: "column",
+          sm: "row",
         }}
       >
         <SuiBox
@@ -69,8 +68,8 @@ function DeleteAccount() {
         <SuiBox
           display="flex"
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
         >
           <SuiButton variant="outlined" color="secondary">
@@ -90,7 +89,7 @@ function DeleteAccount() {
               variant="gradient"
               color="error"
               sx={{
-                height: '100%',
+                height: "100%",
               }}
             >
               delete account

@@ -14,19 +14,19 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Images
-import curved14 from 'assets/images/curved-images/curved14.jpg';
-import masterCardLogo from 'assets/images/logos/mastercard.png';
+import curved14 from "assets/images/curved-images/curved14.jpg";
+import masterCardLogo from "assets/images/logos/mastercard.png";
 
 function MasterCard({ color, number, holder, expires }) {
   const numbers = [...`${number}`];
@@ -37,10 +37,10 @@ function MasterCard({ color, number, holder, expires }) {
     );
   }
 
-  const num1 = numbers.slice(0, 4).join('');
-  const num2 = numbers.slice(4, 8).join('');
-  const num3 = numbers.slice(8, 12).join('');
-  const num4 = numbers.slice(12, 16).join('');
+  const num1 = numbers.slice(0, 4).join("");
+  const num2 = numbers.slice(4, 8).join("");
+  const num3 = numbers.slice(8, 12).join("");
+  const num4 = numbers.slice(12, 16).join("");
 
   return (
     <Card
@@ -83,19 +83,10 @@ function MasterCard({ color, number, holder, expires }) {
           &nbsp;&nbsp;&nbsp;
           {num4}
         </SuiTypography>
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-        >
+        <SuiBox display="flex" justifyContent="space-between" alignItems="center">
           <SuiBox display="flex" alignItems="center">
             <SuiBox mr={3} lineHeight={1}>
-              <SuiTypography
-                variant="button"
-                color="white"
-                fontWeight="regular"
-                opacity={0.8}
-              >
+              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Card Holder
               </SuiTypography>
               <SuiTypography
@@ -108,12 +99,7 @@ function MasterCard({ color, number, holder, expires }) {
               </SuiTypography>
             </SuiBox>
             <SuiBox lineHeight={1}>
-              <SuiTypography
-                variant="button"
-                color="white"
-                fontWeight="regular"
-                opacity={0.8}
-              >
+              <SuiTypography variant="button" color="white" fontWeight="regular" opacity={0.8}>
                 Expires
               </SuiTypography>
               <SuiTypography variant="h6" color="white" fontWeight="medium">
@@ -122,13 +108,7 @@ function MasterCard({ color, number, holder, expires }) {
             </SuiBox>
           </SuiBox>
           <SuiBox display="flex" justifyContent="flex-end" width="20%">
-            <SuiBox
-              component="img"
-              src={masterCardLogo}
-              alt="master card"
-              width="60%"
-              mt={1}
-            />
+            <SuiBox component="img" src={masterCardLogo} alt="master card" width="60%" mt={1} />
           </SuiBox>
         </SuiBox>
       </SuiBox>
@@ -138,20 +118,12 @@ function MasterCard({ color, number, holder, expires }) {
 
 // Setting default values for the props of MasterCard
 MasterCard.defaultProps = {
-  color: 'dark',
+  color: "dark",
 };
 
 // Typechecking props for the MasterCard
 MasterCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   number: PropTypes.number.isRequired,
   holder: PropTypes.string.isRequired,
   expires: PropTypes.string.isRequired,

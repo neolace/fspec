@@ -14,13 +14,13 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from 'components/SuiTypography';
+import SuiTypography from "components/SuiTypography";
 
 function ReviewCell({ rating }) {
   const ratings = {

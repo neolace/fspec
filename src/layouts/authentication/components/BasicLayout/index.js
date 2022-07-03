@@ -14,24 +14,24 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbar from 'examples/Navbars/DefaultNavbar';
-import PageLayout from 'examples/LayoutContainers/PageLayout';
+import DefaultNavbar from "examples/Navbars/DefaultNavbar";
+import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Authentication layout components
-import Footer from 'layouts/authentication/components/Footer';
+import Footer from "layouts/authentication/components/Footer";
 
 // Soft UI Dashboard PRO React page layout routes
-import pageRoutes from 'page.routes';
+import pageRoutes from "page.routes";
 
 function BasicLayout({ title, description, image, children }) {
   return (
@@ -39,9 +39,9 @@ function BasicLayout({ title, description, image, children }) {
       <DefaultNavbar
         routes={pageRoutes}
         action={{
-          type: 'external',
-          route: 'https://creative-tim.com/product/soft-ui-dashboard-pro-react',
-          label: 'buy now',
+          type: "external",
+          route: "https://creative-tim.com/product/soft-ui-dashboard-pro-react",
+          label: "buy now",
         }}
         transparent
         light
@@ -55,18 +55,15 @@ function BasicLayout({ title, description, image, children }) {
         pt={6}
         pb={28}
         sx={{
-          backgroundImage: ({
-            functions: { linearGradient, rgba },
-            palette: { gradients },
-          }) =>
+          backgroundImage: ({ functions: { linearGradient, rgba }, palette: { gradients } }) =>
             image &&
             `${linearGradient(
               rgba(gradients.dark.main, 0.6),
               rgba(gradients.dark.state, 0.6)
             )}, url(${image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <Grid
@@ -74,7 +71,7 @@ function BasicLayout({ title, description, image, children }) {
           spacing={3}
           justifyContent="center"
           sx={{
-            textAlign: 'center',
+            textAlign: "center",
           }}
         >
           <Grid item xs={10} lg={4}>
@@ -113,8 +110,8 @@ function BasicLayout({ title, description, image, children }) {
 
 // Setting default values for the props of BasicLayout
 BasicLayout.defaultProps = {
-  title: '',
-  description: '',
+  title: "",
+  description: "",
 };
 
 // Typechecking props for the BasicLayout

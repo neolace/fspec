@@ -27,54 +27,20 @@ import SuiTypography from "components/SuiTypography";
 // Soft UI Dashboard PRO React base styles
 import typography from "assets/theme/base/typography";
 
-function Footer({
-  company,
-  links,
-}) {
-  const {
-    href,
-    name,
-  } =
-    company;
-  const {
-    size,
-  } =
-    typography;
+function Footer({ company, links }) {
+  const { href, name } = company;
+  const { size } = typography;
 
-  const renderLinks =
-    () =>
-      links.map(
-        (
-          link
-        ) => (
-          <SuiBox
-            key={
-              link.name
-            }
-            component="li"
-            px={
-              2
-            }
-            lineHeight={
-              1
-            }>
-            <Link
-              href={
-                link.href
-              }
-              target="_blank">
-              <SuiTypography
-                variant="button"
-                fontWeight="regular"
-                color="text">
-                {
-                  link.name
-                }
-              </SuiTypography>
-            </Link>
-          </SuiBox>
-        )
-      );
+  const renderLinks = () =>
+    links.map((link) => (
+      <SuiBox key={link.name} component="li" px={2} lineHeight={1}>
+        <Link href={link.href} target="_blank">
+          <SuiTypography variant="button" fontWeight="regular" color="text">
+            {link.name}
+          </SuiTypography>
+        </Link>
+      </SuiBox>
+    ));
 
   return (
     <SuiBox
@@ -86,90 +52,50 @@ function Footer({
       }}
       justifyContent="space-between"
       alignItems="center"
-      px={
-        1.5
-      }>
+      px={1.5}
+    >
       <SuiBox
         display="flex"
         justifyContent="center"
         alignItems="center"
         flexWrap="wrap"
         color="text"
-        fontSize={
-          size.sm
-        }
-        px={
-          1.5
-        }>
-        &copy;{" "}
-        {new Date().getFullYear()}
-        ,
-        made
-        with
-        <SuiBox
-          fontSize={
-            size.md
-          }
-          color="text"
-          mb={
-            -0.5
-          }
-          mx={
-            0.25
-          }>
-          <Icon
-            color="inherit"
-            fontSize="inherit">
+        fontSize={size.sm}
+        px={1.5}
+      >
+        &copy; {new Date().getFullYear()}, made with
+        <SuiBox fontSize={size.md} color="text" mb={-0.5} mx={0.25}>
+          <Icon color="inherit" fontSize="inherit">
             favorite
           </Icon>
         </SuiBox>
         by
-        <Link
-          href={
-            href
-          }
-          target="_blank">
-          <SuiTypography
-            variant="button"
-            fontWeight="medium">
+        <Link href={href} target="_blank">
+          <SuiTypography variant="button" fontWeight="medium">
             &nbsp;
-            {
-              name
-            }
+            {name}
             &nbsp;
           </SuiTypography>
         </Link>
-        for
-        a
-        better
-        web.
+        for a better web.
       </SuiBox>
       <SuiBox
         component="ul"
-        sx={({
-          breakpoints,
-        }) => ({
-          display:
-            "flex",
-          flexWrap:
-            "wrap",
-          alignItems:
-            "center",
-          justifyContent:
-            "center",
-          listStyle:
-            "none",
+        sx={({ breakpoints }) => ({
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center",
+          listStyle: "none",
           mt: 3,
           mb: 0,
           p: 0,
 
-          [breakpoints.up(
-            "lg"
-          )]:
-            {
-              mt: 0,
-            },
-        })}>
+          [breakpoints.up("lg")]: {
+            mt: 0,
+          },
+        })}
+      >
         {renderLinks()}
       </SuiBox>
     </SuiBox>
@@ -177,45 +103,35 @@ function Footer({
 }
 
 // Setting default values for the props of Footer
-Footer.defaultProps =
-  {
-    company:
-      {
-        href: "https://www.creative-tim.com/",
-        name: "Creative Tim",
-      },
-    links:
-      [
-        {
-          href: "https://www.creative-tim.com/",
-          name: "Creative Tim",
-        },
-        {
-          href: "https://www.creative-tim.com/presentation",
-          name: "About Us",
-        },
-        {
-          href: "https://www.creative-tim.com/blog",
-          name: "Blog",
-        },
-        {
-          href: "https://www.creative-tim.com/license",
-          name: "License",
-        },
-      ],
-  };
+Footer.defaultProps = {
+  company: {
+    href: "https://www.creative-tim.com/",
+    name: "Creative Tim",
+  },
+  links: [
+    {
+      href: "https://www.creative-tim.com/",
+      name: "Creative Tim",
+    },
+    {
+      href: "https://www.creative-tim.com/presentation",
+      name: "About Us",
+    },
+    {
+      href: "https://www.creative-tim.com/blog",
+      name: "Blog",
+    },
+    {
+      href: "https://www.creative-tim.com/license",
+      name: "License",
+    },
+  ],
+};
 
 // Typechecking props for the Footer
-Footer.propTypes =
-  {
-    company:
-      PropTypes.objectOf(
-        PropTypes.string
-      ),
-    links:
-      PropTypes.arrayOf(
-        PropTypes.object
-      ),
-  };
+Footer.propTypes = {
+  company: PropTypes.objectOf(PropTypes.string),
+  links: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default Footer;

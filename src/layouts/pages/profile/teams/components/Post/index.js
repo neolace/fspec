@@ -13,31 +13,31 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiAvatar from 'components/SuiAvatar';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
-import SuiInput from 'components/SuiInput';
+import SuiBox from "components/SuiBox";
+import SuiAvatar from "components/SuiAvatar";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
+import SuiInput from "components/SuiInput";
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
+import borders from "assets/theme/base/borders";
 
 // Images
-import team1 from 'assets/images/team-1.jpg';
-import team2 from 'assets/images/team-2.jpg';
-import team4 from 'assets/images/team-4.jpg';
-import team5 from 'assets/images/team-5.jpg';
-import bruceMars from 'assets/images/bruce-mars.jpg';
-import workSpace from 'assets/images/work-space.jpeg';
+import team1 from "assets/images/team-1.jpg";
+import team2 from "assets/images/team-2.jpg";
+import team4 from "assets/images/team-4.jpg";
+import team5 from "assets/images/team-5.jpg";
+import bruceMars from "assets/images/bruce-mars.jpg";
+import workSpace from "assets/images/work-space.jpeg";
 
 function Post() {
   const { borderWidth, borderColor } = borders;
@@ -45,73 +45,57 @@ function Post() {
   const [comments] = useState([
     {
       image: bruceMars,
-      name: 'michael lewis',
-      text: 'I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves!',
+      name: "michael lewis",
+      text: "I always felt like I could do anything. That’s the main thing people are controlled by! Thoughts- their perception of themselves!",
       like: 3,
       share: 2,
     },
     {
       image: team5,
-      name: 'jessica stones',
-      text: 'Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out. It’s like a little kid, a little boy.',
+      name: "jessica stones",
+      text: "Society has put up so many boundaries, so many limitations on what’s right and wrong that it’s almost impossible to get a pure thought out. It’s like a little kid, a little boy.",
       like: 10,
       share: 1,
     },
   ]);
 
-  const renderComments = comments.map(
-    ({ image, name, text, like, share }, key) => (
-      <SuiBox key={name} display="flex" mt={key === 0 ? 0 : 3}>
-        <SuiBox flexShrink={0}>
-          <SuiAvatar src={image} alt={name} />
-        </SuiBox>
-        <SuiBox flexGrow={1} ml={2}>
-          <SuiTypography
-            variant="h5"
-            fontWeight="medium"
-            textTransform="capitalize"
-          >
-            {name}
+  const renderComments = comments.map(({ image, name, text, like, share }, key) => (
+    <SuiBox key={name} display="flex" mt={key === 0 ? 0 : 3}>
+      <SuiBox flexShrink={0}>
+        <SuiAvatar src={image} alt={name} />
+      </SuiBox>
+      <SuiBox flexGrow={1} ml={2}>
+        <SuiTypography variant="h5" fontWeight="medium" textTransform="capitalize">
+          {name}
+        </SuiTypography>
+        <SuiBox mt={1} mb={2} lineHeight={0.75}>
+          <SuiTypography variant="button" fontWeight="regular" color="text">
+            {text}
           </SuiTypography>
-          <SuiBox mt={1} mb={2} lineHeight={0.75}>
+        </SuiBox>
+        <SuiBox display="flex" flexWrap="wrap" alignItems="center">
+          <SuiBox display="flex" alignItems="center" mr={1}>
+            <SuiTypography component="a" href="#" variant="body2" color="text">
+              <Icon>thumb_up</Icon>
+              &nbsp;
+            </SuiTypography>
             <SuiTypography variant="button" fontWeight="regular" color="text">
-              {text}
+              {like} likes
             </SuiTypography>
           </SuiBox>
-          <SuiBox display="flex" flexWrap="wrap" alignItems="center">
-            <SuiBox display="flex" alignItems="center" mr={1}>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="text"
-              >
-                <Icon>thumb_up</Icon>
-                &nbsp;
-              </SuiTypography>
-              <SuiTypography variant="button" fontWeight="regular" color="text">
-                {like} likes
-              </SuiTypography>
-            </SuiBox>
-            <SuiBox display="flex" alignItems="center">
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="text"
-              >
-                <Icon>share</Icon>
-                &nbsp;
-              </SuiTypography>
-              <SuiTypography variant="button" fontWeight="regular" color="text">
-                {share} shares
-              </SuiTypography>
-            </SuiBox>
+          <SuiBox display="flex" alignItems="center">
+            <SuiTypography component="a" href="#" variant="body2" color="text">
+              <Icon>share</Icon>
+              &nbsp;
+            </SuiTypography>
+            <SuiTypography variant="button" fontWeight="regular" color="text">
+              {share} shares
+            </SuiTypography>
           </SuiBox>
         </SuiBox>
       </SuiBox>
-    )
-  );
+    </SuiBox>
+  ));
 
   return (
     <Card>
@@ -120,8 +104,8 @@ function Post() {
         justifyContent="space-between"
         alignItems="center"
         flexDirection={{
-          xs: 'column',
-          sm: 'row',
+          xs: "column",
+          sm: "row",
         }}
         borderBottom={`${borderWidth[1]} solid ${borderColor}`}
         py={2}
@@ -129,27 +113,17 @@ function Post() {
       >
         <SuiAvatar src={team4} alt="profile-image" variant="rounded" />
         <SuiBox mx={2} lineHeight={1}>
-          <SuiTypography
-            component="a"
-            href="#"
-            variant="button"
-            fontWeight="regular"
-          >
+          <SuiTypography component="a" href="#" variant="button" fontWeight="regular">
             John Snow
           </SuiTypography>
-          <SuiTypography
-            component="div"
-            variant="button"
-            color="text"
-            fontWeight="regular"
-          >
+          <SuiTypography component="div" variant="button" color="text" fontWeight="regular">
             3 days ago
           </SuiTypography>
         </SuiBox>
         <SuiBox
           ml={{
             xs: 0,
-            sm: 'auto',
+            sm: "auto",
           }}
           mt={{
             xs: 2,
@@ -159,7 +133,7 @@ function Post() {
           <SuiButton variant="gradient" color="info" size="small">
             <Icon
               sx={{
-                fontWeight: 'bold',
+                fontWeight: "bold",
               }}
             >
               add
@@ -171,74 +145,40 @@ function Post() {
       <SuiBox p={3}>
         <SuiBox mb={3}>
           <SuiTypography variant="body2" color="text">
-            Personal profiles are the perfect way for you to grab their
-            attention and persuade recruiters to continue reading your CV
-            because you’re telling them from the off exactly why they should
-            hire you.
+            Personal profiles are the perfect way for you to grab their attention and persuade
+            recruiters to continue reading your CV because you’re telling them from the off exactly
+            why they should hire you.
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          component="img"
-          src={workSpace}
-          shadow="lg"
-          borderRadius="xl"
-          width="100%"
-        />
+        <SuiBox component="img" src={workSpace} shadow="lg" borderRadius="xl" width="100%" />
         <SuiBox mt={3} mb={1} px={1}>
           <Grid container justifyContent="space-between" alignItems="center">
             <Grid item xs={12} sm={6}>
               <SuiBox display="flex" alignItems="center">
                 <SuiBox display="flex" alignItems="center" mr={2}>
-                  <SuiTypography
-                    component="a"
-                    href="#"
-                    variant="body2"
-                    color="text"
-                  >
+                  <SuiTypography component="a" href="#" variant="body2" color="text">
                     <Icon>thumb_up</Icon>
                     &nbsp;
                   </SuiTypography>
-                  <SuiTypography
-                    variant="button"
-                    fontWeight="regular"
-                    color="text"
-                  >
+                  <SuiTypography variant="button" fontWeight="regular" color="text">
                     150
                   </SuiTypography>
                 </SuiBox>
                 <SuiBox display="flex" alignItems="center" mr={2}>
-                  <SuiTypography
-                    component="a"
-                    href="#"
-                    variant="body2"
-                    color="text"
-                  >
+                  <SuiTypography component="a" href="#" variant="body2" color="text">
                     <Icon>mode_comment</Icon>
                     &nbsp;
                   </SuiTypography>
-                  <SuiTypography
-                    variant="button"
-                    fontWeight="regular"
-                    color="text"
-                  >
+                  <SuiTypography variant="button" fontWeight="regular" color="text">
                     36
                   </SuiTypography>
                 </SuiBox>
                 <SuiBox display="flex" alignItems="center" mr={2}>
-                  <SuiTypography
-                    component="a"
-                    href="#"
-                    variant="body2"
-                    color="text"
-                  >
+                  <SuiTypography component="a" href="#" variant="body2" color="text">
                     <Icon>share</Icon>
                     &nbsp;
                   </SuiTypography>
-                  <SuiTypography
-                    variant="button"
-                    fontWeight="regular"
-                    color="text"
-                  >
+                  <SuiTypography variant="button" fontWeight="regular" color="text">
                     12
                   </SuiTypography>
                 </SuiBox>
@@ -247,8 +187,8 @@ function Post() {
             <Grid item xs={12} sm={6}>
               <SuiBox
                 display={{
-                  xs: 'none',
-                  sm: 'flex',
+                  xs: "none",
+                  sm: "flex",
                 }}
                 justifyContent="flex-end"
                 alignItems="center"
@@ -258,11 +198,7 @@ function Post() {
                 <SuiAvatar src={team2} alt="person 2" size="xs" />
                 <SuiAvatar src={team1} alt="person 3" size="xs" />
                 <SuiBox pl={1}>
-                  <SuiTypography
-                    variant="button"
-                    color="text"
-                    fontWeight="medium"
-                  >
+                  <SuiTypography variant="button" color="text" fontWeight="medium">
                     and 30+ more
                   </SuiTypography>
                 </SuiBox>

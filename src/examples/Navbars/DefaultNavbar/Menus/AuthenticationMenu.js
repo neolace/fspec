@@ -1,39 +1,25 @@
-/**
- =========================================================
- * Soft UI Dashboard PRO React - v3.1.0
- =========================================================
 
- * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
- * Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
- Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
-import { useState } from 'react';
+import { useState } from "react";
 
 // prop-types is a library for typechecking of props.
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-router components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // @mui material components
-import MenuItem from '@mui/material/MenuItem';
-import Icon from '@mui/material/Icon';
+import MenuItem from "@mui/material/MenuItem";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DefaultNavbarMenu from 'examples/Navbars/DefaultNavbar/DefaultNavbarMenu';
+import DefaultNavbarMenu from "examples/Navbars/DefaultNavbar/DefaultNavbarMenu";
 
 // Images
-import curved8 from 'assets/images/curved-images/curved8.jpg';
+import curved8 from "assets/images/curved-images/curved8.jpg";
 
 function AuthenticationMenu({ routes, open, close, mobileMenu }) {
   const renderAuthenticationMenuRoute = (routeName) =>
@@ -51,8 +37,8 @@ function AuthenticationMenu({ routes, open, close, mobileMenu }) {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <Icon
               sx={{
-                fontWeight: 'bold',
-                ml: 'auto',
+                fontWeight: "bold",
+                ml: "auto",
               }}
             >
               chevron_right
@@ -62,21 +48,19 @@ function AuthenticationMenu({ routes, open, close, mobileMenu }) {
               open={menu}
               close={closeMenu}
               style={{
-                paddingLeft: '1.25rem',
+                paddingLeft: "1.25rem",
               }}
             >
-              {collapse.map(
-                ({ key: collapseKey, name: collapseName, route }) => (
-                  <MenuItem
-                    component={Link}
-                    to={route}
-                    key={collapseKey}
-                    onClick={mobileMenu ? undefined : close}
-                  >
-                    {collapseName}
-                  </MenuItem>
-                )
-              )}
+              {collapse.map(({ key: collapseKey, name: collapseName, route }) => (
+                <MenuItem
+                  component={Link}
+                  to={route}
+                  key={collapseKey}
+                  onClick={mobileMenu ? undefined : close}
+                >
+                  {collapseName}
+                </MenuItem>
+              ))}
             </DefaultNavbarMenu>
           </MenuItem>
         );
@@ -104,7 +88,7 @@ function AuthenticationMenu({ routes, open, close, mobileMenu }) {
     });
 
   const renderMenuContent = (
-    <SuiBox display={mobileMenu ? 'block' : 'flex'}>
+    <SuiBox display={mobileMenu ? "block" : "flex"}>
       {!mobileMenu && (
         <SuiBox
           width="10rem"
@@ -149,15 +133,12 @@ function AuthenticationMenu({ routes, open, close, mobileMenu }) {
               mb={1}
             >
               <Icon
-                sx={({
-                  functions: { linearGradient },
-                  palette: { gradients, transparent },
-                }) => ({
+                sx={({ functions: { linearGradient }, palette: { gradients, transparent } }) => ({
                   backgroundImage: `${linearGradient(
                     gradients.info.main,
                     gradients.info.state
                   )} !important`,
-                  WebkitBackgroundClip: 'text !important',
+                  WebkitBackgroundClip: "text !important",
                   WebkitTextFillColor: `${transparent.main} !important`,
                 })}
               >
@@ -171,12 +152,12 @@ function AuthenticationMenu({ routes, open, close, mobileMenu }) {
         </SuiBox>
       )}
       <SuiBox py={1} pl={2}>
-        {renderAuthenticationMenuRoute('sign-in')}
-        {renderAuthenticationMenuRoute('sign-up')}
-        {renderAuthenticationMenuRoute('reset-password')}
-        {renderAuthenticationMenuRoute('lock')}
-        {renderAuthenticationMenuRoute('2-step-verification')}
-        {renderAuthenticationMenuRoute('error')}
+        {renderAuthenticationMenuRoute("sign-in")}
+        {renderAuthenticationMenuRoute("sign-up")}
+        {renderAuthenticationMenuRoute("reset-password")}
+        {renderAuthenticationMenuRoute("lock")}
+        {renderAuthenticationMenuRoute("2-step-verification")}
+        {renderAuthenticationMenuRoute("error")}
       </SuiBox>
     </SuiBox>
   );

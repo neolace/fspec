@@ -13,23 +13,23 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // react-images-viewer components
-import ImgsViewer from 'react-images-viewer';
+import ImgsViewer from "react-images-viewer";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Images
-import image1 from 'assets/images/ecommerce/wooden-table.jpeg';
-import image2 from 'assets/images/ecommerce/chair-pink.jpeg';
-import image3 from 'assets/images/ecommerce/black-chair.jpeg';
-import image4 from 'assets/images/ecommerce/chair-steel.jpeg';
-import image5 from 'assets/images/ecommerce/chair-wood.jpeg';
+import image1 from "assets/images/ecommerce/wooden-table.jpeg";
+import image2 from "assets/images/ecommerce/chair-pink.jpeg";
+import image3 from "assets/images/ecommerce/black-chair.jpeg";
+import image4 from "assets/images/ecommerce/chair-steel.jpeg";
+import image5 from "assets/images/ecommerce/chair-wood.jpeg";
 
 function ProductImages() {
   const [currentImage, setCurrentImage] = useState(image1);
@@ -95,9 +95,9 @@ function ProductImages() {
               shadow="md"
               width="100%"
               sx={{
-                cursor: 'pointer',
-                height: '100%',
-                objectFit: 'cover',
+                cursor: "pointer",
+                height: "100%",
+                objectFit: "cover",
               }}
               onClick={handleSetCurrentImage}
             />
@@ -112,9 +112,9 @@ function ProductImages() {
               shadow="md"
               width="100%"
               sx={{
-                cursor: 'pointer',
-                height: '100%',
-                objectFit: 'cover',
+                cursor: "pointer",
+                height: "100%",
+                objectFit: "cover",
               }}
               onClick={handleSetCurrentImage}
             />
@@ -129,9 +129,9 @@ function ProductImages() {
               shadow="md"
               width="100%"
               sx={{
-                cursor: 'pointer',
-                height: '100%',
-                objectFit: 'cover',
+                cursor: "pointer",
+                height: "100%",
+                objectFit: "cover",
               }}
               onClick={handleSetCurrentImage}
             />
@@ -146,9 +146,9 @@ function ProductImages() {
               shadow="md"
               width="100%"
               sx={{
-                cursor: 'pointer',
-                height: '100%',
-                objectFit: 'cover',
+                cursor: "pointer",
+                height: "100%",
+                objectFit: "cover",
               }}
               onClick={handleSetCurrentImage}
             />
@@ -163,9 +163,9 @@ function ProductImages() {
               shadow="md"
               width="100%"
               sx={{
-                cursor: 'pointer',
-                height: '100%',
-                objectFit: 'cover',
+                cursor: "pointer",
+                height: "100%",
+                objectFit: "cover",
               }}
               onClick={handleSetCurrentImage}
             />

@@ -14,15 +14,15 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Collapse from '@mui/material/Collapse';
-import Icon from '@mui/material/Icon';
+import Collapse from "@mui/material/Collapse";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function DefaultNavbarLink({
   name,
@@ -43,10 +43,10 @@ function DefaultNavbarLink({
         onMouseLeave={children ? undefined : closeHandler}
         display="flex"
         alignItems="baseline"
-        color={light ? 'white' : 'dark'}
+        color={light ? "white" : "dark"}
         sx={{
-          cursor: 'pointer',
-          userSelect: 'none',
+          cursor: "pointer",
+          userSelect: "none",
         }}
       >
         <SuiTypography
@@ -55,16 +55,16 @@ function DefaultNavbarLink({
           textTransform="capitalize"
           color="inherit"
           sx={{
-            fontWeight: '100%',
+            fontWeight: "100%",
           }}
         >
           {name}
         </SuiTypography>
-        <SuiTypography variant="body2" color={light ? 'white' : 'dark'}>
+        <SuiTypography variant="body2" color={light ? "white" : "dark"}>
           <Icon
             sx={{
-              fontWeight: 'bold',
-              verticalAlign: 'middle',
+              fontWeight: "bold",
+              verticalAlign: "middle",
             }}
           >
             keyboard_arrow_down

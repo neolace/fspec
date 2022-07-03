@@ -14,17 +14,17 @@
  */
 
 // prop-type is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // NewUser page components
-import FormField from 'layouts/pages/users/new-user/components/FormField';
+import FormField from "layouts/pages/users/new-user/components/FormField";
 
 function Profile({ formData }) {
   const { formField, values } = formData;

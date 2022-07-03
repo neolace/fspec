@@ -14,12 +14,12 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiAvatar from "components/SuiAvatar";
 
 function ProductCell({ image, name, orders }) {
   return (
@@ -34,7 +34,7 @@ function ProductCell({ image, name, orders }) {
         <SuiTypography variant="button" fontWeight="medium" color="secondary">
           <SuiTypography component="span" variant="button" color="success">
             {orders}
-          </SuiTypography>{' '}
+          </SuiTypography>{" "}
           orders
         </SuiTypography>
       </SuiBox>

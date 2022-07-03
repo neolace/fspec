@@ -14,30 +14,24 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function StatusCell({ icon, color, status }) {
   return (
     <SuiBox display="flex" alignItems="center">
       <SuiBox mr={1}>
-        <SuiButton
-          variant="outlined"
-          color={color}
-          size="small"
-          iconOnly
-          circular
-        >
+        <SuiButton variant="outlined" color={color} size="small" iconOnly circular>
           <Icon
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
           >
             {icon}

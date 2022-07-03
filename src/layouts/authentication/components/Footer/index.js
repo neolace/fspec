@@ -14,18 +14,18 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // @mui icons
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import PinterestIcon from '@mui/icons-material/Pinterest';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PinterestIcon from "@mui/icons-material/Pinterest";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function Footer() {
   return (
@@ -40,12 +40,7 @@ function Footer() {
                 xl: 6,
               }}
             >
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Company
               </SuiTypography>
             </SuiBox>
@@ -56,12 +51,7 @@ function Footer() {
                 xl: 6,
               }}
             >
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 About Us
               </SuiTypography>
             </SuiBox>
@@ -72,12 +62,7 @@ function Footer() {
                 xl: 6,
               }}
             >
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Team
               </SuiTypography>
             </SuiBox>
@@ -88,12 +73,7 @@ function Footer() {
                 xl: 6,
               }}
             >
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Product
               </SuiTypography>
             </SuiBox>
@@ -104,22 +84,12 @@ function Footer() {
                 xl: 6,
               }}
             >
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Blog
               </SuiTypography>
             </SuiBox>
             <SuiBox>
-              <SuiTypography
-                component="a"
-                href="#"
-                variant="body2"
-                color="secondary"
-              >
+              <SuiTypography component="a" href="#" variant="body2" color="secondary">
                 Pricing
               </SuiTypography>
             </SuiBox>
@@ -149,7 +119,7 @@ function Footer() {
           xs={12}
           lg={8}
           sx={{
-            textAlign: 'center',
+            textAlign: "center",
           }}
         >
           <SuiTypography variant="body2" color="secondary">

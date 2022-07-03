@@ -13,32 +13,32 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
-import Card from '@mui/material/Card';
+import Grid from "@mui/material/Grid";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import Footer from 'examples/Footer';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import Footer from "examples/Footer";
 
 // NewProduct page components
-import Header from 'layouts/ecommerce/products/new-product/components/Header';
-import ProductInfo from 'layouts/ecommerce/products/new-product/components/ProductInfo';
-import Media from 'layouts/ecommerce/products/new-product/components/Media';
-import Socials from 'layouts/ecommerce/products/new-product/components/Socials';
-import Pricing from 'layouts/ecommerce/products/new-product/components/Pricing';
+import Header from "layouts/ecommerce/products/new-product/components/Header";
+import ProductInfo from "layouts/ecommerce/products/new-product/components/ProductInfo";
+import Media from "layouts/ecommerce/products/new-product/components/Media";
+import Socials from "layouts/ecommerce/products/new-product/components/Socials";
+import Pricing from "layouts/ecommerce/products/new-product/components/Pricing";
 
 function getSteps() {
-  return ['1. Product Info', '2. Media', '3. Social', '4. Pricing'];
+  return ["1. Product Info", "2. Media", "3. Social", "4. Pricing"];
 }
 
 function getStepContent(stepIndex) {
@@ -79,26 +79,17 @@ function NewProduct() {
             </Stepper>
             <Card
               sx={{
-                overflow: 'visible',
+                overflow: "visible",
               }}
             >
               <SuiBox p={2}>
                 <SuiBox>
                   {getStepContent(activeStep)}
-                  <SuiBox
-                    mt={3}
-                    width="100%"
-                    display="flex"
-                    justifyContent="space-between"
-                  >
+                  <SuiBox mt={3} width="100%" display="flex" justifyContent="space-between">
                     {activeStep === 0 ? (
                       <SuiBox />
                     ) : (
-                      <SuiButton
-                        variant="gradient"
-                        color="secondary"
-                        onClick={handleBack}
-                      >
+                      <SuiButton variant="gradient" color="secondary" onClick={handleBack}>
                         back
                       </SuiButton>
                     )}
@@ -107,7 +98,7 @@ function NewProduct() {
                       color="dark"
                       onClick={!isLastStep ? handleNext : undefined}
                     >
-                      {isLastStep ? 'send' : 'next'}
+                      {isLastStep ? "send" : "next"}
                     </SuiButton>
                   </SuiBox>
                 </SuiBox>

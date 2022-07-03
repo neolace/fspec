@@ -14,18 +14,18 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
-import Collapse from '@mui/material/Collapse';
+import Icon from "@mui/material/Icon";
+import Collapse from "@mui/material/Collapse";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React components
-import borders from 'assets/theme/base/borders';
+import borders from "assets/theme/base/borders";
 
 function FaqCollapse({ title, open, children, ...rest }) {
   const { borderWidth, borderColor } = borders;
@@ -40,37 +40,32 @@ function FaqCollapse({ title, open, children, ...rest }) {
         p={2}
         borderBottom={`${borderWidth[1]} solid ${borderColor}`}
         sx={{
-          cursor: 'pointer',
+          cursor: "pointer",
         }}
       >
         <SuiTypography
           variant="h5"
-          color={open ? 'dark' : 'text'}
+          color={open ? "dark" : "text"}
           sx={{
-            userSelect: 'none',
+            userSelect: "none",
           }}
         >
           {title}
         </SuiTypography>
-        <SuiBox color={open ? 'dark' : 'text'}>
+        <SuiBox color={open ? "dark" : "text"}>
           <Icon
             sx={{
-              fontWeight: 'bold',
+              fontWeight: "bold",
             }}
             fontSize="small"
           >
-            {open ? 'remove' : 'add'}
+            {open ? "remove" : "add"}
           </Icon>
         </SuiBox>
       </SuiBox>
       <Collapse timeout={400} in={open}>
         <SuiBox p={2} lineHeight={1}>
-          <SuiTypography
-            variant="button"
-            color="text"
-            opacity={0.8}
-            fontWeight="regular"
-          >
+          <SuiTypography variant="button" color="text" opacity={0.8} fontWeight="regular">
             {children}
           </SuiTypography>
         </SuiBox>

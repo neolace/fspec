@@ -14,17 +14,17 @@
  */
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
+import borders from "assets/theme/base/borders";
 
 // Images
-import rocketShip from 'assets/images/illustrations/rocket-white.png';
+import rocketShip from "assets/images/illustrations/rocket-white.png";
 
 function OutlinedCard() {
   const { borderWidth, borderColor } = borders;
@@ -41,13 +41,7 @@ function OutlinedCard() {
       textAlign="center"
       p={3}
     >
-      <SuiBox
-        component="img"
-        src={rocketShip}
-        alt="Rocketship"
-        width="50%"
-        mb={3}
-      />
+      <SuiBox component="img" src={rocketShip} alt="Rocketship" width="50%" mb={3} />
       <SuiTypography
         component="a"
         href="#"
@@ -56,26 +50,26 @@ function OutlinedCard() {
         textTransform="capitalize"
         fontWeight="medium"
         sx={({ palette: { secondary }, typography: { size } }) => ({
-          display: 'inline-flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          display: "inline-flex",
+          justifyContent: "center",
+          alignItems: "center",
           color: `${secondary.main} !important`,
 
-          '& .material-icons-round': {
+          "& .material-icons-round": {
             ml: 0.5,
             fontSize: size.md,
-            transition: 'transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)',
+            transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
           },
 
-          '&:hover .material-icons-round': {
-            transform: 'translateX(5px)',
+          "&:hover .material-icons-round": {
+            transform: "translateX(5px)",
           },
         })}
       >
-        Join rocketship program{' '}
+        Join rocketship program{" "}
         <Icon
           sx={{
-            fontWeight: 'bold',
+            fontWeight: "bold",
           }}
         >
           arrow_forward

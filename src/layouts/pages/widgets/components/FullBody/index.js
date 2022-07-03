@@ -28,56 +28,18 @@ function FullBody() {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        pt={
-          3
-        }
-        mb={
-          2
-        }
-        px={
-          3
-        }>
-        <SuiTypography
-          variant="body2"
-          color="text"
-          fontWeight="regular">
-          Full
-          Body
+        pt={3}
+        mb={2}
+        px={3}
+      >
+        <SuiTypography variant="body2" color="text" fontWeight="regular">
+          Full Body
         </SuiTypography>
-        <SuiBadge
-          variant="contained"
-          color="info"
-          badgeContent="moderate"
-          container
-        />
+        <SuiBadge variant="contained" color="info" badgeContent="moderate" container />
       </SuiBox>
-      <SuiBox
-        pb={
-          3
-        }
-        px={
-          3
-        }>
-        <SuiTypography
-          variant="body2"
-          color="text"
-          fontWeight="regular">
-          What
-          matters
-          is
-          the
-          people
-          who
-          are
-          sparked
-          by
-          it.
-          And
-          the
-          people
-          who
-          are
-          liked.
+      <SuiBox pb={3} px={3}>
+        <SuiTypography variant="body2" color="text" fontWeight="regular">
+          What matters is the people who are sparked by it. And the people who are liked.
         </SuiTypography>
       </SuiBox>
     </Card>

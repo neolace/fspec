@@ -13,40 +13,40 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // formik components
-import { Form, Formik } from 'formik';
+import { Form, Formik } from "formik";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
 
 // NewUser page components
-import UserInfo from 'layouts/pages/users/new-user/components/UserInfo';
-import Address from 'layouts/pages/users/new-user/components/Address';
-import Socials from 'layouts/pages/users/new-user/components/Socials';
-import Profile from 'layouts/pages/users/new-user/components/Profile';
+import UserInfo from "layouts/pages/users/new-user/components/UserInfo";
+import Address from "layouts/pages/users/new-user/components/Address";
+import Socials from "layouts/pages/users/new-user/components/Socials";
+import Profile from "layouts/pages/users/new-user/components/Profile";
 
 // NewUser layout schemas for form and form feilds
-import validations from 'layouts/pages/users/new-user/schemas/validations';
-import form from 'layouts/pages/users/new-user/schemas/form';
-import initialValues from 'layouts/pages/users/new-user/schemas/initialValues';
+import validations from "layouts/pages/users/new-user/schemas/validations";
+import form from "layouts/pages/users/new-user/schemas/form";
+import initialValues from "layouts/pages/users/new-user/schemas/initialValues";
 
 function getSteps() {
-  return ['User Info', 'Address', 'Social', 'Profile'];
+  return ["User Info", "Address", "Social", "Profile"];
 }
 
 function getStepContent(stepIndex, formData) {
@@ -107,7 +107,7 @@ function NewUser() {
           container
           justifyContent="center"
           sx={{
-            height: '100%',
+            height: "100%",
           }}
         >
           <Grid item xs={12} lg={8}>
@@ -127,7 +127,7 @@ function NewUser() {
                 <Form id={formId} autoComplete="off">
                   <Card
                     sx={{
-                      height: '100%',
+                      height: "100%",
                     }}
                   >
                     <SuiBox p={2}>
@@ -138,20 +138,11 @@ function NewUser() {
                           formField,
                           errors,
                         })}
-                        <SuiBox
-                          mt={2}
-                          width="100%"
-                          display="flex"
-                          justifyContent="space-between"
-                        >
+                        <SuiBox mt={2} width="100%" display="flex" justifyContent="space-between">
                           {activeStep === 0 ? (
                             <SuiBox />
                           ) : (
-                            <SuiButton
-                              variant="gradient"
-                              color="light"
-                              onClick={handleBack}
-                            >
+                            <SuiButton variant="gradient" color="light" onClick={handleBack}>
                               back
                             </SuiButton>
                           )}
@@ -161,7 +152,7 @@ function NewUser() {
                             variant="gradient"
                             color="dark"
                           >
-                            {isLastStep ? 'send' : 'next'}
+                            {isLastStep ? "send" : "next"}
                           </SuiButton>
                         </SuiBox>
                       </SuiBox>

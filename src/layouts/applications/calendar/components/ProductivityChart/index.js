@@ -39,184 +39,73 @@ import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
 function ProductivityChart() {
-  const {
-    white,
-  } =
-    colors;
-  const {
-    size,
-  } =
-    typography;
-  const chartRef =
-    useRef(
-      null
-    );
-  const [
-    openMenu,
-    setOpenMenu,
-  ] =
-    useState(
-      null
-    );
-  const [
-    chartData,
-    setChartData,
-  ] =
-    useState(
-      {}
-    );
-  const {
-    data,
-    options,
-  } =
-    chartData;
+  const { white } = colors;
+  const { size } = typography;
+  const chartRef = useRef(null);
+  const [openMenu, setOpenMenu] = useState(null);
+  const [chartData, setChartData] = useState({});
+  const { data, options } = chartData;
 
-  const handleOpenMenu =
-    (
-      event
-    ) =>
-      setOpenMenu(
-        event.currentTarget
-      );
-  const handleCloseMenu =
-    () =>
-      setOpenMenu(
-        null
-      );
+  const handleOpenMenu = (event) => setOpenMenu(event.currentTarget);
+  const handleCloseMenu = () => setOpenMenu(null);
 
   useEffect(() => {
-    const backgroundColor =
-      gradientChartLine(
-        chartRef
-          .current
-          .children[0],
-        white.main,
-        0.3
-      );
+    const backgroundColor = gradientChartLine(chartRef.current.children[0], white.main, 0.3);
 
-    setChartData(
-      configs(
-        backgroundColor
-      )
-    );
-  }, [
-    configs,
-  ]);
+    setChartData(configs(backgroundColor));
+  }, [configs]);
 
-  const renderMenu =
-    () => (
-      <Menu
-        anchorEl={
-          openMenu
-        }
-        transformOrigin={{
-          vertical:
-            "top",
-          horizontal:
-            "right",
-        }}
-        open={Boolean(
-          openMenu
-        )}
-        onClose={
-          handleCloseMenu
-        }
-        keepMounted>
-        <MenuItem
-          onClick={
-            handleCloseMenu
-          }>
-          Action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            handleCloseMenu
-          }>
-          Anoter
-          action
-        </MenuItem>
-        <MenuItem
-          onClick={
-            handleCloseMenu
-          }>
-          Something
-          else
-          here
-        </MenuItem>
-      </Menu>
-    );
+  const renderMenu = () => (
+    <Menu
+      anchorEl={openMenu}
+      transformOrigin={{
+        vertical: "top",
+        horizontal: "right",
+      }}
+      open={Boolean(openMenu)}
+      onClose={handleCloseMenu}
+      keepMounted
+    >
+      <MenuItem onClick={handleCloseMenu}>Action</MenuItem>
+      <MenuItem onClick={handleCloseMenu}>Anoter action</MenuItem>
+      <MenuItem onClick={handleCloseMenu}>Something else here</MenuItem>
+    </Menu>
+  );
 
   return (
     <Card>
-      <SuiBox
-        bgColor="dark"
-        variant="gradient">
-        <SuiBox
-          p={
-            2
-          }>
-          <SuiBox
-            display="flex"
-            justifyContent="space-between">
+      <SuiBox bgColor="dark" variant="gradient">
+        <SuiBox p={2}>
+          <SuiBox display="flex" justifyContent="space-between">
             <SuiBox>
-              <SuiTypography
-                variant="h6"
-                fontWeight="medium"
-                color="white">
+              <SuiTypography variant="h6" fontWeight="medium" color="white">
                 Productivity
               </SuiTypography>
-              <SuiBox
-                display="flex"
-                alignItems="center">
-                <SuiBox
-                  fontSize={
-                    size.lg
-                  }
-                  color="success"
-                  mb={
-                    0.3
-                  }
-                  mr={
-                    0.5
-                  }
-                  lineHeight={
-                    0
-                  }>
+              <SuiBox display="flex" alignItems="center">
+                <SuiBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                   <Icon
                     sx={{
-                      fontWeight:
-                        "bold",
-                    }}>
+                      fontWeight: "bold",
+                    }}
+                  >
                     arrow_upward
                   </Icon>
                 </SuiBox>
-                <SuiTypography
-                  variant="button"
-                  color="white"
-                  fontWeight="medium">
-                  4%
-                  more{" "}
-                  <SuiTypography
-                    variant="button"
-                    color="white"
-                    fontWeight="regular">
-                    in
-                    2021
+                <SuiTypography variant="button" color="white" fontWeight="medium">
+                  4% more{" "}
+                  <SuiTypography variant="button" color="white" fontWeight="regular">
+                    in 2021
                   </SuiTypography>
                 </SuiTypography>
               </SuiBox>
             </SuiBox>
-            <SuiTypography
-              color="white"
-              onClick={
-                handleOpenMenu
-              }>
+            <SuiTypography color="white" onClick={handleOpenMenu}>
               <Icon
                 fontSize="default"
                 sx={{
-                  cursor:
-                    "pointer",
-                }}>
+                  cursor: "pointer",
+                }}
+              >
                 more_horiz
               </Icon>
             </SuiTypography>
@@ -226,26 +115,15 @@ function ProductivityChart() {
         {useMemo(
           () => (
             <SuiBox
-              ref={
-                chartRef
-              }
+              ref={chartRef}
               sx={{
-                height:
-                  "6.25rem",
-              }}>
-              <Line
-                data={
-                  data
-                }
-                options={
-                  options
-                }
-              />
+                height: "6.25rem",
+              }}
+            >
+              <Line data={data} options={options} />
             </SuiBox>
           ),
-          [
-            chartData,
-          ]
+          [chartData]
         )}
       </SuiBox>
     </Card>

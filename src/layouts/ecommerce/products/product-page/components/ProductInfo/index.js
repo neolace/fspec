@@ -14,61 +14,61 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Icon from '@mui/material/Icon';
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
-import SuiBadge from 'components/SuiBadge';
-import SuiSelect from 'components/SuiSelect';
-import SuiInput from 'components/SuiInput';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
+import SuiBadge from "components/SuiBadge";
+import SuiSelect from "components/SuiSelect";
+import SuiInput from "components/SuiInput";
 
 function ProductInfo() {
   const frameOptions = [
     {
-      value: 'aluminium',
-      label: 'Aluminium',
+      value: "aluminium",
+      label: "Aluminium",
     },
     {
-      value: 'carbon',
-      label: 'Carbon',
+      value: "carbon",
+      label: "Carbon",
     },
     {
-      value: 'steel',
-      label: 'Steel',
+      value: "steel",
+      label: "Steel",
     },
     {
-      value: 'wood',
-      label: 'Wood',
+      value: "wood",
+      label: "Wood",
     },
   ];
 
   const colorOptions = [
     {
-      value: 'black',
-      label: 'black',
+      value: "black",
+      label: "black",
     },
     {
-      value: 'blue',
-      label: 'blue',
+      value: "blue",
+      label: "blue",
     },
     {
-      value: 'gray',
-      label: 'gray',
+      value: "gray",
+      label: "gray",
     },
     {
-      value: 'pink',
-      label: 'pink',
+      value: "pink",
+      label: "pink",
     },
     {
-      value: 'red',
-      label: 'red',
+      value: "red",
+      label: "red",
     },
     {
-      value: 'white',
-      label: 'white',
+      value: "white",
+      label: "white",
     },
   ];
 
@@ -96,12 +96,7 @@ function ProductInfo() {
           $1,419
         </SuiTypography>
       </SuiBox>
-      <SuiBadge
-        variant="contained"
-        color="success"
-        badgeContent="in stock"
-        container
-      />
+      <SuiBadge variant="contained" color="success" badgeContent="in stock" container />
       <SuiBox mt={3} mb={1} ml={0.5}>
         <SuiTypography variant="caption" fontWeight="bold">
           Description
@@ -110,8 +105,7 @@ function ProductInfo() {
       <SuiBox component="ul" m={0} pl={4} mb={2}>
         <SuiBox component="li" color="text" fontSize="1.25rem" lineHeight={1}>
           <SuiTypography variant="body2" color="text" verticalAlign="middle">
-            The most beautiful curves of this swivel stool adds an elegant touch
-            to any environment
+            The most beautiful curves of this swivel stool adds an elegant touch to any environment
           </SuiTypography>
         </SuiBox>
         <SuiBox component="li" color="text" fontSize="1.25rem" lineHeight={1}>
@@ -134,11 +128,7 @@ function ProductInfo() {
         <Grid container spacing={3}>
           <Grid item xs={12} lg={5}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography
-                component="label"
-                variant="caption"
-                fontWeight="bold"
-              >
+              <SuiTypography component="label" variant="caption" fontWeight="bold">
                 Frame Material
               </SuiTypography>
             </SuiBox>
@@ -146,11 +136,7 @@ function ProductInfo() {
           </Grid>
           <Grid item xs={12} lg={5}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography
-                component="label"
-                variant="caption"
-                fontWeight="bold"
-              >
+              <SuiTypography component="label" variant="caption" fontWeight="bold">
                 Color
               </SuiTypography>
             </SuiBox>
@@ -158,17 +144,13 @@ function ProductInfo() {
           </Grid>
           <Grid item xs={12} lg={2}>
             <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
-              <SuiTypography
-                component="label"
-                variant="caption"
-                fontWeight="bold"
-              >
+              <SuiTypography component="label" variant="caption" fontWeight="bold">
                 Quantity
               </SuiTypography>
             </SuiBox>
             <SuiInput
               inputProps={{
-                type: 'number',
+                type: "number",
               }}
               defaultValue={1}
             />

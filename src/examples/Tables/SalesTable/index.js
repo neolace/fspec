@@ -13,24 +13,24 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
 
 // Soft UI Dashboard PRO React components
-import SuiTypography from 'components/SuiTypography';
-import SuiBox from 'components/SuiBox';
+import SuiTypography from "components/SuiTypography";
+import SuiBox from "components/SuiBox";
 
 // Soft UI Dashboard PRO React example components
-import SalesTableCell from 'examples/Tables/SalesTable/SalesTableCell';
+import SalesTableCell from "examples/Tables/SalesTable/SalesTableCell";
 
 function SalesTable({ title, rows }) {
   const renderTableCells = rows.map((row, key) => {
@@ -64,7 +64,7 @@ function SalesTable({ title, rows }) {
   return (
     <TableContainer
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
       <Table>

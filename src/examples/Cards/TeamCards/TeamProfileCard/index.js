@@ -14,29 +14,21 @@
  */
 
 // prop-types is library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
-import Tooltip from '@mui/material/Tooltip';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Tooltip from "@mui/material/Tooltip";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiBadge from 'components/SuiBadge';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiBadge from "components/SuiBadge";
+import SuiAvatar from "components/SuiAvatar";
 
-function TeamProfileCard({
-  color,
-  title,
-  description,
-  industry,
-  rating,
-  members,
-  dropdown,
-}) {
+function TeamProfileCard({ color, title, description, industry, rating, members, dropdown }) {
   const ratings = {
     0.5: [
       <Icon key={1}>star_outline</Icon>,
@@ -119,11 +111,11 @@ function TeamProfileCard({
         sx={({ borders: { borderWidth }, palette: { white } }) => ({
           ml: -1.25,
           border: `${borderWidth[2]} solid ${white.main}`,
-          cursor: 'pointer',
-          position: 'relative',
+          cursor: "pointer",
+          position: "relative",
 
-          '&:hover, &:focus': {
-            zIndex: '10',
+          "&:hover, &:focus": {
+            zIndex: "10",
           },
         })}
       />
@@ -133,12 +125,7 @@ function TeamProfileCard({
   return (
     <Card>
       <SuiBox p={3}>
-        <SuiBox
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          mb={2}
-        >
+        <SuiBox display="flex" justifyContent="space-between" alignItems="center" mb={2}>
           <SuiTypography
             variant="h5"
             fontWeight="medium"
@@ -153,8 +140,8 @@ function TeamProfileCard({
               color="secondary"
               onClick={dropdown.action}
               sx={{
-                width: '16px',
-                cursor: 'pointer',
+                width: "16px",
+                cursor: "pointer",
               }}
             >
               <Icon fontSize="default">more_vert</Icon>
@@ -167,20 +154,10 @@ function TeamProfileCard({
             {description}
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          component="ul"
-          display="flex"
-          flexDirection="column"
-          p={0}
-          m={0}
-        >
+        <SuiBox component="ul" display="flex" flexDirection="column" p={0} m={0}>
           {industry ? (
             <SuiBox component="li" display="flex" flexDirection="column">
-              <SuiBox
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-              >
+              <SuiBox display="flex" justifyContent="space-between" alignItems="center">
                 <SuiTypography variant="body2" color="text">
                   Industry:
                 </SuiTypography>
@@ -197,11 +174,7 @@ function TeamProfileCard({
           ) : null}
           {rating ? (
             <SuiBox component="li" display="flex" flexDirection="column">
-              <SuiBox
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-              >
+              <SuiBox display="flex" justifyContent="space-between" alignItems="center">
                 <SuiTypography variant="body2" color="text">
                   Rating:
                 </SuiTypography>
@@ -239,8 +212,8 @@ function TeamProfileCard({
 
 // Setting default values for the props of TeamProfileCard
 TeamProfileCard.defaultProps = {
-  color: 'info',
-  industry: '',
+  color: "info",
+  industry: "",
   rating: 0,
   members: [],
   dropdown: false,
@@ -248,15 +221,7 @@ TeamProfileCard.defaultProps = {
 
 // Typechecking props for the TeamProfileCard
 TeamProfileCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   industry: PropTypes.string,

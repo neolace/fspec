@@ -13,17 +13,17 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // prop-types is a library for typechecking of props.
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Popper from '@mui/material/Popper';
-import Grow from '@mui/material/Grow';
+import Popper from "@mui/material/Popper";
+import Grow from "@mui/material/Grow";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 function DefaultNavbarMenu({ open, close, placement, children, style }) {
   const [anchor, setAnchor] = useState(false);
@@ -46,7 +46,7 @@ function DefaultNavbarMenu({ open, close, placement, children, style }) {
         <Grow
           {...TransitionProps}
           sx={{
-            transformOrigin: 'left top',
+            transformOrigin: "left top",
           }}
         >
           <SuiBox
@@ -67,20 +67,17 @@ function DefaultNavbarMenu({ open, close, placement, children, style }) {
 
 // Setting default values for the props of DefaultNavbarMenu
 DefaultNavbarMenu.defaultProps = {
-  placement: 'bottom-start',
+  placement: "bottom-start",
   style: {},
 };
 
 // Typechecking props for the DefaultNavbarMenu
 DefaultNavbarMenu.propTypes = {
   open: PropTypes.oneOfType([PropTypes.bool, PropTypes.object]).isRequired,
-  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object])
-    .isRequired,
+  close: PropTypes.oneOfType([PropTypes.func, PropTypes.bool, PropTypes.object]).isRequired,
   placement: PropTypes.string,
   children: PropTypes.node.isRequired,
-  style: PropTypes.objectOf(
-    PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  ),
+  style: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
 };
 
 export default DefaultNavbarMenu;

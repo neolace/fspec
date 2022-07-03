@@ -13,26 +13,26 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 // porp-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-chartjs-2 components
-import { Line } from 'react-chartjs-2';
+import { Line } from "react-chartjs-2";
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // DefaultLineChart configurations
-import configs from 'examples/Charts/LineCharts/DefaultLineChart/configs';
+import configs from "examples/Charts/LineCharts/DefaultLineChart/configs";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
+import colors from "assets/theme/base/colors";
 
 function DefaultLineChart({ title, description, height, chart }) {
   const chartDatasets = chart.datasets
@@ -42,10 +42,10 @@ function DefaultLineChart({ title, description, height, chart }) {
         borderWidth: 3,
         pointRadius: 2,
         pointBackgroundColor: colors[dataset.color]
-          ? colors[dataset.color || 'dark'].main
+          ? colors[dataset.color || "dark"].main
           : colors.dark.main,
         borderColor: colors[dataset.color]
-          ? colors[dataset.color || 'dark'].main
+          ? colors[dataset.color || "dark"].main
           : colors.dark.main,
         maxBarThickness: 6,
       }))
@@ -63,12 +63,7 @@ function DefaultLineChart({ title, description, height, chart }) {
             </SuiBox>
           )}
           <SuiBox mb={2}>
-            <SuiTypography
-              component="div"
-              variant="button"
-              fontWeight="regular"
-              color="text"
-            >
+            <SuiTypography component="div" variant="button" fontWeight="regular" color="text">
               {description}
             </SuiTypography>
           </SuiBox>
@@ -90,9 +85,9 @@ function DefaultLineChart({ title, description, height, chart }) {
 
 // Setting default values for the props of DefaultLineChart
 DefaultLineChart.defaultProps = {
-  title: '',
-  description: '',
-  height: '19.125rem',
+  title: "",
+  description: "",
+  height: "19.125rem",
 };
 
 // Typechecking props for the DefaultLineChart

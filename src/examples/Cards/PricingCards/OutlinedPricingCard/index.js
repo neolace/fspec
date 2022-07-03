@@ -14,71 +14,58 @@
  */
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
-import Divider from '@mui/material/Divider';
+import Icon from "@mui/material/Icon";
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
+import borders from "assets/theme/base/borders";
 
-function OutlinedPricingCard({
-  color,
-  title,
-  description,
-  price,
-  specifications,
-  action,
-}) {
+function OutlinedPricingCard({ color, title, description, price, specifications, action }) {
   const { borderWidth, borderColor } = borders;
 
-  const renderSpecifications = specifications.map(
-    ({ label, includes }, key) => (
-      <SuiBox
-        key={label}
-        display="flex"
-        alignItems="center"
-        pb={specifications.length - 1 !== key ? 2 : 0}
+  const renderSpecifications = specifications.map(({ label, includes }, key) => (
+    <SuiBox
+      key={label}
+      display="flex"
+      alignItems="center"
+      pb={specifications.length - 1 !== key ? 2 : 0}
+    >
+      <SuiTypography
+        variant="body1"
+        color={includes ? "success" : "error"}
+        sx={{
+          lineHeight: 0,
+        }}
       >
-        <SuiTypography
-          variant="body1"
-          color={includes ? 'success' : 'error'}
+        <Icon
           sx={{
-            lineHeight: 0,
+            fontWeight: "bold",
           }}
         >
-          <Icon
-            sx={{
-              fontWeight: 'bold',
-            }}
-          >
-            {includes ? 'done' : 'close'}
-          </Icon>
+          {includes ? "done" : "close"}
+        </Icon>
+      </SuiTypography>
+      <SuiBox pl={2} lineHeight={1}>
+        <SuiTypography variant="button" color="text" fontWeight="regular">
+          {label}
         </SuiTypography>
-        <SuiBox pl={2} lineHeight={1}>
-          <SuiTypography variant="button" color="text" fontWeight="regular">
-            {label}
-          </SuiTypography>
-        </SuiBox>
       </SuiBox>
-    )
-  );
+    </SuiBox>
+  ));
 
   return (
-    <SuiBox
-      height="100%"
-      borderRadius="xl"
-      border={`${borderWidth[1]} solid ${borderColor}`}
-    >
+    <SuiBox height="100%" borderRadius="xl" border={`${borderWidth[1]} solid ${borderColor}`}>
       <SuiBox pt={3} pb={0.5} px={3} lineHeight={1} textAlign="center">
         <SuiTypography variant="h5" color={color}>
           {title}
@@ -98,7 +85,7 @@ function OutlinedPricingCard({
           </SuiTypography>
         </SuiBox>
         <SuiBox mt={3} mb={1}>
-          {action.type === 'internal' ? (
+          {action.type === "internal" ? (
             <SuiButton
               component={Link}
               to={action.route}
@@ -135,20 +122,20 @@ function OutlinedPricingCard({
 
 // Setting default values for the props of OutlinedPricingCard
 OutlinedPricingCard.defaultProps = {
-  color: 'dark',
+  color: "dark",
 };
 
 // Typechecking props for the OutlinedPricingCard
 OutlinedPricingCard.propTypes = {
   color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'light',
-    'dark',
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "light",
+    "dark",
   ]),
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -158,7 +145,7 @@ OutlinedPricingCard.propTypes = {
   }).isRequired,
   specifications: PropTypes.arrayOf(PropTypes.object).isRequired,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(['external', 'internal']).isRequired,
+    type: PropTypes.oneOf(["external", "internal"]).isRequired,
     route: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,

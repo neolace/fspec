@@ -26,52 +26,19 @@ import FormField from "layouts/ecommerce/products/new-product/components/FormFie
 function Socials() {
   return (
     <SuiBox>
-      <SuiTypography
-        variant="h5"
-        fontWeight="bold">
+      <SuiTypography variant="h5" fontWeight="bold">
         Socials
       </SuiTypography>
-      <SuiBox
-        mt={
-          2
-        }>
-        <Grid
-          container
-          spacing={
-            2
-          }>
-          <Grid
-            item
-            xs={
-              12
-            }>
-            <FormField
-              type="text"
-              label="shoppify handle"
-              placeholder="@soft"
-            />
+      <SuiBox mt={2}>
+        <Grid container spacing={2}>
+          <Grid item xs={12}>
+            <FormField type="text" label="shoppify handle" placeholder="@soft" />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }>
-            <FormField
-              type="text"
-              label="facebook account"
-              placeholder="https://..."
-            />
+          <Grid item xs={12}>
+            <FormField type="text" label="facebook account" placeholder="https://..." />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }>
-            <FormField
-              type="text"
-              label="instagram account"
-              placeholder="https://..."
-            />
+          <Grid item xs={12}>
+            <FormField type="text" label="instagram account" placeholder="https://..." />
           </Grid>
         </Grid>
       </SuiBox>

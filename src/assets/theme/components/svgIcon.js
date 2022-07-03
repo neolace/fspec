@@ -14,16 +14,16 @@
  */
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const svgIcon = {
   defaultProps: {
-    fontSize: 'inherit',
+    fontSize: "inherit",
   },
 
   styleOverrides: {
     fontSizeInherit: {
-      fontSize: 'inherit !important',
+      fontSize: "inherit !important",
     },
 
     fontSizeSmall: {

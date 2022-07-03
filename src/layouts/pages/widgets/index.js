@@ -13,43 +13,43 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Icon from '@mui/material/Icon';
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import MiniStatisticsCard from 'examples/Cards/StatisticsCards/MiniStatisticsCard';
-import ProgressLineChart from 'examples/Charts/LineCharts/ProgressLineChart';
-import DefaultInfoCard from 'examples/Cards/InfoCards/DefaultInfoCard';
-import MasterCard from 'examples/Cards/MasterCard';
-import MiniInfoCard from 'examples/Cards/InfoCards/MiniInfoCard';
-import ControllerCard from 'examples/Cards/ControllerCard';
-import Calendar from 'examples/Calendar';
-import CategoriesList from 'examples/Lists/CategoriesList';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
+import ProgressLineChart from "examples/Charts/LineCharts/ProgressLineChart";
+import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+import MasterCard from "examples/Cards/MasterCard";
+import MiniInfoCard from "examples/Cards/InfoCards/MiniInfoCard";
+import ControllerCard from "examples/Cards/ControllerCard";
+import Calendar from "examples/Calendar";
+import CategoriesList from "examples/Lists/CategoriesList";
 
 // Widgets page components
-import Steps from 'layouts/pages/widgets/components/Steps';
-import FullBody from 'layouts/pages/widgets/components/FullBody';
-import MediaPlayer from 'layouts/pages/widgets/components/MediaPlayer';
-import OrdersOverview from 'layouts/pages/widgets/components/OrdersOverview';
-import UpcomingEvents from 'layouts/pages/widgets/components/UpcomingEvents';
-import Chart from 'layouts/pages/widgets/components/Chart';
+import Steps from "layouts/pages/widgets/components/Steps";
+import FullBody from "layouts/pages/widgets/components/FullBody";
+import MediaPlayer from "layouts/pages/widgets/components/MediaPlayer";
+import OrdersOverview from "layouts/pages/widgets/components/OrdersOverview";
+import UpcomingEvents from "layouts/pages/widgets/components/UpcomingEvents";
+import Chart from "layouts/pages/widgets/components/Chart";
 
 // Data
-import progressLineChartData from 'layouts/pages/widgets/data/progressLineChartData';
-import calendarEventsData from 'layouts/pages/widgets/data/calendarEventsData';
-import categoriesListData from 'layouts/pages/widgets/data/categoriesListData';
-import incomeChartData from 'layouts/pages/widgets/data/incomeChartData';
-import caloriesChartData from 'layouts/pages/widgets/data/caloriesChartData';
+import progressLineChartData from "layouts/pages/widgets/data/progressLineChartData";
+import calendarEventsData from "layouts/pages/widgets/data/calendarEventsData";
+import categoriesListData from "layouts/pages/widgets/data/categoriesListData";
+import incomeChartData from "layouts/pages/widgets/data/incomeChartData";
+import caloriesChartData from "layouts/pages/widgets/data/caloriesChartData";
 
 function Widgets() {
   const [lights, setLights] = useState(false);
@@ -67,25 +67,25 @@ function Widgets() {
                 <MiniStatisticsCard
                   bgColor="info"
                   title={{
-                    text: 'battery health',
-                    fontWeight: 'regular',
+                    text: "battery health",
+                    fontWeight: "regular",
                   }}
                   count="99 %"
                   icon={{
-                    component: 'sports_esports',
+                    component: "sports_esports",
                   }}
                 />
               </SuiBox>
               <MiniStatisticsCard
                 bgColor="info"
                 title={{
-                  text: 'music volume',
-                  fontWeight: 'regular',
+                  text: "music volume",
+                  fontWeight: "regular",
                 }}
                 count="15/100"
                 icon={{
-                  color: 'info',
-                  component: 'music_note',
+                  color: "info",
+                  component: "music_note",
                 }}
               />
             </Grid>
@@ -94,8 +94,8 @@ function Widgets() {
                 title="income"
                 count="$130,832"
                 percentage={{
-                  color: 'success',
-                  label: '+90%',
+                  color: "success",
+                  label: "+90%",
                 }}
                 chart={incomeChartData}
               />
@@ -133,11 +133,7 @@ function Widgets() {
               />
             </Grid>
             <Grid item xs={12} lg={4}>
-              <MasterCard
-                number={4562112245947852}
-                holder="jack peterson"
-                expires="11/22"
-              />
+              <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
             </Grid>
           </Grid>
         </SuiBox>
@@ -150,10 +146,7 @@ function Widgets() {
               <ControllerCard
                 state={lights}
                 icon={
-                  <Icon
-                    className={lights ? 'text-white' : 'text-dark'}
-                    fontSize="large"
-                  >
+                  <Icon className={lights ? "text-white" : "text-dark"} fontSize="large">
                     lightbulb
                   </Icon>
                 }
@@ -166,8 +159,8 @@ function Widgets() {
                 title="calories"
                 count={97}
                 percentage={{
-                  color: 'success',
-                  label: '+5%',
+                  color: "success",
+                  label: "+5%",
                 }}
                 chart={caloriesChartData}
               />
@@ -178,11 +171,7 @@ function Widgets() {
                 title={
                   <>
                     754&nbsp;
-                    <SuiTypography
-                      variant="button"
-                      color="secondary"
-                      fontWeight="medium"
-                    >
+                    <SuiTypography variant="button" color="secondary" fontWeight="medium">
                       m
                     </SuiTypography>
                   </>
@@ -201,8 +190,8 @@ function Widgets() {
               () => (
                 <Calendar
                   header={{
-                    title: 'calendar',
-                    date: 'Monday, 2021',
+                    title: "calendar",
+                    date: "Monday, 2021",
                   }}
                   headerToolbar={false}
                   initialView="dayGridMonth"
@@ -217,10 +206,7 @@ function Widgets() {
           </Grid>
           <Grid item xs={12} lg={3}>
             <SuiBox mb={3}>
-              <CategoriesList
-                title="categories"
-                categories={categoriesListData}
-              />
+              <CategoriesList title="categories" categories={categoriesListData} />
             </SuiBox>
             <MediaPlayer />
           </Grid>

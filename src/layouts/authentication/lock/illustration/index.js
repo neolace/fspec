@@ -31,50 +31,26 @@ function Illustration() {
       color="dark"
       header={
         <SuiBox textAlign="center">
-          <SuiTypography
-            variant="h4"
-            fontWeight="bold">
-            Mike
-            Priesler
+          <SuiTypography variant="h4" fontWeight="bold">
+            Mike Priesler
           </SuiTypography>
-          <SuiTypography
-            variant="body2"
-            color="text">
-            Enter
-            password
-            to
-            unlock
-            your
-            account.
+          <SuiTypography variant="body2" color="text">
+            Enter password to unlock your account.
           </SuiTypography>
         </SuiBox>
       }
       illustration={{
-        image:
-          lock,
-        title:
-          '"Attention is the new currency"',
+        image: lock,
+        title: '"Attention is the new currency"',
         description:
           "The more effortless the writing looks, the more effort the writer actually put into the process.",
-      }}>
-      <SuiBox
-        component="form"
-        role="form">
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            type="password"
-            placeholder="Password"
-            size="large"
-          />
+      }}
+    >
+      <SuiBox component="form" role="form">
+        <SuiBox mb={2}>
+          <SuiInput type="password" placeholder="Password" size="large" />
         </SuiBox>
-        <SuiButton
-          variant="gradient"
-          color="dark"
-          size="large"
-          fullWidth>
+        <SuiButton variant="gradient" color="dark" size="large" fullWidth>
           unlock
         </SuiButton>
       </SuiBox>

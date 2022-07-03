@@ -30,47 +30,21 @@ function Illustration() {
       title="Reset Password"
       description="You will receive an e-mail in maximum 60 seconds"
       illustration={{
-        image:
-          lock,
-        title:
-          "Soft UI Design",
+        image: lock,
+        title: "Soft UI Design",
         description:
           "Just as it takes a company to sustain a product, it takes a community to sustain a protocol.",
-      }}>
-      <SuiBox
-        component="form"
-        role="form">
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            type="email"
-            placeholder="Email"
-            size="large"
-          />
+      }}
+    >
+      <SuiBox component="form" role="form">
+        <SuiBox mb={2}>
+          <SuiInput type="email" placeholder="Email" size="large" />
         </SuiBox>
-        <SuiBox
-          mb={
-            2
-          }>
-          <SuiInput
-            placeholder="Verification Code"
-            size="large"
-          />
+        <SuiBox mb={2}>
+          <SuiInput placeholder="Verification Code" size="large" />
         </SuiBox>
-        <SuiBox
-          mt={
-            4
-          }
-          mb={
-            1
-          }>
-          <SuiButton
-            variant="gradient"
-            color="info"
-            size="large"
-            fullWidth>
+        <SuiBox mt={4} mb={1}>
+          <SuiButton variant="gradient" color="info" size="large" fullWidth>
             send
           </SuiButton>
         </SuiBox>

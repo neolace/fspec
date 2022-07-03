@@ -1,28 +1,28 @@
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import AnimatedStatisticsCard from 'examples/Cards/StatisticsCards/AnimatedStatisticsCard';
-import MiniStatisticsCard from 'examples/Cards/StatisticsCards/MiniStatisticsCard';
-import AnnouncementCard from 'examples/Cards/AnnouncementCard';
-import ProgressLineChart from 'examples/Charts/LineCharts/ProgressLineChart';
-import ProgressDoughnutChart from 'examples/Charts/DoughnutCharts/ProgressDoughnutChart';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import AnimatedStatisticsCard from "examples/Cards/StatisticsCards/AnimatedStatisticsCard";
+import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
+import AnnouncementCard from "examples/Cards/AnnouncementCard";
+import ProgressLineChart from "examples/Charts/LineCharts/ProgressLineChart";
+import ProgressDoughnutChart from "examples/Charts/DoughnutCharts/ProgressDoughnutChart";
 
 // General page components
-import TodoList from 'layouts/pages/projects/general/components/TodoList';
+import TodoList from "layouts/pages/projects/general/components/TodoList";
 
 // Data
-import progressLineChartData from 'layouts/pages/projects/general/data/progressLineChartData';
-import progressDoughnutChartData from 'layouts/pages/projects/general/data/progressDoughnutChartData';
+import progressLineChartData from "layouts/pages/projects/general/data/progressLineChartData";
+import progressDoughnutChartData from "layouts/pages/projects/general/data/progressDoughnutChartData";
 
 // Images
-import team3 from 'assets/images/team-3.jpg';
+import team3 from "assets/images/team-3.jpg";
 
 function General() {
   return (
@@ -37,13 +37,13 @@ function General() {
                   title="earnings"
                   count="$15,800"
                   percentage={{
-                    color: 'dark',
-                    label: '+15% since last week',
+                    color: "dark",
+                    label: "+15% since last week",
                   }}
                   action={{
-                    type: 'internal',
-                    route: '/pages/projects/general',
-                    label: 'view more',
+                    type: "internal",
+                    route: "/pages/projects/general",
+                    label: "view more",
                   }}
                 />
               </Grid>
@@ -51,30 +51,30 @@ function General() {
                 <SuiBox mb={3}>
                   <MiniStatisticsCard
                     title={{
-                      fontWeight: 'medium',
+                      fontWeight: "medium",
                       text: "today's money",
                     }}
                     count="$53,000"
                     icon={{
-                      color: 'dark',
-                      component: 'local_atm',
+                      color: "dark",
+                      component: "local_atm",
                     }}
                     direction="left"
                   />
                 </SuiBox>
                 <MiniStatisticsCard
                   title={{
-                    fontWeight: 'medium',
-                    text: 'sessions',
+                    fontWeight: "medium",
+                    text: "sessions",
                   }}
                   count="9,600"
                   percentage={{
-                    color: 'success',
-                    text: '+55%',
+                    color: "success",
+                    text: "+55%",
                   }}
                   icon={{
-                    color: 'dark',
-                    component: 'emoji_events',
+                    color: "dark",
+                    component: "emoji_events",
                   }}
                   direction="left"
                 />
@@ -83,34 +83,34 @@ function General() {
                 <SuiBox mb={3}>
                   <MiniStatisticsCard
                     title={{
-                      fontWeight: 'medium',
+                      fontWeight: "medium",
                       text: "today's users",
                     }}
                     count="2,300"
                     percentage={{
-                      color: 'success',
-                      text: '+3%',
+                      color: "success",
+                      text: "+3%",
                     }}
                     icon={{
-                      color: 'dark',
-                      component: 'public',
+                      color: "dark",
+                      component: "public",
                     }}
                     direction="left"
                   />
                 </SuiBox>
                 <MiniStatisticsCard
                   title={{
-                    fontWeight: 'medium',
-                    text: 'Sign-Ups',
+                    fontWeight: "medium",
+                    text: "Sign-Ups",
                   }}
                   count="348"
                   percentage={{
-                    color: 'success',
-                    text: '+12%',
+                    color: "success",
+                    text: "+12%",
                   }}
                   icon={{
-                    color: 'dark',
-                    component: 'storefront',
+                    color: "dark",
+                    component: "storefront",
                   }}
                   direction="left"
                 />
@@ -128,24 +128,24 @@ function General() {
                 <AnnouncementCard
                   by={{
                     image: team3,
-                    name: 'lucas prila',
-                    date: '2h ago',
+                    name: "lucas prila",
+                    date: "2h ago",
                   }}
                   badge={{
-                    color: 'info',
-                    label: 'recommendation',
+                    color: "info",
+                    label: "recommendation",
                   }}
                   title="I need a Ruby developer for my new website."
                   description="The website was initially built in PHP, I need a professional ruby programmer to shift it."
                   value={{
-                    type: '$',
-                    amount: '3,000',
-                    method: 'month',
+                    type: "$",
+                    amount: "3,000",
+                    method: "month",
                   }}
                   action={{
-                    type: 'internal',
-                    route: '/pages/projects/general',
-                    label: 'apply',
+                    type: "internal",
+                    route: "/pages/projects/general",
+                    label: "apply",
                   }}
                 />
               </Grid>

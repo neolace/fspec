@@ -14,15 +14,15 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import typography from 'assets/theme/base/typography';
-import borders from 'assets/theme/base/borders';
+import colors from "assets/theme/base/colors";
+import typography from "assets/theme/base/typography";
+import borders from "assets/theme/base/borders";
 
 function DataTableBodyCell({ noBorder, align, children }) {
   const { light } = colors;
@@ -34,7 +34,7 @@ function DataTableBodyCell({ noBorder, align, children }) {
       component="td"
       textAlign={align}
       fontSize={size.sm}
-      borderBottom={noBorder ? 'none' : `${borderWidth[1]} solid ${light.main}`}
+      borderBottom={noBorder ? "none" : `${borderWidth[1]} solid ${light.main}`}
       py={1.5}
       px={3}
     >
@@ -43,7 +43,7 @@ function DataTableBodyCell({ noBorder, align, children }) {
         width="max-content"
         color="text"
         sx={{
-          verticalAlign: 'middle',
+          verticalAlign: "middle",
         }}
       >
         {children}
@@ -55,14 +55,14 @@ function DataTableBodyCell({ noBorder, align, children }) {
 // Setting default values for the props of DataTableBodyCell
 DataTableBodyCell.defaultProps = {
   noBorder: false,
-  align: 'left',
+  align: "left",
 };
 
 // Typechecking props for the DataTableBodyCell
 DataTableBodyCell.propTypes = {
   children: PropTypes.node.isRequired,
   noBorder: PropTypes.bool,
-  align: PropTypes.oneOf(['left', 'right', 'center']),
+  align: PropTypes.oneOf(["left", "right", "center"]),
 };
 
 export default DataTableBodyCell;

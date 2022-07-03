@@ -14,32 +14,32 @@
  */
 
 // sweetalert2 components
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 // Sweet Alerts page components
-import Template from 'layouts/pages/sweet-alerts/components/Template';
+import Template from "layouts/pages/sweet-alerts/components/Template";
 
 function WithSuccessAttachedFunction() {
   const showAlert = () => {
     const newSwal = Swal.mixin({
       customClass: {
-        confirmButton: 'button button-success',
-        cancelButton: 'button button-error',
+        confirmButton: "button button-success",
+        cancelButton: "button button-error",
       },
       buttonsStyling: false,
     });
 
     newSwal
       .fire({
-        title: 'Are you sure?',
+        title: "Are you sure?",
         text: "You won't be able to revert this!",
-        icon: 'warning',
+        icon: "warning",
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
+        confirmButtonText: "Yes, delete it!",
       })
       .then((result) => {
         if (result.isConfirmed) {
-          Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+          Swal.fire("Deleted!", "Your file has been deleted.", "success");
         }
       });
   };

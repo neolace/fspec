@@ -15,11 +15,11 @@
 
 /* eslint-disable no-dupe-keys */
 // Soft UI Dashboard PRO React helper functions
-import rgba from 'assets/theme/functions/rgba';
+import rgba from "assets/theme/functions/rgba";
 
 // Soft UI Dashboard PRO React base styles
-import typography from 'assets/theme/base/typography';
-import colors from 'assets/theme/base/colors';
+import typography from "assets/theme/base/typography";
+import colors from "assets/theme/base/colors";
 
 const { gradients } = colors;
 
@@ -32,12 +32,8 @@ function configs(color, labels, label, data) {
           label,
           tension: 0.3,
           pointRadius: 2,
-          pointBackgroundColor: gradients[color]
-            ? gradients[color].main
-            : gradients.info.main,
-          borderColor: gradients[color]
-            ? gradients[color].main
-            : gradients.info.main,
+          pointBackgroundColor: gradients[color] ? gradients[color].main : gradients.info.main,
+          borderColor: gradients[color] ? gradients[color].main : gradients.info.main,
           borderWidth: 2,
           backgroundColor: gradients[color]
             ? rgba(gradients[color].main, 0.1)
@@ -58,7 +54,7 @@ function configs(color, labels, label, data) {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: "index",
       },
       scales: {
         y: {
@@ -83,7 +79,7 @@ function configs(color, labels, label, data) {
             drawTicks: false,
           },
           ticks: {
-            color: '#252f40',
+            color: "#252f40",
             padding: 10,
             font: {
               family: typography.fontFamily,
@@ -101,7 +97,7 @@ function configs(color, labels, label, data) {
           ticks: {
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
             font: {
               family: typography.fontFamily,
             },
@@ -118,7 +114,7 @@ function configs(color, labels, label, data) {
           ticks: {
             display: true,
             padding: 10,
-            color: '#9ca2b7',
+            color: "#9ca2b7",
             font: {
               family: typography.fontFamily,
             },

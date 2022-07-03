@@ -14,50 +14,33 @@
  */
 
 // react-router components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import MuiLink from '@mui/material/Link';
+import MuiLink from "@mui/material/Link";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiAvatar from "components/SuiAvatar";
 
 function SimpleProfileCard({ image, name, position, description, action }) {
   return (
-    <SuiBox
-      display="flex"
-      flexDirection="column"
-      alignItems="center"
-      textAlign="center"
-    >
-      {action.type === 'external' ? (
+    <SuiBox display="flex" flexDirection="column" alignItems="center" textAlign="center">
+      {action.type === "external" ? (
         <MuiLink href={action.route} target="_blank" rel="noreferrer">
-          <SuiAvatar
-            src={image}
-            alt={name}
-            size="xl"
-            shadow="md"
-            variant="rounded"
-          />
+          <SuiAvatar src={image} alt={name} size="xl" shadow="md" variant="rounded" />
         </MuiLink>
       ) : (
         <Link to={action.route}>
-          <SuiAvatar
-            src={image}
-            alt={name}
-            size="xl"
-            shadow="md"
-            variant="rounded"
-          />
+          <SuiAvatar src={image} alt={name} size="xl" shadow="md" variant="rounded" />
         </Link>
       )}
       <SuiBox p={3}>
-        {action.type === 'external' ? (
+        {action.type === "external" ? (
           <MuiLink href={action.route} target="_blank" rel="noreferrer">
             <SuiTypography variant="h4">{name}</SuiTypography>
           </MuiLink>
@@ -66,12 +49,7 @@ function SimpleProfileCard({ image, name, position, description, action }) {
             <SuiTypography variant="h4">{name}</SuiTypography>
           </Link>
         )}
-        <SuiTypography
-          variant="h6"
-          color={position.color}
-          textGradient
-          gutterBottom
-        >
+        <SuiTypography variant="h6" color={position.color} textGradient gutterBottom>
           {position.label}
         </SuiTypography>
         <SuiTypography variant="body2" color="text">
@@ -84,10 +62,10 @@ function SimpleProfileCard({ image, name, position, description, action }) {
 
 // Setting default props for the SimpleProfileCard
 SimpleProfileCard.defaultProps = {
-  description: '',
+  description: "",
   action: {
-    type: 'internal',
-    route: '#',
+    type: "internal",
+    route: "#",
   },
 };
 
@@ -96,20 +74,13 @@ SimpleProfileCard.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   position: PropTypes.shape({
-    color: PropTypes.oneOf([
-      'primary',
-      'secondary',
-      'info',
-      'success',
-      'warning',
-      'error',
-      'dark',
-    ]).isRequired,
+    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"])
+      .isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
   description: PropTypes.string,
   action: PropTypes.shape({
-    type: PropTypes.oneOf(['external', 'internal']).isRequired,
+    type: PropTypes.oneOf(["external", "internal"]).isRequired,
     route: PropTypes.string.isRequired,
   }),
 };

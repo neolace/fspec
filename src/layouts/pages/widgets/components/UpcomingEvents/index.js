@@ -27,45 +27,20 @@ function UpcomingEvents() {
   return (
     <Card
       sx={{
-        height:
-          "100%",
-      }}>
-      <SuiBox
-        pt={
-          2
-        }
-        px={
-          2
-        }
-        lineHeight={
-          1
-        }>
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium">
-          Upcoming
-          events
+        height: "100%",
+      }}
+    >
+      <SuiBox pt={2} px={2} lineHeight={1}>
+        <SuiTypography variant="h6" fontWeight="medium">
+          Upcoming events
         </SuiTypography>
-        <SuiTypography
-          variant="button"
-          color="text"
-          fontWeight="medium">
+        <SuiTypography variant="button" color="text" fontWeight="medium">
           Joined
         </SuiTypography>
       </SuiBox>
-      <SuiBox
-        p={
-          2
-        }>
-        <DefaultItem
-          icon="paid"
-          title="Cyber Week"
-          description="27 March 2020, at 12:30 PM"
-        />
-        <SuiBox
-          mt={
-            3.5
-          }>
+      <SuiBox p={2}>
+        <DefaultItem icon="paid" title="Cyber Week" description="27 March 2020, at 12:30 PM" />
+        <SuiBox mt={3.5}>
           <DefaultItem
             color="primary"
             icon="notifications"

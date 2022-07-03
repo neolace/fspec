@@ -14,9 +14,9 @@
  */
 
 const item = {
-  width: '100%',
+  width: "100%",
   padding: 0,
-  cursor: 'pointer',
+  cursor: "pointer",
 };
 
 function itemContent(theme, ownerState) {
@@ -28,27 +28,27 @@ function itemContent(theme, ownerState) {
   const { pxToRem, rgba } = functions;
 
   return {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    width: '100%',
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    width: "100%",
     padding: `${pxToRem(7.2)} ${pxToRem(16)}`,
     margin: `0 ${pxToRem(16)} 0 ${pxToRem(21.6)}`,
-    userSelect: 'none',
-    position: 'relative',
+    userSelect: "none",
+    position: "relative",
 
-    '& span': {
+    "& span": {
       color: active ? dark.main : rgba(gradients.dark.state, 0.7),
       fontWeight: active ? fontWeightMedium : fontWeightRegular,
       fontSize: size.sm,
       opacity: miniSidenav ? 0 : 1,
-      transition: transitions.create(['opacity', 'color'], {
+      transition: transitions.create(["opacity", "color"], {
         easing: transitions.easing.easeInOut,
         duration: transitions.duration.standard,
       }),
     },
 
-    '&::before': {
+    "&::before": {
       content: () => {
         if (nested) {
           return nested && miniSidenav && `"${name[0]}"`;
@@ -73,14 +73,14 @@ function itemContent(theme, ownerState) {
       backgroundColor: active ? dark.main : rgba(gradients.dark.state, 0.5),
       color: active ? dark.main : rgba(gradients.dark.state, 0.5),
       fontWeight: active ? fontWeightMedium : fontWeightRegular,
-      display: 'flex',
-      alignItems: 'center',
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
+      display: "flex",
+      alignItems: "center",
+      position: "absolute",
+      top: "50%",
+      transform: "translateY(-50%)",
       left: pxToRem(-18),
       opacity: 1,
-      borderRadius: '50%',
+      borderRadius: "50%",
       fontSize: size.sm,
     },
   };
@@ -100,17 +100,13 @@ function itemArrow(theme, ownerState) {
     marginRight: pxToRem(-2.5),
     transform: () => {
       if (open) {
-        return miniSidenav
-          ? `translateX(${pxToRem(-24)}) rotate(0)`
-          : 'rotate(0)';
+        return miniSidenav ? `translateX(${pxToRem(-24)}) rotate(0)` : "rotate(0)";
       }
 
-      return miniSidenav
-        ? `translateX(${pxToRem(-24)}) rotate(-180deg)`
-        : 'rotate(-180deg)';
+      return miniSidenav ? `translateX(${pxToRem(-24)}) rotate(-180deg)` : "rotate(-180deg)";
     },
     color: open ? dark.main : rgba(gradients.dark.state, 0.4),
-    transition: transitions.create(['color', 'transform'], {
+    transition: transitions.create(["color", "transform"], {
       easing: transitions.easing.easeInOut,
       duration: transitions.duration.shorter,
     }),

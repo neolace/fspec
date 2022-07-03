@@ -42,12 +42,7 @@ import team1 from "assets/images/team-1.jpg";
 import sunCloud from "assets/images/small-logos/icon-sun-cloud.png";
 
 function VRInfo() {
-  const {
-    d1,
-    h2,
-    fontWeightMedium,
-  } =
-    typography;
+  const { d1, h2, fontWeightMedium } = typography;
 
   return (
     <BaseLayout>
@@ -70,19 +65,11 @@ function VRInfo() {
           md: 3,
         }}
         sx={{
-          transform:
-            "scale(1.1)",
-        }}>
-        <Grid
-          container>
-          <Grid
-            item
-            xs={
-              12
-            }
-            md={
-              1
-            }>
+          transform: "scale(1.1)",
+        }}
+      >
+        <Grid container>
+          <Grid item xs={12} md={1}>
             <SuiBox
               display="flex"
               flexDirection={{
@@ -91,26 +78,20 @@ function VRInfo() {
               }}
               justifyContent="center"
               alignItems="center"
-              px={
-                2
-              }
+              px={2}
               mb={{
                 xs: 8,
                 md: 0,
-              }}>
-              <Tooltip
-                title="My Profile"
-                placement="right">
+              }}
+            >
+              <Tooltip title="My Profile" placement="right">
                 <SuiAvatar
-                  src={
-                    team1
-                  }
+                  src={team1}
                   alt="Profile Picture"
                   size="lg"
                   variant="rounded"
                   sx={{
-                    cursor:
-                      "pointer",
+                    cursor: "pointer",
                   }}
                 />
               </Tooltip>
@@ -123,31 +104,18 @@ function VRInfo() {
                 mx={{
                   xs: 2,
                   md: 0,
-                }}>
-                <Tooltip
-                  title="Home"
-                  placement="right">
+                }}
+              >
+                <Tooltip title="Home" placement="right">
                   <SuiButton
                     size="large"
                     iconOnly
-                    sx={({
-                      palette:
-                        {
-                          dark,
-                        },
-                      borders:
-                        {
-                          borderRadius,
-                        },
-                    }) => ({
-                      color:
-                        dark.main,
-                      borderRadius:
-                        borderRadius.lg,
-                    })}>
-                    <Icon>
-                      home
-                    </Icon>
+                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                      color: dark.main,
+                      borderRadius: borderRadius.lg,
+                    })}
+                  >
+                    <Icon>home</Icon>
                   </SuiButton>
                 </Tooltip>
               </SuiBox>
@@ -159,76 +127,36 @@ function VRInfo() {
                 mr={{
                   xs: 2,
                   md: 0,
-                }}>
-                <Tooltip
-                  title="Search"
-                  placement="right">
+                }}
+              >
+                <Tooltip title="Search" placement="right">
                   <SuiButton
                     size="large"
                     iconOnly
-                    sx={({
-                      palette:
-                        {
-                          dark,
-                        },
-                      borders:
-                        {
-                          borderRadius,
-                        },
-                    }) => ({
-                      color:
-                        dark.main,
-                      borderRadius:
-                        borderRadius.lg,
-                    })}>
-                    <Icon>
-                      search
-                    </Icon>
+                    sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                      color: dark.main,
+                      borderRadius: borderRadius.lg,
+                    })}
+                  >
+                    <Icon>search</Icon>
                   </SuiButton>
                 </Tooltip>
               </SuiBox>
-              <Tooltip
-                title="Minimize"
-                placement="right">
+              <Tooltip title="Minimize" placement="right">
                 <SuiButton
                   size="large"
                   iconOnly
-                  sx={({
-                    palette:
-                      {
-                        dark,
-                      },
-                    borders:
-                      {
-                        borderRadius,
-                      },
-                  }) => ({
-                    color:
-                      dark.main,
-                    borderRadius:
-                      borderRadius.lg,
-                  })}>
-                  <Icon>
-                    more_horiz
-                  </Icon>
+                  sx={({ palette: { dark }, borders: { borderRadius } }) => ({
+                    color: dark.main,
+                    borderRadius: borderRadius.lg,
+                  })}
+                >
+                  <Icon>more_horiz</Icon>
                 </SuiButton>
               </Tooltip>
             </SuiBox>
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            md={
-              11
-            }
-            lg={
-              10
-            }
-            xl={
-              9
-            }>
+          <Grid item xs={12} md={11} lg={10} xl={9}>
             <SuiBox
               display="flex"
               justifyContent="space-between"
@@ -240,45 +168,28 @@ function VRInfo() {
                 xs: 1,
                 md: 4,
               }}
-              mt={
-                -1
-              }>
+              mt={-1}
+            >
               <SuiBox>
                 <SuiBox
                   fontSize={{
                     xs: h2.fontSize,
                     lg: d1.fontSize,
                   }}
-                  fontWeight={
-                    fontWeightMedium
-                  }
-                  lineHeight={
-                    1
-                  }>
+                  fontWeight={fontWeightMedium}
+                  lineHeight={1}
+                >
                   28&deg;C
                 </SuiBox>
-                <SuiTypography
-                  variant="h6"
-                  fontWeight="medium"
-                  textTransform="uppercase">
+                <SuiTypography variant="h6" fontWeight="medium" textTransform="uppercase">
                   cloudy
                 </SuiTypography>
               </SuiBox>
-              <SuiBox
-                component="img"
-                src={
-                  sunCloud
-                }
-                width="30%"
-              />
+              <SuiBox component="img" src={sunCloud} width="30%" />
             </SuiBox>
             <SuiBox
-              mt={
-                3
-              }
-              mb={
-                8
-              }
+              mt={3}
+              mb={8}
               ml={{
                 xs: 1,
                 md: 4,
@@ -286,50 +197,20 @@ function VRInfo() {
               mr={{
                 xs: 1,
                 md: 0,
-              }}>
-              <Grid
-                container
-                spacing={
-                  3
-                }>
-                <Grid
-                  item
-                  xs={
-                    12
-                  }
-                  md={
-                    4
-                  }>
+              }}
+            >
+              <Grid container spacing={3}>
+                <Grid item xs={12} md={4}>
                   <TodoList />
                 </Grid>
-                <Grid
-                  item
-                  xs={
-                    12
-                  }
-                  md={
-                    4
-                  }>
-                  <SuiBox
-                    mb={
-                      3
-                    }>
+                <Grid item xs={12} md={4}>
+                  <SuiBox mb={3}>
                     <TodoCard />
                   </SuiBox>
                   <Emails />
                 </Grid>
-                <Grid
-                  item
-                  xs={
-                    12
-                  }
-                  md={
-                    4
-                  }>
-                  <SuiBox
-                    mb={
-                      3
-                    }>
+                <Grid item xs={12} md={4}>
+                  <SuiBox mb={3}>
                     <MediaPlayer />
                   </SuiBox>
                   <Messages />

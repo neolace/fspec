@@ -14,13 +14,13 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
-import boxShadows from 'assets/theme/base/boxShadows';
+import colors from "assets/theme/base/colors";
+import borders from "assets/theme/base/borders";
+import boxShadows from "assets/theme/base/boxShadows";
 
 // Soft UI Dashboard PRO React helper functions
-import linearGradient from 'assets/theme/functions/linearGradient';
-import pxToRem from 'assets/theme/functions/pxToRem';
+import linearGradient from "assets/theme/functions/linearGradient";
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const { light, white, sliderColors, black, gradients } = colors;
 const { borderRadius, borderWidth } = borders;
@@ -29,13 +29,13 @@ const { sliderBoxShadow } = boxShadows;
 const slider = {
   styleOverrides: {
     root: {
-      width: '100%',
+      width: "100%",
 
-      '& .MuiSlider-active, & .Mui-focusVisible': {
-        boxShadow: 'none !important',
+      "& .MuiSlider-active, & .Mui-focusVisible": {
+        boxShadow: "none !important",
       },
 
-      '& .MuiSlider-valueLabel': {
+      "& .MuiSlider-valueLabel": {
         color: black.main,
       },
     },
@@ -47,14 +47,11 @@ const slider = {
     },
 
     track: {
-      backgroundImage: linearGradient(
-        gradients.info.main,
-        gradients.info.state
-      ),
+      backgroundImage: linearGradient(gradients.info.main, gradients.info.state),
       height: pxToRem(6),
-      position: 'relative',
+      position: "relative",
       top: pxToRem(2),
-      border: 'none',
+      border: "none",
       borderRadius: borderRadius.lg,
       zIndex: 1,
     },
@@ -67,8 +64,8 @@ const slider = {
       boxShadow: sliderBoxShadow.thumb,
       border: `${borderWidth[1]} solid ${sliderColors.thumb.borderColor}`,
 
-      '&:hover': {
-        boxShadow: 'none',
+      "&:hover": {
+        boxShadow: "none",
       },
     },
   },

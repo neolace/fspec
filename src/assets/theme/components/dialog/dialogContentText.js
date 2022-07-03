@@ -14,8 +14,8 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import typography from 'assets/theme/base/typography';
-import colors from 'assets/theme/base/colors';
+import typography from "assets/theme/base/typography";
+import colors from "assets/theme/base/colors";
 
 // Soft UI Dashboard PRO React helper functions
 // import pxToRem from "assets/theme/functions/pxToRem";

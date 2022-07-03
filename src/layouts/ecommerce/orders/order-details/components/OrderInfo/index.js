@@ -29,60 +29,19 @@ const orderImage =
 
 function OrderInfo() {
   return (
-    <Grid
-      container
-      spacing={
-        3
-      }
-      alignItems="center">
-      <Grid
-        item
-        xs={
-          12
-        }
-        md={
-          6
-        }>
-        <SuiBox
-          display="flex"
-          alignItems="center">
-          <SuiBox
-            mr={
-              2
-            }>
-            <SuiAvatar
-              variant="rounded"
-              size="xxl"
-              src={
-                orderImage
-              }
-              alt="Gold Glasses"
-            />
+    <Grid container spacing={3} alignItems="center">
+      <Grid item xs={12} md={6}>
+        <SuiBox display="flex" alignItems="center">
+          <SuiBox mr={2}>
+            <SuiAvatar variant="rounded" size="xxl" src={orderImage} alt="Gold Glasses" />
           </SuiBox>
-          <SuiBox
-            lineHeight={
-              1
-            }>
-            <SuiTypography
-              variant="h6"
-              fontWeight="medium">
-              Gold
-              Glasses
+          <SuiBox lineHeight={1}>
+            <SuiTypography variant="h6" fontWeight="medium">
+              Gold Glasses
             </SuiTypography>
-            <SuiBox
-              mb={
-                2
-              }>
-              <SuiTypography
-                variant="button"
-                fontWeight="regular"
-                color="text">
-                Order
-                was
-                delivered
-                2
-                days
-                ago.
+            <SuiBox mb={2}>
+              <SuiTypography variant="button" fontWeight="regular" color="text">
+                Order was delivered 2 days ago.
               </SuiTypography>
             </SuiBox>
             <SuiBadge
@@ -97,47 +56,21 @@ function OrderInfo() {
       </Grid>
       <Grid
         item
-        xs={
-          12
-        }
-        md={
-          6
-        }
+        xs={12}
+        md={6}
         sx={{
-          textAlign:
-            "right",
-        }}>
-        <SuiButton
-          variant="gradient"
-          color="info">
-          contact
-          us
+          textAlign: "right",
+        }}
+      >
+        <SuiButton variant="gradient" color="info">
+          contact us
         </SuiButton>
-        <SuiBox
-          mt={
-            0.5
-          }>
-          <SuiTypography
-            variant="button"
-            fontWeight="regular"
-            color="text">
-            Do
-            you
-            like
-            the
-            product?
-            Leave
-            us
-            a
-            review{" "}
-            <SuiTypography
-              component="a"
-              href="#"
-              variant="button"
-              fontWeight="regular">
+        <SuiBox mt={0.5}>
+          <SuiTypography variant="button" fontWeight="regular" color="text">
+            Do you like the product? Leave us a review{" "}
+            <SuiTypography component="a" href="#" variant="button" fontWeight="regular">
               here
             </SuiTypography>
-
             .
           </SuiTypography>
         </SuiBox>

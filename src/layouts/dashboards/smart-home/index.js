@@ -13,38 +13,38 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
+import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import WeatherCard from 'examples/Cards/WeatherCard';
-import DefaultCounterCard from 'examples/Cards/CounterCards/DefaultCounterCard';
-import ReportsDoughnutChart from 'examples/Charts/DoughnutCharts/ReportsDoughnutChart';
-import ThinBarChart from 'examples/Charts/BarCharts/ThinBarChart';
-import ControllerCard from 'examples/Cards/ControllerCard';
-import PlaceholderCard from 'examples/Cards/PlaceholderCard';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import WeatherCard from "examples/Cards/WeatherCard";
+import DefaultCounterCard from "examples/Cards/CounterCards/DefaultCounterCard";
+import ReportsDoughnutChart from "examples/Charts/DoughnutCharts/ReportsDoughnutChart";
+import ThinBarChart from "examples/Charts/BarCharts/ThinBarChart";
+import ControllerCard from "examples/Cards/ControllerCard";
+import PlaceholderCard from "examples/Cards/PlaceholderCard";
 
 // SmartHome dashboard components
-import Cameras from 'layouts/dashboards/smart-home/components/Cameras';
-import TemperatureSlider from 'layouts/dashboards/smart-home/components/TemperatureSlider';
+import Cameras from "layouts/dashboards/smart-home/components/Cameras";
+import TemperatureSlider from "layouts/dashboards/smart-home/components/TemperatureSlider";
 
 // Data
-import reportsDoughnutChartData from 'layouts/dashboards/smart-home/data/reportsDoughnutChartData';
-import thinBarChartData from 'layouts/dashboards/smart-home/data/thinBarChartData';
-import controllerCardIcons from 'layouts/dashboards/smart-home/data/controllerCardIcons';
+import reportsDoughnutChartData from "layouts/dashboards/smart-home/data/reportsDoughnutChartData";
+import thinBarChartData from "layouts/dashboards/smart-home/data/thinBarChartData";
+import controllerCardIcons from "layouts/dashboards/smart-home/data/controllerCardIcons";
 
 // Images
-import iconSunCloud from 'assets/images/small-logos/icon-sun-cloud.png';
+import iconSunCloud from "assets/images/small-logos/icon-sun-cloud.png";
 
 function SmartHome() {
   const [temperature, setTemperature] = useState(21);
@@ -82,12 +82,12 @@ function SmartHome() {
                   <WeatherCard
                     title="weather today"
                     weather={{
-                      location: 'San Francisco',
+                      location: "San Francisco",
                       degree: 29,
                     }}
                     icon={{
                       component: iconSunCloud,
-                      text: 'cloudy',
+                      text: "cloudy",
                     }}
                   />
                 </Grid>
@@ -134,17 +134,14 @@ function SmartHome() {
                 title="Consumption by room"
                 count={{
                   number: 471.3,
-                  text: 'whatts',
+                  text: "whatts",
                 }}
                 chart={reportsDoughnutChartData}
                 tooltip="See the consumption per room"
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <ThinBarChart
-                title="Consumption per day"
-                chart={thinBarChartData}
-              />
+              <ThinBarChart title="Consumption per day" chart={thinBarChartData} />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <TemperatureSlider
@@ -197,11 +194,7 @@ function SmartHome() {
           <Grid item xs={12} sm={6} lg={2}>
             <ControllerCard
               state={airConditionerState}
-              icon={
-                airConditionerState
-                  ? airConditionerIconLight
-                  : airConditionerIconDark
-              }
+              icon={airConditionerState ? airConditionerIconLight : airConditionerIconDark}
               title="air conditioner"
               description="Inactive since: 1 hour"
               onChange={() => setAirConditionerState(!airConditionerState)}
@@ -228,8 +221,8 @@ function SmartHome() {
           <Grid item xs={12} sm={6} lg={2}>
             <PlaceholderCard
               title={{
-                variant: 'h5',
-                text: 'New device',
+                variant: "h5",
+                text: "New device",
               }}
             />
           </Grid>

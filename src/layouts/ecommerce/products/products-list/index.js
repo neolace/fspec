@@ -14,25 +14,25 @@
  */
 
 // react-router-dom components
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Stack from '@mui/material/Stack';
+import Card from "@mui/material/Card";
+import Stack from "@mui/material/Stack";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import DataTable from 'examples/Tables/DataTable';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import DataTable from "examples/Tables/DataTable";
 
 // Data
-import dataTableData from 'layouts/ecommerce/products/products-list/data/dataTableData';
+import dataTableData from "layouts/ecommerce/products/products-list/data/dataTableData";
 
 function ProductsList() {
   return (
@@ -40,19 +40,13 @@ function ProductsList() {
       <DashboardNavbar />
       <SuiBox my={3}>
         <Card>
-          <SuiBox
-            display="flex"
-            justifyContent="space-between"
-            alignItems="flex-start"
-            p={3}
-          >
+          <SuiBox display="flex" justifyContent="space-between" alignItems="flex-start" p={3}>
             <SuiBox lineHeight={1}>
               <SuiTypography variant="h5" fontWeight="medium">
                 All Products
               </SuiTypography>
               <SuiTypography variant="button" fontWeight="regular" color="text">
-                A lightweight, extendable, dependency-free javascript HTML table
-                plugin.
+                A lightweight, extendable, dependency-free javascript HTML table plugin.
               </SuiTypography>
             </SuiBox>
             <Stack spacing={1} direction="row">

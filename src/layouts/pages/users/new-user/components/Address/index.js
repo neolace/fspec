@@ -13,34 +13,29 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // prop-type is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
+import Grid from "@mui/material/Grid";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiInput from 'components/SuiInput';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiInput from "components/SuiInput";
 
 // NewUser page components
-import FormField from 'layouts/pages/users/new-user/components/FormField';
+import FormField from "layouts/pages/users/new-user/components/FormField";
 
 function Address({ formData }) {
-  const [state, setState] = useState('...');
+  const [state, setState] = useState("...");
   const { formField, values, errors, touched } = formData;
   const { address1, address2, city, zip } = formField;
-  const {
-    address1: address1V,
-    address2: address2V,
-    city: cityV,
-    zip: zipV,
-  } = values;
+  const { address1: address1V, address2: address2V, city: cityV, zip: zipV } = values;
 
   const handleSetState = (event) => setState(event.target.value);
 
@@ -97,11 +92,7 @@ function Address({ formData }) {
                 State
               </SuiTypography>
             </SuiBox>
-            <Select
-              input={<SuiInput />}
-              value={state}
-              onChange={handleSetState}
-            >
+            <Select input={<SuiInput />} value={state} onChange={handleSetState}>
               <MenuItem value="...">...</MenuItem>
               <MenuItem value="10">Hello 10</MenuItem>
               <MenuItem value="11">Hello 11</MenuItem>

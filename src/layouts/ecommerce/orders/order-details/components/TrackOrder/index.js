@@ -14,11 +14,11 @@
  */
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import TimelineItem from 'examples/Timeline/TimelineItem';
+import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
   return (

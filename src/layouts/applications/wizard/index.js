@@ -13,32 +13,32 @@
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
 
-import { useState } from 'react';
+import { useState } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import Stepper from '@mui/material/Stepper';
-import Step from '@mui/material/Step';
-import StepLabel from '@mui/material/StepLabel';
+import Grid from "@mui/material/Grid";
+import Card from "@mui/material/Card";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
 
 // Wizard page components
-import About from 'layouts/applications/wizard/components/About';
-import Account from 'layouts/applications/wizard/components/Account';
-import Address from 'layouts/applications/wizard/components/Address';
+import About from "layouts/applications/wizard/components/About";
+import Account from "layouts/applications/wizard/components/Account";
+import Address from "layouts/applications/wizard/components/Address";
 
 function getSteps() {
-  return ['About', 'Account', 'Address'];
+  return ["About", "Account", "Address"];
 }
 
 function getStepContent(stepIndex) {
@@ -74,11 +74,7 @@ function Wizard() {
                   Build Your Profile
                 </SuiTypography>
               </SuiBox>
-              <SuiTypography
-                variant="h5"
-                fontWeight="regular"
-                color="secondary"
-              >
+              <SuiTypography variant="h5" fontWeight="regular" color="secondary">
                 This information will let us know more about you.
               </SuiTypography>
             </SuiBox>
@@ -94,20 +90,11 @@ function Wizard() {
               <SuiBox p={2}>
                 <SuiBox>
                   {getStepContent(activeStep)}
-                  <SuiBox
-                    mt={3}
-                    width="100%"
-                    display="flex"
-                    justifyContent="space-between"
-                  >
+                  <SuiBox mt={3} width="100%" display="flex" justifyContent="space-between">
                     {activeStep === 0 ? (
                       <SuiBox />
                     ) : (
-                      <SuiButton
-                        variant="gradient"
-                        color="light"
-                        onClick={handleBack}
-                      >
+                      <SuiButton variant="gradient" color="light" onClick={handleBack}>
                         back
                       </SuiButton>
                     )}
@@ -116,7 +103,7 @@ function Wizard() {
                       color="dark"
                       onClick={!isLastStep ? handleNext : undefined}
                     >
-                      {isLastStep ? 'send' : 'next'}
+                      {isLastStep ? "send" : "next"}
                     </SuiButton>
                   </SuiBox>
                 </SuiBox>

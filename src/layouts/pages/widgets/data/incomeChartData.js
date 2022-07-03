@@ -14,11 +14,11 @@
  */
 
 const incomeChartData = {
-  labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   datasets: [
     {
-      label: 'Income',
-      color: 'dark',
+      label: "Income",
+      color: "dark",
       data: [50, 45, 60, 60, 80, 65, 90, 80, 100],
     },
   ],

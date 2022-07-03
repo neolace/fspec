@@ -14,37 +14,37 @@
  */
 
 // Overview page components
-import ProductCell from 'layouts/ecommerce/overview/components/ProductCell';
-import RefundsCell from 'layouts/ecommerce/overview/components/RefundsCell';
-import DefaultCell from 'layouts/ecommerce/overview/components/DefaultCell';
+import ProductCell from "layouts/ecommerce/overview/components/ProductCell";
+import RefundsCell from "layouts/ecommerce/overview/components/RefundsCell";
+import DefaultCell from "layouts/ecommerce/overview/components/DefaultCell";
 
 // Images
-import team1 from 'assets/images/team-1.jpg';
-import team2 from 'assets/images/team-2.jpg';
-import team3 from 'assets/images/team-3.jpg';
-import team4 from 'assets/images/team-4.jpg';
-import team5 from 'assets/images/team-5.jpg';
+import team1 from "assets/images/team-1.jpg";
+import team2 from "assets/images/team-2.jpg";
+import team3 from "assets/images/team-3.jpg";
+import team4 from "assets/images/team-4.jpg";
+import team5 from "assets/images/team-5.jpg";
 
 const dataTableData = {
   columns: [
     {
-      Header: 'user',
-      accessor: 'user',
-      width: '40%',
+      Header: "user",
+      accessor: "user",
+      width: "40%",
     },
     {
-      Header: 'value',
-      accessor: 'value',
+      Header: "value",
+      accessor: "value",
     },
     {
-      Header: 'profit',
-      accessor: 'profit',
-      align: 'center',
+      Header: "profit",
+      accessor: "profit",
+      align: "center",
     },
     {
-      Header: 'refunds',
-      accessor: 'refunds',
-      align: 'center',
+      Header: "refunds",
+      accessor: "refunds",
+      align: "center",
     },
   ],
 
@@ -57,8 +57,8 @@ const dataTableData = {
         <RefundsCell
           value={13}
           icon={{
-            color: 'success',
-            name: 'keyboard_arrow_up',
+            color: "success",
+            name: "keyboard_arrow_up",
           }}
           tooltip="Refund rate is lower with 97% than other products"
         />
@@ -72,8 +72,8 @@ const dataTableData = {
         <RefundsCell
           value={40}
           icon={{
-            color: 'error',
-            name: 'keyboard_arrow_down',
+            color: "error",
+            name: "keyboard_arrow_down",
           }}
         />
       ),
@@ -86,8 +86,8 @@ const dataTableData = {
         <RefundsCell
           value={54}
           icon={{
-            color: 'success',
-            name: 'keyboard_arrow_up',
+            color: "success",
+            name: "keyboard_arrow_up",
           }}
         />
       ),
@@ -100,8 +100,8 @@ const dataTableData = {
         <RefundsCell
           value={5}
           icon={{
-            color: 'error',
-            name: 'keyboard_arrow_down',
+            color: "error",
+            name: "keyboard_arrow_down",
           }}
         />
       ),
@@ -114,8 +114,8 @@ const dataTableData = {
         <RefundsCell
           value={121}
           icon={{
-            color: 'success',
-            name: 'keyboard_arrow_up',
+            color: "success",
+            name: "keyboard_arrow_up",
           }}
           tooltip="Refund rate is higher with 70% than other products"
         />

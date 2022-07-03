@@ -14,20 +14,20 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
-import Icon from '@mui/material/Icon';
-import Tooltip from '@mui/material/Tooltip';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function TodoList() {
   return (
     <Card
       sx={{
-        height: '100%',
+        height: "100%",
       }}
     >
       <SuiBox p={3}>
@@ -41,11 +41,7 @@ function TodoList() {
             <SuiTypography variant="h6" fontWeight="medium">
               Synk up with Mark
             </SuiTypography>
-            <SuiTypography
-              variant="button"
-              fontWeight="regular"
-              color="secondary"
-            >
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               Hangouts
             </SuiTypography>
           </SuiBox>
@@ -61,11 +57,7 @@ function TodoList() {
             <SuiTypography variant="h6" fontWeight="medium">
               Gym
             </SuiTypography>
-            <SuiTypography
-              variant="button"
-              fontWeight="regular"
-              color="secondary"
-            >
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               World Class
             </SuiTypography>
           </SuiBox>
@@ -81,11 +73,7 @@ function TodoList() {
             <SuiTypography variant="h6" fontWeight="medium">
               Design Review
             </SuiTypography>
-            <SuiTypography
-              variant="button"
-              fontWeight="regular"
-              color="secondary"
-            >
+            <SuiTypography variant="button" fontWeight="regular" color="secondary">
               Zoom
             </SuiTypography>
           </SuiBox>
@@ -96,13 +84,13 @@ function TodoList() {
           title="Show More"
           placement="top"
           sx={{
-            cursor: 'pointer',
+            cursor: "pointer",
           }}
         >
           <SuiBox textAlign="center" py={0.5} color="info" lineHeight={0}>
             <Icon
               sx={{
-                fontWeight: 'bold',
+                fontWeight: "bold",
               }}
               color="inherit"
               fontSize="default"

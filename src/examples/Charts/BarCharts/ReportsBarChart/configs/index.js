@@ -24,7 +24,7 @@ function configs(labels, datasets) {
           borderWidth: 0,
           borderRadius: 4,
           borderSkipped: false,
-          backgroundColor: '#fff',
+          backgroundColor: "#fff",
           data: datasets.data,
           maxBarThickness: 6,
         },
@@ -41,7 +41,7 @@ function configs(labels, datasets) {
       },
       interaction: {
         intersect: false,
-        mode: 'index',
+        mode: "index",
       },
       scales: {
         y: {
@@ -58,11 +58,11 @@ function configs(labels, datasets) {
             padding: 15,
             font: {
               size: 14,
-              family: 'Roboto',
-              style: 'normal',
+              family: "Roboto",
+              style: "normal",
               lineHeight: 2,
             },
-            color: '#fff',
+            color: "#fff",
           },
         },
         x: {

@@ -14,26 +14,26 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
-import Icon from '@mui/material/Icon';
+import Grid from "@mui/material/Grid";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React example components
-import MiniStatisticsCard from 'examples/Cards/StatisticsCards/MiniStatisticsCard';
-import SalesTable from 'examples/Tables/SalesTable';
-import Globe from 'examples/Globe';
+import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
+import SalesTable from "examples/Tables/SalesTable";
+import Globe from "examples/Globe";
 
 // Soft UI Dashboard PRO React base styles
-import breakpoints from 'assets/theme/base/breakpoints';
+import breakpoints from "assets/theme/base/breakpoints";
 
 // VR dashboards components
-import BaseLayout from 'layouts/dashboards/virtual-reality/components/BaseLayout';
+import BaseLayout from "layouts/dashboards/virtual-reality/components/BaseLayout";
 
 // Data
-import salesTableData from 'layouts/dashboards/default/data/salesTableData';
+import salesTableData from "layouts/dashboards/default/data/salesTableData";
 
 function VRDefault() {
   const { values } = breakpoints;
@@ -58,7 +58,7 @@ function VRDefault() {
           <Grid item xs={12} lg={7}>
             <SuiBox mb={3} p={1}>
               <SuiTypography
-                variant={window.innerWidth < values.sm ? 'h3' : 'h2'}
+                variant={window.innerWidth < values.sm ? "h3" : "h2"}
                 textTransform="capitalize"
                 fontWeight="bold"
                 gutterBottom
@@ -75,25 +75,24 @@ function VRDefault() {
                   variant="button"
                   color="info"
                   sx={({ typography: { size }, functions: { pxToRem } }) => ({
-                    display: 'flex',
-                    alignItems: 'center',
+                    display: "flex",
+                    alignItems: "center",
 
-                    '& .material-icons-round': {
+                    "& .material-icons-round": {
                       fontSize: size.md,
                       transform: `translate(0, ${pxToRem(-1)})`,
-                      transition: 'all 0.2s cubic-bezier(0.34,1.61,0.7,1.3)',
+                      transition: "all 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
                     },
 
-                    '&:hover .material-icons-round, &:focus .material-icons-round':
-                      {
-                        transform: `translate(${pxToRem(5)}, ${pxToRem(-1)})`,
-                      },
+                    "&:hover .material-icons-round, &:focus .material-icons-round": {
+                      transform: `translate(${pxToRem(5)}, ${pxToRem(-1)})`,
+                    },
                   })}
                 >
                   Read More&nbsp;
                   <Icon
                     sx={{
-                      fontWeight: 'bold',
+                      fontWeight: "bold",
                     }}
                   >
                     arrow_forward
@@ -101,7 +100,7 @@ function VRDefault() {
                 </SuiTypography>
               </SuiBox>
               <SuiTypography
-                variant={window.innerWidth < values.sm ? 'h2' : 'h1'}
+                variant={window.innerWidth < values.sm ? "h2" : "h1"}
                 textTransform="capitalize"
                 fontWeight="bold"
                 gutterBottom
@@ -114,8 +113,8 @@ function VRDefault() {
               <Grid item xs={12}>
                 <Globe
                   display={{
-                    xs: 'none',
-                    md: 'block',
+                    xs: "none",
+                    md: "block",
                   }}
                   position="absolute"
                   top="25%"
@@ -129,9 +128,9 @@ function VRDefault() {
                     lg: 24,
                   }}
                   canvassx={{
-                    marginTop: '3rem',
-                    outline: 'none',
-                    transform: 'scale(1.6)',
+                    marginTop: "3rem",
+                    outline: "none",
+                    transform: "scale(1.6)",
                   }}
                 />
               </Grid>
@@ -146,12 +145,12 @@ function VRDefault() {
                     }}
                     count="$53,000"
                     percentage={{
-                      color: 'success',
-                      text: '+55%',
+                      color: "success",
+                      text: "+55%",
                     }}
                     icon={{
-                      color: 'info',
-                      component: 'paid',
+                      color: "info",
+                      component: "paid",
                     }}
                   />
                 </SuiBox>
@@ -161,12 +160,12 @@ function VRDefault() {
                   }}
                   count="2,300"
                   percentage={{
-                    color: 'success',
-                    text: '+3%',
+                    color: "success",
+                    text: "+3%",
                   }}
                   icon={{
-                    color: 'info',
-                    component: 'public',
+                    color: "info",
+                    component: "public",
                   }}
                 />
               </Grid>
@@ -174,32 +173,32 @@ function VRDefault() {
                 <SuiBox mb={3}>
                   <MiniStatisticsCard
                     title={{
-                      text: 'new clients',
+                      text: "new clients",
                     }}
                     count="+3,462"
                     percentage={{
-                      color: 'error',
-                      text: '-2%',
+                      color: "error",
+                      text: "-2%",
                     }}
                     icon={{
-                      color: 'info',
-                      component: 'emoji_events',
+                      color: "info",
+                      component: "emoji_events",
                     }}
                   />
                 </SuiBox>
                 <SuiBox mb={3}>
                   <MiniStatisticsCard
                     title={{
-                      text: 'sales',
+                      text: "sales",
                     }}
                     count="$103,430"
                     percentage={{
-                      color: 'success',
-                      text: '+5%',
+                      color: "success",
+                      text: "+5%",
                     }}
                     icon={{
-                      color: 'info',
-                      component: 'shopping_cart',
+                      color: "info",
+                      component: "shopping_cart",
                     }}
                   />
                 </SuiBox>

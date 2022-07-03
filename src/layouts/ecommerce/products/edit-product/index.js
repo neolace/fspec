@@ -14,23 +14,23 @@
  */
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
 
 // EditProduct page components
-import ProductImage from 'layouts/ecommerce/products/edit-product/components/ProductImage';
-import ProductInfo from 'layouts/ecommerce/products/edit-product/components/ProductInfo';
-import Socials from 'layouts/ecommerce/products/edit-product/components/Socials';
-import Pricing from 'layouts/ecommerce/products/edit-product/components/Pricing';
+import ProductImage from "layouts/ecommerce/products/edit-product/components/ProductImage";
+import ProductInfo from "layouts/ecommerce/products/edit-product/components/ProductInfo";
+import Socials from "layouts/ecommerce/products/edit-product/components/Socials";
+import Pricing from "layouts/ecommerce/products/edit-product/components/Pricing";
 
 function EditProduct() {
   return (
@@ -45,8 +45,8 @@ function EditProduct() {
               </SuiTypography>
               <SuiBox mt={1} mb={2}>
                 <SuiTypography variant="body2" color="text">
-                  We’re constantly trying to express ourselves and actualize our
-                  dreams. If you have the opportunity to play.
+                  We’re constantly trying to express ourselves and actualize our dreams. If you have
+                  the opportunity to play.
                 </SuiTypography>
               </SuiBox>
             </Grid>

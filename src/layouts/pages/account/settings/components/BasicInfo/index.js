@@ -32,234 +32,95 @@ import FormField from "layouts/pages/account/components/FormField";
 import selectData from "layouts/pages/account/settings/components/BasicInfo/data/selectData";
 
 function BasicInfo() {
-  const [
-    skills,
-    setSkills,
-  ] =
-    useState(
-      [
-        "react",
-        "angular",
-      ]
-    );
+  const [skills, setSkills] = useState(["react", "angular"]);
 
   return (
     <Card
       id="basic-info"
       sx={{
-        overflow:
-          "visible",
-      }}>
-      <SuiBox
-        p={
-          3
-        }>
-        <SuiTypography variant="h5">
-          Basic
-          Info
-        </SuiTypography>
+        overflow: "visible",
+      }}
+    >
+      <SuiBox p={3}>
+        <SuiTypography variant="h5">Basic Info</SuiTypography>
       </SuiBox>
-      <SuiBox
-        component="form"
-        pb={
-          3
-        }
-        px={
-          3
-        }>
-        <Grid
-          container
-          spacing={
-            3
-          }>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
-            <FormField
-              label="first name"
-              placeholder="Alec"
-            />
+      <SuiBox component="form" pb={3} px={3}>
+        <Grid container spacing={3}>
+          <Grid item xs={12} sm={6}>
+            <FormField label="first name" placeholder="Alec" />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
-            <FormField
-              label="last name"
-              placeholder="Thompson"
-            />
+          <Grid item xs={12} sm={6}>
+            <FormField label="last name" placeholder="Thompson" />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }>
-            <Grid
-              container
-              spacing={
-                3
-              }>
-              <Grid
-                item
-                xs={
-                  12
-                }
-                sm={
-                  4
-                }>
+          <Grid item xs={12}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={4}>
                 <SuiBox
                   display="flex"
                   flexDirection="column"
                   justifyContent="flex-end"
-                  height="100%">
-                  <SuiBox
-                    mb={
-                      1
-                    }
-                    ml={
-                      0.5
-                    }
-                    lineHeight={
-                      0
-                    }
-                    display="inline-block">
+                  height="100%"
+                >
+                  <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
                     <SuiTypography
                       component="label"
                       variant="caption"
                       fontWeight="bold"
-                      textTransform="capitalize">
+                      textTransform="capitalize"
+                    >
                       I&apos;m
                     </SuiTypography>
                   </SuiBox>
-                  <SuiSelect
-                    placeholder="Male"
-                    options={
-                      selectData.gender
-                    }
-                  />
+                  <SuiSelect placeholder="Male" options={selectData.gender} />
                 </SuiBox>
               </Grid>
-              <Grid
-                item
-                xs={
-                  12
-                }
-                sm={
-                  8
-                }>
-                <Grid
-                  container
-                  spacing={
-                    3
-                  }>
-                  <Grid
-                    item
-                    xs={
-                      12
-                    }
-                    sm={
-                      5
-                    }>
+              <Grid item xs={12} sm={8}>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={5}>
                     <SuiBox
                       display="flex"
                       flexDirection="column"
                       justifyContent="flex-end"
-                      height="100%">
-                      <SuiBox
-                        mb={
-                          1
-                        }
-                        ml={
-                          0.5
-                        }
-                        lineHeight={
-                          0
-                        }
-                        display="inline-block">
+                      height="100%"
+                    >
+                      <SuiBox mb={1} ml={0.5} lineHeight={0} display="inline-block">
                         <SuiTypography
                           component="label"
                           variant="caption"
                           fontWeight="bold"
-                          textTransform="capitalize">
-                          birth
-                          date
+                          textTransform="capitalize"
+                        >
+                          birth date
                         </SuiTypography>
                       </SuiBox>
-                      <SuiSelect
-                        placeholder="February"
-                        options={
-                          selectData.birthDate
-                        }
-                      />
+                      <SuiSelect placeholder="February" options={selectData.birthDate} />
                     </SuiBox>
                   </Grid>
-                  <Grid
-                    item
-                    xs={
-                      12
-                    }
-                    sm={
-                      4
-                    }>
+                  <Grid item xs={12} sm={4}>
                     <SuiBox
                       display="flex"
                       flexDirection="column"
                       justifyContent="flex-end"
-                      height="100%">
-                      <SuiSelect
-                        placeholder={
-                          1
-                        }
-                        options={
-                          selectData.days
-                        }
-                      />
+                      height="100%"
+                    >
+                      <SuiSelect placeholder={1} options={selectData.days} />
                     </SuiBox>
                   </Grid>
-                  <Grid
-                    item
-                    xs={
-                      12
-                    }
-                    sm={
-                      3
-                    }>
+                  <Grid item xs={12} sm={3}>
                     <SuiBox
                       display="flex"
                       flexDirection="column"
                       justifyContent="flex-end"
-                      height="100%">
-                      <SuiSelect
-                        placeholder={
-                          2021
-                        }
-                        options={
-                          selectData.years
-                        }
-                      />
+                      height="100%"
+                    >
+                      <SuiSelect placeholder={2021} options={selectData.years} />
                     </SuiBox>
                   </Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
+          <Grid item xs={12} sm={6}>
             <FormField
               label="email"
               placeholder="example@email.com"
@@ -268,14 +129,7 @@ function BasicInfo() {
               }}
             />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
+          <Grid item xs={12} sm={6}>
             <FormField
               label="confirmation email"
               placeholder="example@email.com"
@@ -284,27 +138,10 @@ function BasicInfo() {
               }}
             />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
-            <FormField
-              label="your location"
-              placeholder="Sydney, A"
-            />
+          <Grid item xs={12} sm={6}>
+            <FormField label="your location" placeholder="Sydney, A" />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            sm={
-              6
-            }>
+          <Grid item xs={12} sm={6}>
             <FormField
               label="phone number"
               placeholder="+40 735 631 620"
@@ -313,44 +150,15 @@ function BasicInfo() {
               }}
             />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            md={
-              6
-            }>
-            <FormField
-              label="language"
-              placeholder="English"
-            />
+          <Grid item xs={12} md={6}>
+            <FormField label="language" placeholder="English" />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }
-            md={
-              6
-            }>
-            <SuiBox
-              display="flex"
-              flexDirection="column"
-              justifyContent="flex-end"
-              height="100%">
+          <Grid item xs={12} md={6}>
+            <SuiBox display="flex" flexDirection="column" justifyContent="flex-end" height="100%">
               <SuiTagInput
-                tags={
-                  skills
-                }
+                tags={skills}
                 placeholder=" "
-                onChange={(
-                  newSkill
-                ) =>
-                  setSkills(
-                    newSkill
-                  )
-                }
+                onChange={(newSkill) => setSkills(newSkill)}
                 removeOnBackspace
               />
             </SuiBox>

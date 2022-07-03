@@ -14,39 +14,31 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // react-circular-slider-svg components
-import CircularSlider from 'react-circular-slider-svg';
+import CircularSlider from "react-circular-slider-svg";
 
 // @mui material components
-import Card from '@mui/material/Card';
+import Card from "@mui/material/Card";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
+import colors from "assets/theme/base/colors";
 
 // Custom styles for TemperatureSlider
-import circularSlider from 'layouts/dashboards/smart-home/components/TemperatureSlider/styles';
+import circularSlider from "layouts/dashboards/smart-home/components/TemperatureSlider/styles";
 
-function TemperatureSlider({
-  title,
-  color,
-  current,
-  label,
-  start,
-  end,
-  ...sliderProps
-}) {
+function TemperatureSlider({ title, color, current, label, start, end, ...sliderProps }) {
   const { circleSliderColors } = colors;
 
   return (
     <Card
       sx={{
-        height: '99.5%',
+        height: "99.5%",
       }}
     >
       <SuiBox p={2} position="relative" height="100%">
@@ -89,11 +81,7 @@ function TemperatureSlider({
             <SuiTypography variant="caption" color="text">
               {start}
             </SuiTypography>
-            <SuiTypography
-              variant="body2"
-              color="text"
-              textTransform="capitalize"
-            >
+            <SuiTypography variant="body2" color="text" textTransform="capitalize">
               {label}
             </SuiTypography>
             <SuiTypography variant="caption" color="text">
@@ -108,20 +96,12 @@ function TemperatureSlider({
 
 // Setting default values for the props of TemperatureSlider
 TemperatureSlider.defaultProps = {
-  color: 'info',
+  color: "info",
 };
 
 // Typechecking props for the TemperatureSlider
 TemperatureSlider.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   title: PropTypes.string.isRequired,
   current: PropTypes.node.isRequired,
   label: PropTypes.string.isRequired,

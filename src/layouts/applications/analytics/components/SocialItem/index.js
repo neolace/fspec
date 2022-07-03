@@ -14,16 +14,16 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiProgress from 'components/SuiProgress';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiProgress from "components/SuiProgress";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import typography from 'assets/theme/base/typography';
+import colors from "assets/theme/base/colors";
+import typography from "assets/theme/base/typography";
 
 function SocialItem({ icon, title, percentage }) {
   const { socialMediaColors } = colors;
@@ -33,11 +33,7 @@ function SocialItem({ icon, title, percentage }) {
     <SuiBox width="100%" py={1} mb={1}>
       <SuiBox display="flex" justifyContent="space-between" mb={1}>
         <SuiBox display="flex" alignItems="center" lineHeight={0}>
-          <SuiBox
-            mr={1}
-            color={socialMediaColors[icon.color].main}
-            fontSize={size.lg}
-          >
+          <SuiBox mr={1} color={socialMediaColors[icon.color].main} fontSize={size.lg}>
             {icon.component}
           </SuiBox>
           <SuiTypography variant="button" fontWeight="medium" color="text">
@@ -57,18 +53,18 @@ function SocialItem({ icon, title, percentage }) {
 SocialItem.propTypes = {
   icon: PropTypes.shape({
     color: PropTypes.oneOf([
-      'facebook',
-      'twitter',
-      'instagram',
-      'linkedin',
-      'pinterest',
-      'youtube',
-      'vimeo',
-      'slack',
-      'dribbble',
-      'github',
-      'reddit',
-      'tumblr',
+      "facebook",
+      "twitter",
+      "instagram",
+      "linkedin",
+      "pinterest",
+      "youtube",
+      "vimeo",
+      "slack",
+      "dribbble",
+      "github",
+      "reddit",
+      "tumblr",
     ]).isRequired,
     component: PropTypes.node.isRequired,
   }).isRequired,

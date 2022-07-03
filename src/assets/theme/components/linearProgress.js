@@ -14,11 +14,11 @@
  */
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
-import colors from 'assets/theme/base/colors';
+import borders from "assets/theme/base/borders";
+import colors from "assets/theme/base/colors";
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const { borderRadius } = borders;
 const { light } = colors;
@@ -28,8 +28,8 @@ const linearProgress = {
     root: {
       height: pxToRem(3),
       borderRadius: borderRadius.md,
-      overflow: 'visible',
-      position: 'relative',
+      overflow: "visible",
+      position: "relative",
     },
 
     colorPrimary: {
@@ -43,9 +43,9 @@ const linearProgress = {
     bar: {
       height: pxToRem(6),
       borderRadius: borderRadius.sm,
-      position: 'absolute',
+      position: "absolute",
       transform: `translate(0, ${pxToRem(-1.5)}) !important`,
-      transition: 'width 0.6s ease !important',
+      transition: "width 0.6s ease !important",
     },
   },
 };

@@ -12,27 +12,27 @@
 
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  */
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
+import SuiBox from "components/SuiBox";
 
 // Soft UI Dashboard PRO React example components
-import DashboardLayout from 'examples/LayoutContainers/DashboardLayout';
-import DashboardNavbar from 'examples/Navbars/DashboardNavbar';
-import Footer from 'examples/Footer';
-import EventCalendar from 'examples/Calendar';
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
+import EventCalendar from "examples/Calendar";
 
 // Calendar application components
-import Header from 'layouts/applications/calendar/components/Header';
-import NextEvents from 'layouts/applications/calendar/components/NextEvents';
-import ProductivityChart from 'layouts/applications/calendar/components/ProductivityChart';
+import Header from "layouts/applications/calendar/components/Header";
+import NextEvents from "layouts/applications/calendar/components/NextEvents";
+import ProductivityChart from "layouts/applications/calendar/components/ProductivityChart";
 
 // Data
-import calendarEventsData from 'layouts/applications/calendar/data/calendarEventsData';
+import calendarEventsData from "layouts/applications/calendar/data/calendarEventsData";
 
 function Calendar() {
   return (
@@ -48,7 +48,7 @@ function Calendar() {
             xs={12}
             xl={9}
             sx={{
-              height: 'max-content',
+              height: "max-content",
             }}
           >
             {useMemo(

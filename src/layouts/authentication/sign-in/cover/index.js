@@ -34,148 +34,64 @@ import CoverLayout from "layouts/authentication/components/CoverLayout";
 import curved9 from "assets/images/curved-images/curved9.jpg";
 
 function Cover() {
-  const [
-    rememberMe,
-    setRememberMe,
-  ] =
-    useState(
-      true
-    );
+  const [rememberMe, setRememberMe] = useState(true);
 
-  const handleSetRememberMe =
-    () =>
-      setRememberMe(
-        !rememberMe
-      );
+  const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
     <CoverLayout
       title="Welcome back"
       description="Enter your email and password to sign in"
-      image={
-        curved9
-      }>
-      <SuiBox
-        component="form"
-        role="form">
-        <SuiBox
-          mb={
-            2
-          }
-          lineHeight={
-            1.25
-          }>
-          <SuiBox
-            mb={
-              1
-            }
-            ml={
-              0.5
-            }>
-            <SuiTypography
-              component="label"
-              variant="caption"
-              fontWeight="bold">
+      image={curved9}
+    >
+      <SuiBox component="form" role="form">
+        <SuiBox mb={2} lineHeight={1.25}>
+          <SuiBox mb={1} ml={0.5}>
+            <SuiTypography component="label" variant="caption" fontWeight="bold">
               Email
             </SuiTypography>
           </SuiBox>
-          <SuiInput
-            type="email"
-            placeholder="Email"
-          />
+          <SuiInput type="email" placeholder="Email" />
         </SuiBox>
-        <SuiBox
-          mb={
-            2
-          }
-          lineHeight={
-            1.25
-          }>
-          <SuiBox
-            mb={
-              1
-            }
-            ml={
-              0.5
-            }>
-            <SuiTypography
-              component="label"
-              variant="caption"
-              fontWeight="bold">
+        <SuiBox mb={2} lineHeight={1.25}>
+          <SuiBox mb={1} ml={0.5}>
+            <SuiTypography component="label" variant="caption" fontWeight="bold">
               Password
             </SuiTypography>
           </SuiBox>
-          <SuiInput
-            type="password"
-            placeholder="Password"
-          />
+          <SuiInput type="password" placeholder="Password" />
         </SuiBox>
-        <SuiBox
-          display="flex"
-          alignItems="center">
-          <Switch
-            checked={
-              rememberMe
-            }
-            onChange={
-              handleSetRememberMe
-            }
-          />
+        <SuiBox display="flex" alignItems="center">
+          <Switch checked={rememberMe} onChange={handleSetRememberMe} />
           <SuiTypography
             variant="button"
             fontWeight="regular"
-            onClick={
-              handleSetRememberMe
-            }
+            onClick={handleSetRememberMe}
             sx={{
-              cursor:
-                "pointer",
-              userSelect:
-                "none",
-            }}>
-            &nbsp;&nbsp;Remember
-            me
+              cursor: "pointer",
+              userSelect: "none",
+            }}
+          >
+            &nbsp;&nbsp;Remember me
           </SuiTypography>
         </SuiBox>
-        <SuiBox
-          mt={
-            4
-          }
-          mb={
-            1
-          }>
-          <SuiButton
-            variant="gradient"
-            color="info"
-            fullWidth>
-            sign
-            in
+        <SuiBox mt={4} mb={1}>
+          <SuiButton variant="gradient" color="info" fullWidth>
+            sign in
           </SuiButton>
         </SuiBox>
-        <SuiBox
-          mt={
-            3
-          }
-          textAlign="center">
-          <SuiTypography
-            variant="button"
-            color="text"
-            fontWeight="regular">
-            Don&apos;t
-            have
-            an
-            account?{" "}
+        <SuiBox mt={3} textAlign="center">
+          <SuiTypography variant="button" color="text" fontWeight="regular">
+            Don&apos;t have an account?{" "}
             <SuiTypography
-              component={
-                Link
-              }
+              component={Link}
               to="/authentication/sign-up/cover"
               variant="button"
               color="info"
               fontWeight="medium"
-              textGradient>
-              Sign
-              up
+              textGradient
+            >
+              Sign up
             </SuiTypography>
           </SuiTypography>
         </SuiBox>

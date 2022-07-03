@@ -27,157 +27,62 @@ import SuiAvatar from "components/SuiAvatar";
 // Soft UI Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-function DefaultProfileCard({
-  image,
-  name,
-  position,
-  description,
-  social,
-}) {
-  const {
-    socialMediaColors,
-  } =
-    colors;
+function DefaultProfileCard({ image, name, position, description, social }) {
+  const { socialMediaColors } = colors;
 
   // Render the social media icons
-  const renderSocial =
-    social.map(
-      (
-        {
-          link,
-          icon,
-          color,
-        },
-        key
-      ) => (
-        <SuiBox
-          key={
-            color
-          }
-          component={
-            Link
-          }
-          href={
-            link
-          }
-          target="_blank"
-          rel="noreferrer"
-          fontSize="1.375rem"
-          color={
-            socialMediaColors[
-              color
-            ]
-              .main
-          }
-          py={
-            2
-          }
-          pr={
-            2
-          }
-          pl={
-            key ===
-            0
-              ? 0
-              : 2
-          }
-          lineHeight={
-            1
-          }>
-          {
-            icon
-          }
-        </SuiBox>
-      )
-    );
+  const renderSocial = social.map(({ link, icon, color }, key) => (
+    <SuiBox
+      key={color}
+      component={Link}
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      fontSize="1.375rem"
+      color={socialMediaColors[color].main}
+      py={2}
+      pr={2}
+      pl={key === 0 ? 0 : 2}
+      lineHeight={1}
+    >
+      {icon}
+    </SuiBox>
+  ));
 
   return (
     <SuiBox>
-      <SuiAvatar
-        src={
-          image
-        }
-        alt={
-          name
-        }
-        size="xxl"
-        shadow="xl"
-        variant="rounded"
-      />
-      <SuiBox
-        py={
-          2.5
-        }
-        pr={
-          4
-        }>
-        <SuiTypography variant="h5">
-          {
-            name
-          }
-        </SuiTypography>
-        <SuiTypography
-          variant="body2"
-          color="text">
-          {
-            position
-          }
+      <SuiAvatar src={image} alt={name} size="xxl" shadow="xl" variant="rounded" />
+      <SuiBox py={2.5} pr={4}>
+        <SuiTypography variant="h5">{name}</SuiTypography>
+        <SuiTypography variant="body2" color="text">
+          {position}
         </SuiTypography>
         {description && (
-          <SuiBox
-            my={
-              2
-            }>
-            <SuiTypography
-              variant="body2"
-              color="text">
-              {
-                description
-              }
+          <SuiBox my={2}>
+            <SuiTypography variant="body2" color="text">
+              {description}
             </SuiTypography>
           </SuiBox>
         )}
-        <SuiBox display="flex">
-          {
-            renderSocial
-          }
-        </SuiBox>
+        <SuiBox display="flex">{renderSocial}</SuiBox>
       </SuiBox>
     </SuiBox>
   );
 }
 
 // Setting default props for the DefaultProfileCard
-DefaultProfileCard.defaultProps =
-  {
-    description:
-      "",
-    social:
-      [
-        {},
-      ],
-  };
+DefaultProfileCard.defaultProps = {
+  description: "",
+  social: [{}],
+};
 
 // Typechecking props for the DefaultProfileCard
-DefaultProfileCard.propTypes =
-  {
-    image:
-      PropTypes
-        .string
-        .isRequired,
-    name: PropTypes
-      .string
-      .isRequired,
-    position:
-      PropTypes
-        .string
-        .isRequired,
-    description:
-      PropTypes.string,
-    social:
-      PropTypes.arrayOf(
-        PropTypes.object
-      ),
-  };
+DefaultProfileCard.propTypes = {
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  social: PropTypes.arrayOf(PropTypes.object),
+};
 
 export default DefaultProfileCard;

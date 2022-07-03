@@ -14,15 +14,15 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function WeatherCard({ color, title, weather, icon }) {
   return (
@@ -45,7 +45,7 @@ function WeatherCard({ color, title, weather, icon }) {
           >
             <SuiTypography
               variant="button"
-              color={color === 'light' ? 'dark' : 'white'}
+              color={color === "light" ? "dark" : "white"}
               textTransform="capitalize"
               fontWeight="medium"
               opacity={0.7}
@@ -54,7 +54,7 @@ function WeatherCard({ color, title, weather, icon }) {
             </SuiTypography>
             <SuiTypography
               variant="h5"
-              color={color === 'light' ? 'dark' : 'white'}
+              color={color === "light" ? "dark" : "white"}
               fontWeight="bold"
             >
               {weather.location} - {weather.degree}
@@ -73,7 +73,7 @@ function WeatherCard({ color, title, weather, icon }) {
               <SuiBox ml="auto" mr={1}>
                 <SuiTypography
                   variant="h5"
-                  color={color === 'light' ? 'dark' : 'white'}
+                  color={color === "light" ? "dark" : "white"}
                   textTransform="capitalize"
                 >
                   {icon.text}
@@ -89,25 +89,16 @@ function WeatherCard({ color, title, weather, icon }) {
 
 // Setting default values for the props of WeatherCard
 WeatherCard.defaultProps = {
-  color: 'info',
+  color: "info",
 };
 
 // Typechecking props for the WeatherCard
 WeatherCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   title: PropTypes.string.isRequired,
   weather: PropTypes.shape({
     location: PropTypes.string.isRequired,
-    degree: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-      .isRequired,
+    degree: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   }).isRequired,
   icon: PropTypes.shape({
     text: PropTypes.string.isRequired,

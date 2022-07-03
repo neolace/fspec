@@ -14,11 +14,11 @@
  */
 
 // @mui material components
-import Divider from '@mui/material/Divider';
+import Divider from "@mui/material/Divider";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function Separator() {
   return (
@@ -32,7 +32,7 @@ function Separator() {
         px={1.5}
         lineHeight={1}
         sx={{
-          transform: 'translate(-50%, -60%)',
+          transform: "translate(-50%, -60%)",
         }}
       >
         <SuiTypography variant="button" fontWeight="medium" color="secondary">

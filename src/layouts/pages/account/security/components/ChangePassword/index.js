@@ -28,104 +28,50 @@ import FormField from "layouts/pages/account/components/FormField";
 function ChangePassword() {
   return (
     <Card id="change-password">
-      <SuiBox
-        pt={
-          2
-        }
-        px={
-          2
-        }
-        lineHeight={
-          1
-        }>
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium">
-          Change
-          Password
+      <SuiBox pt={2} px={2} lineHeight={1}>
+        <SuiTypography variant="h6" fontWeight="medium">
+          Change Password
         </SuiTypography>
-        <SuiTypography
-          variant="button"
-          fontWeight="regular"
-          color="text">
-          We
-          will
-          send
-          you
-          an
-          email
-          with
-          the
-          verification
-          code.
+        <SuiTypography variant="button" fontWeight="regular" color="text">
+          We will send you an email with the verification code.
         </SuiTypography>
       </SuiBox>
-      <SuiBox
-        component="form"
-        p={
-          2
-        }>
-        <Grid
-          container
-          spacing={
-            3
-          }>
-          <Grid
-            item
-            xs={
-              12
-            }>
+      <SuiBox component="form" p={2}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
             <FormField
               label="current password"
               placeholder="Current Password"
               inputProps={{
                 type: "password",
-                autoComplete:
-                  "",
+                autoComplete: "",
               }}
             />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }>
+          <Grid item xs={12}>
             <FormField
               label="new password"
               placeholder="New Password"
               inputProps={{
                 type: "password",
-                autoComplete:
-                  "",
+                autoComplete: "",
               }}
             />
           </Grid>
-          <Grid
-            item
-            xs={
-              12
-            }>
+          <Grid item xs={12}>
             <FormField
               label="confirm new password"
               placeholder="Confirm Password"
               inputProps={{
                 type: "password",
-                autoComplete:
-                  "",
+                autoComplete: "",
               }}
             />
           </Grid>
         </Grid>
-        <SuiBox
-          mt={
-            2
-          }>
-          <SuiButton
-            variant="gradient"
-            color="dark"
-            fullWidth>
-            update
-            password
+        <SuiBox mt={2}>
+          <SuiButton variant="gradient" color="dark" fullWidth>
+            update password
           </SuiButton>
         </SuiBox>
       </SuiBox>

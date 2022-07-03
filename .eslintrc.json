@@ -13,22 +13,34 @@
   },
   "plugins": ["react", "prettier"],
   "rules": {
+    "default-param-last": "off",
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto"
       }
     ],
-    "default-param-last": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-curly-spacing": [
+      2,
+      "never"
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
     "react/jsx-props-no-spreading": [
       1,
       {
         "custom": "ignore"
       }
     ],
-    "react/jsx-curly-spacing": [2, "never"]
+    "react/react-in-jsx-scope": "off"
   },
-  "settings": { "import/resolver": { "node": { "paths": ["src"] } } }
+  "settings": { "import/resolver": { "node": { "paths": ["src"] } } },
+    "globals": { "__DEV__": true }
 }

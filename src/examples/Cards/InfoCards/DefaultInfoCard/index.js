@@ -1,29 +1,14 @@
-/**
- =========================================================
- * Soft UI Dashboard PRO React - v3.1.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
- * Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
- Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
 // prop-types is library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Divider from '@mui/material/Divider';
-import Icon from '@mui/material/Icon';
+import Card from "@mui/material/Card";
+import Divider from "@mui/material/Divider";
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
 
 function DefaultInfoCard({ color, icon, title, description, value }) {
   return (
@@ -45,11 +30,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
         </SuiBox>
       </SuiBox>
       <SuiBox pb={2} px={2} textAlign="center" lineHeight={1.25}>
-        <SuiTypography
-          variant="h6"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
+        <SuiTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
         </SuiTypography>
         {description && (
@@ -70,22 +51,14 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
 
 // Setting default values for the props of DefaultInfoCard
 DefaultInfoCard.defaultProps = {
-  color: 'info',
-  value: '',
-  description: '',
+  color: "info",
+  value: "",
+  description: "",
 };
 
 // Typechecking props for the DefaultInfoCard
 DefaultInfoCard.propTypes = {
-  color: PropTypes.oneOf([
-    'primary',
-    'secondary',
-    'info',
-    'success',
-    'warning',
-    'error',
-    'dark',
-  ]),
+  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,

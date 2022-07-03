@@ -14,26 +14,21 @@
  */
 
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiAvatar from 'components/SuiAvatar';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiAvatar from "components/SuiAvatar";
 
 // Soft UI Dashboard PRO React base styles
-import borders from 'assets/theme/base/borders';
-import colors from 'assets/theme/base/colors';
+import borders from "assets/theme/base/borders";
+import colors from "assets/theme/base/colors";
 
-function ComplexReportsDoughnutChartItem({
-  image,
-  title,
-  percentage,
-  hasBorder,
-}) {
+function ComplexReportsDoughnutChartItem({ image, title, percentage, hasBorder }) {
   const { borderWidth } = borders;
   const { light } = colors;
 
@@ -43,9 +38,7 @@ function ComplexReportsDoughnutChartItem({
       justifyContent="space-between"
       alignItems="center"
       sx={{
-        borderBottom: hasBorder
-          ? `${borderWidth[1]} solid ${light.main}`
-          : 'none',
+        borderBottom: hasBorder ? `${borderWidth[1]} solid ${light.main}` : "none",
       }}
     >
       <Grid item xs={10}>
@@ -80,7 +73,7 @@ function ComplexReportsDoughnutChartItem({
 
 // Setting default values for the props of ComplexReportsDoughnutChartItem
 ComplexReportsDoughnutChartItem.defaultProps = {
-  image: '',
+  image: "",
   hasBorder: false,
 };
 

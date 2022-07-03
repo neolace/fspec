@@ -14,27 +14,27 @@
  */
 
 // sweetalert2 components
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 // Sweet Alerts page components
-import Template from 'layouts/pages/sweet-alerts/components/Template';
+import Template from "layouts/pages/sweet-alerts/components/Template";
 
 function RtlLanguarge() {
   const showAlert = () => {
     const newSwal = Swal.mixin({
       customClass: {
-        confirmButton: 'button button-success',
-        cancelButton: 'button button-error',
+        confirmButton: "button button-success",
+        cancelButton: "button button-error",
       },
       buttonsStyling: false,
     });
 
     newSwal.fire({
-      title: 'هل تريد الاستمرار؟',
-      icon: 'question',
-      iconHtml: '؟',
-      confirmButtonText: 'نعم',
-      cancelButtonText: 'لا',
+      title: "هل تريد الاستمرار؟",
+      icon: "question",
+      iconHtml: "؟",
+      confirmButtonText: "نعم",
+      cancelButtonText: "لا",
       showCancelButton: true,
       showCloseButton: true,
     });

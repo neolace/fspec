@@ -14,7 +14,7 @@
  */
 
 // Soft UI Dashboard PRO React helper functions
-import pxToRem from 'assets/theme/functions/pxToRem';
+import pxToRem from "assets/theme/functions/pxToRem";
 
 const step = {
   styleOverrides: {

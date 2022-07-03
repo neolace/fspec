@@ -1,28 +1,13 @@
-/**
- =========================================================
- * Soft UI Dashboard PRO React - v3.1.0
- =========================================================
-
- * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-pro-react
- * Copyright 2022 Creative Tim (https://www.creative-tim.com)
-
- Coded by www.creative-tim.com
-
- =========================================================
-
- * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- */
-
 // prop-types is a library for typechecking of props
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // @mui material components
-import Icon from '@mui/material/Icon';
+import Icon from "@mui/material/Icon";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 function Bill({ name, company, email, vat, noGutter }) {
   return (
@@ -42,20 +27,16 @@ function Bill({ name, company, email, vat, noGutter }) {
           display="flex"
           justifyContent="space-between"
           alignItems={{
-            xs: 'flex-start',
-            sm: 'center',
+            xs: "flex-start",
+            sm: "center",
           }}
           flexDirection={{
-            xs: 'column',
-            sm: 'row',
+            xs: "column",
+            sm: "row",
           }}
           mb={2}
         >
-          <SuiTypography
-            variant="button"
-            fontWeight="medium"
-            textTransform="capitalize"
-          >
+          <SuiTypography variant="button" fontWeight="medium" textTransform="capitalize">
             {name}
           </SuiTypography>
 
@@ -86,11 +67,7 @@ function Bill({ name, company, email, vat, noGutter }) {
         <SuiBox mb={1} lineHeight={0}>
           <SuiTypography variant="caption" color="text">
             Company Name:&nbsp;&nbsp;&nbsp;
-            <SuiTypography
-              variant="caption"
-              fontWeight="medium"
-              textTransform="capitalize"
-            >
+            <SuiTypography variant="caption" fontWeight="medium" textTransform="capitalize">
               {company}
             </SuiTypography>
           </SuiTypography>

@@ -14,18 +14,18 @@
  */
 
 // @mui material components
-import Tooltip from '@mui/material/Tooltip';
-import Link from '@mui/material/Link';
+import Tooltip from "@mui/material/Tooltip";
+import Link from "@mui/material/Link";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiInput from 'components/SuiInput';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiInput from "components/SuiInput";
+import SuiButton from "components/SuiButton";
 
 // Soft UI Dashboard PRO React base styles
-import colors from 'assets/theme/base/colors';
-import borders from 'assets/theme/base/borders';
+import colors from "assets/theme/base/colors";
+import borders from "assets/theme/base/borders";
 
 function ReferralCode() {
   const { secondary } = colors;
@@ -51,10 +51,10 @@ function ReferralCode() {
       >
         <SuiBox mb={1} lineHeight={0}>
           <SuiTypography variant="caption" color="text">
-            Generated 23 days ago by{' '}
+            Generated 23 days ago by{" "}
             <span
               sx={{
-                fontWeight: 'bold',
+                fontWeight: "bold",
               }}
             >
               softuidash23
@@ -72,8 +72,8 @@ function ReferralCode() {
               size="small"
               defaultValue="soft-ui-dashboard-vmsk392"
               icon={{
-                component: 'lock',
-                direction: 'right',
+                component: "lock",
+                direction: "right",
               }}
               disabled
             />
@@ -84,7 +84,7 @@ function ReferralCode() {
               color="secondary"
               size="small"
               sx={{
-                padding: '0.5rem 1rem',
+                padding: "0.5rem 1rem",
               }}
             >
               copy
@@ -103,7 +103,7 @@ function ReferralCode() {
               className="color-background"
             >
               Contact us
-            </SuiTypography>{' '}
+            </SuiTypography>{" "}
             to generate more referrals link.
           </SuiTypography>
         </SuiBox>

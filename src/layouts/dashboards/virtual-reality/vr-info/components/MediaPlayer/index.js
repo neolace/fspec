@@ -14,17 +14,17 @@
  */
 
 // @mui material components
-import Card from '@mui/material/Card';
-import Icon from '@mui/material/Icon';
-import Tooltip from '@mui/material/Tooltip';
+import Card from "@mui/material/Card";
+import Icon from "@mui/material/Icon";
+import Tooltip from "@mui/material/Tooltip";
 
 // Soft UI Dashboard PRO React components
-import SuiBox from 'components/SuiBox';
-import SuiTypography from 'components/SuiTypography';
-import SuiButton from 'components/SuiButton';
+import SuiBox from "components/SuiBox";
+import SuiTypography from "components/SuiTypography";
+import SuiButton from "components/SuiButton";
 
 // Images
-import curved1 from 'assets/images/curved-images/curved1.jpg';
+import curved1 from "assets/images/curved-images/curved1.jpg";
 
 function MediaPlayer() {
   const mediaPlayerButtonStyles = ({ functions: { pxToRem } }) => ({
@@ -37,16 +37,13 @@ function MediaPlayer() {
 
   return (
     <Card
-      sx={({
-        functions: { linearGradient, rgba },
-        palette: { gradients },
-      }) => ({
+      sx={({ functions: { linearGradient, rgba }, palette: { gradients } }) => ({
         backgroundImage: `${linearGradient(
           rgba(gradients.dark.main, 0.85),
           rgba(gradients.dark.state, 0.85)
         )}, url(${curved1})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       })}
     >
       <SuiBox p={3} position="relative" lineHeight={0}>
